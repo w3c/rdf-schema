@@ -21,14 +21,14 @@
       // editors, add as many as you like
       // only "name" is required
       editors:  [
-          { name: "Dan Brickley", url: "http://danbri.org/",
-            company: "Google", //companyURL: "",
-          }, 
-          { name: "R.V. Guha",  url: "",
-            company: "Google", //companyURL: "",
-          },
+        { name: "Dominik Tomaszuk", w3cid: "44239"},
+        { name: "Timothée Haudebourg", w3cid: "138654"},
       ],
+
       formerEditors: [
+        { name: "Guus Schreiber" },
+        { name: "Dan Brickley" }, 
+        { name: "R.V. Guha" },
         { name: "Brian McBride" }
       ],
 
@@ -1065,62 +1065,78 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
 
 <section class="appendix informative" id="ch_acknowledgements">
   <h2>Acknowledgments</h2>
-  <p>The RDF Schema design was originally produced by the RDF Schema Working
-    Group (1997-2000). The current specification is largely an editorial
-    clarification of that design, and has benefited greatly from the hard
-    work of
-    the <a href="https://www.w3.org/2001/sw/RDFCore/">RDF Core Working Group</a>
-    <a href="https://www.w3.org/2001/sw/RDFCore/#Membership">members</a>, and
-    from
-    implementation feedback from many members of the <a href="https://www.w3.org/RDF/Interest/">RDF
-      Interest Group</a>. In
-    2013-2014 Guus Schreiber edited this document on behalf of the <a href="https://www.w3.org/2011/rdf-wg/">RDF
-      Working Group</a>
-    to bring it in line with the RDF 1.1 specifications. </p>
-  <p>David Singer of IBM was the chair of the original RDF Schema group
-    throughout most of the development of this specification; we thank David
-    for
-    his efforts and thank IBM for supporting him and us in this endeavor.
-    Particular thanks are also due to Andrew Layman for his editorial work
-    on
-    early versions of this specification.</p>
-  <p>The original RDF Schema Working Group membership included:</p>
-  <p>Nick Arnett (Verity), Dan Brickley (ILRT / University of Bristol),
-    Walter
-    Chang (Adobe), Sailesh Chutani (Oracle), Ron Daniel (DATAFUSION),
-    Charles
-    Frankston (Microsoft), Joe Lapp (webMethods Inc.), Patrick Gannon
-    (CommerceNet), RV Guha (Epinions, previously of Netscape
-    Communications), Tom
-    Hill (Apple Computer), Renato Iannella (DSTC), Sandeep Jain (Oracle),
-    Kevin
-    Jones, (InterMind), Emiko Kezuka (Digital Vision Laboratories), Ora
-    Lassila
-    (Nokia Research Center), Andrew Layman (Microsoft), John McCarthy
-    (Lawrence
-    Berkeley National Laboratory), Michael Mealling (Network Solutions),
-    Norbert
-    Mikula (DataChannel), Eric Miller (OCLC), Frank Olken (Lawrence Berkeley
-    National Laboratory), Sri Raghavan (Digital/Compaq), Lisa Rein
-    (webMethods
-    Inc.), Tsuyoshi Sakata (Digital Vision Laboratories), Leon Shklar
-    (Pencom Web
-    Works), David Singer (IBM), Wei (William) Song (SISU), Neel Sundaresan
-    (IBM),
-    Ralph Swick (W3C), Naohiko Uramoto (IBM), Charles Wicksteed (Reuters
-    Ltd.),
-    Misha Wolf (Reuters Ltd.)</p>
+
+  <section class="informative">
+    <h3>Acknowledgements for 2004 Recommendation</h3>
+    <p>The RDF Schema design was originally produced by the RDF Schema Working
+      Group (1997-2000).</p>
+    <p>David Singer of IBM was the chair of the original RDF Schema group
+      throughout most of the development of this specification; we thank David
+      for
+      his efforts and thank IBM for supporting him and us in this endeavor.
+      Particular thanks are also due to Andrew Layman for his editorial work
+      on
+      early versions of this specification.</p>
+    <p>The original RDF Schema Working Group membership included:</p>
+    <p>Nick Arnett (Verity), Dan Brickley (ILRT / University of Bristol),
+      Walter
+      Chang (Adobe), Sailesh Chutani (Oracle), Ron Daniel (DATAFUSION),
+      Charles
+      Frankston (Microsoft), Joe Lapp (webMethods Inc.), Patrick Gannon
+      (CommerceNet), RV Guha (Epinions, previously of Netscape
+      Communications), Tom
+      Hill (Apple Computer), Renato Iannella (DSTC), Sandeep Jain (Oracle),
+      Kevin
+      Jones, (InterMind), Emiko Kezuka (Digital Vision Laboratories), Ora
+      Lassila
+      (Nokia Research Center), Andrew Layman (Microsoft), John McCarthy
+      (Lawrence
+      Berkeley National Laboratory), Michael Mealling (Network Solutions),
+      Norbert
+      Mikula (DataChannel), Eric Miller (OCLC), Frank Olken (Lawrence Berkeley
+      National Laboratory), Sri Raghavan (Digital/Compaq), Lisa Rein
+      (webMethods
+      Inc.), Tsuyoshi Sakata (Digital Vision Laboratories), Leon Shklar
+      (Pencom Web
+      Works), David Singer (IBM), Wei (William) Song (SISU), Neel Sundaresan
+      (IBM),
+      Ralph Swick (W3C), Naohiko Uramoto (IBM), Charles Wicksteed (Reuters
+      Ltd.),
+      Misha Wolf (Reuters Ltd.)</p>
+  </section>
+
+  <section class="informative">
+    <h3>Acknowledgements for RDF 1.1</h3>
+    <p>The current specification is largely an editorial
+      clarification of that design, and has benefited greatly from the hard
+      work of
+      the <a href="https://www.w3.org/2001/sw/RDFCore/">RDF Core Working Group</a>
+      <a href="https://www.w3.org/2001/sw/RDFCore/#Membership">members</a>, and
+      from
+      implementation feedback from many members of the <a href="https://www.w3.org/RDF/Interest/">RDF
+        Interest Group</a>. In
+      2013-2014 Guus Schreiber edited this document on behalf of the <a href="https://www.w3.org/2011/rdf-wg/">RDF
+        Working Group</a>
+      to bring it in line with the RDF 1.1 specifications.</p>
+  </section>
+
+  <section class="informative">
+    <h3>Acknowledgements for RDF 1.2</h3>
+
+    <p>In addition to the editors, the following people have contributed to this specification:
+      <span id="gh-contributors"></span>
+    </p>
+
+    <p data-include="common/participants.html"></p>
+
+    <p class="ednote">Recognize members of the Task Force? Not an easy to find list of contributors.</p>
+  </section>
 </section>
 
 <section class="appendix informative" id="PER-changes">
   <h2>Change since 2004 Recommendation</h2>
   <p>Changes for RDF 1.1 Recommendation</p>
 
-  <ul>
-    <li>No changes.</li>
-  </ul>
-
-  <p>Changes for RDF 1.1 Proposed Edited Recommendation</p>
   <ul>
     <li>Conversion to ReSpec, including formatting of examples and notes.</li>
     <li>References to RDF 1.0 documents where appropriate
@@ -1150,6 +1166,14 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
     <li>Removed references to 2004 Primer from Secs. 5.1, 5.2
         and 5.4.3. In the latter case the example referred to was
         moved into this document for readability purposes. </li> 
+  </ul>
+</section>
+
+<section class="appendix informative" id="changes-12">
+  <h2>Changes between RDF 1.1 and RDF 1.2</h2>
+
+  <ul>
+    
   </ul>
 </section>
 

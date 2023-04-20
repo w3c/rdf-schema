@@ -728,7 +728,7 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
         statement is the statement made by a token of an RDF triple. The
         subject of an RDF statement is the instance of <code><a href="#ch_resource">rdfs:Resource</a></code>
         identified by the subject of the triple. The predicate of an RDF
-        statement is the instance of <code><a href="#ch_property">rdf:Property</a></code>
+        statement is the instance of <code><a href="#ch_resource">rdf:Resource</a></code>
         identified by the predicate of the triple. The object of an RDF
         statement is the instance of <code><a href="#ch_resource">rdfs:Resource</a></code>
         identified by the object of the triple.
@@ -740,6 +740,15 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
         <code><a href="#ch_subject">rdf:subject</a></code>
         and <code><a href="#ch_object">rdf:object</a></code> properties.
       </p>
+
+      <p>
+	RDF statements are not triples in an RDF graph so their values
+	for <code><a href="#ch_predicate">rdf:predicate</a></code> do not need to be instances of
+	<code><a href="#ch_property">rdf:Property</a></code> in that graph,
+	although in most cases they will be.
+      </p>
+
+
     </section>
 
     <section id="ch_subject">
@@ -770,7 +779,7 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
       </blockquote>
       <p>states that S is an instance of <code><a href="#ch_statement">rdf:Statement</a></code>,
         that P is an instance of
-        <code><a href="#ch_property">rdf:Property</a></code> and that the
+        <code><a href="#ch_resource">rdfs:Resource</a></code> and that the
         predicate
         of S is P.</p>
       <p>The <a href="#ch_domain"><code>rdfs:domain</code></a> of

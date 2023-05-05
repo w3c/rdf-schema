@@ -1,89 +1,1183 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta content="text/html; charset=utf-8" http-equiv="content-type">
-  <title>RDF 1.2 Schema</title>
-  <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
-  <script src="./common/local-biblio.js" class="remove"></script>
-  <script src="./common/fixup.js" class="remove"></script>
-  <script class='remove'>
-    var respecConfig = {
-      localBiblio:          localBibliography,
-      specStatus:           "ED",
-      edDraftURI:           "https://w3c.github.io/rdf-schema/spec/",
-      shortName:            "rdf12-schema",
-      copyrightStart:       "2004",
+<!DOCTYPE html><html lang="en"><head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
+<meta name="generator" content="ReSpec 34.1.1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+span.example-title{text-transform:none}
+:is(aside,div).example,div.illegal-example{padding:.5em;margin:1em 0;position:relative;clear:both}
+div.illegal-example{color:red}
+div.illegal-example p{color:#000}
+:is(aside,div).example{border-left-width:.5em;border-left-style:solid;border-color:#e0cb52;background:#fcfaee}
+aside.example div.example{border-left-width:.1em;border-color:#999;background:#fff}
+.example pre{background-color:rgba(0,0,0,.03)}
+</style>
+<style>
+.issue-label{text-transform:initial}
+.warning>p:first-child{margin-top:0}
+.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}
+span.warning{padding:.1em .5em .15em}
+.issue.closed span.issue-number{text-decoration:line-through}
+.issue.closed span.issue-number::after{content:" (Closed)";font-size:smaller}
+.warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}
+.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}
+li.task-list-item{list-style:none}
+input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}
+.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}
+</style>
+<style>
+dfn{cursor:pointer}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
+.dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1}
+.dfn-panel *{margin:0}
+.dfn-panel b{display:block;color:#000;margin-top:.25em}
+.dfn-panel ul a[href]{color:#333}
+.dfn-panel>div{display:flex}
+.dfn-panel a.self-link{font-weight:700;margin-right:auto}
+.dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
+.dfn-panel .marker.dfn-exported{background:#d1edfd;box-shadow:0 0 0 .125em #1ca5f940}
+.dfn-panel .marker.idl-block{background:#8ccbf2;box-shadow:0 0 0 .125em #0670b161}
+.dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}
+.dfn-panel a[href]:hover{border-bottom-width:1px}
+.dfn-panel ul{padding:0}
+.dfn-panel li{margin-left:1em}
+.dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}
+</style>
+  
+  
+<title>RDF 1.2 Schema</title>
+  
+<style id="respec-mainstyle">
+@keyframes pop{
+0%{transform:scale(1,1)}
+25%{transform:scale(1.25,1.25);opacity:.75}
+100%{transform:scale(1,1)}
+}
+:is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
+dfn{font-weight:700}
+a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
+a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
+a.bibref{text-decoration:none}
+.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}
+.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}
+@supports not (text-decoration:red wavy underline){
+.respec-offending-element:not(pre){display:inline-block}
+.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
+}
+#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
+cite .bibref{font-style:normal}
+a[href].orcid{padding-left:4px;padding-right:4px}
+a[href].orcid>svg{margin-bottom:-2px}
+.toc a,.tof a{text-decoration:none}
+a .figno,a .secno{color:#000}
+ol.tof,ul.tof{list-style:none outside none}
+.caption{margin-top:.5em;font-style:italic}
+table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
+.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
+.simple th a{color:#fff;padding:3px 5px;text-align:left}
+.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
+.simple td{padding:3px 10px;border-top:1px solid #ddd}
+.simple tr:nth-child(even){background:#f0f6ff}
+.section dd>p:first-child{margin-top:0}
+.section dd>p:last-child{margin-bottom:0}
+.section dd{margin-bottom:1em}
+.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
+#issue-summary>ul{column-count:2}
+#issue-summary li{list-style:none;display:inline-block}
+details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
+details.respec-tests-details>*{padding-right:2em}
+details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}
+details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}
+details.respec-tests-details>ul{width:100%;margin-top:-.3em}
+details.respec-tests-details>li{padding-left:1em}
+.self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
+aside.example .marker>a.self-link{color:inherit}
+.header-wrapper{display:flex;align-items:baseline}
+:is(h2,h3,h4,h5,h6):not(#toc>h2,#abstract>h2,#sotd>h2,.head>h2){position:relative;left:-.5em}
+:is(h2,h3,h4,h5,h6):not(#toch2)+a.self-link{color:inherit;order:-1;position:relative;left:-1.1em;font-size:1rem;opacity:.5}
+:is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§";text-decoration:none;color:var(--heading-text)}
+:is(h2,h3)+a.self-link{top:-.2em}
+:is(h4,h5,h6)+a.self-link::before{color:#000}
+@media (max-width:767px){
+dd{margin-left:0}
+}
+@media print{
+.removeOnSave{display:none}
+}
+</style>
+  
+  
+  
 
-      previousPublishDate:  "2014-02-25",
-      previousMaturity:     "REC",
-      prevRecShortname:     "rdf-schema",
+  
+<style>
 
-      // editors, add as many as you like
-      // only "name" is required
-      editors:  [
-        { name: "Dominik Tomaszuk", w3cid: "44239"},
-        { name: "Timothée Haudebourg", w3cid: "138654"},
-      ],
-
-      formerEditors: [
-        { name: "Guus Schreiber" },
-        { name: "Dan Brickley" }, 
-        { name: "R.V. Guha" },
-        { name: "Brian McBride" }
-      ],
-
-      github: "https://github.com/w3c/rdf-schema/",
-      group:           "rdf-star",
-      doJsonLd:     true,
-      wgPublicList: "public-rdf-star-wg"    
-    };
-  </script>
-
-  <style>
     figure { text-align: center; }
     table { border-collapse:collapse; }
     table, td, th { border:1px solid black; }
     caption { font-weight: bold; text-align: left ; }
     code {color: #ff4500;}  /* Old W3C Style */
-  </style>
-</head>
-<body>
-<section id="abstract">
+  
+</style>
+
+<style>
+ul.index{columns:30ch;column-gap:1.5em}
+ul.index li{list-style:inherit}
+ul.index li span{color:inherit;cursor:pointer;white-space:normal}
+#index-defined-here ul.index li{font-size:.9rem}
+ul.index code{color:inherit}
+#index-defined-here .print-only{display:none}
+@media print{
+#index-defined-here .print-only{display:initial}
+}
+</style>
+<meta name="description" content="RDF Schema provides a data-modelling vocabulary for RDF data. RDF Schema
+    is an extension of the basic RDF vocabulary.">
+<link rel="canonical" href="https://www.w3.org/TR/rdf12-schema/">
+<script type="application/ld+json">{
+  "@context": [
+    "http://schema.org",
+    {
+      "@vocab": "http://schema.org/",
+      "@language": "en",
+      "w3p": "http://www.w3.org/2001/02pd/rec54#",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "datePublished": {
+        "@type": "http://www.w3.org/2001/XMLSchema#date"
+      },
+      "inLanguage": {
+        "@language": null
+      },
+      "isBasedOn": {
+        "@type": "@id"
+      },
+      "license": {
+        "@type": "@id"
+      }
+    }
+  ],
+  "id": "https://www.w3.org/TR/rdf12-schema/",
+  "type": [
+    "TechArticle"
+  ],
+  "name": "RDF 1.2 Schema",
+  "inLanguage": "en",
+  "license": "https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document",
+  "datePublished": "2023-05-16",
+  "copyrightHolder": {
+    "name": "World Wide Web Consortium",
+    "url": "https://www.w3.org/"
+  },
+  "discussionUrl": "https://github.com/w3c/rdf-schema/issues/",
+  "alternativeHeadline": "",
+  "isBasedOn": "https://www.w3.org/TR/2014/REC-rdf12-schema-20140225/",
+  "description": "RDF Schema provides a data-modelling vocabulary for RDF data. RDF Schema\n    is an extension of the basic RDF vocabulary.",
+  "editor": [
+    {
+      "type": "Person",
+      "name": "Dominik Tomaszuk"
+    },
+    {
+      "type": "Person",
+      "name": "Timothée Haudebourg"
+    }
+  ],
+  "contributor": [],
+  "citation": [
+    {
+      "id": "https://w3c.github.io/rdf-concepts/spec/",
+      "type": "TechArticle",
+      "name": "RDF 1.2 Concepts and Abstract Syntax",
+      "url": "https://w3c.github.io/rdf-concepts/spec/",
+      "creator": [
+        {
+          "name": "Richard Cyganiak"
+        },
+        {
+          "name": "David Wood"
+        },
+        {
+          "name": "Markus Lanthaler"
+        }
+      ],
+      "publishedDate": "2022-01-01",
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://w3c.github.io/rdf-semantics/spec/",
+      "type": "TechArticle",
+      "name": "RDF 1.2 Semantics",
+      "url": "https://w3c.github.io/rdf-semantics/spec/",
+      "creator": [
+        {
+          "name": "Patrick Hayes"
+        },
+        {
+          "name": "Peter Patel-Schneider"
+        }
+      ],
+      "publishedDate": "2022-01-01",
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://w3c.github.io/rdf-turtle/spec/",
+      "type": "TechArticle",
+      "name": "RDF 1.2 Turtle",
+      "url": "https://w3c.github.io/rdf-turtle/spec/",
+      "creator": [
+        {
+          "name": "Eric Prud'hommeaux"
+        },
+        {
+          "name": "Gavin Carothers"
+        }
+      ],
+      "publishedDate": "2022-01-01",
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://w3c.github.io/rdf-trig/spec/",
+      "type": "TechArticle",
+      "name": "RDF 1.2 TriG",
+      "url": "https://w3c.github.io/rdf-trig/spec/",
+      "creator": [
+        {
+          "name": "Gavin Carothers"
+        },
+        {
+          "name": "Andy Seaborne"
+        }
+      ],
+      "publishedDate": "2022-01-01",
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://www.w3.org/TR/json-ld11/",
+      "type": "TechArticle",
+      "name": "JSON-LD 1.1",
+      "url": "https://www.w3.org/TR/json-ld11/",
+      "creator": [
+        {
+          "name": "Gregg Kellogg"
+        },
+        {
+          "name": "Pierre-Antoine Champin"
+        },
+        {
+          "name": "Dave Longley"
+        }
+      ],
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://w3c.github.io/rdf-primer/spec/",
+      "type": "TechArticle",
+      "name": "RDF 1.2 Primer",
+      "url": "https://w3c.github.io/rdf-primer/spec/",
+      "creator": [
+        {
+          "name": "Guus Schreiber"
+        },
+        {
+          "name": "Yves Raimond"
+        }
+      ],
+      "publishedDate": "2022-01-01",
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://www.w3.org/DesignIssues/RDFnot.html",
+      "type": "TechArticle",
+      "name": "What the Semantic Web can represent",
+      "url": "https://www.w3.org/DesignIssues/RDFnot.html",
+      "creator": [
+        {
+          "name": "Tim Berners-Lee"
+        }
+      ],
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://www.w3.org/TR/owl2-overview/",
+      "type": "TechArticle",
+      "name": "OWL 2 Web Ontology Language Document Overview (Second Edition)",
+      "url": "https://www.w3.org/TR/owl2-overview/",
+      "creator": [
+        {
+          "name": "W3C OWL Working Group"
+        }
+      ],
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://www.w3.org/TR/rdf-schema/",
+      "type": "TechArticle",
+      "name": "RDF Schema 1.1",
+      "url": "https://www.w3.org/TR/rdf-schema/",
+      "creator": [
+        {
+          "name": "Dan Brickley"
+        },
+        {
+          "name": "Ramanathan Guha"
+        }
+      ],
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://w3c.github.io/rdf-new/spec/",
+      "type": "TechArticle",
+      "name": "What’s New in RDF 1.2",
+      "url": "https://w3c.github.io/rdf-new/spec/",
+      "creator": [
+        {
+          "name": "David Wood"
+        }
+      ],
+      "publishedDate": "2022-01-01",
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://w3c.github.io/rdf-n-quads/spec/",
+      "type": "TechArticle",
+      "name": "RDF 1.2 N-Quads",
+      "url": "https://w3c.github.io/rdf-n-quads/spec/",
+      "creator": [
+        {
+          "name": "Gavin Carothers"
+        }
+      ],
+      "publishedDate": "2022-01-01",
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://w3c.github.io/rdf-n-triples/spec/",
+      "type": "TechArticle",
+      "name": "RDF 1.2 N-Triples",
+      "url": "https://w3c.github.io/rdf-n-triples/spec/",
+      "creator": [
+        {
+          "name": "Gavin Carothers"
+        },
+        {
+          "name": "Andy Seaborne"
+        }
+      ],
+      "publishedDate": "2022-01-01",
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://w3c.github.io/rdf-xml/spec/",
+      "type": "TechArticle",
+      "name": "RDF 1.2 XML Syntax",
+      "url": "https://w3c.github.io/rdf-xml/spec/",
+      "creator": [
+        {
+          "name": "Fabien Gandon"
+        },
+        {
+          "name": "Guus Schreiber"
+        }
+      ],
+      "publishedDate": "2022-01-01",
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://w3c.github.io/sparql-new/spec/",
+      "type": "TechArticle",
+      "name": "What’s New in SPARQL 1.2",
+      "url": "https://w3c.github.io/sparql-new/spec/",
+      "creator": [
+        {
+          "name": "The W3C RDF-star Working Group"
+        }
+      ],
+      "publishedDate": "2022-01-01",
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://w3c.github.io/sparql-concepts/spec/",
+      "type": "TechArticle",
+      "name": "SPARQL 1.2 Concepts",
+      "url": "https://w3c.github.io/sparql-concepts/spec/",
+      "creator": [
+        {
+          "name": "The W3C RDF-star Working Group"
+        }
+      ],
+      "publishedDate": "2022-01-01",
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://w3c.github.io/sparql-query/spec/",
+      "type": "TechArticle",
+      "name": "SPARQL 1.2 Query Language",
+      "url": "https://w3c.github.io/sparql-query/spec/",
+      "creator": [
+        {
+          "name": "Steven Harris"
+        },
+        {
+          "name": "Andy Seaborne"
+        }
+      ],
+      "publishedDate": "2022-01-01",
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://w3c.github.io/sparql-update/spec/",
+      "type": "TechArticle",
+      "name": "SPARQL 1.2 Update",
+      "url": "https://w3c.github.io/sparql-update/spec/",
+      "creator": [
+        {
+          "name": "Paula Gearon"
+        },
+        {
+          "name": "Alexandre Passant"
+        },
+        {
+          "name": "Axel Polleres"
+        }
+      ],
+      "publishedDate": "2022-01-01",
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://w3c.github.io/sparql-service-description/spec/",
+      "type": "TechArticle",
+      "name": "SPARQL 1.2 Service Description",
+      "url": "https://w3c.github.io/sparql-service-description/spec/",
+      "creator": [
+        {
+          "name": "Gregory Williams"
+        }
+      ],
+      "publishedDate": "2022-01-01",
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://w3c.github.io/sparql-federated-query/spec/",
+      "type": "TechArticle",
+      "name": "SPARQL 1.2 Federated Query",
+      "url": "https://w3c.github.io/sparql-federated-query/spec/",
+      "creator": [
+        {
+          "name": "Eric Prud'hommeaux"
+        },
+        {
+          "name": "Carlos Buil Aranda"
+        }
+      ],
+      "publishedDate": "2022-01-01",
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://w3c.github.io/sparql-results-json/spec/",
+      "type": "TechArticle",
+      "name": "SPARQL 1.2 Query Results JSON Format",
+      "url": "https://w3c.github.io/sparql-results-json/spec/",
+      "creator": [
+        {
+          "name": "Andy Seaborne"
+        }
+      ],
+      "publishedDate": "2022-01-01",
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://w3c.github.io/sparql-results-csv-tsv/spec/",
+      "type": "TechArticle",
+      "name": "SPARQL 1.2 Query Results CSV and TSV Formats",
+      "url": "https://w3c.github.io/sparql-results-csv-tsv/spec/",
+      "creator": [
+        {
+          "name": "Andy Seaborne"
+        }
+      ],
+      "publishedDate": "2022-01-01",
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://w3c.github.io/sparql-results-xml/spec/",
+      "type": "TechArticle",
+      "name": "SPARQL 1.2 Query Results XML Formats",
+      "url": "https://w3c.github.io/sparql-results-xml/spec/",
+      "creator": [
+        {
+          "name": "Sandro Hawke"
+        },
+        {
+          "name": "Dave Beckett"
+        },
+        {
+          "name": "Jeen Broekstra"
+        }
+      ],
+      "publishedDate": "2022-01-01",
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://w3c.github.io/sparql-entailment/spec/",
+      "type": "TechArticle",
+      "name": "SPARQL 1.2 Entailment Regimes",
+      "url": "https://w3c.github.io/sparql-entailment/spec/",
+      "creator": [
+        {
+          "name": "Birte Glimm"
+        },
+        {
+          "name": "Chimezie Ogbuji"
+        }
+      ],
+      "publishedDate": "2022-01-01",
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://w3c.github.io/sparql-protocol/spec/",
+      "type": "TechArticle",
+      "name": "SPARQL 1.2 Protocol",
+      "url": "https://w3c.github.io/sparql-protocol/spec/",
+      "creator": [
+        {
+          "name": "Lee Feigenbaum"
+        },
+        {
+          "name": "Gregory Williams"
+        },
+        {
+          "name": "Kendall Clark"
+        },
+        {
+          "name": "Elias Torres"
+        }
+      ],
+      "publishedDate": "2022-01-01",
+      "publisher": {
+        "name": "W3C"
+      }
+    },
+    {
+      "id": "https://w3c.github.io/sparql-graph-store-protocol/spec/",
+      "type": "TechArticle",
+      "name": "SPARQL 1.2 Graph Store HTTP Protocol",
+      "url": "https://w3c.github.io/sparql-graph-store-protocol/spec/",
+      "creator": [
+        {
+          "name": "Chimezie Ogbuji"
+        }
+      ],
+      "publishedDate": "2022-01-01",
+      "publisher": {
+        "name": "W3C"
+      }
+    }
+  ]
+}</script>
+<style>
+.hljs{display:block;overflow-x:auto;padding:.5em;color:#383a42;background:#fafafa}
+.hljs-comment,.hljs-quote{color:#717277;font-style:italic}
+.hljs-doctag,.hljs-formula,.hljs-keyword{color:#a626a4}
+.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#ca4706;font-weight:700}
+.hljs-literal{color:#0b76c5}
+.hljs-addition,.hljs-attribute,.hljs-meta-string,.hljs-regexp,.hljs-string{color:#42803c}
+.hljs-built_in,.hljs-class .hljs-title{color:#9a6a01}
+.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#986801}
+.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#336ae3}
+.hljs-emphasis{font-style:italic}
+.hljs-strong{font-weight:700}
+.hljs-link{text-decoration:underline}
+</style>
+<style>
+var{position:relative;cursor:pointer}
+var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
+var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}
+var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}
+var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
+</style>
+<script id="initialUserConfig" type="application/json">{
+  "localBiblio": {
+    "ISO24707": {
+      "id": "ISO24707",
+      "title": "Information technology — Common Logic (CL) — A framework for a family of logic-based languages",
+      "date": "2018-07",
+      "href": "https://www.iso.org/standard/66249.html",
+      "status": "Published",
+      "publisher": "ISO/EIC"
+    },
+    "HORST04": {
+      "id": "HORST04",
+      "title": "Extending the RDFS Entailment Lemma",
+      "authors": [
+        "Herman J. ter Horst"
+      ],
+      "date": "2004",
+      "isbn": "978-3-540-30475-3",
+      "href": "https://doi.org/10.1007/978-3-540-30475-3_7",
+      "status": "Conference Proceeding",
+      "publisher": "Springer, Berlin, Heidelberg"
+    },
+    "HORST05": {
+      "id": "HORST05",
+      "title": "Completeness, Decidability and Complexity of Entailment for RDF Schema and a Semantic Extension Involving the OWL Vocabulary",
+      "authors": [
+        "Herman J. ter Horst"
+      ],
+      "date": "2005",
+      "href": "https://dx.doi.org/10.2139/ssrn.3199251",
+      "status": "Conference Proceeding",
+      "publisher": "Journal of Web Semantics"
+    },
+    "SAFETY": {
+      "title": "Saftety of recursive horn clauses with infinite relations",
+      "href": "http://arxiv.org/abs/cs.LO/9809032",
+      "authors": [
+        "R. Ramakrishnan",
+        "F. Bancilhon",
+        "A. Silberschatz"
+      ],
+      "date": "1987",
+      "publisher": "ACM New York"
+    },
+    "STRIPEDRDF": {
+      "id": "STRIPEDRDF",
+      "title": "RDF: Understanding the Striped RDF/XML Syntax",
+      "editors": [
+        "D. Brickley"
+      ],
+      "date": "2001",
+      "href": "http://www.w3.org/2001/10/stripes/",
+      "status": "Team Submission",
+      "publisher": "W3C"
+    },
+    "RDF12-CONCEPTS": {
+      "authors": [
+        "Richard Cyganiak",
+        "David Wood",
+        "Markus Lanthaler"
+      ],
+      "href": "https://w3c.github.io/rdf-concepts/spec/",
+      "title": "RDF 1.2 Concepts and Abstract Syntax",
+      "rawDate": "2022-01-01",
+      "status": "WD",
+      "publisher": "W3C",
+      "id": "rdf12-concepts"
+    },
+    "RDF12-SEMANTICS": {
+      "authors": [
+        "Patrick Hayes",
+        "Peter Patel-Schneider"
+      ],
+      "href": "https://w3c.github.io/rdf-semantics/spec/",
+      "title": "RDF 1.2 Semantics",
+      "rawDate": "2022-01-01",
+      "status": "WD",
+      "publisher": "W3C",
+      "id": "rdf12-semantics"
+    },
+    "RDF12-N-QUADS": {
+      "authors": [
+        "Gavin Carothers"
+      ],
+      "href": "https://w3c.github.io/rdf-n-quads/spec/",
+      "title": "RDF 1.2 N-Quads",
+      "rawDate": "2022-01-01",
+      "status": "WD",
+      "publisher": "W3C",
+      "id": "rdf12-n-quads"
+    },
+    "RDF12-N-TRIPLES": {
+      "authors": [
+        "Gavin Carothers",
+        "Andy Seaborne"
+      ],
+      "href": "https://w3c.github.io/rdf-n-triples/spec/",
+      "title": "RDF 1.2 N-Triples",
+      "rawDate": "2022-01-01",
+      "status": "WD",
+      "publisher": "W3C",
+      "id": "rdf12-n-triples"
+    },
+    "RDF12-NEW": {
+      "authors": [
+        "David Wood"
+      ],
+      "href": "https://w3c.github.io/rdf-new/spec/",
+      "title": "What’s New in RDF 1.2",
+      "rawDate": "2022-01-01",
+      "status": "DNOTE",
+      "publisher": "W3C",
+      "id": "rdf12-new"
+    },
+    "RDF12-PRIMER": {
+      "authors": [
+        "Guus Schreiber",
+        "Yves Raimond"
+      ],
+      "href": "https://w3c.github.io/rdf-primer/spec/",
+      "title": "RDF 1.2 Primer",
+      "rawDate": "2022-01-01",
+      "status": "DNOTE",
+      "publisher": "W3C",
+      "id": "rdf12-primer"
+    },
+    "RDF12-SCHEMA": {
+      "authors": [
+        "Dan Brickley",
+        "Ramanathan Guha"
+      ],
+      "href": "https://w3c.github.io/rdf-schema/spec/",
+      "title": "RDF 1.2 Schema",
+      "rawDate": "2022-01-01",
+      "status": "WD",
+      "publisher": "W3C"
+    },
+    "RDF12-TRIG": {
+      "authors": [
+        "Gavin Carothers",
+        "Andy Seaborne"
+      ],
+      "href": "https://w3c.github.io/rdf-trig/spec/",
+      "title": "RDF 1.2 TriG",
+      "rawDate": "2022-01-01",
+      "status": "WD",
+      "publisher": "W3C",
+      "id": "rdf12-trig"
+    },
+    "RDF12-TURTLE": {
+      "authors": [
+        "Eric Prud'hommeaux",
+        "Gavin Carothers"
+      ],
+      "href": "https://w3c.github.io/rdf-turtle/spec/",
+      "title": "RDF 1.2 Turtle",
+      "rawDate": "2022-01-01",
+      "status": "WD",
+      "publisher": "W3C",
+      "id": "rdf12-turtle"
+    },
+    "RDF12-XML": {
+      "authors": [
+        "Fabien Gandon",
+        "Guus Schreiber"
+      ],
+      "href": "https://w3c.github.io/rdf-xml/spec/",
+      "title": "RDF 1.2 XML Syntax",
+      "rawDate": "2022-01-01",
+      "status": "WD",
+      "publisher": "W3C",
+      "id": "rdf12-xml"
+    },
+    "SPARQL12-NEW": {
+      "authors": [
+        "The W3C RDF-star Working Group"
+      ],
+      "href": "https://w3c.github.io/sparql-new/spec/",
+      "title": "What’s New in SPARQL 1.2",
+      "rawDate": "2022-01-01",
+      "status": "WD",
+      "publisher": "W3C",
+      "id": "sparql12-new"
+    },
+    "SPARQL12-CONCEPTS": {
+      "authors": [
+        "The W3C RDF-star Working Group"
+      ],
+      "href": "https://w3c.github.io/sparql-concepts/spec/",
+      "title": "SPARQL 1.2 Concepts",
+      "rawDate": "2022-01-01",
+      "status": "WD",
+      "publisher": "W3C",
+      "id": "sparql12-concepts"
+    },
+    "SPARQL12-QUERY": {
+      "authors": [
+        "Steven Harris",
+        "Andy Seaborne"
+      ],
+      "href": "https://w3c.github.io/sparql-query/spec/",
+      "title": "SPARQL 1.2 Query Language",
+      "rawDate": "2022-01-01",
+      "status": "WD",
+      "publisher": "W3C",
+      "id": "sparql12-query"
+    },
+    "SPARQL12-UPDATE": {
+      "authors": [
+        "Paula Gearon",
+        "Alexandre Passant",
+        "Axel Polleres"
+      ],
+      "href": "https://w3c.github.io/sparql-update/spec/",
+      "title": "SPARQL 1.2 Update",
+      "rawDate": "2022-01-01",
+      "status": "WD",
+      "publisher": "W3C",
+      "id": "sparql12-update"
+    },
+    "SPARQL12-SERVICE-DESCRIPTION": {
+      "authors": [
+        "Gregory Williams"
+      ],
+      "href": "https://w3c.github.io/sparql-service-description/spec/",
+      "title": "SPARQL 1.2 Service Description",
+      "rawDate": "2022-01-01",
+      "status": "WD",
+      "publisher": "W3C",
+      "id": "sparql12-service-description"
+    },
+    "SPARQL12-FEDERATED-QUERY": {
+      "authors": [
+        "Eric Prud'hommeaux",
+        "Carlos Buil Aranda"
+      ],
+      "href": "https://w3c.github.io/sparql-federated-query/spec/",
+      "title": "SPARQL 1.2 Federated Query",
+      "rawDate": "2022-01-01",
+      "status": "WD",
+      "publisher": "W3C",
+      "id": "sparql12-federated-query"
+    },
+    "SPARQL12-RESULTS-JSON": {
+      "authors": [
+        "Andy Seaborne"
+      ],
+      "href": "https://w3c.github.io/sparql-results-json/spec/",
+      "title": "SPARQL 1.2 Query Results JSON Format",
+      "rawDate": "2022-01-01",
+      "status": "WD",
+      "publisher": "W3C",
+      "id": "sparql12-results-json"
+    },
+    "SPARQL12-RESULTS-CSV-TSV": {
+      "authors": [
+        "Andy Seaborne"
+      ],
+      "href": "https://w3c.github.io/sparql-results-csv-tsv/spec/",
+      "title": "SPARQL 1.2 Query Results CSV and TSV Formats",
+      "rawDate": "2022-01-01",
+      "status": "WD",
+      "publisher": "W3C",
+      "id": "sparql12-results-csv-tsv"
+    },
+    "SPARQL12-RESULTS-XML": {
+      "authors": [
+        "Sandro Hawke",
+        "Dave Beckett",
+        "Jeen Broekstra"
+      ],
+      "href": "https://w3c.github.io/sparql-results-xml/spec/",
+      "title": "SPARQL 1.2 Query Results XML Formats",
+      "rawDate": "2022-01-01",
+      "status": "WD",
+      "publisher": "W3C",
+      "id": "sparql12-results-xml"
+    },
+    "SPARQL12-ENTAILMENT": {
+      "authors": [
+        "Birte Glimm",
+        "Chimezie Ogbuji"
+      ],
+      "href": "https://w3c.github.io/sparql-entailment/spec/",
+      "title": "SPARQL 1.2 Entailment Regimes",
+      "rawDate": "2022-01-01",
+      "status": "WD",
+      "publisher": "W3C",
+      "id": "sparql12-entailment"
+    },
+    "SPARQL12-PROTOCOL": {
+      "authors": [
+        "Lee Feigenbaum",
+        "Gregory Williams",
+        "Kendall Clark",
+        "Elias Torres"
+      ],
+      "href": "https://w3c.github.io/sparql-protocol/spec/",
+      "title": "SPARQL 1.2 Protocol",
+      "rawDate": "2022-01-01",
+      "status": "WD",
+      "publisher": "W3C",
+      "id": "sparql12-protocol"
+    },
+    "SPARQL12-GRAPH-STORE-PROTOCOL": {
+      "authors": [
+        "Chimezie Ogbuji"
+      ],
+      "href": "https://w3c.github.io/sparql-graph-store-protocol/spec/",
+      "title": "SPARQL 1.2 Graph Store HTTP Protocol",
+      "rawDate": "2022-01-01",
+      "status": "WD",
+      "publisher": "W3C",
+      "id": "sparql12-graph-store-protocol"
+    },
+    "CBD": {
+      "title": "CBD - Concise Bounded Description",
+      "href": "https://www.w3.org/Submission/CBD/",
+      "authors": [
+        "Patrick Stickler, Nokia"
+      ],
+      "rawDate": "2005-06-03",
+      "publisher": "W3C",
+      "status": "W3C Member Submission"
+    }
+  },
+  "specStatus": "FPWD",
+  "edDraftURI": "https://w3c.github.io/rdf-schema/spec/",
+  "shortName": "rdf12-schema",
+  "copyrightStart": "2004",
+  "previousPublishDate": "2014-02-25",
+  "previousMaturity": "REC",
+  "prevRecShortname": "rdf-schema",
+  "editors": [
+    {
+      "name": "Dominik Tomaszuk",
+      "w3cid": "44239"
+    },
+    {
+      "name": "Timothée Haudebourg",
+      "w3cid": "138654"
+    }
+  ],
+  "formerEditors": [
+    {
+      "name": "Guus Schreiber"
+    },
+    {
+      "name": "Dan Brickley"
+    },
+    {
+      "name": "R.V. Guha"
+    },
+    {
+      "name": "Brian McBride"
+    }
+  ],
+  "github": "https://github.com/w3c/rdf-schema/",
+  "group": "rdf-star",
+  "doJsonLd": true,
+  "wgPublicList": "public-rdf-star-wg",
+  "publishDate": "2023-05-16",
+  "publishISODate": "2023-05-16T00:00:00.000Z",
+  "generatedSubtitle": "W3C First Public Working Draft 16 May 2023"
+}</script>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-WD"></head>
+<body class="h-entry informative"><div class="head">
+    <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
+  </a></p>
+    <h1 id="title" class="title">RDF 1.2 Schema</h1> 
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#FPWD">W3C First Public Working Draft</a> <time class="dt-published" datetime="2023-05-16">16 May 2023</time></p>
+    <details open="">
+      <summary>More details about this document</summary>
+      <dl>
+        <dt>This version:</dt><dd>
+                <a class="u-url" href="https://www.w3.org/TR/2023/WD-rdf12-schema-20230516/">https://www.w3.org/TR/2023/WD-rdf12-schema-20230516/</a>
+              </dd>
+        <dt>Latest published version:</dt><dd>
+                <a href="https://www.w3.org/TR/rdf12-schema/">https://www.w3.org/TR/rdf12-schema/</a>
+              </dd>
+        <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/rdf-schema/spec/">https://w3c.github.io/rdf-schema/spec/</a></dd>
+        <dt>History:</dt><dd>
+                    <a href="https://www.w3.org/standards/history/rdf12-schema">https://www.w3.org/standards/history/rdf12-schema</a>
+                  </dd><dd>
+                    <a href="https://github.com/w3c/rdf-schema/commits/">Commit history</a>
+                  </dd>
+        
+        
+        
+        
+        <dt>Latest Recommendation:</dt><dd><a href="https://www.w3.org/TR/rdf-schema">https://www.w3.org/TR/rdf-schema</a></dd>
+        <dt>Editors:</dt><dd class="editor p-author h-card vcard" data-editor-id="44239">
+    <span class="p-name fn">Dominik Tomaszuk</span>
+  </dd><dd class="editor p-author h-card vcard" data-editor-id="138654">
+    <span class="p-name fn">Timothée Haudebourg</span>
+  </dd>
+        <dt>
+                Former editors:
+              </dt><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Guus Schreiber</span>
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Dan Brickley</span>
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">R.V. Guha</span>
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Brian McBride</span>
+  </dd>
+        
+        <dt>Feedback:</dt><dd>
+        <a href="https://github.com/w3c/rdf-schema/">GitHub w3c/rdf-schema</a>
+        (<a href="https://github.com/w3c/rdf-schema/pulls/">pull requests</a>,
+        <a href="https://github.com/w3c/rdf-schema/issues/new/choose">new issue</a>,
+        <a href="https://github.com/w3c/rdf-schema/issues/">open issues</a>)
+      </dd><dd><a href="mailto:public-rdf-star-wg@w3.org?subject=%5Brdf12-schema%5D%20YOUR%20TOPIC%20HERE">public-rdf-star-wg@w3.org</a> with subject line <kbd>[rdf12-schema] <em>… message topic …</em></kbd> (<a rel="discussion" href="https://lists.w3.org/Archives/Public/public-rdf-star-wg">archives</a>)</dd>
+        
+        
+      </dl>
+    </details>
+    
+    
+    <p class="copyright">
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+    ©
+    2004-2023
+    
+    <a href="https://www.w3.org/">World Wide Web Consortium</a>.
+    <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup>
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and
+    <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document" title="W3C Software and Document Notice and License">permissive document license</a> rules apply.
+  </p>
+    <hr title="Separator for header">
+  </div>
+<section id="abstract" class="introductory"><h2>Abstract</h2>
   <p>RDF
     Schema provides a data-modelling vocabulary for RDF data. RDF Schema
     is an extension of the basic RDF vocabulary. </p>
 </section>
 
-<section id="sotd">
+<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
+      document at the time of its publication. A list of current <abbr title="World Wide Web Consortium">W3C</abbr>
+      publications and the latest revision of this technical report can be found
+      in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
+      https://www.w3.org/TR/.</em></p>
   <p>This document is an edited version of the 2014 RDF
     Schema Recommendation. The purpose of this revision is to make this
     document available as part of the RDF 1.2 document set. Changes are
     limited to errata, revised references, terminology updates, and adaptations to
     the introduction.
-    The title of the document was changed from [[[RDF11-SCHEMA]]] to <em>RDF 1.2 Schema</em>.
+    The title of the document was changed from <cite><a data-matched-text="[[[RDF11-SCHEMA]]]" href="https://www.w3.org/TR/rdf-schema/">RDF Schema 1.1</a></cite> to <em>RDF 1.2 Schema</em>.
     The technical content of the document is unchanged. Details of the changes
     are listed in the <a href="#PER-changes">Changes</a> section.
     Since the edits to this document do not constitute a technical
     change the Director decided no new implementation report was
     required.</p>
 
-  <section id="related" data-include="./common/related.html"></section>
-</section>
+  <p>
+    This document was published by the <a href="https://www.w3.org/groups/wg/rdf-star">RDF-star Working Group</a> as
+    a First Public Working Draft using the
+        <a href="https://www.w3.org/2021/Process-20211102/#recs-and-notes">Recommendation track</a>. 
+  </p><p>Publication as a First Public Working Draft does not
+  imply endorsement by <abbr title="World Wide Web Consortium">W3C</abbr> and its Members. </p><p>
+    This is a draft document and may be updated, replaced or obsoleted by other
+    documents at any time. It is inappropriate to cite this document as other
+    than work in progress.
+    
+  </p><p>
+    
+        This document was produced by a group
+        operating under the
+        <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent
+          Policy</a>.
+      
+    
+                <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
+                <a rel="disclosure" href="https://www.w3.org/groups/wg/rdf-star/ipr">public list of any patent disclosures</a>
+          made in connection with the deliverables of
+          the group; that page also includes
+          instructions for disclosing a patent. An individual who has actual
+          knowledge of a patent which the individual believes contains
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+          must disclose the information in accordance with
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+        
+  </p><p>
+                  This document is governed by the
+                  <a id="w3c_process_revision" href="https://www.w3.org/2021/Process-20211102/">2 November 2021 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                </p><section id="related"><div class="header-wrapper"><h3 id="set-of-documents">Set of Documents</h3><a class="self-link" href="#related" aria-label="Permalink for this Section"></a></div>
+<p>This document is one of ten RDF 1.2 and twelve SPARQL 1.2 Recommendations produced by the <a href="https://www.w3.org/groups/wg/rdf-star">RDF-star Working Group</a>:</p>
 
-<section id="ch_introduction">
-  <h2>Introduction</h2>
+<p>RDF 1.2 Recommendations:</p>
+<ol>
+  <li><cite><a data-matched-text="[[[RDF12-NEW]]]" href="https://w3c.github.io/rdf-new/spec/">What’s New in RDF 1.2</a></cite></li>
+  <li><cite><a data-matched-text="[[[RDF12-CONCEPTS]]]" href="https://w3c.github.io/rdf-concepts/spec/">RDF 1.2 Concepts and Abstract Syntax</a></cite></li>
+  <li><cite><a data-matched-text="[[[RDF12-N-QUADS]]]" href="https://w3c.github.io/rdf-n-quads/spec/">RDF 1.2 N-Quads</a></cite></li>
+  <li><cite><a data-matched-text="[[[RDF12-N-TRIPLES]]]" href="https://w3c.github.io/rdf-n-triples/spec/">RDF 1.2 N-Triples</a></cite></li>
+  <li><cite><a data-matched-text="[[[RDF12-PRIMER]]]" href="https://w3c.github.io/rdf-primer/spec/">RDF 1.2 Primer</a></cite></li>
+  <li>RDF 1.2 Schema(this document)</li>
+  <li><cite><a data-matched-text="[[[RDF12-SEMANTICS]]]" href="https://w3c.github.io/rdf-semantics/spec/">RDF 1.2 Semantics</a></cite></li>
+  <li><cite><a data-matched-text="[[[RDF12-TRIG]]]" href="https://w3c.github.io/rdf-trig/spec/">RDF 1.2 TriG</a></cite></li>
+  <li><cite><a data-matched-text="[[[RDF12-TURTLE]]]" href="https://w3c.github.io/rdf-turtle/spec/">RDF 1.2 Turtle</a></cite></li>
+  <li><cite><a data-matched-text="[[[RDF12-XML]]]" href="https://w3c.github.io/rdf-xml/spec/">RDF 1.2 XML Syntax</a></cite></li>
+</ol>
+
+<p>SPARQL 1.2 Recommendations:</p>
+<ol>
+  <li><cite><a data-matched-text="[[[SPARQL12-NEW]]]" href="https://w3c.github.io/sparql-new/spec/">What’s New in SPARQL 1.2</a></cite></li>
+  <li><cite><a data-matched-text="[[[SPARQL12-CONCEPTS]]]" href="https://w3c.github.io/sparql-concepts/spec/">SPARQL 1.2 Concepts</a></cite></li>
+  <li><cite><a data-matched-text="[[[SPARQL12-QUERY]]]" href="https://w3c.github.io/sparql-query/spec/">SPARQL 1.2 Query Language</a></cite></li>
+  <li><cite><a data-matched-text="[[[SPARQL12-UPDATE]]]" href="https://w3c.github.io/sparql-update/spec/">SPARQL 1.2 Update</a></cite></li>
+  <li><cite><a data-matched-text="[[[SPARQL12-SERVICE-DESCRIPTION]]]" href="https://w3c.github.io/sparql-service-description/spec/">SPARQL 1.2 Service Description</a></cite></li>
+  <li><cite><a data-matched-text="[[[SPARQL12-FEDERATED-QUERY]]]" href="https://w3c.github.io/sparql-federated-query/spec/">SPARQL 1.2 Federated Query</a></cite></li>
+  <li><cite><a data-matched-text="[[[SPARQL12-RESULTS-JSON]]]" href="https://w3c.github.io/sparql-results-json/spec/">SPARQL 1.2 Query Results JSON Format</a></cite></li>
+  <li><cite><a data-matched-text="[[[SPARQL12-RESULTS-CSV-TSV]]]" href="https://w3c.github.io/sparql-results-csv-tsv/spec/">SPARQL 1.2 Query Results CSV and TSV Formats</a></cite></li>
+  <li><cite><a data-matched-text="[[[SPARQL12-RESULTS-XML]]]" href="https://w3c.github.io/sparql-results-xml/spec/">SPARQL 1.2 Query Results XML Formats</a></cite></li>
+  <li><cite><a data-matched-text="[[[SPARQL12-ENTAILMENT]]]" href="https://w3c.github.io/sparql-entailment/spec/">SPARQL 1.2 Entailment Regimes</a></cite></li>
+  <li><cite><a data-matched-text="[[[SPARQL12-PROTOCOL]]]" href="https://w3c.github.io/sparql-protocol/spec/">SPARQL 1.2 Protocol</a></cite></li>
+  <li><cite><a data-matched-text="[[[SPARQL12-GRAPH-STORE-PROTOCOL]]]" href="https://w3c.github.io/sparql-graph-store-protocol/spec/">SPARQL 1.2 Graph Store HTTP Protocol</a></cite></li>
+</ol>
+</section>
+</section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#related">Set of Documents</a></li></ol></li><li class="tocline"><a class="tocxref" href="#ch_introduction"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#ch_classes"><bdi class="secno">2. </bdi>Classes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ch_resource"><bdi class="secno">2.1 </bdi>rdfs:Resource</a></li><li class="tocline"><a class="tocxref" href="#ch_class"><bdi class="secno">2.2 </bdi>rdfs:Class</a></li><li class="tocline"><a class="tocxref" href="#ch_literal"><bdi class="secno">2.3 </bdi>rdfs:Literal</a></li><li class="tocline"><a class="tocxref" href="#ch_datatype"><bdi class="secno">2.4 </bdi>rdfs:Datatype</a></li><li class="tocline"><a class="tocxref" href="#ch_langstring"><bdi class="secno">2.5 </bdi>rdf:langString</a></li><li class="tocline"><a class="tocxref" href="#ch_html"><bdi class="secno">2.6 </bdi>rdf:HTML</a></li><li class="tocline"><a class="tocxref" href="#ch_xmlliteral"><bdi class="secno">2.7 </bdi>rdf:XMLLiteral</a></li><li class="tocline"><a class="tocxref" href="#ch_json"><bdi class="secno">2.8 </bdi>rdf:JSON</a></li><li class="tocline"><a class="tocxref" href="#ch_property"><bdi class="secno">2.9 </bdi>rdf:Property</a></li></ol></li><li class="tocline"><a class="tocxref" href="#ch_properties"><bdi class="secno">3. </bdi>Properties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ch_range"><bdi class="secno">3.1 </bdi>rdfs:range</a></li><li class="tocline"><a class="tocxref" href="#ch_domain"><bdi class="secno">3.2 </bdi>rdfs:domain</a></li><li class="tocline"><a class="tocxref" href="#ch_type"><bdi class="secno">3.3 </bdi>rdf:type</a></li><li class="tocline"><a class="tocxref" href="#ch_subclassof"><bdi class="secno">3.4 </bdi>rdfs:subClassOf</a></li><li class="tocline"><a class="tocxref" href="#ch_subpropertyof"><bdi class="secno">3.5 </bdi>rdfs:subPropertyOf</a></li><li class="tocline"><a class="tocxref" href="#ch_label"><bdi class="secno">3.6 </bdi>rdfs:label</a></li><li class="tocline"><a class="tocxref" href="#ch_comment"><bdi class="secno">3.7 </bdi>rdfs:comment</a></li></ol></li><li class="tocline"><a class="tocxref" href="#ch_domainrange"><bdi class="secno">4. </bdi>Using the Domain and Range vocabulary</a></li><li class="tocline"><a class="tocxref" href="#ch_othervocab"><bdi class="secno">5. </bdi>Other vocabulary</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ch_containervocab"><bdi class="secno">5.1 </bdi>Container Classes and Properties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ch_container"><bdi class="secno">5.1.1 </bdi>rdfs:Container</a></li><li class="tocline"><a class="tocxref" href="#ch_bag"><bdi class="secno">5.1.2 </bdi>rdf:Bag</a></li><li class="tocline"><a class="tocxref" href="#ch_seq"><bdi class="secno">5.1.3 </bdi>rdf:Seq</a></li><li class="tocline"><a class="tocxref" href="#ch_alt"><bdi class="secno">5.1.4 </bdi>rdf:Alt</a></li><li class="tocline"><a class="tocxref" href="#ch_containermembershipproperty"><bdi class="secno">5.1.5 </bdi>rdfs:ContainerMembershipProperty</a></li><li class="tocline"><a class="tocxref" href="#ch_member"><bdi class="secno">5.1.6 </bdi>rdfs:member</a></li></ol></li><li class="tocline"><a class="tocxref" href="#ch_collectionvocab"><bdi class="secno">5.2 </bdi>RDF Collections</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ch_list"><bdi class="secno">5.2.1 </bdi>rdf:List</a></li><li class="tocline"><a class="tocxref" href="#ch_first"><bdi class="secno">5.2.2 </bdi>rdf:first</a></li><li class="tocline"><a class="tocxref" href="#ch_rest"><bdi class="secno">5.2.3 </bdi>rdf:rest</a></li><li class="tocline"><a class="tocxref" href="#ch_nil"><bdi class="secno">5.2.4 </bdi>rdf:nil</a></li></ol></li><li class="tocline"><a class="tocxref" href="#ch_reificationvocab"><bdi class="secno">5.3 </bdi>Reification Vocabulary</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ch_statement"><bdi class="secno">5.3.1 </bdi>rdf:Statement</a></li><li class="tocline"><a class="tocxref" href="#ch_subject"><bdi class="secno">5.3.2 </bdi>rdf:subject</a></li><li class="tocline"><a class="tocxref" href="#ch_predicate"><bdi class="secno">5.3.3 </bdi>rdf:predicate</a></li><li class="tocline"><a class="tocxref" href="#ch_object"><bdi class="secno">5.3.4 </bdi>rdf:object</a></li></ol></li><li class="tocline"><a class="tocxref" href="#ch_utilvocab"><bdi class="secno">5.4 </bdi>Utility Properties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ch_seealso"><bdi class="secno">5.4.1 </bdi>rdfs:seeAlso</a></li><li class="tocline"><a class="tocxref" href="#ch_isdefinedby"><bdi class="secno">5.4.2 </bdi>rdfs:isDefinedBy</a></li><li class="tocline"><a class="tocxref" href="#ch_value"><bdi class="secno">5.4.3 </bdi>rdf:value</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#ch_summary"><bdi class="secno">6. </bdi>RDF Schema summary</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ch_sumclasses"><bdi class="secno">6.1 </bdi>RDF classes</a></li><li class="tocline"><a class="tocxref" href="#ch_sumproperties"><bdi class="secno">6.2 </bdi>RDF properties</a></li></ol></li><li class="tocline"><a class="tocxref" href="#ch_Acknowledgments"><bdi class="secno">A. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#acknowledgments-for-2004-recommendation"><bdi class="secno">A.1 </bdi>Acknowledgments for 2004 Recommendation</a></li><li class="tocline"><a class="tocxref" href="#acknowledgments-for-rdf-1-1"><bdi class="secno">A.2 </bdi>Acknowledgments for RDF 1.1</a></li><li class="tocline"><a class="tocxref" href="#acknowledgments-for-rdf-1-2"><bdi class="secno">A.3 </bdi>Acknowledgments for RDF 1.2</a></li></ol></li><li class="tocline"><a class="tocxref" href="#PER-changes"><bdi class="secno">B. </bdi>Change since 2004 Recommendation</a></li><li class="tocline"><a class="tocxref" href="#changes-12"><bdi class="secno">C. </bdi>Changes between RDF 1.1 and RDF 1.2</a></li><li class="tocline"><a class="tocxref" href="#index"><bdi class="secno">D. </bdi>Index</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#index-defined-here"><bdi class="secno">D.1 </bdi>Terms defined by this specification</a></li><li class="tocline"><a class="tocxref" href="#index-defined-elsewhere"><bdi class="secno">D.2 </bdi>Terms defined by reference</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">E. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">E.1 </bdi>Informative references</a></li></ol></li></ol></nav>
+
+<section id="ch_introduction"><div class="header-wrapper"><h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction</h2><a class="self-link" href="#ch_introduction" aria-label="Permalink for Section 1."></a></div>
+  
 
   <p>RDF Schema provides a data-modelling vocabulary for RDF data.
     It is complemented by several companion documents which
     describe the basic concepts and abstract syntax of RDF
-    [[RDF12-CONCEPTS]], the formal semantics of RDF [[RDF12-SEMANTICS]], and
-    various concrete syntaxes for RDF, such as Turtle [[RDF12-TURTLE]],
-    TriG, [[RDF12-TRIG]], and JSON-LD [[JSON-LD11]]. The RDF Primer
-    [[RDF12-PRIMER]] provides an informal introduction and
+    [<cite><a class="bibref" data-link-type="biblio" href="#bib-rdf12-concepts" title="RDF 1.2 Concepts and Abstract Syntax">RDF12-CONCEPTS</a></cite>], the formal semantics of RDF [<cite><a class="bibref" data-link-type="biblio" href="#bib-rdf12-semantics" title="RDF 1.2 Semantics">RDF12-SEMANTICS</a></cite>], and
+    various concrete syntaxes for RDF, such as Turtle [<cite><a class="bibref" data-link-type="biblio" href="#bib-rdf12-turtle" title="RDF 1.2 Turtle">RDF12-TURTLE</a></cite>],
+    TriG, [<cite><a class="bibref" data-link-type="biblio" href="#bib-rdf12-trig" title="RDF 1.2 TriG">RDF12-TRIG</a></cite>], and JSON-LD [<cite><a class="bibref" data-link-type="biblio" href="#bib-json-ld11" title="JSON-LD 1.1">JSON-LD11</a></cite>]. The RDF Primer
+    [<cite><a class="bibref" data-link-type="biblio" href="#bib-rdf12-primer" title="RDF 1.2 Primer">RDF12-PRIMER</a></cite>] provides an informal introduction and
     examples of the use of the concepts specified in this document.</p>
   <p>This document is intended to provide a clear specification of RDF
     Schema to those who find the formal semantics
-    specification [[RDF12-SEMANTICS]]
+    specification [<cite><a class="bibref" data-link-type="biblio" href="#bib-rdf12-semantics" title="RDF 1.2 Semantics">RDF12-SEMANTICS</a></cite>]
     daunting. Thus, this document duplicates material also specified in the
     RDF
     Semantics specification. Where there is disagreement between this
@@ -93,7 +1187,7 @@
     be taken to be correct.</p>
 
   <p>
-    RDF Schema is a <a data-cite="RDF12-SEMANTICS#semantic-extensions-and-entailment-regimes">semantic
+    RDF Schema is a <a href="https://w3c.github.io/rdf-semantics/spec/#semantic-extensions-and-entailment-regimes" id="ref-for-index-term-semantic-extension-1">semantic
       extension</a> of RDF. It provides mechanisms for describing groups of
     related resources and the relationships between these resources. RDF
     Schema is written in RDF
@@ -123,7 +1217,7 @@
     it
     allows anyone to extend the description of existing resources, one of
     the
-    architectural principles of the Web [[RDF-NOT]].</p>
+    architectural principles of the Web [<cite><a class="bibref" data-link-type="biblio" href="#bib-rdf-not" title="What the Semantic Web can represent">RDF-NOT</a></cite>].</p>
   <p>This specification does not attempt to enumerate all the possible forms
     of
     representing the meaning of RDF
@@ -131,7 +1225,7 @@
     to acknowledge that there are many techniques through which the meaning
     of
     classes and properties can be described. Richer vocabulary or 'ontology'
-    languages such as OWL [[OWL2-OVERVIEW]], inference rule
+    languages such as OWL [<cite><a class="bibref" data-link-type="biblio" href="#bib-owl2-overview" title="OWL 2 Web Ontology Language Document Overview (Second Edition)">OWL2-OVERVIEW</a></cite>], inference rule
     languages and other formalisms (for example temporal logics) will each
     contribute to our ability to capture meaningful generalizations about
     data in
@@ -161,12 +1255,12 @@
     with the prefix concatenated with the suffix.</p>
 </section>
 
-<section id="ch_classes">
-  <h2>Classes</h2>
+<section id="ch_classes"><div class="header-wrapper"><h2 id="x2-classes"><bdi class="secno">2. </bdi>Classes</h2><a class="self-link" href="#ch_classes" aria-label="Permalink for Section 2."></a></div>
+  
   <p>Resources may be divided into groups called classes. The members of a
     class are known as <em>instances</em> of the class. Classes are
     themselves
-    resources. They are often identified by <a data-cite="RDF12-CONCEPTS#section-IRIs">IRIs</a>
+    resources. They are often identified by <a href="https://w3c.github.io/rdf-concepts/spec/#section-IRIs" id="ref-for-index-term-iris-1">IRIs</a>
     and
     may be described using RDF properties. The <code><a href="#ch_type">rdf:type</a></code>
     property may be used to state that a
@@ -202,14 +1296,14 @@
     is a super-class of a class C, then all instances of C are also
     instances of C'.
   </p>
-  <p>The RDF Concepts and Abstract Syntax [[RDF12-CONCEPTS]] specification
-    defines the RDF concept of an <a data-cite="RDF12-CONCEPTS#section-Datatypes">RDF
+  <p>The RDF Concepts and Abstract Syntax [<cite><a class="bibref" data-link-type="biblio" href="#bib-rdf12-concepts" title="RDF 1.2 Concepts and Abstract Syntax">RDF12-CONCEPTS</a></cite>] specification
+    defines the RDF concept of an <a href="https://w3c.github.io/rdf-concepts/spec/#section-Datatypes" id="ref-for-index-term-rdf-datatype-1">RDF
       datatype</a>. All datatypes are classes. The instances of a class that
     is a
     datatype are the members of the value space of the datatype.</p>
 
-  <section id="ch_resource">
-    <h3>rdfs:Resource</h3>
+  <section id="ch_resource"><div class="header-wrapper"><h3 id="x2-1-rdfs-resource"><bdi class="secno">2.1 </bdi>rdfs:Resource</h3><a class="self-link" href="#ch_resource" aria-label="Permalink for Section 2.1"></a></div>
+    
     <p>All things described by RDF are called <em>resources</em>, and are
       instances of the class <code>rdfs:Resource</code>. This is the class
       of
@@ -218,85 +1312,80 @@
       this class. <code>rdfs:Resource</code> is an instance of <a href="#ch_class"><code>rdfs:Class</code></a>.</p>
   </section>
 
-  <section id="ch_class">
-    <h3>rdfs:Class</h3>
+  <section id="ch_class"><div class="header-wrapper"><h3 id="x2-2-rdfs-class"><bdi class="secno">2.2 </bdi>rdfs:Class</h3><a class="self-link" href="#ch_class" aria-label="Permalink for Section 2.2"></a></div>
+    
     <p>This is the class of resources that are RDF classes.
       <code>rdfs:Class</code> is an instance of <code>rdfs:Class.</code></p>
   </section>
 
-  <section id="ch_literal">
-    <h3>rdfs:Literal</h3>
-    <p>The class <code>rdfs:Literal</code> is the class of <a data-cite="RDF12-CONCEPTS#section-Graph-Literal">literal</a>
+  <section id="ch_literal"><div class="header-wrapper"><h3 id="x2-3-rdfs-literal"><bdi class="secno">2.3 </bdi>rdfs:Literal</h3><a class="self-link" href="#ch_literal" aria-label="Permalink for Section 2.3"></a></div>
+    
+    <p>The class <code>rdfs:Literal</code> is the class of <a href="https://w3c.github.io/rdf-concepts/spec/#section-Graph-Literal" id="ref-for-index-term-literal-1">literal</a>
       values such as strings and integers. Property values such as textual
       strings are examples of RDF literals.</p>
     <p><code>rdfs:Literal</code> is an instance of <a href="#ch_class"><code>rdfs:Class</code></a>.
       rdfs:Literal is a <a href="#def-subclass">subclass</a> of <a href="#ch_resource">rdfs:Resource</a>.</p>
   </section>
 
-  <section id="ch_datatype">
-    <h3>rdfs:Datatype</h3>
+  <section id="ch_datatype"><div class="header-wrapper"><h3 id="x2-4-rdfs-datatype"><bdi class="secno">2.4 </bdi>rdfs:Datatype</h3><a class="self-link" href="#ch_datatype" aria-label="Permalink for Section 2.4"></a></div>
+    
     <p><code>rdfs:Datatype</code> is the class of datatypes. All instances
       of
-      <code>rdfs:Datatype</code> correspond to the <a data-cite="RDF12-CONCEPTS#section-Datatypes">RDF
+      <code>rdfs:Datatype</code> correspond to the <a href="https://w3c.github.io/rdf-concepts/spec/#section-Datatypes" id="ref-for-index-term-rdf-datatype-2">RDF
 model
         of a datatype</a> described in the RDF Concepts specification
-      [[RDF12-CONCEPTS]].
+      [<cite><a class="bibref" data-link-type="biblio" href="#bib-rdf12-concepts" title="RDF 1.2 Concepts and Abstract Syntax">RDF12-CONCEPTS</a></cite>].
       <code>rdfs:Datatype</code> is
-      both an instance of and a <a href="#def-subclass">subclass</a> of <a
-        href="#ch_class"><code>rdfs:Class</code></a>. Each instance of <code>rdfs:Datatype</code>
+      both an instance of and a <a href="#def-subclass">subclass</a> of <a href="#ch_class"><code>rdfs:Class</code></a>. Each instance of <code>rdfs:Datatype</code>
       is a <a href="#def-subclass">subclass</a> of rdfs:Literal.</p>
   </section>
 
-  <section id="ch_langstring">
-    <h3>rdf:langString</h3>
+  <section id="ch_langstring"><div class="header-wrapper"><h3 id="x2-5-rdf-langstring"><bdi class="secno">2.5 </bdi>rdf:langString</h3><a class="self-link" href="#ch_langstring" aria-label="Permalink for Section 2.5"></a></div>
+    
     <p>The class <code>rdf:langString</code> is the class of
-      <a data-cite="RDF12-CONCEPTS#dfn-language-tagged-string">language-tagged string values</a>. <code>rdf:langString</code> is an instance of
+      <a href="https://w3c.github.io/rdf-concepts/spec/#dfn-language-tagged-string" id="ref-for-index-term-language-tagged-string-values-1">language-tagged string values</a>. <code>rdf:langString</code> is an instance of
       <code>rdfs:Datatype</code> and a <a href="#def-subclass">subclass</a>
       of <a href="#ch_literal"><code>rdfs:Literal</code></a>.</p>
   </section>
 
-  <section id="ch_html" class="informative">
-    <h3>rdf:HTML</h3>
+  <section id="ch_html" class="informative"><div class="header-wrapper"><h3 id="x2-6-rdf-html"><bdi class="secno">2.6 </bdi>rdf:HTML</h3><a class="self-link" href="#ch_html" aria-label="Permalink for Section 2.6"></a></div><p><em>This section is non-normative.</em></p>
+    
     <p>The class <code>rdf:HTML</code> is the class of
-      <a data-cite="RDF12-CONCEPTS#section-html">HTML literal values</a>.
+      <a href="https://w3c.github.io/rdf-concepts/spec/#section-html" id="ref-for-index-term-html-literal-values-1">HTML literal values</a>.
       <code>rdf:HTML</code> is an instance of
       <code>rdfs:Datatype</code> and a <a href="#def-subclass">subclass</a>
       of <a href="#ch_literal"><code>rdfs:Literal</code></a>.</p>
   </section>
 
-  <section id="ch_xmlliteral" class="informative">
-    <h3>rdf:XMLLiteral</h3>
+  <section id="ch_xmlliteral" class="informative"><div class="header-wrapper"><h3 id="x2-7-rdf-xmlliteral"><bdi class="secno">2.7 </bdi>rdf:XMLLiteral</h3><a class="self-link" href="#ch_xmlliteral" aria-label="Permalink for Section 2.7"></a></div><p><em>This section is non-normative.</em></p>
+    
     <p>The class <code>rdf:XMLLiteral</code> is the class of
-      <a data-cite="RDF12-CONCEPTS#section-XMLLiteral">XML literal values</a>.
+      <a href="https://w3c.github.io/rdf-concepts/spec/#section-XMLLiteral" id="ref-for-index-term-xml-literal-values-1">XML literal values</a>.
       <code>rdf:XMLLiteral</code> is an instance of
       <code>rdfs:Datatype</code> and a <a href="#def-subclass">subclass</a>
       of <a href="#ch_literal"><code>rdfs:Literal</code></a>.</p>
   </section>
 
-  <section id="ch_json" class="informative">
-    <h3>rdf:JSON</h3>
-    <!--p>The class <code>rdf:JSON</code> is the class of
-      <a data-cite="RDF12-CONCEPTS#section-JSON">JSON literal values</a>.
-      <code>rdf:JSON</code> is an instance of
-      <code>rdfs:Datatype</code> and a <a href="#def-subclass">subclass</a>
-      of <a href="#ch_literal"><code>rdfs:Literal</code></a>.</p-->
-    <p class="issue" data-number="7">
-      The `rdf:JSON` datatype is originally defined in
-      <a data-cite="?JSON-LD11#the-rdf-json-datatype">Section 10.2 The `rdf:JSON` Datatype</a>
-      in [[?JSON-LD11]].
-    </p>
+  <section id="ch_json" class="informative"><div class="header-wrapper"><h3 id="x2-8-rdf-json"><bdi class="secno">2.8 </bdi>rdf:JSON</h3><a class="self-link" href="#ch_json" aria-label="Permalink for Section 2.8"></a></div><p><em>This section is non-normative.</em></p>
+    
+    
+    <div class="issue closed" id="issue-container-number-7"><div role="heading" class="issue-title marker" id="h-issue" aria-level="4"><a href="https://github.com/w3c/rdf-schema/issues/7"><span class="issue-number">Issue 7</span></a><span class="issue-label">: Add the rdf:JSON datatype <a class="respec-gh-label" href="https://github.com/w3c/rdf-schema/issues/?q=is%3Aissue+is%3Aopen+label%3A%22spec%3Aenhancement%22" style="background-color: rgb(193, 21, 55); color: rgb(255, 255, 255);" aria-label="GitHub label: spec:enhancement">spec:enhancement</a></span></div><p class="">
+      The <code>rdf:JSON</code> datatype is originally defined in
+      <a href="https://www.w3.org/TR/json-ld11/#the-rdf-json-datatype" id="ref-for-index-term-section-10-2-the-rdf-json-datatype-1">Section 10.2 The <code>rdf:JSON</code> Datatype</a>
+      in [<cite><a class="bibref" data-link-type="biblio" href="#bib-json-ld11" title="JSON-LD 1.1">JSON-LD11</a></cite>].
+    </p></div>
   </section>
 
-  <section id="ch_property">
-    <h3>rdf:Property</h3>
+  <section id="ch_property"><div class="header-wrapper"><h3 id="x2-9-rdf-property"><bdi class="secno">2.9 </bdi>rdf:Property</h3><a class="self-link" href="#ch_property" aria-label="Permalink for Section 2.9"></a></div>
+    
     <p><code>rdf:Property</code> is the class of RDF properties.
       <code>rdf:Property</code> is an instance of <a href="#ch_class"><code>rdfs:Class</code></a>.</p>
   </section>
 </section>
 
-<section id="ch_properties">
-  <h2>Properties</h2>
-  <p>The RDF Concepts and Abstract Syntax specification [[RDF12-CONCEPTS]]
+<section id="ch_properties"><div class="header-wrapper"><h2 id="x3-properties"><bdi class="secno">3. </bdi>Properties</h2><a class="self-link" href="#ch_properties" aria-label="Permalink for Section 3."></a></div>
+  
+  <p>The RDF Concepts and Abstract Syntax specification [<cite><a class="bibref" data-link-type="biblio" href="#bib-rdf12-concepts" title="RDF 1.2 Concepts and Abstract Syntax">RDF12-CONCEPTS</a></cite>]
     describes the concept of an RDF property as a relation between subject
     resources and object resources.</p>
   <p id="def-subproperty">
@@ -311,18 +1400,18 @@ model
     also related by P'. This specification does not define a top
     property that is the super-property of all properties.
   </p>
-  <p class="note">
+  <div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="3"><span>Note</span></div><p class="">
     The basic facilities provided by <a href="#ch_domain"><code>rdfs:domain</code></a>
     and <a href="#ch_range"><code>rdfs:range</code></a> do not provide any
     direct way to indicate property restrictions that are local to a class.
     Although it is possible to combine use <a href="#ch_domain"><code>rdfs:domain</code></a>
     and <a href="#ch_range"><code>rdfs:range</code></a> with sub-property
     hierarchies, direct support for such declarations are provided by richer
-    Web Ontology languages such as OWL [[OWL2-OVERVIEW]].
-  </p>
+    Web Ontology languages such as OWL [<cite><a class="bibref" data-link-type="biblio" href="#bib-owl2-overview" title="OWL 2 Web Ontology Language Document Overview (Second Edition)">OWL2-OVERVIEW</a></cite>].
+  </p></div>
 
-  <section id="ch_range">
-    <h3>rdfs:range</h3>
+  <section id="ch_range"><div class="header-wrapper"><h3 id="x3-1-rdfs-range"><bdi class="secno">3.1 </bdi>rdfs:range</h3><a class="self-link" href="#ch_range" aria-label="Permalink for Section 3.1"></a></div>
+    
     <p><code>rdfs:range</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
       that is used to state that
       the values of a property are instances of one or more classes.</p>
@@ -352,8 +1441,8 @@ model
       <code><a href="#ch_property">rdf:Property</a></code>.</p>
   </section>
 
-  <section id="ch_domain">
-    <h3>rdfs:domain</h3>
+  <section id="ch_domain"><div class="header-wrapper"><h3 id="x3-2-rdfs-domain"><bdi class="secno">3.2 </bdi>rdfs:domain</h3><a class="self-link" href="#ch_domain" aria-label="Permalink for Section 3.2"></a></div>
+    
     <p><code>rdfs:domain</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
       that is used to state that
       any resource that has a given property is an instance of one or more
@@ -381,8 +1470,8 @@ model
       instance of <code><a href="#ch_class">rdfs:Class</a></code>.</p>
   </section>
 
-  <section id="ch_type">
-    <h3>rdf:type</h3>
+  <section id="ch_type"><div class="header-wrapper"><h3 id="x3-3-rdf-type"><bdi class="secno">3.3 </bdi>rdf:type</h3><a class="self-link" href="#ch_type" aria-label="Permalink for Section 3.3"></a></div>
+    
     <p><code>rdf:type</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
       that is used to
       state that a resource is an instance of a class.</p>
@@ -393,14 +1482,12 @@ model
       and R is an instance of C.</p>
     <p>The <code><a href="#ch_domain">rdfs:domain</a></code> of
       <code>rdf:type</code> is <a href="#ch_resource">rdfs:Resource</a>.
-      The <a href="#ch_range"><code>rdfs:range</code></a> of rdf:type is <a
-        href="#ch_class"><code>rdfs:Class</code></a>.</p>
+      The <a href="#ch_range"><code>rdfs:range</code></a> of rdf:type is <a href="#ch_class"><code>rdfs:Class</code></a>.</p>
   </section>
 
-  <section id="ch_subclassof">
-    <h3>rdfs:subClassOf</h3>
-    <p>The property <code>rdfs:subClassOf</code> is an instance of <code><a
-          href="#ch_property">rdf:Property</a></code> that is used to state
+  <section id="ch_subclassof"><div class="header-wrapper"><h3 id="x3-4-rdfs-subclassof"><bdi class="secno">3.4 </bdi>rdfs:subClassOf</h3><a class="self-link" href="#ch_subclassof" aria-label="Permalink for Section 3.4"></a></div>
+    
+    <p>The property <code>rdfs:subClassOf</code> is an instance of <code><a href="#ch_property">rdf:Property</a></code> that is used to state
       that all the instances of one class are instances of another.</p>
     <p>A triple of the form:</p>
     <blockquote> <code>C1 rdfs:subClassOf C2</code>
@@ -415,10 +1502,9 @@ model
       is <a href="#ch_class"><code>rdfs:Class</code></a>.</p>
   </section>
 
-  <section id="ch_subpropertyof">
-    <h3>rdfs:subPropertyOf</h3>
-    <p>The property <code>rdfs:subPropertyOf</code> is an instance of <code><a
-          href="#ch_property">rdf:Property</a></code> that is used to state
+  <section id="ch_subpropertyof"><div class="header-wrapper"><h3 id="x3-5-rdfs-subpropertyof"><bdi class="secno">3.5 </bdi>rdfs:subPropertyOf</h3><a class="self-link" href="#ch_subpropertyof" aria-label="Permalink for Section 3.5"></a></div>
+    
+    <p>The property <code>rdfs:subPropertyOf</code> is an instance of <code><a href="#ch_property">rdf:Property</a></code> that is used to state
       that all resources related by one property are also related by
       another.</p>
     <p>A triple of the form:</p>
@@ -434,8 +1520,8 @@ model
       rdfs:subPropertyOf is <a href="#ch_property"><code>rdf:Property</code></a>.</p>
   </section>
 
-  <section id="ch_label">
-    <h3>rdfs:label</h3>
+  <section id="ch_label"><div class="header-wrapper"><h3 id="x3-6-rdfs-label"><bdi class="secno">3.6 </bdi>rdfs:label</h3><a class="self-link" href="#ch_label" aria-label="Permalink for Section 3.6"></a></div>
+    
     <p><code>rdfs:label</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
       that may be used to provide a human-readable version of a resource's
       name.</p>
@@ -447,12 +1533,12 @@ model
       <code>rdfs:label</code> is <code><a href="#ch_resource">rdfs:Resource</a></code>.
       The <a href="#ch_range"><code>rdfs:range</code></a> of rdfs:label is
       <a href="#ch_literal"><code>rdfs:Literal</code></a>.</p>
-    <p>Multilingual labels are supported using the <a data-cite="RDF12-CONCEPTS#section-Graph-Literal">language
+    <p>Multilingual labels are supported using the <a href="https://w3c.github.io/rdf-concepts/spec/#section-Graph-Literal" id="ref-for-index-term-literal-2">language
         tagging</a> facility of RDF literals.</p>
   </section>
 
-  <section id="ch_comment">
-    <h3>rdfs:comment</h3>
+  <section id="ch_comment"><div class="header-wrapper"><h3 id="x3-7-rdfs-comment"><bdi class="secno">3.7 </bdi>rdfs:comment</h3><a class="self-link" href="#ch_comment" aria-label="Permalink for Section 3.7"></a></div>
+    
     <p><code>rdfs:comment</code> is an instance of <code><a href="#ch_property">rdf:Property</a></code>
       that may be used to provide a human-readable description of a
       resource.</p>
@@ -477,13 +1563,13 @@ model
       vocabularies
       defined in other namespaces may be used to provide richer
       documentation.</p>
-    <p>Multilingual documentation is supported through use of the <a data-cite="RDF12-CONCEPTS#section-Graph-Literal">language
+    <p>Multilingual documentation is supported through use of the <a href="https://w3c.github.io/rdf-concepts/spec/#section-Graph-Literal" id="ref-for-index-term-literal-3">language
         tagging</a> facility of RDF literals.</p>
   </section>
 </section>
 
-<section class="informative" id="ch_domainrange">
-  <h2>Using the Domain and Range vocabulary</h2>
+<section class="informative" id="ch_domainrange"><div class="header-wrapper"><h2 id="x4-using-the-domain-and-range-vocabulary"><bdi class="secno">4. </bdi>Using the Domain and Range vocabulary</h2><a class="self-link" href="#ch_domainrange" aria-label="Permalink for Section 4."></a></div><p><em>This section is non-normative.</em></p>
+  
   <p>This specification introduces an RDF vocabulary for describing the
     meaningful use of properties and classes in RDF data. For example, an
     RDF
@@ -513,22 +1599,22 @@ model
     is a class defined in another namespace.</p>
 </section>
 
-<section id="ch_othervocab">
-  <h2>Other vocabulary</h2>
+<section id="ch_othervocab"><div class="header-wrapper"><h2 id="x5-other-vocabulary"><bdi class="secno">5. </bdi>Other vocabulary</h2><a class="self-link" href="#ch_othervocab" aria-label="Permalink for Section 5."></a></div>
+  
   <p>Additional classes and properties, including constructs for
     representing
     containers and RDF statements, and for deploying RDF vocabulary
     descriptions
     in the World Wide Web, are defined in this section.</p>
 
-  <section id="ch_containervocab" class="informative">
-    <h3>Container Classes and Properties</h3>
+  <section id="ch_containervocab" class="informative"><div class="header-wrapper"><h3 id="x5-1-container-classes-and-properties"><bdi class="secno">5.1 </bdi>Container Classes and Properties</h3><a class="self-link" href="#ch_containervocab" aria-label="Permalink for Section 5.1"></a></div><p><em>This section is non-normative.</em></p>
+    
     <p>RDF containers are resources that are used to represent collections.
       The same resource may appear in a container more than
       once. Unlike containment in the physical world, a container may be
       contained in itself.</p>
     <p>Three different kinds of container are defined. Whilst the formal
-      semantics [[RDF12-SEMANTICS]] of all three classes of container are
+      semantics [<cite><a class="bibref" data-link-type="biblio" href="#bib-rdf12-semantics" title="RDF 1.2 Semantics">RDF12-SEMANTICS</a></cite>] of all three classes of container are
       identical,
       different classes may be used to indicate informally further
       information. An rdf:Bag is used to indicate that the container is
@@ -547,15 +1633,15 @@ model
       container is not necessarily a property of all of its members.</p>
     <p>RDF containers are defined by the following classes and properties.</p>
 
-    <section id="ch_container">
-      <h4>rdfs:Container</h4>
+    <section id="ch_container"><div class="header-wrapper"><h4 id="x5-1-1-rdfs-container"><bdi class="secno">5.1.1 </bdi>rdfs:Container</h4><a class="self-link" href="#ch_container" aria-label="Permalink for Section 5.1.1"></a></div>
+      
       <p>The <code>rdfs:Container</code> class is a super-class of the RDF
         Container classes, i.e. <code><a href="#ch_bag">rdf:Bag</a></code>,
         <code><a href="#ch_seq">rdf:Seq</a></code>, <code><a href="#ch_alt">rdf:Alt</a></code>.</p>
     </section>
 
-    <section id="ch_bag">
-      <h4>rdf:Bag</h4>
+    <section id="ch_bag"><div class="header-wrapper"><h4 id="x5-1-2-rdf-bag"><bdi class="secno">5.1.2 </bdi>rdf:Bag</h4><a class="self-link" href="#ch_bag" aria-label="Permalink for Section 5.1.2"></a></div>
+      
       <p>The <code>rdf:Bag</code> class is the class of RDF 'Bag'
         containers. It is
         a <a href="#def-subclass">subclass</a> of <code><a href="#ch_container">rdfs:Container</a></code>.
@@ -568,8 +1654,8 @@ model
         to be unordered.</p>
     </section>
 
-    <section id="ch_seq">
-      <h4>rdf:Seq</h4>
+    <section id="ch_seq"><div class="header-wrapper"><h4 id="x5-1-3-rdf-seq"><bdi class="secno">5.1.3 </bdi>rdf:Seq</h4><a class="self-link" href="#ch_seq" aria-label="Permalink for Section 5.1.3"></a></div>
+      
       <p>The <code>rdf:Seq</code> class is the class of RDF 'Sequence'
         containers.
         It is a <a href="#def-subclass">subclass</a> of <code><a href="#ch_container">rdfs:Container</a></code>.
@@ -583,11 +1669,10 @@ model
           properties</a> of the container is intended to be significant.</p>
     </section>
 
-    <section id="ch_alt">
-      <h4>rdf:Alt</h4>
+    <section id="ch_alt"><div class="header-wrapper"><h4 id="x5-1-4-rdf-alt"><bdi class="secno">5.1.4 </bdi>rdf:Alt</h4><a class="self-link" href="#ch_alt" aria-label="Permalink for Section 5.1.4"></a></div>
+      
       <p>The <code>rdf:Alt</code> class is the class of RDF 'Alternative'
-        containers. It is a <a href="#def-subclass">subclass</a> of <code><a
-            href="#ch_container">rdfs:Container</a></code>. Whilst formally
+        containers. It is a <a href="#def-subclass">subclass</a> of <code><a href="#ch_container">rdfs:Container</a></code>. Whilst formally
         it is no
         different from an <code><a href="#ch_seq">rdf:Seq</a></code> or an
         <code><a href="#ch_bag">rdf:Bag</a></code>, the <code>rdf:Alt</code>
@@ -601,8 +1686,8 @@ model
         default choice.</p>
     </section>
 
-    <section id="ch_containermembershipproperty">
-      <h4>rdfs:ContainerMembershipProperty</h4>
+    <section id="ch_containermembershipproperty"><div class="header-wrapper"><h4 id="x5-1-5-rdfs-containermembershipproperty"><bdi class="secno">5.1.5 </bdi>rdfs:ContainerMembershipProperty</h4><a class="self-link" href="#ch_containermembershipproperty" aria-label="Permalink for Section 5.1.5"></a></div>
+      
       <p>The <code>rdfs:ContainerMembershipProperty</code> class has as
         instances
         the properties <code>rdf:_1, rdf:_2, rdf:_3 ...</code> that are
@@ -623,8 +1708,8 @@ model
         than containers.</p>
     </section>
 
-    <section id="ch_member">
-      <h4>rdfs:member</h4>
+    <section id="ch_member"><div class="header-wrapper"><h4 id="x5-1-6-rdfs-member"><bdi class="secno">5.1.6 </bdi>rdfs:member</h4><a class="self-link" href="#ch_member" aria-label="Permalink for Section 5.1.6"></a></div>
+      
       <p><code>rdfs:member</code> is an instance of <code><a href="#ch_property">rdf:Property</a></code>
         that is a super-property of all
         the container membership properties i.e. each container membership
@@ -639,32 +1724,32 @@ model
     </section>
   </section>
 
-  <section id="ch_collectionvocab" class="informative">
-    <h3>RDF Collections</h3>
+  <section id="ch_collectionvocab" class="informative"><div class="header-wrapper"><h3 id="x5-2-rdf-collections"><bdi class="secno">5.2 </bdi>RDF Collections</h3><a class="self-link" href="#ch_collectionvocab" aria-label="Permalink for Section 5.2"></a></div><p><em>This section is non-normative.</em></p>
+    
     <p>RDF containers are open in the sense that the core RDF specifications
       define no mechanism to state that there are no more members. The RDF
       Collection vocabulary of classes and properties can describe a closed
       collection, i.e. one that can have no more members.</p>
     <p>A collection is represented as a list of items, a representation that
       will be familiar to those with experience of Lisp and similar
-      programming languages. There is a <a data-cite="RDF12-TURTLE#collections">shorthand
+      programming languages. There is a <a href="https://w3c.github.io/rdf-turtle/spec/#collections" id="ref-for-index-term-shorthand-notation-1">shorthand
         notation</a> in the Turtle syntax specification for representing
       collections.</p>
-    <p class="note">
+    <div class="note" role="note" id="issue-container-generatedID-0"><div role="heading" class="note-title marker" id="h-note-0" aria-level="4"><span>Note</span></div><p class="">
       RDFS does not require that there be only one first element of a
       list-like structure, or even that a list-like structure have a first
       element.
-    </p>
-    <section id="ch_list">
-      <h4>rdf:List</h4>
+    </p></div>
+    <section id="ch_list"><div class="header-wrapper"><h4 id="x5-2-1-rdf-list"><bdi class="secno">5.2.1 </bdi>rdf:List</h4><a class="self-link" href="#ch_list" aria-label="Permalink for Section 5.2.1"></a></div>
+      
       <p><code>rdf:List</code> is an instance of <a href="#ch_class"><code>rdfs:Class</code></a>
         that can be used to build descriptions of lists and other list-like
         structures.
       </p>
     </section>
 
-    <section id="ch_first">
-      <h4>rdf:first</h4>
+    <section id="ch_first"><div class="header-wrapper"><h4 id="x5-2-2-rdf-first"><bdi class="secno">5.2.2 </bdi>rdf:first</h4><a class="self-link" href="#ch_first" aria-label="Permalink for Section 5.2.2"></a></div>
+      
       <p><code>rdf:first</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
         that can be used to build descriptions of lists and other list-like
         structures.
@@ -680,8 +1765,8 @@ model
       </p>
     </section>
 
-    <section id="ch_rest">
-      <h4>rdf:rest</h4>
+    <section id="ch_rest"><div class="header-wrapper"><h4 id="x5-2-3-rdf-rest"><bdi class="secno">5.2.3 </bdi>rdf:rest</h4><a class="self-link" href="#ch_rest" aria-label="Permalink for Section 5.2.3"></a></div>
+      
       <p><code>rdf:rest</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
         that can be used to build descriptions of lists and other list-like
         structures.
@@ -697,8 +1782,8 @@ model
       </p>
     </section>
 
-    <section id="ch_nil">
-      <h4>rdf:nil</h4>
+    <section id="ch_nil"><div class="header-wrapper"><h4 id="x5-2-4-rdf-nil"><bdi class="secno">5.2.4 </bdi>rdf:nil</h4><a class="self-link" href="#ch_nil" aria-label="Permalink for Section 5.2.4"></a></div>
+      
       <p>The resource <code>rdf:nil</code> is an instance of <code><a href="#ch_list">rdf:List</a></code>
         that can be used to represent an empty list or other list-like
         structure.</p>
@@ -711,18 +1796,12 @@ model
     </section>
   </section>
 
-  <section id="ch_reificationvocab" class="informative">
-    <h3>Reification Vocabulary</h3>
-      <!--
-<p>The 1999 RDF Model and Syntax Specification [[RDF12-XML-19990222]] defined a vocabulary for describing RDF statements without stating them. 
-The 2004 RDF specification did not assign a normative formal semantics to this vocabulary.  However, an intended meaning of 
-this vocabulary (which generally clarifies the intent of the RDF XML Syntax definition) is described here.
-An informal introduction to the reification vocabulary, with examples, may be found in the <a
-href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 primer</a>.
-</p>-->
+  <section id="ch_reificationvocab" class="informative"><div class="header-wrapper"><h3 id="x5-3-reification-vocabulary"><bdi class="secno">5.3 </bdi>Reification Vocabulary</h3><a class="self-link" href="#ch_reificationvocab" aria-label="Permalink for Section 5.3"></a></div><p><em>This section is non-normative.</em></p>
+    
+      
 
-    <section id="ch_statement">
-      <h4>rdf:Statement</h4>
+    <section id="ch_statement"><div class="header-wrapper"><h4 id="x5-3-1-rdf-statement"><bdi class="secno">5.3.1 </bdi>rdf:Statement</h4><a class="self-link" href="#ch_statement" aria-label="Permalink for Section 5.3.1"></a></div>
+      
       <p><code>rdf:Statement</code> is an instance of <code><a href="#ch_class">rdfs:Class.</a></code>
         It is intended to represent the class of RDF statements. An RDF
         statement is the statement made by a token of an RDF triple. The
@@ -732,8 +1811,7 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
         identified by the predicate of the triple. The object of an RDF
         statement is the instance of <code><a href="#ch_resource">rdfs:Resource</a></code>
         identified by the object of the triple.
-        <code>rdf:Statement</code> is in the domain of the properties <code><a
-            href="#ch_predicate">rdf:predicate</a></code>, <code><a href="#ch_subject">rdf:subject</a></code>
+        <code>rdf:Statement</code> is in the domain of the properties <code><a href="#ch_predicate">rdf:predicate</a></code>, <code><a href="#ch_subject">rdf:subject</a></code>
         and <code><a href="#ch_object">rdf:object</a></code>. Different
         individual <code>rdf:Statement</code> instances may have the same
         values for their <code><a href="#ch_predicate">rdf:predicate</a></code>,
@@ -751,8 +1829,8 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
 
     </section>
 
-    <section id="ch_subject">
-      <h4>rdf:subject</h4>
+    <section id="ch_subject"><div class="header-wrapper"><h4 id="x5-3-2-rdf-subject"><bdi class="secno">5.3.2 </bdi>rdf:subject</h4><a class="self-link" href="#ch_subject" aria-label="Permalink for Section 5.3.2"></a></div>
+      
       <p><code>rdf:subject</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
         that is used to state the
         subject of a statement.</p>
@@ -769,8 +1847,8 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
         <code><a href="#ch_resource">rdfs:Resource</a></code>.</p>
     </section>
 
-    <section id="ch_predicate">
-      <h4>rdf:predicate</h4>
+    <section id="ch_predicate"><div class="header-wrapper"><h4 id="x5-3-3-rdf-predicate"><bdi class="secno">5.3.3 </bdi>rdf:predicate</h4><a class="self-link" href="#ch_predicate" aria-label="Permalink for Section 5.3.3"></a></div>
+      
       <p><code>rdf:predicate</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
         that is used to state the
         predicate of a statement.</p>
@@ -787,8 +1865,8 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
         and the <a href="#ch_range"><code>rdfs:range</code></a> is <a href="#ch_resource"><code>rdfs:Resource</code></a>.</p>
     </section>
 
-    <section id="ch_object">
-      <h4>rdf:object</h4>
+    <section id="ch_object"><div class="header-wrapper"><h4 id="x5-3-4-rdf-object"><bdi class="secno">5.3.4 </bdi>rdf:object</h4><a class="self-link" href="#ch_object" aria-label="Permalink for Section 5.3.4"></a></div>
+      
       <p><code>rdf:object</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
         that is used to state the
         object of a statement.</p>
@@ -806,13 +1884,13 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
     </section>
   </section>
 
-  <section id="ch_utilvocab">
-    <h3>Utility Properties</h3>
+  <section id="ch_utilvocab"><div class="header-wrapper"><h3 id="x5-4-utility-properties"><bdi class="secno">5.4 </bdi>Utility Properties</h3><a class="self-link" href="#ch_utilvocab" aria-label="Permalink for Section 5.4"></a></div>
+    
     <p>The following utility classes and properties are defined in the RDF
       core
       namespaces.</p>
-    <section id="ch_seealso">
-      <h4>rdfs:seeAlso</h4>
+    <section id="ch_seealso"><div class="header-wrapper"><h4 id="x5-4-1-rdfs-seealso"><bdi class="secno">5.4.1 </bdi>rdfs:seeAlso</h4><a class="self-link" href="#ch_seealso" aria-label="Permalink for Section 5.4.1"></a></div>
+      
       <p><code>rdfs:seeAlso</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
         that is used to indicate a
         resource that might provide additional information about the subject
@@ -834,8 +1912,8 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
         <code><a href="#ch_resource">rdfs:Resource</a></code>.</p>
     </section>
 
-    <section id="ch_isdefinedby">
-      <h4>rdfs:isDefinedBy</h4>
+    <section id="ch_isdefinedby"><div class="header-wrapper"><h4 id="x5-4-2-rdfs-isdefinedby"><bdi class="secno">5.4.2 </bdi>rdfs:isDefinedBy</h4><a class="self-link" href="#ch_isdefinedby" aria-label="Permalink for Section 5.4.2"></a></div>
+      
       <p><code>rdfs:isDefinedBy</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
         that is used to indicate a
         resource defining the subject resource. This property may be used to
@@ -859,21 +1937,23 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
         <code><a href="#ch_resource">rdfs:Resource</a></code>.</p>
     </section>
 
-    <section id="ch_value">
-      <h4>rdf:value</h4>
+    <section id="ch_value"><div class="header-wrapper"><h4 id="x5-4-3-rdf-value"><bdi class="secno">5.4.3 </bdi>rdf:value</h4><a class="self-link" href="#ch_value" aria-label="Permalink for Section 5.4.3"></a></div>
+      
       <p><code>rdf:value</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
         that may be used in
         describing structured values.</p>
       <p>rdf:value has no meaning on its own. It is provided as a piece of
         vocabulary that may be used in idioms such as illustrated
         in example below:</p>
-      <pre class="example">
-        &lt;http://www.example.com/2002/04/products#item10245&gt;
-            &lt;http://www.example.org/terms/weight&gt; [
-               rdf:value 2.4 ;
-               &lt;http://www.example.org/terms/units&gt; &lt;http://www.example.org/units/kilograms&gt;
-               ] .
-      </pre>
+      <div class="example" id="example-1">
+        <div class="marker">
+    <a class="self-link" href="#example-1">Example<bdi> 1</bdi></a>
+  </div> <pre aria-busy="false"><code class="hljs css">&lt;http://www.example.com/<span class="hljs-number">2002</span>/<span class="hljs-number">04</span>/products#item10245&gt;
+    &lt;http://www.example.org/terms/weight&gt; [
+       rdf:value <span class="hljs-number">2.4</span> ;
+       &lt;http://www.example.org/terms/units&gt; &lt;http://www.example.org/units/kilograms&gt;
+       ] .</code></pre>
+      </div>
         <p>Despite
         the lack of formal specification of the meaning of this property,
         there is
@@ -888,12 +1968,12 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
   </section>
 </section>
 
-<section class="informative" id="ch_summary">
-  <h2>RDF Schema summary</h2>
+<section class="informative" id="ch_summary"><div class="header-wrapper"><h2 id="x6-rdf-schema-summary"><bdi class="secno">6. </bdi>RDF Schema summary</h2><a class="self-link" href="#ch_summary" aria-label="Permalink for Section 6."></a></div><p><em>This section is non-normative.</em></p>
+  
   <p>The tables in this section provide an overview of the RDF Schema vocabulary.</p>
 
-  <section id="ch_sumclasses">
-    <h3>RDF classes</h3>
+  <section id="ch_sumclasses"><div class="header-wrapper"><h3 id="x6-1-rdf-classes"><bdi class="secno">6.1 </bdi>RDF classes</h3><a class="self-link" href="#ch_sumclasses" aria-label="Permalink for Section 6.1"></a></div>
+    
     <table>
       <tbody>
         <tr>
@@ -921,10 +2001,7 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
           <td><a href="#ch_xmlliteral">rdf:XMLLiteral</a></td>
           <td>The class of XML literal values.</td>
         </tr>
-        <!--tr>
-          <td><a href="#ch_json">rdf:JSON</a></td>
-          <td>The class of JSON literal values.</td>
-        </tr-->
+        
         <tr>
           <td><a href="#ch_class">rdfs:Class</a></td>
           <td>The class of classes.</td>
@@ -970,8 +2047,8 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
     </table>
   </section>
 
-  <section id="ch_sumproperties">
-    <h3>RDF properties</h3>
+  <section id="ch_sumproperties"><div class="header-wrapper"><h3 id="x6-2-rdf-properties"><bdi class="secno">6.2 </bdi>RDF properties</h3><a class="self-link" href="#ch_sumproperties" aria-label="Permalink for Section 6.2"></a></div>
+    
     <table>
       <tbody>
         <tr>
@@ -1090,11 +2167,11 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
   </section>
 </section>
 
-<section class="appendix informative" id="ch_Acknowledgments">
-  <h2>Acknowledgments</h2>
+<section class="appendix informative" id="ch_Acknowledgments"><div class="header-wrapper"><h2 id="a-acknowledgments"><bdi class="secno">A. </bdi>Acknowledgments</h2><a class="self-link" href="#ch_Acknowledgments" aria-label="Permalink for Appendix A."></a></div><p><em>This section is non-normative.</em></p>
+  
 
-  <section class="informative">
-    <h3>Acknowledgments for 2004 Recommendation</h3>
+  <section class="informative" id="acknowledgments-for-2004-recommendation"><div class="header-wrapper"><h3 id="a-1-acknowledgments-for-2004-recommendation"><bdi class="secno">A.1 </bdi>Acknowledgments for 2004 Recommendation</h3><a class="self-link" href="#acknowledgments-for-2004-recommendation" aria-label="Permalink for Appendix A.1"></a></div><p><em>This section is non-normative.</em></p>
+    
     <p>The RDF Schema design was originally produced by the RDF Schema Working
       Group (1997-2000).</p>
     <p>David Singer of IBM was the chair of the original RDF Schema group
@@ -1127,13 +2204,13 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
       (Pencom Web
       Works), David Singer (IBM), Wei (William) Song (SISU), Neel Sundaresan
       (IBM),
-      Ralph Swick (W3C), Naohiko Uramoto (IBM), Charles Wicksteed (Reuters
+      Ralph Swick (<abbr title="World Wide Web Consortium">W3C</abbr>), Naohiko Uramoto (IBM), Charles Wicksteed (Reuters
       Ltd.),
       Misha Wolf (Reuters Ltd.)</p>
   </section>
 
-  <section class="informative">
-    <h3>Acknowledgments for RDF 1.1</h3>
+  <section class="informative" id="acknowledgments-for-rdf-1-1"><div class="header-wrapper"><h3 id="a-2-acknowledgments-for-rdf-1-1"><bdi class="secno">A.2 </bdi>Acknowledgments for RDF 1.1</h3><a class="self-link" href="#acknowledgments-for-rdf-1-1" aria-label="Permalink for Appendix A.2"></a></div><p><em>This section is non-normative.</em></p>
+    
     <p>The current specification is largely an editorial
       clarification of that design, and has benefited greatly from the hard
       work of
@@ -1147,21 +2224,22 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
       to bring it in line with the RDF 1.1 specifications.</p>
   </section>
 
-  <section class="informative">
-    <h3>Acknowledgments for RDF 1.2</h3>
+  <section class="informative" id="acknowledgments-for-rdf-1-2"><div class="header-wrapper"><h3 id="a-3-acknowledgments-for-rdf-1-2"><bdi class="secno">A.3 </bdi>Acknowledgments for RDF 1.2</h3><a class="self-link" href="#acknowledgments-for-rdf-1-2" aria-label="Permalink for Appendix A.3"></a></div><p><em>This section is non-normative.</em></p>
+    
 
     <p>In addition to the editors, the following people have contributed to this specification:
-      <span id="gh-contributors"></span>
+      <span id="gh-contributors">Gregg Kellogg, Peter F. Patel-Schneider, and Pierre-Antoine Champin</span>
     </p>
 
-    <p data-include="common/participants.html"></p>
+    <p>Members of the RDF-star Working Group Group included Adrian Gschwend, Andy Seaborne, Antoine Zimmermann, Dan Brickley, David Chaves-Fraga, Dominik Tomaszuk, Dörthe Arndt, Enrico Franconi, Fabien Gandon, Gregg Kellogg, Gregory Williams, Jesse Wright, Julián Arenas-Guerrero, Olaf Hartig, Ora Lassila, Pasquale Lisena, Peter Patel-Schneider, Pierre-Antoine Champin, Raphaël Troncy, Ruben Taelman, Rémi Ceres, Sarven Capadisli, Souripriya Das, Ted Thibodeau, and Timothée Haudebourg.
+</p>
 
-    <p class="ednote">Recognize members of the Task Force? Not an easy to find list of contributors.</p>
+    <div class="note" id="issue-container-generatedID-1"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="4"><span>Editor's note</span></div><p class="">Recognize members of the Task Force? Not an easy to find list of contributors.</p></div>
   </section>
 </section>
 
-<section class="appendix informative" id="PER-changes">
-  <h2>Change since 2004 Recommendation</h2>
+<section class="appendix informative" id="PER-changes"><div class="header-wrapper"><h2 id="b-change-since-2004-recommendation"><bdi class="secno">B. </bdi>Change since 2004 Recommendation</h2><a class="self-link" href="#PER-changes" aria-label="Permalink for Appendix B."></a></div><p><em>This section is non-normative.</em></p>
+  
   <p>Changes for RDF 1.1 Recommendation</p>
 
   <ul>
@@ -1196,14 +2274,454 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
   </ul>
 </section>
 
-<section class="appendix informative" id="changes-12">
-  <h2>Changes between RDF 1.1 and RDF 1.2</h2>
+<section class="appendix informative" id="changes-12"><div class="header-wrapper"><h2 id="c-changes-between-rdf-1-1-and-rdf-1-2"><bdi class="secno">C. </bdi>Changes between RDF 1.1 and RDF 1.2</h2><a class="self-link" href="#changes-12" aria-label="Permalink for Appendix C."></a></div><p><em>This section is non-normative.</em></p>
+  
 
   <ul>
     
   </ul>
 </section>
 
-<section id="index"></section>
+<section id="index" class="appendix"><div class="header-wrapper"><h2 id="d-index"><bdi class="secno">D. </bdi>Index</h2><a class="self-link" href="#index" aria-label="Permalink for Appendix D."></a></div><section id="index-defined-here"><div class="header-wrapper"><h3 id="d-1-terms-defined-by-this-specification"><bdi class="secno">D.1 </bdi>Terms defined by this specification</h3><a class="self-link" href="#index-defined-here" aria-label="Permalink for Appendix D.1"></a></div>
+    
+    <ul class="index">
+    
+  </ul>
+  </section><section id="index-defined-elsewhere"><div class="header-wrapper"><h3 id="d-2-terms-defined-by-reference"><bdi class="secno">D.2 </bdi>Terms defined by reference</h3><a class="self-link" href="#index-defined-elsewhere" aria-label="Permalink for Appendix D.2"></a></div>
+    
+    <ul class="index">
+    <li>
+        [<cite><a class="bibref" data-link-type="biblio" href="#bib-json-ld11">JSON-LD11</a></cite>] defines the following:
+        <ul>
+          <li>
+    <span class="index-term" data-href="https://www.w3.org/TR/json-ld11/#the-rdf-json-datatype" id="index-term-section-10-2-the-rdf-json-datatype" tabindex="0" aria-haspopup="dialog">Section 10.2 The rdf:JSON Datatype</span>
+  </li>
+        </ul>
+      </li><li>
+        [<cite><a class="bibref" data-link-type="biblio" href="#bib-rdf12-concepts">RDF12-CONCEPTS</a></cite>] defines the following:
+        <ul>
+          <li>
+    <span class="index-term" data-href="https://w3c.github.io/rdf-concepts/spec/#section-html" id="index-term-html-literal-values" tabindex="0" aria-haspopup="dialog">HTML literal values</span>
+  </li><li>
+    <span class="index-term" data-href="https://w3c.github.io/rdf-concepts/spec/#section-IRIs" id="index-term-iris" tabindex="0" aria-haspopup="dialog">IRIs</span>
+  </li><li>
+    <span class="index-term" data-href="https://w3c.github.io/rdf-concepts/spec/#dfn-language-tagged-string" id="index-term-language-tagged-string-values" tabindex="0" aria-haspopup="dialog">language-tagged string values</span>
+  </li><li>
+    <span class="index-term" data-href="https://w3c.github.io/rdf-concepts/spec/#section-Graph-Literal" id="index-term-literal" tabindex="0" aria-haspopup="dialog">literal</span>
+  </li><li>
+    <span class="index-term" data-href="https://w3c.github.io/rdf-concepts/spec/#section-Datatypes" id="index-term-rdf-datatype" tabindex="0" aria-haspopup="dialog">RDF datatype</span>
+  </li><li>
+    <span class="index-term" data-href="https://w3c.github.io/rdf-concepts/spec/#section-XMLLiteral" id="index-term-xml-literal-values" tabindex="0" aria-haspopup="dialog">XML literal values</span>
+  </li>
+        </ul>
+      </li><li>
+        [<cite><a class="bibref" data-link-type="biblio" href="#bib-rdf12-semantics">RDF12-SEMANTICS</a></cite>] defines the following:
+        <ul>
+          <li>
+    <span class="index-term" data-href="https://w3c.github.io/rdf-semantics/spec/#semantic-extensions-and-entailment-regimes" id="index-term-semantic-extension" tabindex="0" aria-haspopup="dialog">semantic extension</span>
+  </li>
+        </ul>
+      </li><li>
+        [<cite><a class="bibref" data-link-type="biblio" href="#bib-rdf12-turtle">RDF12-TURTLE</a></cite>] defines the following:
+        <ul>
+          <li>
+    <span class="index-term" data-href="https://w3c.github.io/rdf-turtle/spec/#collections" id="index-term-shorthand-notation" tabindex="0" aria-haspopup="dialog">shorthand notation</span>
+  </li>
+        </ul>
+      </li>
+  </ul>
+  </section></section>
 
-</body></html>
+
+<section id="references" class="appendix"><div class="header-wrapper"><h2 id="e-references"><bdi class="secno">E. </bdi>References</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix E."></a></div><section id="informative-references"><div class="header-wrapper"><h3 id="e-1-informative-references"><bdi class="secno">E.1 </bdi>Informative references</h3><a class="self-link" href="#informative-references" aria-label="Permalink for Appendix E.1"></a></div>
+    
+    <dl class="bibliography"><dt id="bib-json-ld11">[JSON-LD11]</dt><dd>
+      <a href="https://www.w3.org/TR/json-ld11/"><cite>JSON-LD 1.1</cite></a>. Gregg Kellogg; Pierre-Antoine Champin; Dave Longley.  W3C. 16 July 2020. W3C Recommendation. URL: <a href="https://www.w3.org/TR/json-ld11/">https://www.w3.org/TR/json-ld11/</a>
+    </dd><dt id="bib-owl2-overview">[OWL2-OVERVIEW]</dt><dd>
+      <a href="https://www.w3.org/TR/owl2-overview/"><cite>OWL 2 Web Ontology Language Document Overview (Second Edition)</cite></a>. W3C OWL Working Group.  W3C. 11 December 2012. W3C Recommendation. URL: <a href="https://www.w3.org/TR/owl2-overview/">https://www.w3.org/TR/owl2-overview/</a>
+    </dd><dt id="bib-rdf-not">[RDF-NOT]</dt><dd>
+      <a href="https://www.w3.org/DesignIssues/RDFnot.html"><cite>What the Semantic Web can represent</cite></a>. Tim Berners-Lee.  W3C. 17 September 1998. W3C-Internal Document. URL: <a href="https://www.w3.org/DesignIssues/RDFnot.html">https://www.w3.org/DesignIssues/RDFnot.html</a>
+    </dd><dt id="bib-rdf11-schema">[RDF11-SCHEMA]</dt><dd>
+      <a href="https://www.w3.org/TR/rdf-schema/"><cite>RDF Schema 1.1</cite></a>. Dan Brickley; Ramanathan Guha.  W3C. 25 February 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/rdf-schema/">https://www.w3.org/TR/rdf-schema/</a>
+    </dd><dt id="bib-rdf12-concepts">[RDF12-CONCEPTS]</dt><dd>
+      <a href="https://w3c.github.io/rdf-concepts/spec/"><cite>RDF 1.2 Concepts and Abstract Syntax</cite></a>. Richard Cyganiak; David Wood; Markus Lanthaler.  W3C. W3C Working Draft. URL: <a href="https://w3c.github.io/rdf-concepts/spec/">https://w3c.github.io/rdf-concepts/spec/</a>
+    </dd><dt id="bib-rdf12-n-quads">[RDF12-N-QUADS]</dt><dd>
+      <a href="https://w3c.github.io/rdf-n-quads/spec/"><cite>RDF 1.2 N-Quads</cite></a>. Gavin Carothers.  W3C. W3C Working Draft. URL: <a href="https://w3c.github.io/rdf-n-quads/spec/">https://w3c.github.io/rdf-n-quads/spec/</a>
+    </dd><dt id="bib-rdf12-n-triples">[RDF12-N-TRIPLES]</dt><dd>
+      <a href="https://w3c.github.io/rdf-n-triples/spec/"><cite>RDF 1.2 N-Triples</cite></a>. Gavin Carothers; Andy Seaborne.  W3C. W3C Working Draft. URL: <a href="https://w3c.github.io/rdf-n-triples/spec/">https://w3c.github.io/rdf-n-triples/spec/</a>
+    </dd><dt id="bib-rdf12-new">[RDF12-NEW]</dt><dd>
+      <a href="https://w3c.github.io/rdf-new/spec/"><cite>What’s New in RDF 1.2</cite></a>. David Wood.  W3C. DNOTE. URL: <a href="https://w3c.github.io/rdf-new/spec/">https://w3c.github.io/rdf-new/spec/</a>
+    </dd><dt id="bib-rdf12-primer">[RDF12-PRIMER]</dt><dd>
+      <a href="https://w3c.github.io/rdf-primer/spec/"><cite>RDF 1.2 Primer</cite></a>. Guus Schreiber; Yves Raimond.  W3C. DNOTE. URL: <a href="https://w3c.github.io/rdf-primer/spec/">https://w3c.github.io/rdf-primer/spec/</a>
+    </dd><dt id="bib-rdf12-semantics">[RDF12-SEMANTICS]</dt><dd>
+      <a href="https://w3c.github.io/rdf-semantics/spec/"><cite>RDF 1.2 Semantics</cite></a>. Patrick Hayes; Peter Patel-Schneider.  W3C. W3C Working Draft. URL: <a href="https://w3c.github.io/rdf-semantics/spec/">https://w3c.github.io/rdf-semantics/spec/</a>
+    </dd><dt id="bib-rdf12-trig">[RDF12-TRIG]</dt><dd>
+      <a href="https://w3c.github.io/rdf-trig/spec/"><cite>RDF 1.2 TriG</cite></a>. Gavin Carothers; Andy Seaborne.  W3C. W3C Working Draft. URL: <a href="https://w3c.github.io/rdf-trig/spec/">https://w3c.github.io/rdf-trig/spec/</a>
+    </dd><dt id="bib-rdf12-turtle">[RDF12-TURTLE]</dt><dd>
+      <a href="https://w3c.github.io/rdf-turtle/spec/"><cite>RDF 1.2 Turtle</cite></a>. Eric Prud'hommeaux; Gavin Carothers.  W3C. W3C Working Draft. URL: <a href="https://w3c.github.io/rdf-turtle/spec/">https://w3c.github.io/rdf-turtle/spec/</a>
+    </dd><dt id="bib-rdf12-xml">[RDF12-XML]</dt><dd>
+      <a href="https://w3c.github.io/rdf-xml/spec/"><cite>RDF 1.2 XML Syntax</cite></a>. Fabien Gandon; Guus Schreiber.  W3C. W3C Working Draft. URL: <a href="https://w3c.github.io/rdf-xml/spec/">https://w3c.github.io/rdf-xml/spec/</a>
+    </dd><dt id="bib-sparql12-concepts">[SPARQL12-CONCEPTS]</dt><dd>
+      <a href="https://w3c.github.io/sparql-concepts/spec/"><cite>SPARQL 1.2 Concepts</cite></a>. The W3C RDF-star Working Group.  W3C. W3C Working Draft. URL: <a href="https://w3c.github.io/sparql-concepts/spec/">https://w3c.github.io/sparql-concepts/spec/</a>
+    </dd><dt id="bib-sparql12-entailment">[SPARQL12-ENTAILMENT]</dt><dd>
+      <a href="https://w3c.github.io/sparql-entailment/spec/"><cite>SPARQL 1.2 Entailment Regimes</cite></a>. Birte Glimm; Chimezie Ogbuji.  W3C. W3C Working Draft. URL: <a href="https://w3c.github.io/sparql-entailment/spec/">https://w3c.github.io/sparql-entailment/spec/</a>
+    </dd><dt id="bib-sparql12-federated-query">[SPARQL12-FEDERATED-QUERY]</dt><dd>
+      <a href="https://w3c.github.io/sparql-federated-query/spec/"><cite>SPARQL 1.2 Federated Query</cite></a>. Eric Prud'hommeaux; Carlos Buil Aranda.  W3C. W3C Working Draft. URL: <a href="https://w3c.github.io/sparql-federated-query/spec/">https://w3c.github.io/sparql-federated-query/spec/</a>
+    </dd><dt id="bib-sparql12-graph-store-protocol">[SPARQL12-GRAPH-STORE-PROTOCOL]</dt><dd>
+      <a href="https://w3c.github.io/sparql-graph-store-protocol/spec/"><cite>SPARQL 1.2 Graph Store HTTP Protocol</cite></a>. Chimezie Ogbuji.  W3C. W3C Working Draft. URL: <a href="https://w3c.github.io/sparql-graph-store-protocol/spec/">https://w3c.github.io/sparql-graph-store-protocol/spec/</a>
+    </dd><dt id="bib-sparql12-new">[SPARQL12-NEW]</dt><dd>
+      <a href="https://w3c.github.io/sparql-new/spec/"><cite>What’s New in SPARQL 1.2</cite></a>. The W3C RDF-star Working Group.  W3C. W3C Working Draft. URL: <a href="https://w3c.github.io/sparql-new/spec/">https://w3c.github.io/sparql-new/spec/</a>
+    </dd><dt id="bib-sparql12-protocol">[SPARQL12-PROTOCOL]</dt><dd>
+      <a href="https://w3c.github.io/sparql-protocol/spec/"><cite>SPARQL 1.2 Protocol</cite></a>. Lee Feigenbaum; Gregory Williams; Kendall Clark; Elias Torres.  W3C. W3C Working Draft. URL: <a href="https://w3c.github.io/sparql-protocol/spec/">https://w3c.github.io/sparql-protocol/spec/</a>
+    </dd><dt id="bib-sparql12-query">[SPARQL12-QUERY]</dt><dd>
+      <a href="https://w3c.github.io/sparql-query/spec/"><cite>SPARQL 1.2 Query Language</cite></a>. Steven Harris; Andy Seaborne.  W3C. W3C Working Draft. URL: <a href="https://w3c.github.io/sparql-query/spec/">https://w3c.github.io/sparql-query/spec/</a>
+    </dd><dt id="bib-sparql12-results-csv-tsv">[SPARQL12-RESULTS-CSV-TSV]</dt><dd>
+      <a href="https://w3c.github.io/sparql-results-csv-tsv/spec/"><cite>SPARQL 1.2 Query Results CSV and TSV Formats</cite></a>. Andy Seaborne.  W3C. W3C Working Draft. URL: <a href="https://w3c.github.io/sparql-results-csv-tsv/spec/">https://w3c.github.io/sparql-results-csv-tsv/spec/</a>
+    </dd><dt id="bib-sparql12-results-json">[SPARQL12-RESULTS-JSON]</dt><dd>
+      <a href="https://w3c.github.io/sparql-results-json/spec/"><cite>SPARQL 1.2 Query Results JSON Format</cite></a>. Andy Seaborne.  W3C. W3C Working Draft. URL: <a href="https://w3c.github.io/sparql-results-json/spec/">https://w3c.github.io/sparql-results-json/spec/</a>
+    </dd><dt id="bib-sparql12-results-xml">[SPARQL12-RESULTS-XML]</dt><dd>
+      <a href="https://w3c.github.io/sparql-results-xml/spec/"><cite>SPARQL 1.2 Query Results XML Formats</cite></a>. Sandro Hawke; Dave Beckett; Jeen Broekstra.  W3C. W3C Working Draft. URL: <a href="https://w3c.github.io/sparql-results-xml/spec/">https://w3c.github.io/sparql-results-xml/spec/</a>
+    </dd><dt id="bib-sparql12-service-description">[SPARQL12-SERVICE-DESCRIPTION]</dt><dd>
+      <a href="https://w3c.github.io/sparql-service-description/spec/"><cite>SPARQL 1.2 Service Description</cite></a>. Gregory Williams.  W3C. W3C Working Draft. URL: <a href="https://w3c.github.io/sparql-service-description/spec/">https://w3c.github.io/sparql-service-description/spec/</a>
+    </dd><dt id="bib-sparql12-update">[SPARQL12-UPDATE]</dt><dd>
+      <a href="https://w3c.github.io/sparql-update/spec/"><cite>SPARQL 1.2 Update</cite></a>. Paula Gearon; Alexandre Passant; Axel Polleres.  W3C. W3C Working Draft. URL: <a href="https://w3c.github.io/sparql-update/spec/">https://w3c.github.io/sparql-update/spec/</a>
+    </dd></dl>
+  </section></section><p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-index-term-section-10-2-the-rdf-json-datatype" aria-label="Links in this document to definition: Section 10.2 The rdf:JSON Datatype">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="https://www.w3.org/TR/json-ld11/#the-rdf-json-datatype" aria-label="Permalink for definition: Section 10.2 The rdf:JSON Datatype. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-index-term-section-10-2-the-rdf-json-datatype-1" title="§ 2.8 rdf:JSON">§ 2.8 rdf:JSON</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-index-term-html-literal-values" aria-label="Links in this document to definition: HTML literal values">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="https://w3c.github.io/rdf-concepts/spec/#section-html" aria-label="Permalink for definition: HTML literal values. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-index-term-html-literal-values-1" title="§ 2.6 rdf:HTML">§ 2.6 rdf:HTML</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-index-term-iris" aria-label="Links in this document to definition: IRIs">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="https://w3c.github.io/rdf-concepts/spec/#section-IRIs" aria-label="Permalink for definition: IRIs. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-index-term-iris-1" title="§ 2. Classes">§ 2. Classes</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-index-term-language-tagged-string-values" aria-label="Links in this document to definition: language-tagged string values">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="https://w3c.github.io/rdf-concepts/spec/#dfn-language-tagged-string" aria-label="Permalink for definition: language-tagged string values. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-index-term-language-tagged-string-values-1" title="§ 2.5 rdf:langString">§ 2.5 rdf:langString</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-index-term-literal" aria-label="Links in this document to definition: literal">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="https://w3c.github.io/rdf-concepts/spec/#section-Graph-Literal" aria-label="Permalink for definition: literal. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-index-term-literal-1" title="§ 2.3 rdfs:Literal">§ 2.3 rdfs:Literal</a> 
+  </li><li>
+    <a href="#ref-for-index-term-literal-2" title="§ 3.6 rdfs:label">§ 3.6 rdfs:label</a> 
+  </li><li>
+    <a href="#ref-for-index-term-literal-3" title="§ 3.7 rdfs:comment">§ 3.7 rdfs:comment</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-index-term-rdf-datatype" aria-label="Links in this document to definition: RDF datatype">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="https://w3c.github.io/rdf-concepts/spec/#section-Datatypes" aria-label="Permalink for definition: RDF datatype. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-index-term-rdf-datatype-1" title="§ 2. Classes">§ 2. Classes</a> 
+  </li><li>
+    <a href="#ref-for-index-term-rdf-datatype-2" title="§ 2.4 rdfs:Datatype">§ 2.4 rdfs:Datatype</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-index-term-xml-literal-values" aria-label="Links in this document to definition: XML literal values">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="https://w3c.github.io/rdf-concepts/spec/#section-XMLLiteral" aria-label="Permalink for definition: XML literal values. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-index-term-xml-literal-values-1" title="§ 2.7 rdf:XMLLiteral">§ 2.7 rdf:XMLLiteral</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-index-term-semantic-extension" aria-label="Links in this document to definition: semantic extension">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="https://w3c.github.io/rdf-semantics/spec/#semantic-extensions-and-entailment-regimes" aria-label="Permalink for definition: semantic extension. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-index-term-semantic-extension-1" title="§ 1. Introduction">§ 1. Introduction</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-index-term-shorthand-notation" aria-label="Links in this document to definition: shorthand notation">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="https://w3c.github.io/rdf-turtle/spec/#collections" aria-label="Permalink for definition: shorthand notation. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-index-term-shorthand-notation-1" title="§ 5.2 RDF Collections">§ 5.2 RDF Collections</a> 
+  </li>
+  </ul>
+    </div><script id="respec-dfn-panel">(() => {
+// @ts-check
+if (document.respec) {
+  document.respec.ready.then(setupPanel);
+} else {
+  setupPanel();
+}
+
+function setupPanel() {
+  const listener = panelListener();
+  document.body.addEventListener("keydown", listener);
+  document.body.addEventListener("click", listener);
+}
+
+function panelListener() {
+  /** @type {HTMLElement} */
+  let panel = null;
+  return event => {
+    const { target, type } = event;
+
+    if (!(target instanceof HTMLElement)) return;
+
+    // For keys, we only care about Enter key to activate the panel
+    // otherwise it's activated via a click.
+    if (type === "keydown" && event.key !== "Enter") return;
+
+    const action = deriveAction(event);
+
+    switch (action) {
+      case "show": {
+        hidePanel(panel);
+        /** @type {HTMLElement} */
+        const dfn = target.closest("dfn, .index-term");
+        panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
+        const coords = deriveCoordinates(event);
+        displayPanel(dfn, panel, coords);
+        break;
+      }
+      case "dock": {
+        panel.style.left = null;
+        panel.style.top = null;
+        panel.classList.add("docked");
+        break;
+      }
+      case "hide": {
+        hidePanel(panel);
+        panel = null;
+        break;
+      }
+    }
+  };
+}
+
+/**
+ * @param {MouseEvent|KeyboardEvent} event
+ */
+function deriveCoordinates(event) {
+  const target = /** @type HTMLElement */ (event.target);
+
+  // We prevent synthetic AT clicks from putting
+  // the dialog in a weird place. The AT events sometimes
+  // lack coordinates, so they have clientX/Y = 0
+  const rect = target.getBoundingClientRect();
+  if (
+    event instanceof MouseEvent &&
+    event.clientX >= rect.left &&
+    event.clientY >= rect.top
+  ) {
+    // The event probably happened inside the bounding rect...
+    return { x: event.clientX, y: event.clientY };
+  }
+
+  // Offset to the middle of the element
+  const x = rect.x + rect.width / 2;
+  // Placed at the bottom of the element
+  const y = rect.y + rect.height;
+  return { x, y };
+}
+
+/**
+ * @param {Event} event
+ */
+function deriveAction(event) {
+  const target = /** @type {HTMLElement} */ (event.target);
+  const hitALink = !!target.closest("a");
+  if (target.closest("dfn:not([data-cite]), .index-term")) {
+    return hitALink ? "none" : "show";
+  }
+  if (target.closest(".dfn-panel")) {
+    if (hitALink) {
+      return target.classList.contains("self-link") ? "hide" : "dock";
+    }
+    const panel = target.closest(".dfn-panel");
+    return panel.classList.contains("docked") ? "hide" : "none";
+  }
+  if (document.querySelector(".dfn-panel:not([hidden])")) {
+    return "hide";
+  }
+  return "none";
+}
+
+/**
+ * @param {HTMLElement} dfn
+ * @param {HTMLElement} panel
+ * @param {{ x: number, y: number }} clickPosition
+ */
+function displayPanel(dfn, panel, { x, y }) {
+  panel.hidden = false;
+  // distance (px) between edge of panel and the pointing triangle (caret)
+  const MARGIN = 20;
+
+  const dfnRects = dfn.getClientRects();
+  // Find the `top` offset when the `dfn` can be spread across multiple lines
+  let closestTop = 0;
+  let minDiff = Infinity;
+  for (const rect of dfnRects) {
+    const { top, bottom } = rect;
+    const diffFromClickY = Math.abs((top + bottom) / 2 - y);
+    if (diffFromClickY < minDiff) {
+      minDiff = diffFromClickY;
+      closestTop = top;
+    }
+  }
+
+  const top = window.scrollY + closestTop + dfnRects[0].height;
+  const left = x - MARGIN;
+  panel.style.left = `${left}px`;
+  panel.style.top = `${top}px`;
+
+  // Find if the panel is flowing out of the window
+  const panelRect = panel.getBoundingClientRect();
+  const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
+  if (panelRect.right > SCREEN_WIDTH) {
+    const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
+    const newCaretOffset = left - newLeft;
+    panel.style.left = `${newLeft}px`;
+    /** @type {HTMLElement} */
+    const caret = panel.querySelector(".caret");
+    caret.style.left = `${newCaretOffset}px`;
+  }
+
+  // As it's a dialog, we trap focus.
+  // TODO: when <dialog> becomes a implemented, we should really
+  // use that.
+  trapFocus(panel, dfn);
+}
+
+/**
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function trapFocus(panel, dfn) {
+  /** @type NodeListOf<HTMLAnchorElement> elements */
+  const anchors = panel.querySelectorAll("a[href]");
+  // No need to trap focus
+  if (!anchors.length) return;
+
+  // Move focus to first anchor element
+  const first = anchors.item(0);
+  first.focus();
+
+  const trapListener = createTrapListener(anchors, panel, dfn);
+  panel.addEventListener("keydown", trapListener);
+
+  // Hiding the panel releases the trap
+  const mo = new MutationObserver(records => {
+    const [record] = records;
+    const target = /** @type HTMLElement */ (record.target);
+    if (target.hidden) {
+      panel.removeEventListener("keydown", trapListener);
+      mo.disconnect();
+    }
+  });
+  mo.observe(panel, { attributes: true, attributeFilter: ["hidden"] });
+}
+
+/**
+ *
+ * @param {NodeListOf<HTMLAnchorElement>} anchors
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function createTrapListener(anchors, panel, dfn) {
+  const lastIndex = anchors.length - 1;
+  let currentIndex = 0;
+  return event => {
+    switch (event.key) {
+      // Hitting "Tab" traps us in a nice loop around elements.
+      case "Tab": {
+        event.preventDefault();
+        currentIndex += event.shiftKey ? -1 : +1;
+        if (currentIndex < 0) {
+          currentIndex = lastIndex;
+        } else if (currentIndex > lastIndex) {
+          currentIndex = 0;
+        }
+        anchors.item(currentIndex).focus();
+        break;
+      }
+
+      // Hitting "Enter" on an anchor releases the trap.
+      case "Enter":
+        hidePanel(panel);
+        break;
+
+      // Hitting "Escape" returns focus to dfn.
+      case "Escape":
+        hidePanel(panel);
+        dfn.focus();
+        return;
+    }
+  };
+}
+
+/** @param {HTMLElement} panel */
+function hidePanel(panel) {
+  if (!panel) return;
+  panel.hidden = true;
+  panel.classList.remove("docked");
+}
+})()</script><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body></html>

@@ -44,7 +44,8 @@
     table { border-collapse:collapse; }
     table, td, th { border:1px solid black; }
     caption { font-weight: bold; text-align: left ; }
-    code {color: #ff4500;}  /* Old W3C Style */
+    code { color: #ff4500; }  /* Old W3C Style */
+    table { word-break: break-all; max-width: 80vw; padding: 0.2em 0.5em }
   </style>
 </head>
 <body>
@@ -959,7 +960,7 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
         </tr>
         <tr>
           <td><a href="#ch_containermembershipproperty">rdfs:ContainerMembershipProperty</a></td>
-          <td>The class of container membership properties, rdf:_1, rdf:_2,
+          <td>The class of container membership properties, <code>rdf:_1</code>, <code>rdf:_2</code>,
             ..., all of which are sub-properties of 'member'.</td>
         </tr>
         <tr>
@@ -982,98 +983,98 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
         </tr> <tr>
           <td><a href="#ch_type">rdf:type</a></td>
           <td>The subject is an instance of a class.</td>
-          <td>rdfs:Resource</td>
-          <td>rdfs:Class</td>
+          <td><code>rdfs:Resource</code></td>
+          <td><code>rdfs:Class</code></td>
         </tr>
         <tr>
           <td><a href="#ch_subclassof">rdfs:subClassOf</a></td>
           <td>The subject is a subclass of a class.</td>
-          <td>rdfs:Class</td>
-          <td>rdfs:Class</td>
+          <td><code>rdfs:Class</code></td>
+          <td><code>rdfs:Class</code></td>
         </tr>
         <tr>
           <td><a href="#ch_subpropertyof">rdfs:subPropertyOf</a></td>
           <td>The subject is a subproperty of a property.</td>
-          <td>rdf:Property</td>
-          <td>rdf:Property</td>
+          <td><code>rdf:Property</code></td>
+          <td><code>rdf:Property</code></td>
         </tr>
         <tr>
           <td><a href="#ch_domain">rdfs:domain</a></td>
           <td>A domain of the subject property.</td>
-          <td>rdf:Property</td>
-          <td>rdfs:Class</td>
+          <td><code>rdf:Property</code></td>
+          <td><code>rdfs:Class</code></td>
         </tr>
         <tr>
           <td><a href="#ch_range">rdfs:range</a></td>
           <td>A range of the subject property.</td>
-          <td>rdf:Property</td>
-          <td>rdfs:Class</td>
+          <td><code>rdf:Property</code></td>
+          <td><code>rdfs:Class</code></td>
         </tr>
         <tr>
           <td><a href="#ch_label">rdfs:label</a></td>
           <td>A human-readable name for the subject.</td>
-          <td>rdfs:Resource</td>
-          <td>rdfs:Literal</td>
+          <td><code>rdfs:Resource</code></td>
+          <td><code>rdfs:Literal</code></td>
         </tr>
         <tr>
           <td><a href="#ch_comment">rdfs:comment</a></td>
           <td>A description of the subject resource.</td>
-          <td>rdfs:Resource</td>
-          <td>rdfs:Literal</td>
+          <td><code>rdfs:Resource</code></td>
+          <td><code>rdfs:Literal</code></td>
         </tr>
         <tr>
           <td><a href="#ch_member">rdfs:member</a></td>
           <td>A member of the subject resource.</td>
-          <td>rdfs:Resource</td>
-          <td>rdfs:Resource</td>
+          <td><code>rdfs:Resource</code></td>
+          <td><code>rdfs:Resource</code></td>
         </tr>
         <tr>
           <td><a href="#ch_first">rdf:first</a></td>
           <td>The first item in the subject RDF list.</td>
-          <td>rdf:List</td>
-          <td>rdfs:Resource</td>
+          <td><code>rdf:List</code></td>
+          <td><code>rdfs:Resource</code></td>
         </tr>
         <tr>
           <td><a href="#ch_rest">rdf:rest</a></td>
           <td>The rest of the subject RDF list after the first item.</td>
-          <td>rdf:List</td>
-          <td>rdf:List</td>
+          <td><code>rdf:List</code></td>
+          <td><code>rdf:List</code></td>
         </tr>
         <tr>
           <td><a href="#ch_seealso">rdfs:seeAlso</a></td>
           <td>Further information about the subject resource.</td>
-          <td>rdfs:Resource</td>
-          <td>rdfs:Resource</td>
+          <td><code>rdfs:Resource</code></td>
+          <td><code>rdfs:Resource</code></td>
         </tr>
         <tr>
           <td><a href="#ch_isdefinedby">rdfs:isDefinedBy</a></td>
           <td>The definition of the subject resource.</td>
-          <td>rdfs:Resource</td>
-          <td>rdfs:Resource</td>
+          <td><code>rdfs:Resource</code></td>
+          <td><code>rdfs:Resource</code></td>
         </tr>
         <tr>
           <td><a href="#ch_value">rdf:value</a></td>
           <td>Idiomatic property used for structured values.</td>
-          <td>rdfs:Resource</td>
-          <td>rdfs:Resource</td>
+          <td><code>rdfs:Resource</code></td>
+          <td><code>rdfs:Resource</code></td>
         </tr>
         <tr>
           <td><a href="#ch_subject">rdf:subject</a></td>
           <td>The subject of the subject RDF statement.</td>
-          <td>rdf:Statement</td>
-          <td>rdfs:Resource</td>
+          <td><code>rdf:Statement</code></td>
+          <td><code>rdfs:Resource</code></td>
         </tr>
         <tr>
           <td><a href="#ch_predicate">rdf:predicate</a></td>
           <td>The predicate of the subject RDF statement.</td>
-          <td>rdf:Statement</td>
-          <td>rdfs:Resource</td>
+          <td><code>rdf:Statement</code></td>
+          <td><code>rdfs:Resource</code></td>
         </tr>
         <tr>
           <td><a href="#ch_object">rdf:object</a></td>
           <td>The object of the subject RDF statement.</td>
-          <td>rdf:Statement</td>
-          <td>rdfs:Resource</td>
+          <td><code>rdf:Statement</code></td>
+          <td><code>rdfs:Resource</code></td>
         </tr>
       </tbody>
     </table>

@@ -41,11 +41,13 @@
 
   <style>
     figure { text-align: center; }
-    table { border-collapse:collapse; }
-    table, td, th { border:1px solid black; }
+    table { border-collapse: collapse; }
+    table, td, th { border: 1px solid black; }
     caption { font-weight: bold; text-align: left ; }
     code { color: #ff4500; }  /* Old W3C Style */
-    table { word-break: break-all; max-width: 80vw; padding: 0.2em 0.5em }
+    @media (max-width: 767px) {
+        table { word-break: break-all; max-width: 80vw; padding: 0.2em 0.5em }
+    }
   </style>
 </head>
 <body>

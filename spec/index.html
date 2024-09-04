@@ -298,6 +298,12 @@ model
     <p><code>rdf:Property</code> is the class of RDF properties.
       <code>rdf:Property</code> is an instance of <a href="#ch_class"><code>rdfs:Class</code></a>.</p>
   </section>
+  
+    <section id="ch_reificationproperty">
+    <h3>rdf:ReificationProperty</h3>
+    <p><code>rdf:ReificationProperty</code> is the class of properties used for reification in RDF 1.2.
+      <code>rdf:ReificationProperty</code> is an instance of <a href="#ch_class"><code>rdfs:Class</code></a> and a subclass of <a href="#ch_property"><code>rdf:Property</code></a>.</p>
+  </section>
 </section>
 
 <section id="ch_properties">
@@ -940,6 +946,10 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
           <td>The class of RDF properties.</td>
         </tr>
         <tr>
+          <td><a href="#ch_reificationproperty">rdf:ReificationProperty</a></td>
+          <td>The class of properties used for reification in RDF.</td>
+        </tr>
+        <tr>
           <td><a href="#ch_datatype">rdfs:Datatype</a></td>
           <td>The class of RDF datatypes.</td>
         </tr>
@@ -1207,6 +1217,7 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
 
   <ul>
     <li>Added the datatype <code>rdf:JSON</code>.</li>
+    <li>Added the class <code>rdf:ReificationProperty</code>.</li>
   </ul>
 </section>
 

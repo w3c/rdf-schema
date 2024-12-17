@@ -23,11 +23,11 @@ rdf:langString a rdfs:Datatype ;
 	rdfs:comment "The datatype of language-tagged string values" .
 
 rdf:dirLangString a rdfs:Datatype ;
-    rdfs:subClassOf rdfs:Literal ;
-    rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-    rdfs:seeAlso <https://www.w3.org/TR/rdf12-concepts/#section-Graph-Literal> ;
-    rdfs:label "dirLangString" ;
-    rdfs:comment "The datatype of directional language-tagged string values, which includes a language tag and a base direction (either 'ltr' or 'rtl'). The language tag must be well-formed as per BCP47, and the base direction determines the initial text direction." .
+	rdfs:subClassOf rdfs:Literal ;
+	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
+	rdfs:seeAlso <https://www.w3.org/TR/rdf12-concepts/#section-Graph-Literal> ;
+	rdfs:label "dirLangString" ;
+	rdfs:comment "The datatype of directional language-tagged string values, which includes a language tag and a base direction (either 'ltr' or 'rtl'). The language tag must be well-formed as per BCP47, and the base direction determines the initial text direction." .
 
 rdf:PlainLiteral a rdfs:Datatype ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
@@ -45,10 +45,10 @@ rdf:type a rdf:Property ;
 
 rdf:reifies a rdf:Property ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-    rdfs:label "reifies" ;
-    rdfs:comment "The abstract proposition of a more concrete circumstance." ;
-    rdfs:range rdf:Proposition ;
-    rdfs:domain rdfs:Resource .
+	rdfs:label "reifies" ;
+	rdfs:comment "The abstract proposition of a more concrete circumstance." ;
+	rdfs:range rdf:Proposition ;
+	rdfs:domain rdfs:Resource .
 
 rdf:Property a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
@@ -58,8 +58,8 @@ rdf:Property a rdfs:Class ;
 
 rdf:Proposition a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-    rdfs:label "proposition" ;
-    rdfs:comment "An atomic, logical, abstract proposition." .
+	rdfs:label "proposition" ;
+	rdfs:comment "An atomic, logical, abstract proposition." .
 
 rdf:Statement a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;

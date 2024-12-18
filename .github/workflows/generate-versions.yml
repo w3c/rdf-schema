@@ -1,0 +1,46 @@
+name: Generate RDF Serializations
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'ns/*.ttl'
+
+jobs:
+  generate-versions:
+    name: Generate RDF Versions
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Install Apache Jena tools (including riot)
+      - name: Install Jena
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y apache2-utils openjdk-11-jre-headless
+          curl -L https://dlcdn.apache.org/jena/binaries/apache-jena-4.8.0.tar.gz \
+            | tar xz --strip-components=1 -C /home/runner
+          echo 'export PATH="/home/runner/bin:$PATH"' >> $GITHUB_ENV
+
+      # Convert all .ttl files to RDF/XML and JSON-LD using riot
+      - name: Convert RDF to multiple formats
+        run: |
+          for file in ns/*.ttl; do
+            base=$(basename "$file" .ttl)
+            # Convert Turtle -> RDF/XML
+            /home/runner/bin/riot --syntax=turtle --output=rdfxml ns/${base}.ttl > ns/${base}.rdf
+            # Convert Turtle -> JSON-LD
+            /home/runner/bin/riot --syntax=turtle --output=jsonld ns/${base}.ttl > ns/${base}.jsonld
+          done
+
+      # Commit and push any changes (RDF/XML, JSON-LD files)
+      - name: Commit generated files
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          if [[ `git status --porcelain` ]]; then
+            git add ns/*.rdf ns/*.jsonld
+            git commit -m "Generate RDF/XML and JSON-LD for updated vocabularies"
+            git push
+

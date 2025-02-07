@@ -298,6 +298,13 @@ model
     <p><code>rdf:Property</code> is the class of RDF properties.
       <code>rdf:Property</code> is an instance of <a href="#ch_class"><code>rdfs:Class</code></a>.</p>
   </section>
+
+  <section id="ch_proposition">
+    <h3>rdf:Proposition</h3>
+    <p><code>rdf:Proposition</code> is the class of reified triples.
+      <code>rdf:Proposition</code> is an instance of <a href="#ch_class"><code>rdfs:Class</code></a>.</p>
+  </section>
+
 </section>
 
 <section id="ch_properties">
@@ -401,6 +408,23 @@ model
       <code>rdf:type</code> is <a href="#ch_resource">rdfs:Resource</a>.
       The <a href="#ch_range"><code>rdfs:range</code></a> of rdf:type is <a
         href="#ch_class"><code>rdfs:Class</code></a>.</p>
+  </section>
+
+  <section id="ch_reifies">
+    <h3><code>rdf:reifies</code></h3>
+    <p><code>rdf:reifies</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
+      that is used to associate a resource (reifier) with a triple (proposition).</p>
+    <p>A triple of the form:</p>
+    <blockquote> <code>R rdf:reifies &lt;&lt;S P O&gt;&gt;</code> </blockquote>
+    <p>states that <em>R</em> is an instance of <a href="#ch_resource"><code>rdfs:Resource</code></a> 
+      and reifies the triple term <code>&lt;&lt;S P O&gt;&gt;</code>, where <em>S</em>, <em>P</em>, and <em>O</em> represent 
+      the subject, predicate, and object of the reified triple, respectively. The object 
+      <code>&lt;&lt;S P O&gt;&gt;</code> is an instance of the class 
+      <a href="#ch_proposition"><code>rdf:Proposition</code></a>.</p>
+    <p>The <code><a href="#ch_domain">rdfs:domain</a></code> of
+      <code>rdf:reifies</code> is <a href="#ch_resource"><code>rdfs:Resource</code></a>.
+      The <a href="#ch_range"><code>rdfs:range</code></a> of <code>rdf:reifies</code> is 
+      <a href="#ch_proposition"><code>rdf:Proposition</code></a>.</p>
   </section>
 
   <section id="ch_subclassof">
@@ -940,6 +964,10 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
           <td>The class of RDF properties.</td>
         </tr>
         <tr>
+          <td><a href="#ch_proposition">rdf:Proposition</a></td>
+          <td>The class of reified triples. </td>
+        </tr>
+        <tr>
           <td><a href="#ch_datatype">rdfs:Datatype</a></td>
           <td>The class of RDF datatypes.</td>
         </tr>
@@ -985,11 +1013,18 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
           <th>comment</th>
           <th>domain</th>
           <th>range</th>
-        </tr> <tr>
+        </tr>
+        <tr>
           <td><a href="#ch_type">rdf:type</a></td>
           <td>The subject is an instance of a class.</td>
           <td><code>rdfs:Resource</code></td>
           <td><code>rdfs:Class</code></td>
+        </tr>
+        <tr>
+          <td><a href="#ch_reifies">rdf:reifies</a></td>
+          <td>Associates a resource with a reified triple.</td>
+          <td><code>rdfs:Resource</code></td>
+          <td><code>rdf:Proposition</code></td>
         </tr>
         <tr>
           <td><a href="#ch_subclassof">rdfs:subClassOf</a></td>
@@ -1207,6 +1242,7 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
 
   <ul>
     <li>Added the datatype <code>rdf:JSON</code>.</li>
+    <li>Added the class <code>rdf:Proposition</code> and the property <code>rdf:reifies</code>.</li>
   </ul>
 </section>
 

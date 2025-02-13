@@ -34,13 +34,3 @@ jobs:
             /home/runner/bin/riot --syntax=turtle --output=jsonld ns/${base}.ttl > ns/${base}.jsonld
           done
 
-      # Commit and push any changes (RDF/XML, JSON-LD files)
-      - name: Commit generated files
-        run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          if [[ `git status --porcelain` ]]; then
-            git add ns/*.rdf ns/*.jsonld
-            git commit -m "Generate RDF/XML and JSON-LD for updated vocabularies"
-            git push
-

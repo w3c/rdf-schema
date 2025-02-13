@@ -104,5 +104,3 @@ rdfs:Datatype a rdfs:Class ;
 	rdfs:label "Datatype" ;
 	rdfs:comment "The class of RDF datatypes." ;
 	rdfs:subClassOf rdfs:Class .
-
-<http://www.w3.org/2000/01/rdf-schema#> rdfs:seeAlso <http://www.w3.org/2000/01/rdf-schema-more> .

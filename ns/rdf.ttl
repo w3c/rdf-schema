@@ -130,7 +130,7 @@ rdf:JSON a rdfs:Datatype ;
 	rdfs:comment "The datatype of RDF literals storing JSON content." ;
 	rdfs:subClassOf rdfs:Literal ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:seeAlso <https://www.w3.org/TR/json-ld11/#the-rdf-json-datatype> .
+        rdfs:seeAlso <https://www.w3.org/TR/rdf-concepts/#section-json> .
 
 rdf:CompoundLiteral a rdfs:Class ;
 	rdfs:label "CompoundLiteral" ;

@@ -11,6 +11,11 @@ rdfs:Resource a rdfs:Class ;
 	rdfs:label "Resource" ;
 	rdfs:comment "The class resource, everything." .
 
+rdfs:Proposition a rdfs:Class ;
+	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
+	rdfs:label "Proposition" ;
+	rdfs:comment "An atomic, logical, abstract proposition." .
+
 rdfs:Class a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
 	rdfs:label "Class" ;

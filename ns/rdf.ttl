@@ -37,6 +37,13 @@ rdf:type a rdf:Property ;
 	rdfs:range rdfs:Class ;
 	rdfs:domain rdfs:Resource .
 
+rdf:reifies a rdf:Property ;
+	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
+	rdfs:label "reifies" ;
+	rdfs:comment "The abstract proposition of a more concrete circumstance." ;
+	rdfs:range rdfs:Proposition ;
+	rdfs:domain rdfs:Resource .
+
 rdf:Property a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
 	rdfs:label "Property" ;

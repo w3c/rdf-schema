@@ -14,16 +14,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Install Apache Jena tools (including riot)
-      - name: Install Jena
+      - name: Install Jena and Java 17
         run: |
           sudo apt-get update -y
-          sudo apt-get install -y apache2-utils openjdk-11-jre-headless
-          curl -L https://dlcdn.apache.org/jena/binaries/apache-jena-4.8.0.tar.gz \
+          sudo apt-get install -y apache2-utils openjdk-17-jre-headless
+          curl -L -A "Mozilla/5.0" https://repo1.maven.org/maven2/org/apache/jena/apache-jena/5.3.0/apache-jena-5.3.0.tar.gz \
             | tar xz --strip-components=1 -C /home/runner
           echo 'export PATH="/home/runner/bin:$PATH"' >> $GITHUB_ENV
 
-      # Convert all .ttl files to RDF/XML and JSON-LD using riot
       - name: Convert RDF to multiple formats
         run: |
           for file in ns/*.ttl; do

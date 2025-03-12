@@ -19,7 +19,7 @@ jobs:
         run: |
           sudo apt-get update -y
           sudo apt-get install -y apache2-utils openjdk-11-jre-headless
-          curl -L https://dlcdn.apache.org/jena/binaries/apache-jena-4.8.0.tar.gz \
+          curl -L https://repo1.maven.org/maven2/org/apache/jena/apache-jena/5.3.0/apache-jena-5.3.0.tar.gz \
             | tar xz --strip-components=1 -C /home/runner
           echo 'export PATH="/home/runner/bin:$PATH"' >> $GITHUB_ENV
 

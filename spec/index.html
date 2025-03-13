@@ -265,6 +265,14 @@ model
       of <a href="#ch_literal"><code>rdfs:Literal</code></a>.</p>
   </section>
 
+  <section id="ch_dirlangstring">
+    <h3>rdf:dirLangString</h3>
+    <p>The class <code>rdf:dirLangString</code> is the class of
+      <a data-cite="RDF12-CONCEPTS#dfn-dir-lang-string">directional language-tagged string values</a>. <code>rdf:dirLangString</code> is an instance of
+      <code>rdfs:Datatype</code> and a <a href="#def-subclass">subclass</a>
+      of <a href="#ch_literal"><code>rdfs:Literal</code></a>.</p>
+  </section>
+
   <section id="ch_html" class="informative">
     <h3>rdf:HTML</h3>
     <p>The class <code>rdf:HTML</code> is the class of
@@ -944,6 +952,10 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
           <td>The class of language-tagged string literal values.</td>
         </tr>
         <tr>
+          <td><a href="#ch_dirlangstring">rdf:dirLangString</a></td>
+          <td>The class of directional language-tagged string literal values.</td>
+        </tr>
+        <tr>
           <td><a href="#ch_html">rdf:HTML</a></td>
           <td>The class of HTML literal values.</td>
         </tr>
@@ -1241,6 +1253,7 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
   <h2>Changes between RDF 1.1 and RDF 1.2</h2>
 
   <ul>
+    <li>Added the datatype <code>rdf:dirLangString</code>.
     <li>Added the datatype <code>rdf:JSON</code>.</li>
     <li>Added the class <code>rdf:Proposition</code> and the property <code>rdf:reifies</code>.</li>
   </ul>

@@ -34,7 +34,7 @@ rdf:PlainLiteral a rdfs:Datatype ;
 	rdfs:subClassOf rdfs:Literal ;
 	rdfs:seeAlso <http://www.w3.org/TR/rdf-plain-literal/> ;
 	rdfs:label "PlainLiteral" ;
-	rdfs:comment "The class of plain (i.e. untyped) literal values, as used in RIF and OWL 2.  Will not be removed until no longer needed there." .
+	rdfs:comment "The class of plain (i.e., untyped) literal values, as used in RIF and OWL 2.  Will not be removed until no longer needed there." .
 
 rdf:type a rdf:Property ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;

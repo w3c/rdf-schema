@@ -240,7 +240,7 @@
       values such as strings and integers. Property values such as textual
       strings are examples of RDF literals.</p>
     <p><code>rdfs:Literal</code> is an instance of <a href="#ch_class"><code>rdfs:Class</code></a>.
-      rdfs:Literal is a <a href="#def-subclass">subclass</a> of <a href="#ch_resource">rdfs:Resource</a>.</p>
+      <code>rdfs:Literal</code> is a <a href="#def-subclass">subclass</a> of <a href="#ch_resource"><code>rdfs:Resource</code></a>.</p>
   </section>
 
   <section id="ch_datatype">
@@ -254,7 +254,7 @@ model
       <code>rdfs:Datatype</code> is
       both an instance of and a <a href="#def-subclass">subclass</a> of <a
         href="#ch_class"><code>rdfs:Class</code></a>. Each instance of <code>rdfs:Datatype</code>
-      is a <a href="#def-subclass">subclass</a> of rdfs:Literal.</p>
+      is a <a href="#def-subclass">subclass</a> of <a href="#ch_literal"><code>rdfs:Literal</code></a>.</p>
   </section>
 
   <section id="ch_langstring">
@@ -358,7 +358,7 @@ model
       denoted by the objects of triples with predicate <var>P</var> are instances of
       all the classes stated by the <code>rdfs:range</code> properties.</p>
     <p>The <code>rdfs:range</code> property can be applied to itself. The
-      rdfs:range of <code>rdfs:range</code> is the class <a href="#ch_class"><code>rdfs:Class</code></a>.
+      <code>rdfs:range</code> of <code>rdfs:range</code> is the class <a href="#ch_class"><code>rdfs:Class</code></a>.
       This states that any resource
       that is the value of an <code>rdfs:range</code> property is an
       instance of <a href="#ch_class"><code>rdfs:Class</code></a>.</p>
@@ -391,7 +391,7 @@ model
       instances of all the classes stated by the <code>rdfs:domain</code>
       properties.</p>
     <p>The <code>rdfs:domain</code> property may be applied to itself. The
-      rdfs:domain of <code>rdfs:domain</code> is the class <a href="#ch_property"><code>rdf:Property</code></a>.
+      <code>rdfs:domain</code> of <code>rdfs:domain</code> is the class <a href="#ch_property"><code>rdf:Property</code></a>.
       This states that any
       resource with an <code>rdfs:domain</code> property is an instance of
       <code><a href="#ch_property">rdf:Property</a></code>.</p>
@@ -414,7 +414,7 @@ model
       and <var>R</var> is an instance of <var>C</var>.</p>
     <p>The <code><a href="#ch_domain">rdfs:domain</a></code> of
       <code>rdf:type</code> is <a href="#ch_resource">rdfs:Resource</a>.
-      The <a href="#ch_range"><code>rdfs:range</code></a> of rdf:type is <a
+      The <a href="#ch_range"><code>rdfs:range</code></a> of <code>rdf:type</code> is <a
         href="#ch_class"><code>rdfs:Class</code></a>.</p>
   </section>
 
@@ -469,7 +469,7 @@ model
     <p>The <a href="#ch_domain"><code>rdfs:domain</code></a> of
       <code>rdfs:subPropertyOf</code> is <code><a href="#ch_property">rdf:Property</a></code>.
       The <a href="#ch_range"><code>rdfs:range</code></a> of
-      rdfs:subPropertyOf is <a href="#ch_property"><code>rdf:Property</code></a>.</p>
+      <code>rdfs:subPropertyOf</code> is <a href="#ch_property"><code>rdf:Property</code></a>.</p>
   </section>
 
   <section id="ch_label">
@@ -483,7 +483,7 @@ model
     <p>states that <var>L</var> is a human readable label for <var>R</var>.</p>
     <p>The <a href="#ch_domain"><code>rdfs:domain</code></a> of
       <code>rdfs:label</code> is <code><a href="#ch_resource">rdfs:Resource</a></code>.
-      The <a href="#ch_range"><code>rdfs:range</code></a> of rdfs:label is
+      The <a href="#ch_range"><code>rdfs:range</code></a> of <code>rdfs:label</code> is
       <a href="#ch_literal"><code>rdfs:Literal</code></a>.</p>
     <p>Multilingual labels are supported using the <a data-cite="RDF12-CONCEPTS#section-Graph-Literal">language
         tagging</a> facility of RDF literals.</p>
@@ -500,7 +500,7 @@ model
     <p>states that <var>L</var> is a human readable description of <var>R</var>.</p>
     <p>The <a href="#ch_domain"><code>rdfs:domain</code></a> of
       <code>rdfs:comment</code> is <code><a href="#ch_resource">rdfs:Resource</a></code>.
-      The <a href="#ch_range"><code>rdfs:range</code></a> of rdfs:comment
+      The <a href="#ch_range"><code>rdfs:range</code></a> of <code>rdfs:comment</code>
       is <a href="#ch_literal"><code>rdfs:Literal</code></a>.</p>
     <p>A textual comment helps clarify the meaning of RDF classes and
       properties.
@@ -569,11 +569,11 @@ model
       semantics [[RDF12-SEMANTICS]] of all three classes of container are
       identical,
       different classes may be used to indicate informally further
-      information. An rdf:Bag is used to indicate that the container is
-      intended to be unordered. An rdf:Seq is used to indicate that the
+      information. An <code>rdf:Bag</code> is used to indicate that the container is
+      intended to be unordered. An <code>rdf:Seq</code> is used to indicate that the
       order indicated by the numerical order of the <a href="#ch_containermembershipproperty">container
         membership properties</a>
-      of the container is intended to be significant. An rdf:Alt container
+      of the container is intended to be significant. An <code>rdf:Alt</code> container
       is used
       to indicate that typical processing of the container will be to select
       one of

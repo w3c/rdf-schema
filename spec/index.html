@@ -298,7 +298,6 @@ model
       <code>rdf:JSON</code> is an instance of
       <code>rdfs:Datatype</code> and a <a href="#def-subclass">subclass</a>
       of <a href="#ch_literal"><code>rdfs:Literal</code></a>.</p>
-    </p>
   </section>
 
   <section id="ch_property">
@@ -370,7 +369,7 @@ model
       states
       that any resource with an <code>rdfs:range</code> property is an
       instance of
-      <code><a href="#ch_property">rdf:Property</a></code>.</p>
+      <a href="#ch_property"><code>rdf:Property</code></a>.</p>
   </section>
 
   <section id="ch_domain">
@@ -394,12 +393,12 @@ model
       <code>rdfs:domain</code> of <code>rdfs:domain</code> is the class <a href="#ch_property"><code>rdf:Property</code></a>.
       This states that any
       resource with an <code>rdfs:domain</code> property is an instance of
-      <code><a href="#ch_property">rdf:Property</a></code>.</p>
+      <a href="#ch_property"><code>rdf:Property</a></code>.</p>
     <p>The <a href="#ch_range"><code>rdfs:range</code></a> of
       <code>rdfs:domain</code> is the class <code><a href="#ch_class">rdfs:Class</a></code>.
       This states that any resource that is the value of an <code>rdfs:domain</code>
       property is an
-      instance of <code><a href="#ch_class">rdfs:Class</a></code>.</p>
+      instance of <a href="#ch_class"><code>rdfs:Class</code></a>.</p>
   </section>
 
   <section id="ch_type">
@@ -761,7 +760,7 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
 
     <section id="ch_statement">
       <h4><code>rdf:Statement</code></h4>
-      <p><code>rdf:Statement</code> is an instance of <code><a href="#ch_class">rdfs:Class.</a></code>
+      <p><code>rdf:Statement</code> is an instance of <code><a href="#ch_class">rdfs:Class</a></code>.
         It is intended to represent the class of RDF statements. An RDF
         statement is the statement made by a token of an RDF triple. The
         subject of an RDF statement is the instance of <code><a href="#ch_resource">rdfs:Resource</a></code>
@@ -939,77 +938,77 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
           <th>comment</th>
         </tr>
         <tr>
-          <td><a href="#ch_resource">rdfs:Resource</a></td>
+          <td><a href="#ch_resource"><code>rdfs:Resource</code></a></td>
           <td>The class resource, everything.</td>
         </tr>
         <tr>
-          <td><a href="#ch_literal">rdfs:Literal</a></td>
+          <td><a href="#ch_literal"><code>rdfs:Literal</code></a></td>
           <td>The class of literal values, e.g. textual strings and
             integers.</td>
         </tr>
         <tr>
-          <td><a href="#ch_langstring">rdf:langString</a></td>
+          <td><a href="#ch_langstring"><code>rdf:langString</code></a></td>
           <td>The class of language-tagged string literal values.</td>
         </tr>
         <tr>
-          <td><a href="#ch_dirlangstring">rdf:dirLangString</a></td>
+          <td><a href="#ch_dirlangstring"><code>rdf:dirLangString</code></a></td>
           <td>The class of directional language-tagged string literal values.</td>
         </tr>
         <tr>
-          <td><a href="#ch_html">rdf:HTML</a></td>
+          <td><a href="#ch_html"><code>rdf:HTML</code></a></td>
           <td>The class of HTML literal values.</td>
         </tr>
         <tr>
-          <td><a href="#ch_xmlliteral">rdf:XMLLiteral</a></td>
+          <td><a href="#ch_xmlliteral"><code>rdf:XMLLiteral</code></a></td>
           <td>The class of XML literal values.</td>
         </tr>
         <tr>
-          <td><a href="#ch_json">rdf:JSON</a></td>
+          <td><a href="#ch_json"><code>rdf:JSON</code></a></td>
           <td>The class of JSON literal values.</td>
         </tr>
         <tr>
-          <td><a href="#ch_class">rdfs:Class</a></td>
+          <td><a href="#ch_class"><code>rdfs:Class</code></a></td>
           <td>The class of classes.</td>
         </tr>
         <tr>
-          <td><a href="#ch_property">rdf:Property</a></td>
+          <td><a href="#ch_property"><code>rdf:Property</code></a></td>
           <td>The class of RDF properties.</td>
         </tr>
         <tr>
-          <td><a href="#ch_proposition">rdf:Proposition</a></td>
+          <td><a href="#ch_proposition"><code>rdf:Proposition</code></a></td>
           <td>The class of reified triples. </td>
         </tr>
         <tr>
-          <td><a href="#ch_datatype">rdfs:Datatype</a></td>
+          <td><a href="#ch_datatype"><code>rdfs:Datatype</code></a></td>
           <td>The class of RDF datatypes.</td>
         </tr>
         <tr>
-          <td><a href="#ch_statement">rdf:Statement</a></td>
+          <td><a href="#ch_statement"><code>rdf:Statement</code></a></td>
           <td>The class of RDF statements.</td>
         </tr>
         <tr>
-          <td><a href="#ch_bag">rdf:Bag</a></td>
+          <td><a href="#ch_bag"><code>rdf:Bag</code></a></td>
           <td>The class of unordered containers.</td>
         </tr>
         <tr>
-          <td><a href="#ch_seq">rdf:Seq</a></td>
+          <td><a href="#ch_seq"><code>rdf:Seq</code></a></td>
           <td>The class of ordered containers.</td>
         </tr>
         <tr>
-          <td><a href="#ch_alt">rdf:Alt</a></td>
+          <td><a href="#ch_alt"><code>rdf:Alt</code></a></td>
           <td>The class of containers of alternatives.</td>
         </tr>
         <tr>
-          <td><a href="#ch_container">rdfs:Container</a></td>
+          <td><a href="#ch_container"><code>rdfs:Container</code></a></td>
           <td>The class of RDF containers.</td>
         </tr>
         <tr>
-          <td><a href="#ch_containermembershipproperty">rdfs:ContainerMembershipProperty</a></td>
+          <td><a href="#ch_containermembershipproperty"><code>rdfs:ContainerMembershipProperty</code></a></td>
           <td>The class of container membership properties, <code>rdf:_1</code>, <code>rdf:_2</code>,
             ..., all of which are sub-properties of 'member'.</td>
         </tr>
         <tr>
-          <td><a href="#ch_list">rdf:List</a></td>
+          <td><a href="#ch_list"><code>rdf:List</code></a></td>
           <td>The class of RDF Lists.</td>
         </tr>
       </tbody>
@@ -1027,109 +1026,110 @@ href="https://www.w3.org/TR/2004/REC-rdf-primer-20040210/#reification">RDF2004 p
           <th>range</th>
         </tr>
         <tr>
-          <td><a href="#ch_type">rdf:type</a></td>
+          <td><a href="#ch_type"><code>rdf:type</code></a></td>
           <td>The subject is an instance of a class.</td>
           <td><code>rdfs:Resource</code></td>
           <td><code>rdfs:Class</code></td>
         </tr>
         <tr>
-          <td><a href="#ch_reifies">rdf:reifies</a></td>
+          <td><a href="#ch_reifies"><code>rdf:reifies</code></a></td>
           <td>Associates a resource with a reified triple.</td>
           <td><code>rdfs:Resource</code></td>
           <td><code>rdf:Proposition</code></td>
         </tr>
         <tr>
-          <td><a href="#ch_subclassof">rdfs:subClassOf</a></td>
+          <td><a href="#ch_subclassof"><code>rdfs:subClassOf</code></a></td>
           <td>The subject is a subclass of a class.</td>
           <td><code>rdfs:Class</code></td>
           <td><code>rdfs:Class</code></td>
         </tr>
         <tr>
-          <td><a href="#ch_subpropertyof">rdfs:subPropertyOf</a></td>
+          <td><a href="#ch_subpropertyof"><code>rdfs:subPropertyOf</code></a></td>
           <td>The subject is a subproperty of a property.</td>
           <td><code>rdf:Property</code></td>
           <td><code>rdf:Property</code></td>
         </tr>
         <tr>
-          <td><a href="#ch_domain">rdfs:domain</a></td>
+          <td><a href="#ch_domain"><code>rdfs:domain</code></a></td>
           <td>A domain of the subject property.</td>
           <td><code>rdf:Property</code></td>
           <td><code>rdfs:Class</code></td>
         </tr>
         <tr>
-          <td><a href="#ch_range">rdfs:range</a></td>
+          <td><a href="#ch_range"><code>rdfs:range</code></a></td>
           <td>A range of the subject property.</td>
           <td><code>rdf:Property</code></td>
           <td><code>rdfs:Class</code></td>
         </tr>
         <tr>
-          <td><a href="#ch_label">rdfs:label</a></td>
+          <td><a href="#ch_label"><code>rdfs:label</code></a></td>
           <td>A human-readable name for the subject.</td>
           <td><code>rdfs:Resource</code></td>
           <td><code>rdfs:Literal</code></td>
         </tr>
         <tr>
-          <td><a href="#ch_comment">rdfs:comment</a></td>
+          <td><a href="#ch_comment"><code>rdfs:comment</code></a></td>
           <td>A description of the subject resource.</td>
           <td><code>rdfs:Resource</code></td>
           <td><code>rdfs:Literal</code></td>
         </tr>
         <tr>
-          <td><a href="#ch_member">rdfs:member</a></td>
+          <td><a href="#ch_member"><code>rdfs:member</code></a></td>
           <td>A member of the subject resource.</td>
           <td><code>rdfs:Resource</code></td>
           <td><code>rdfs:Resource</code></td>
         </tr>
         <tr>
-          <td><a href="#ch_first">rdf:first</a></td>
+          <td><a href="#ch_first"><code>rdf:first</code></a></td>
           <td>The first item in the subject RDF list.</td>
           <td><code>rdf:List</code></td>
           <td><code>rdfs:Resource</code></td>
         </tr>
         <tr>
-          <td><a href="#ch_rest">rdf:rest</a></td>
+          <td><a href="#ch_rest"><code>rdf:rest</code></a></td>
           <td>The rest of the subject RDF list after the first item.</td>
           <td><code>rdf:List</code></td>
           <td><code>rdf:List</code></td>
         </tr>
         <tr>
-          <td><a href="#ch_seealso">rdfs:seeAlso</a></td>
+          <td><a href="#ch_seealso"><code>rdfs:seeAlso</code></a></td>
           <td>Further information about the subject resource.</td>
           <td><code>rdfs:Resource</code></td>
           <td><code>rdfs:Resource</code></td>
         </tr>
         <tr>
-          <td><a href="#ch_isdefinedby">rdfs:isDefinedBy</a></td>
+          <td><a href="#ch_isdefinedby"><code>rdfs:isDefinedBy</code></a></td>
           <td>The definition of the subject resource.</td>
           <td><code>rdfs:Resource</code></td>
           <td><code>rdfs:Resource</code></td>
         </tr>
         <tr>
-          <td><a href="#ch_value">rdf:value</a></td>
+          <td><a href="#ch_value"><code>rdf:value</code></a></td>
           <td>Idiomatic property used for structured values.</td>
           <td><code>rdfs:Resource</code></td>
           <td><code>rdfs:Resource</code></td>
         </tr>
         <tr>
-          <td><a href="#ch_subject">rdf:subject</a></td>
+          <td><a href="#ch_subject"><code>rdf:subject</code></a></td>
           <td>The subject of the subject RDF statement.</td>
           <td><code>rdf:Statement</code></td>
           <td><code>rdfs:Resource</code></td>
         </tr>
         <tr>
-          <td><a href="#ch_predicate">rdf:predicate</a></td>
+          <td><a href="#ch_predicate"><code>rdf:predicate</code></a></td>
           <td>The predicate of the subject RDF statement.</td>
           <td><code>rdf:Statement</code></td>
           <td><code>rdfs:Resource</code></td>
         </tr>
         <tr>
-          <td><a href="#ch_object">rdf:object</a></td>
+          <td><a href="#ch_object"><code>rdf:object</code></a></td>
           <td>The object of the subject RDF statement.</td>
           <td><code>rdf:Statement</code></td>
           <td><code>rdfs:Resource</code></td>
         </tr>
       </tbody>
     </table>
+
     <p>In addition to these classes and properties, RDF also uses properties
       called <code>rdf:_1</code>, <code>rdf:_2</code>, <code>rdf:_3</code>...
       etc.,

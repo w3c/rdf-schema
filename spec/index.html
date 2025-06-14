@@ -171,6 +171,238 @@
     with the prefix concatenated with the suffix.</p>
 </section>
 
+<section id="ch_vocabulary">
+  <h2>Data-modelling vocabulary</h2>
+</section>
+
+<section id="ch_datatypes">
+  <h2>Datatypes</h2>
+</section>
+
+<section id="ch_collectionvocab" class="informative">
+  <h2>RDF Collections</h2>
+</section>
+
+<section id="ch_ttrei">
+  <h2>Triple-term based reification</h2>
+</section>
+
+<section id="ch_utilvocab">
+  <h2>Utility Properties</h2>
+</section>
+
+<section id="ch_legacyvocab" class="informative">
+  <h2>Legacy vocabularies</h2>
+  <p>This section describes vocabularies defined in earlier versions of 
+    RDF and RDF Schema. These vocabularies remain in use in certain 
+    applications and data sets for historical and compatibility reasons. 
+    However, the vocabularies and constructs presented in the preceding 
+    sections of this document are generally recommended as preferable 
+    alternatives for new developments and modern RDF-based systems.</p>
+
+  <section id="ch_containervocab" class="informative">
+    <h3>Containers</h3>
+    <p>RDF containers are resources that are used to represent collections.
+      The same resource may appear in a container more than
+      once. Unlike containment in the physical world, a container may be
+      contained in itself.</p>
+    <p>Three different kinds of container are defined. Whilst the formal
+      semantics [[RDF12-SEMANTICS]] of all three classes of container are
+      identical,
+      different classes may be used to indicate informally further
+      information. An <code>rdf:Bag</code> is used to indicate that the container is
+      intended to be unordered. An <code>rdf:Seq</code> is used to indicate that the
+      order indicated by the numerical order of the <a href="#ch_containermembershipproperty">container
+        membership properties</a>
+      of the container is intended to be significant. An <code>rdf:Alt</code> container
+      is used
+      to indicate that typical processing of the container will be to select
+      one of
+      the members.</p>
+    <p>Just as a hen house may have the property that it is made of wood,
+      that
+      does not mean that all the hens it contains are made of wood, a
+      property of a
+      container is not necessarily a property of all of its members.</p>
+    <p>RDF containers are defined by the following classes and properties.</p>
+
+    <section id="ch_container">
+      <h4><code>rdfs:Container</code></h4>
+      <p>The <code>rdfs:Container</code> class is a super-class of the RDF
+        Container classes, i.e. <a href="#ch_bag"><code>rdf:Bag</code></a>,
+        <a href="#ch_seq"><code>rdf:Seq</code></a>, <a href="#ch_alt"><code>rdf:Alt</code></a>.</p>
+    </section>
+
+    <section id="ch_bag">
+      <h4><code>rdf:Bag</code></h4>
+      <p>The <code>rdf:Bag</code> class is the class of RDF 'Bag'
+        containers. It is
+        a <a href="#def-subclass">subclass</a> of <a href="#ch_container"><code>rdfs:Container</code></a>.
+        Whilst formally it is no
+        different from an <a href="#ch_seq"><code>rdf:Seq</code></a> or an
+        <a href="#ch_alt"><code>rdf:Alt</code></a>, the <code>rdf:Bag</code>
+        class is used
+        conventionally to indicate to a human reader that the container is
+        intended
+        to be unordered.</p>
+    </section>
+
+    <section id="ch_seq">
+      <h4><code>rdf:Seq</code></h4>
+      <p>The <code>rdf:Seq</code> class is the class of RDF 'Sequence'
+        containers.
+        It is a <a href="#def-subclass">subclass</a> of <a href="#ch_container"><code>rdfs:Container</code></a>.
+        Whilst formally it is no
+        different from an <a href="#ch_bag"><code>rdf:Bag</code></a> or an
+        <a href="#ch_alt"><code>rdf:Alt</code></a>, the <code>rdf:Seq</code>
+        class is used
+        conventionally to indicate to a human reader that the numerical
+        ordering of
+        the <a href="#ch_containermembershipproperty">container membership
+          properties</a> of the container is intended to be significant.</p>
+    </section>
+
+    <section id="ch_alt">
+      <h4><code>rdf:Alt</code></h4>
+      <p>The <code>rdf:Alt</code> class is the class of RDF 'Alternative'
+        containers. It is a <a href="#def-subclass">subclass</a> of <a
+            href="#ch_container"><code>rdfs:Container</code></a>. Whilst formally
+        it is no
+        different from an <a href="#ch_seq"><code>rdf:Seq</code></a> or an
+        <a href="#ch_bag"><code>rdf:Bag</code></a>, the <code>rdf:Alt</code>
+        class is used
+        conventionally to indicate to a human reader that typical processing
+        will be
+        to select one of the members of the container. The first member of
+        the
+        container, i.e. the value of the <a href="#ch_containermembershipproperty"><code>rdf:_1</code></a>
+        property, is the
+        default choice.</p>
+    </section>
+
+    <section id="ch_containermembershipproperty">
+      <h4><code>rdfs:ContainerMembershipProperty</code></h4>
+      <p>The <code>rdfs:ContainerMembershipProperty</code> class has as
+        instances
+        the properties <code>rdf:_1, rdf:_2, rdf:_3 ...</code> that are
+        used to state
+        that a resource is a member of a container.
+        <code>rdfs:ContainerMembershipProperty</code> is a <a href="#def-subclass">subclass</a>
+        of <a href="#ch_property"><code>rdf:Property</code></a>. Each
+        instance of
+        <code>rdfs:ContainerMembershipProperty</code> is an <a href="#ch_subpropertyof"><code>rdfs:subPropertyOf</code></a>
+        the <a href="#ch_member"><code>rdfs:member</code></a> property.</p>
+      <p>Given a container <var>C</var>, a triple of the form:</p>
+      <blockquote> <code>C rdf:_nnn O</code>
+      </blockquote>
+      <p>where <code>nnn</code> is the decimal representation of an integer
+        greater than 0 with
+        no leading zeros, states that <var>O</var> is a member of the container <var>C</var>.</p>
+      <p>Container membership properties may be applied to resources other
+        than containers.</p>
+    </section>
+
+    <section id="ch_member">
+      <h4><code>rdfs:member</code></h4>
+      <p><code>rdfs:member</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
+        that is a super-property of all
+        the container membership properties i.e. each container membership
+        property
+        has an <a href="#ch_subpropertyof"><code>rdfs:subPropertyOf</code></a>
+        relationship to the property <code>rdfs:member</code>.</p>
+      <p>The <a href="#ch_domain"><code>rdfs:domain</code></a> of
+        <code>rdfs:member</code> is <a href="#ch_resource"><code>rdfs:Resource</code></a>.
+        The <a href="#ch_range"><code>rdfs:range</code></a> of <code>rdfs:member</code>
+        is
+        <a href="#ch_resource"><code>rdfs:Resource</code></a>.</p>
+    </section>
+  </section>
+
+  <section id="ch_reificationvocab" class="informative">
+    <h3>&quot;Old-style&quot; Reification</h3>
+    <section id="ch_statement">
+      <h4><code>rdf:Statement</code></h4>
+      <p><code>rdf:Statement</code> is an instance of <a href="#ch_class"><code>rdfs:Class</code></a>.
+        It is intended to represent the class of RDF statements. An RDF
+        statement is the statement made by a token of an RDF triple. The
+        subject of an RDF statement is the instance of <a href="#ch_resource"><code>rdfs:Resource</code></a>
+        identified by the subject of the triple. The predicate of an RDF
+        statement is the instance of <a href="#ch_resource"><code>rdf:Resource</code></a>
+        identified by the predicate of the triple. The object of an RDF
+        statement is the instance of <a href="#ch_resource"><code>rdfs:Resource</code></a>
+        identified by the object of the triple.
+        <code>rdf:Statement</code> is in the domain of the properties <a
+            href="#ch_predicate"><code>rdf:predicate</code></a>, <a href="#ch_subject"><code>rdf:subject</code></a>
+        and <a href="#ch_object"><code>rdf:object</code></a>. Different
+        individual <code>rdf:Statement</code> instances may have the same
+        values for their <a href="#ch_predicate"><code>rdf:predicate</code></a>,
+        <a href="#ch_subject"><code>rdf:subject</code></a>
+        and <a href="#ch_object"><code>rdf:object</code></a> properties.
+      </p>
+      <p>
+	RDF statements are not triples in an RDF graph so their values
+	for <a href="#ch_predicate"><code>rdf:predicate</code></a> do not need to be instances of
+	<a href="#ch_property"><code>rdf:Property</code></a> in that graph,
+	although in most cases they will be.
+      </p>
+    </section>
+
+    <section id="ch_subject">
+      <h4><code>rdf:subject</code></h4>
+      <p><code>rdf:subject</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
+        that is used to state the
+        subject of a statement.</p>
+      <p>A triple of the form:</p>
+      <blockquote> <code>S rdf:subject R</code>
+      </blockquote>
+      <p>states that <var>S</var> is an instance of <a href="#ch_statement"><code>rdf:Statement</code></a>
+        and that the subject of <var>S</var> is
+        R.</p>
+      <p class="schemacomment">The <a href="#ch_domain"><code>rdfs:domain</code></a>
+        of <code>rdf:subject</code> is
+        <a href="#ch_statement"><code>rdf:Statement</code></a>. The <a href="#ch_range"><code>rdfs:range</code></a>
+        of <code>rdf:subject</code> is
+        <a href="#ch_resource"><code>rdfs:Resource</code></a>.</p>
+    </section>
+
+    <section id="ch_predicate">
+      <h4><code>rdf:predicate</code></h4>
+      <p><code>rdf:predicate</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
+        that is used to state the
+        predicate of a statement.</p>
+      <p>A triple of the form:</p>
+      <blockquote> <code>S rdf:predicate P</code>
+      </blockquote>
+      <p>states that <var>S</var> is an instance of <a href="#ch_statement"><code>rdf:Statement</code></a>,
+        that <var>P</var> is an instance of
+        <a href="#ch_resource"><code>rdfs:Resource</code></a> and that the
+        predicate
+        of <var>S</var> is <var>P</var>.</p>
+      <p>The <a href="#ch_domain"><code>rdfs:domain</code></a> of
+        <code>rdf:predicate</code> is <a href="#ch_statement"><code>rdf:Statement</code></a>
+        and the <a href="#ch_range"><code>rdfs:range</code></a> is <a href="#ch_resource"><code>rdfs:Resource</code></a>.</p>
+    </section>
+
+    <section id="ch_object">
+      <h4><code>rdf:object</code></h4>
+      <p><code>rdf:object</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
+        that is used to state the
+        object of a statement.</p>
+      <p>A triple of the form:</p>
+      <blockquote> <code>S rdf:object O</code>
+      </blockquote>
+      <p>states that <var>S</var> is an instance of <a href="#ch_statement"><code>rdf:Statement</code></a>
+        and that the object of <var>S</var> is
+        <var>O</var>.</p>
+      <p>The <a href="#ch_domain"><code>rdfs:domain</code></a> of
+        <code>rdf:object</code> is <a href="#ch_statement"><code>rdf:Statement</code></a>.
+        The <a href="#ch_range"><code>rdfs:range</code></a> of <code>rdf:object</code>
+        is
+        <a href="#ch_resource"><code>rdfs:Resource</code></a>.</p>
+    </section>
+  </section>
+</section>
+
 <section id="ch_classes">
   <h2>Classes</h2>
   <p>Resources may be divided into groups called classes. The members of a

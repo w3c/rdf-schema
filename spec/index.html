@@ -171,6 +171,143 @@
     with the prefix concatenated with the suffix.</p>
 </section>
 
+<section id="ch_vocabulary">
+  <h2>Data-modelling vocabulary</h2>
+</section>
+
+<section id="ch_datatypes">
+  <h2>Datatypes</h2>
+  <section id="ch_langstring">
+    <h3><code>rdf:langString</code></h3>
+    <p>The class <code>rdf:langString</code> is the class of
+      <a data-cite="RDF12-CONCEPTS#dfn-language-tagged-string">language-tagged string values</a>. <code>rdf:langString</code> is an instance of
+      <code>rdfs:Datatype</code> and a <a href="#def-subclass">subclass</a>
+      of <a href="#ch_literal"><code>rdfs:Literal</code></a>.</p>
+  </section>
+
+  <section id="ch_dirlangstring">
+    <h3><code>rdf:dirLangString</code></h3>
+    <p>The class <code>rdf:dirLangString</code> is the class of
+      <a data-cite="RDF12-CONCEPTS#dfn-dir-lang-string">directional language-tagged string values</a>. <code>rdf:dirLangString</code> is an instance of
+      <code>rdfs:Datatype</code> and a <a href="#def-subclass">subclass</a>
+      of <a href="#ch_literal"><code>rdfs:Literal</code></a>.</p>
+  </section>
+
+  <section id="ch_html" class="informative">
+    <h3><code>rdf:HTML</code></h3>
+    <p>The class <code>rdf:HTML</code> is the class of
+      <a data-cite="RDF12-CONCEPTS#section-html">HTML literal values</a>.
+      <code>rdf:HTML</code> is an instance of
+      <code>rdfs:Datatype</code> and a <a href="#def-subclass">subclass</a>
+      of <a href="#ch_literal"><code>rdfs:Literal</code></a>.</p>
+  </section>
+
+  <section id="ch_xmlliteral" class="informative">
+    <h3><code>rdf:XMLLiteral</code></h3>
+    <p>The class <code>rdf:XMLLiteral</code> is the class of
+      <a data-cite="RDF12-CONCEPTS#section-XMLLiteral">XML literal values</a>.
+      <code>rdf:XMLLiteral</code> is an instance of
+      <code>rdfs:Datatype</code> and a <a href="#def-subclass">subclass</a>
+      of <a href="#ch_literal"><code>rdfs:Literal</code></a>.</p>
+  </section>
+
+  <section id="ch_json" class="informative">
+    <h3><code>rdf:JSON</code></h3>
+    <p>The class <code>rdf:JSON</code> is the class of
+      <a data-cite="RDF12-CONCEPTS#section-json">JSON literal values</a>.
+      <code>rdf:JSON</code> is an instance of
+      <code>rdfs:Datatype</code> and a <a href="#def-subclass">subclass</a>
+      of <a href="#ch_literal"><code>rdfs:Literal</code></a>.</p>
+  </section>
+
+  <section id="ch_xsd">
+    <h3>XML Schema datatypes</h3>
+    <p>All built-in datatypes defined in the W3C XML Schema Definition 
+    Language (XSD) 1.1 Part 2: Datatypes [[XMLSCHEMA11-2]] are identified 
+    using IRIs of the form <code>http://www.w3.org/2001/XMLSchema#xxx</code>, 
+    where <code>xxx</code> is the local name of the datatype. Among the full 
+    set of XSD datatypes, the subset listed below comprises those that 
+    are compatible with the RDF data model and are known as RDF-compatible 
+    XSD datatypes [[RDF12-CONCEPTS]].</p>
+    <ul>
+      <li>Core types
+        <ul>
+          <li><code>xsd:string</code></li>
+          <li><code>xsd:boolean</code></li>
+          <li><code>xsd:decimal</code></li>
+          <li><code>xsd:integer</code></li>
+        </ul>
+      </li>
+
+      <li>IEEE floating-point numbers
+        <ul>
+          <li><code>xsd:double</code></li>
+          <li><code>xsd:float</code></li>
+        </ul>
+      </li>
+
+      <li>Time and date
+        <ul>
+          <li><code>xsd:date</code></li>
+          <li><code>xsd:time</code></li>
+          <li><code>xsd:dateTime</code></li>
+          <li><code>xsd:dateTimeStamp</code></li>
+        </ul>
+      </li>
+
+      <li>Recurring and partial dates
+        <ul>
+          <li><code>xsd:gYear</code></li>
+          <li><code>xsd:gMonth</code></li>
+          <li><code>xsd:gDay</code></li>
+          <li><code>xsd:gYearMonth</code></li>
+          <li><code>xsd:gMonthDay</code></li>
+          <li><code>xsd:duration</code></li>
+          <li><code>xsd:yearMonthDuration</code></li>
+          <li><code>xsd:dayTimeDuration</code></li>
+        </ul>
+      </li>
+
+      <li>Limited-range integer numbers
+        <ul>
+          <li><code>xsd:byte</code></li>
+          <li><code>xsd:short</code></li>
+          <li><code>xsd:int</code></li>
+          <li><code>xsd:long</code></li>
+          <li><code>xsd:unsignedByte</code></li>
+          <li><code>xsd:unsignedShort</code></li>
+          <li><code>xsd:unsignedInt</code></li>
+          <li><code>xsd:unsignedLong</code></li>
+          <li><code>xsd:positiveInteger</code></li>
+          <li><code>xsd:nonNegativeInteger</code></li>
+          <li><code>xsd:negativeInteger</code></li>
+          <li><code>xsd:nonPositiveInteger</code></li>
+        </ul>
+      </li>
+
+      <li>Encoded binary data
+        <ul>
+          <li><code>xsd:hexBinary</code></li>
+          <li><code>xsd:base64Binary</code></li>
+        </ul>
+      </li>
+
+      <li>Miscellaneous XSD types
+        <ul>
+          <li><code>xsd:anyURI</code></li>
+          <li><code>xsd:language</code></li>
+          <li><code>xsd:normalizedString</code></li>
+          <li><code>xsd:token</code></li>
+          <li><code>xsd:NMTOKEN</code></li>
+          <li><code>xsd:Name</code></li>
+          <li><code>xsd:NCName</code></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+</section>
+
 <section id="ch_classes">
   <h2>Classes</h2>
   <p>Resources may be divided into groups called classes. The members of a

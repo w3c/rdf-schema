@@ -171,6 +171,364 @@
     with the prefix concatenated with the suffix.</p>
 </section>
 
+<section id="ch_vocabulary">
+  <h2>Data-modelling vocabulary</h2>
+  <section id="ch_vocab_classes">
+  <h3>Classes</h3>
+    <p>Resources may be divided into groups called classes. The members of a
+      class are known as <em>instances</em> of the class. Classes are
+      themselves
+      resources. They are often identified by <a data-cite="RDF12-CONCEPTS#section-IRIs">IRIs</a>
+      and
+      may be described using RDF properties. The <a href="#ch_type"><code>rdf:type</code></a>
+      property may be used to state that a
+      resource is an instance of a class.</p>
+    <p>RDF distinguishes between a class and the set of its instances.
+      Associated
+      with each class is a set, called the class extension of the class, which
+      is
+      the set of the instances of the class. Two classes may have the same set
+      of
+      instances but be different classes. For example, the tax office may
+      define
+      the class of people living at the same address as the editor of this
+      document. The Post Office may define the class of people whose address
+      has
+      the same zip code as the address of the author. It is possible for these
+      classes to have exactly the same instances, yet to have different
+      properties.
+      Only one of the classes has the property that it was defined by the tax
+      office, and only the other has the property that it was defined by the
+      Post
+      Office.</p>
+    <p>A class may be a member of its own class extension and may be an
+      instance of itself. </p>
+    <p>The group of resources that are RDF Schema classes is itself a class
+      called <a href="#ch_class"><code>rdfs:Class</code></a>.</p>
+    <p id="def-subclass">
+      If a class <var>C</var> is a <em>subclass</em> of a class <var>C'</var>, then all instances
+      of <var>C</var> will
+      also be instances of <var>C'</var>. The <a href="#ch_subclassof"><code>rdfs:subClassOf</code></a>
+      property may be used to state that one class is a subclass of another.
+      The term super-class is used as the inverse of subclass. If a class <var>C'</var>
+      is a super-class of a class <var>C</var>, then all instances of <var>C</var> are also
+      instances of <var>C'</var>.
+    </p>
+    <p>The RDF Concepts and Abstract Syntax [[RDF12-CONCEPTS]] specification
+      defines the RDF concept of an <a data-cite="RDF12-CONCEPTS#section-Datatypes">RDF
+        datatype</a>. All datatypes are classes. The instances of a class that
+      is a
+      datatype are the members of the value space of the datatype.</p>
+    <section id="ch_resource">
+      <h4><code>rdfs:Resource</code></h4>
+      <p>All things described by RDF are called <em>resources</em>, and are
+        instances of the class <code>rdfs:Resource</code>. This is the class
+        of
+        everything. All other classes are <a href="#def-subclass">subclasses</a>
+        of
+        this class. <code>rdfs:Resource</code> is an instance of <a href="#ch_class"><code>rdfs:Class</code></a>.</p>
+    </section>
+
+    <section id="ch_class">
+      <h4><code>rdfs:Class</code></h4>
+      <p>This is the class of resources that are RDF classes.
+        <code>rdfs:Class</code> is an instance of <code>rdfs:Class.</code></p>
+    </section>
+
+    <section id="ch_literal">
+      <h4><code>rdfs:Literal</code></h4>
+      <p>The class <code>rdfs:Literal</code> is the class of <a data-cite="RDF12-CONCEPTS#section-Graph-Literal">literal</a>
+        values such as strings and integers. Property values such as textual
+        strings are examples of RDF literals.</p>
+      <p><code>rdfs:Literal</code> is an instance of <a href="#ch_class"><code>rdfs:Class</code></a>.
+        <code>rdfs:Literal</code> is a <a href="#def-subclass">subclass</a> of <a href="#ch_resource"><code>rdfs:Resource</code></a>.</p>
+    </section>
+
+    <section id="ch_datatype">
+      <h4><code>rdfs:Datatype</code></h4>
+      <p><code>rdfs:Datatype</code> is the class of datatypes. All instances
+        of
+        <code>rdfs:Datatype</code> correspond to the <a data-cite="RDF12-CONCEPTS#section-Datatypes">RDF model
+          of a datatype</a> described in the RDF Concepts specification
+        [[RDF12-CONCEPTS]].
+        <code>rdfs:Datatype</code> is
+        both an instance of and a <a href="#def-subclass">subclass</a> of <a
+          href="#ch_class"><code>rdfs:Class</code></a>. Each instance of <code>rdfs:Datatype</code>
+        is a <a href="#def-subclass">subclass</a> of <a href="#ch_literal"><code>rdfs:Literal</code></a>.</p>
+    </section>
+    <section id="ch_property">
+      <h4><code>rdf:Property</code></h4>
+      <p><code>rdf:Property</code> is the class of RDF properties.
+        <code>rdf:Property</code> is an instance of <a href="#ch_class"><code>rdfs:Class</code></a>.</p>
+    </section>
+  </section>
+  <section id="ch_vocab_sem_props">
+    <h3>Semantic Properties</h3>
+    <p>The RDF Concepts and Abstract Syntax specification [[RDF12-CONCEPTS]]
+      describes the concept of an RDF property as a relation between subject
+      resources and object resources.</p>
+    <p id="def-subproperty">
+      This specification defines the concept of subproperty. The <a href="#ch_subclassof"><code>rdfs:subPropertyOf</code></a>
+      property may be used to state that one property is a subproperty of
+      another.
+      If a property <var>P</var> is a subproperty of property <var>P'</var>, then all pairs of
+      resources which are related by <var>P</var> are also related by <var>P'</var>. The term
+      super-property is often
+      used as the inverse of subproperty. If a property <var>P'</var> is a super-property
+      of a property <var>P</var>, then all pairs of resources which are related by <var>P</var> are
+      also related by <var>P'</var>. This specification does not define a top
+      property that is the super-property of all properties.
+    </p>
+    <p class="note">
+      The basic facilities provided by <a href="#ch_domain"><code>rdfs:domain</code></a>
+      and <a href="#ch_range"><code>rdfs:range</code></a> do not provide any
+      direct way to indicate property restrictions that are local to a class.
+      Although it is possible to combine use <a href="#ch_domain"><code>rdfs:domain</code></a>
+      and <a href="#ch_range"><code>rdfs:range</code></a> with sub-property
+      hierarchies, direct support for such declarations are provided by richer
+      Web Ontology languages such as OWL [[OWL2-OVERVIEW]].
+    </p>
+    <section id="ch_range">
+      <h4><code>rdfs:range</code></h4>
+      <p><code>rdfs:range</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
+        that is used to state that
+        the values of a property are instances of one or more classes.</p>
+      <p>The triple</p>
+      <blockquote> <code>P rdfs:range C</code>
+      </blockquote>
+      <p>states that <var>P</var> is an instance of the class <a href="#ch_property"><code>rdf:Property</code></a>,
+        that <var>C</var> is an instance of the class <a href="#ch_class"><code>rdfs:Class</code></a>
+        and that the resources denoted by the objects of triples whose
+        predicate is <var>P</var> are instances of the class <var>C</var>.</p>
+      <p>Where <var>P</var> has more than one <code>rdfs:range</code> property, then the resources
+        denoted by the objects of triples with predicate <var>P</var> are instances of
+        all the classes stated by the <code>rdfs:range</code> properties.</p>
+      <p>The <code>rdfs:range</code> property can be applied to itself. The
+        <code>rdfs:range</code> of <code>rdfs:range</code> is the class <a href="#ch_class"><code>rdfs:Class</code></a>.
+        This states that any resource
+        that is the value of an <code>rdfs:range</code> property is an
+        instance of <a href="#ch_class"><code>rdfs:Class</code></a>.</p>
+      <p>The <code>rdfs:range</code> property is applied to properties. This
+        can be represented in RDF using the <a href="#ch_domain"><code>rdfs:domain</code></a>
+        property. The <a href="#ch_domain"><code>rdfs:domain</code></a> of <code>rdfs:range</code>
+        is
+        the class <a href="#ch_property"><code>rdf:Property</code></a>. This
+        states
+        that any resource with an <code>rdfs:range</code> property is an
+        instance of
+        <a href="#ch_property"><code>rdf:Property</code></a>.</p>
+      </section>
+
+      <section id="ch_domain">
+        <h4><code>rdfs:domain</code></h4>
+        <p><code>rdfs:domain</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
+          that is used to state that
+          any resource that has a given property is an instance of one or more
+          classes.</p>
+        <p>A triple of the form:</p>
+        <blockquote> <code>P rdfs:domain C</code>
+        </blockquote>
+        <p>states that <var>P</var> is an instance of the class <a href="#ch_property"><code>rdf:Property</code></a>,
+          that <var>C</var> is a instance of the class <a href="#ch_class"><code>rdfs:Class</code></a>
+          and that the resources denoted by the subjects of triples whose
+          predicate is <var>P</var> are instances of the class C.</p>
+        <p>Where a property <var>P</var> has more than one <code>rdfs:domain</code> property, then the
+          resources denoted by subjects of triples with predicate <var>P</var> are
+          instances of all the classes stated by the <code>rdfs:domain</code>
+          properties.</p>
+        <p>The <code>rdfs:domain</code> property may be applied to itself. The
+          <code>rdfs:domain</code> of <code>rdfs:domain</code> is the class <a href="#ch_property"><code>rdf:Property</code></a>.
+          This states that any
+          resource with an <code>rdfs:domain</code> property is an instance of
+          <a href="#ch_property"><code>rdf:Property</code></a>.</p>
+        <p>The <a href="#ch_range"><code>rdfs:range</code></a> of
+          <code>rdfs:domain</code> is the class <a href="#ch_class"><code>rdfs:Class</code></a>.
+          This states that any resource that is the value of an <code>rdfs:domain</code>
+          property is an
+          instance of <a href="#ch_class"><code>rdfs:Class</code></a>.</p>
+      </section>
+
+      <section id="ch_type">
+        <h4><code>rdf:type</code></h4>
+        <p><code>rdf:type</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
+          that is used to
+          state that a resource is an instance of a class.</p>
+        <p>A triple of the form:</p>
+        <blockquote> <code>R rdf:type C</code>
+        </blockquote>
+        <p>states that <var>C</var> is an instance of <a href="#ch_class"><code>rdfs:Class</code></a>
+          and <var>R</var> is an instance of <var>C</var>.</p>
+        <p>The <a href="#ch_domain"><code>rdfs:domain</code></a> of
+          <code>rdf:type</code> is <a href="#ch_resource">rdfs:Resource</a>.
+          The <a href="#ch_range"><code>rdfs:range</code></a> of <code>rdf:type</code> is <a
+            href="#ch_class"><code>rdfs:Class</code></a>.</p>
+      </section>
+
+      <section id="ch_subclassof">
+        <h4><code>rdfs:subClassOf</code></h4>
+        <p>The property <code>rdfs:subClassOf</code> is an instance of <a
+              href="#ch_property"><code>rdf:Property</code></a> that is used to state
+          that all the instances of one class are instances of another.</p>
+        <p>A triple of the form:</p>
+        <blockquote> <code>C1 rdfs:subClassOf C2</code>
+        </blockquote>
+        <p>states that <var>C1</var> is an instance of <a href="#ch_class"><code>rdfs:Class</code></a>,
+          <var>C2</var> is an instance of <a href="#ch_class"><code>rdfs:Class</code></a>
+          and <var>C1</var> is a <a href="#def-subclass">subclass</a> of <var>C2</var>. The <code>rdfs:subClassOf</code>
+          property is transitive.</p>
+        <p>The <a href="#ch_domain"><code>rdfs:domain</code></a> of
+          <code>rdfs:subClassOf</code> is <a href="#ch_class"><code>rdfs:Class</code></a>.
+          The <a href="#ch_range"><code>rdfs:range</code></a> of <code>rdfs:subClassOf</code>
+          is <a href="#ch_class"><code>rdfs:Class</code></a>.</p>
+      </section>
+
+      <section id="ch_subpropertyof">
+        <h4><code>rdfs:subPropertyOf</code></h4>
+        <p>The property <code>rdfs:subPropertyOf</code> is an instance of <a
+              href="#ch_property"><code>rdf:Property</code></a> that is used to state
+          that all resources related by one property are also related by
+          another.</p>
+        <p>A triple of the form:</p>
+        <blockquote> <code>P1 rdfs:subPropertyOf P2</code>
+        </blockquote>
+        <p>states that <var>P1</var> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>,
+          <var>P2</var> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
+          and <var>P1</var> is a <a href="#def-subproperty">subproperty</a> of <var>P2</var>. The
+          <code>rdfs:subPropertyOf</code> property is transitive.</p>
+        <p>The <a href="#ch_domain"><code>rdfs:domain</code></a> of
+          <code>rdfs:subPropertyOf</code> is <a href="#ch_property"><code>rdf:Property</code></a>.
+          The <a href="#ch_range"><code>rdfs:range</code></a> of
+          <code>rdfs:subPropertyOf</code> is <a href="#ch_property"><code>rdf:Property</code></a>.</p>
+      </section>
+  </section>
+  <section id="ch_vocab_doc_props">
+    <h3>Documentation Properties</h3>
+      <section id="ch_label">
+        <h4><code>rdfs:label</code></h4>
+        <p><code>rdfs:label</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
+          that may be used to provide a human-readable version of a resource's
+          name.</p>
+        <p>A triple of the form:</p>
+        <blockquote> <code>R rdfs:label L</code>
+        </blockquote>
+        <p>states that <var>L</var> is a human readable label for <var>R</var>.</p>
+        <p>The <a href="#ch_domain"><code>rdfs:domain</code></a> of
+          <code>rdfs:label</code> is <a href="#ch_resource"><code>rdfs:Resource</code></a>.
+          The <a href="#ch_range"><code>rdfs:range</code></a> of <code>rdfs:label</code> is
+          <a href="#ch_literal"><code>rdfs:Literal</code></a>.</p>
+        <p>Multilingual labels are supported using the <a data-cite="RDF12-CONCEPTS#section-Graph-Literal">language
+            tagging</a> facility of RDF literals.</p>
+      </section>
+
+      <section id="ch_comment">
+        <h4><code>rdfs:comment</code></h4>
+        <p><code>rdfs:comment</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
+          that may be used to provide a human-readable description of a
+          resource.</p>
+        <p>A triple of the form:</p>
+        <blockquote> <code>R rdfs:comment L</code>
+        </blockquote>
+        <p>states that <var>L</var> is a human readable description of <var>R</var>.</p>
+        <p>The <a href="#ch_domain"><code>rdfs:domain</code></a> of
+          <code>rdfs:comment</code> is <a href="#ch_resource"><code>rdfs:Resource</code></a>.
+          The <a href="#ch_range"><code>rdfs:range</code></a> of <code>rdfs:comment</code>
+          is <a href="#ch_literal"><code>rdfs:Literal</code></a>.</p>
+        <p>A textual comment helps clarify the meaning of RDF classes and
+          properties.
+          Such in-line documentation complements the use of both formal
+          techniques
+          (Ontology and rule languages) and informal (prose documentation,
+          examples,
+          test cases). A variety of documentation forms can be combined to
+          indicate the
+          intended meaning of the classes and properties described in an RDF
+          vocabulary. Since RDF vocabularies are expressed as RDF graphs,
+          vocabularies
+          defined in other namespaces may be used to provide richer
+          documentation.</p>
+        <p>Multilingual documentation is supported through use of the <a data-cite="RDF12-CONCEPTS#section-Graph-Literal">language
+            tagging</a> facility of RDF literals.</p>
+      </section>
+      <section id="ch_seealso">
+        <h4><code>rdfs:seeAlso</code></h4>
+        <p><code>rdfs:seeAlso</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
+          that is used to indicate a
+          resource that might provide additional information about the subject
+          resource.</p>
+        <p>A triple of the form:</p>
+        <blockquote> <code>S rdfs:seeAlso O</code>
+        </blockquote>
+        <p>states that the resource <var>O</var> may provide additional information about
+          <var>S</var>. It
+          may be possible to retrieve representations of <var>O</var> from the Web, but
+          this is
+          not required. When such representations may be retrieved, no
+          constraints are
+          placed on the format of those representations.</p>
+        <p>The <a href="#ch_domain"><code>rdfs:domain</code></a> of
+          <code>rdfs:seeAlso</code> is <a href="#ch_resource"><code>rdfs:Resource</code></a>.
+          The <a href="#ch_range"><code>rdfs:range</code></a> of <code>rdfs:seeAlso</code>
+          is
+          <a href="#ch_resource"><code>rdfs:Resource</code></a>.</p>
+      </section>
+
+      <section id="ch_isdefinedby">
+        <h4><code>rdfs:isDefinedBy</code></h4>
+        <p><code>rdfs:isDefinedBy</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
+          that is used to indicate a
+          resource defining the subject resource. This property may be used to
+          indicate
+          an RDF vocabulary in which a resource is described.</p>
+        <p>A triple of the form:</p>
+        <blockquote> <code>S rdfs:isDefinedBy O</code>
+        </blockquote>
+        <p>states that the resource <var>O</var> defines <var>S</var>. It may be possible to
+          retrieve
+          representations of <var>O</var> from the Web, but this is not required. When
+          such
+          representations may be retrieved, no constraints are placed on the
+          format of
+          those representations. <code>rdfs:isDefinedBy</code> is a <a href="#def-subproperty">subproperty</a>
+          of <a href="#ch_seealso"><code>rdfs:seeAlso</code></a>.</p>
+        <p>The <a href="#ch_domain"><code>rdfs:domain</code></a> of
+          <code>rdfs:isDefinedBy</code> is <a href="#ch_resource"><code>rdfs:Resource</code></a>.
+          The <a href="#ch_range"><code>rdfs:range</code></a> of <code>rdfs:isDefinedBy</code>
+          is
+          <a href="#ch_resource"><code>rdfs:Resource</code></a>.</p>
+      </section>
+  </section>
+  <section class="informative" id="ch_domainrange">
+    <h3>Using the Domain and Range vocabulary</h3>
+    <p>This specification introduces an RDF vocabulary for describing the
+      meaningful use of properties and classes in RDF data. For example, an
+      RDF
+      vocabulary might describe limitations on the types of values that are
+      appropriate for some property, or on the classes to which it makes sense
+      to
+      ascribe such properties.</p>
+    <p>RDF Schema provides a mechanism for describing this information, but
+      does not say whether or how an application should use it. For example,
+      while an RDF vocabulary can assert that an <code>author</code> property
+      is used to
+      indicate resources that are instances of the class <code>Person</code>,
+      it
+      does not say whether or how an application should act in processing that
+      range information. Different applications will use this information in
+      different ways. For example, data checking tools might use this to help
+      discover errors in some data set, an interactive editor might suggest
+      appropriate values, and a reasoning application might use it to infer
+      additional information from instance data.</p>
+    <p>RDF vocabularies can describe relationships between vocabulary items
+      from
+      multiple independently developed vocabularies. Since IRIs are used
+      to identify classes and properties on the Web, it is possible to create
+      new
+      properties that have a <code>domain</code> or <code>range</code> whose
+      value
+      is a class defined in another namespace.</p>
+  </section>
+</section>
+
 <section id="ch_classes">
   <h2>Classes</h2>
   <p>Resources may be divided into groups called classes. The members of a

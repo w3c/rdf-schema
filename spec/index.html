@@ -171,6 +171,55 @@
     with the prefix concatenated with the suffix.</p>
 </section>
 
+<section id="ch_vocabulary">
+  <h2>Data-modelling vocabulary</h2>
+</section>
+
+<section id="ch_datatypes">
+  <h2>Datatypes</h2>
+</section>
+
+<section id="ch_collectionvocab" class="informative">
+  <h2>RDF Collections</h2>
+</section>
+
+<section id="ch_ttrei">
+  <h2>Triple-term based reification</h2>
+</section>
+
+<section id="ch_utilvocab">
+  <h2>Utility Properties</h2>
+  <p>The following utility classes and properties are defined in the RDF
+    core
+    namespaces.</p>
+  <section id="ch_value">
+    <h4><code>rdf:value</code></h4>
+    <p><code>rdf:value</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
+      that may be used in
+      describing structured values.</p>
+    <p><code>rdf:value</code> has no meaning on its own. It is provided as a piece of
+      vocabulary that may be used in idioms such as illustrated
+      in example below:</p>
+    <pre class="example">
+      &lt;http://www.example.com/2002/04/products#item10245&gt;
+          &lt;http://www.example.org/terms/weight&gt; [
+             rdf:value 2.4 ;
+             &lt;http://www.example.org/terms/units&gt; &lt;http://www.example.org/units/kilograms&gt;
+             ] .
+    </pre>
+      <p>Despite
+      the lack of formal specification of the meaning of this property,
+      there is
+      value in defining it to encourage the use of a common idiom in
+      examples of
+      this kind.</p>
+    <p>The <a href="#ch_domain"><code>rdfs:domain</code></a> of
+      <code>rdf:value</code> is <a href="#ch_resource"><code>rdfs:Resource</code></a>.
+      The <a href="#ch_range"><code>rdfs:range</code></a> of <code>rdf:value</code>
+      is <a href="#ch_resource"><code>rdfs:Resource</code></a>.</p>
+  </section>
+</section>
+
 <section id="ch_classes">
   <h2>Classes</h2>
   <p>Resources may be divided into groups called classes. The members of a

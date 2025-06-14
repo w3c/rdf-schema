@@ -171,6 +171,86 @@
     with the prefix concatenated with the suffix.</p>
 </section>
 
+<section id="ch_vocabulary">
+  <h2>Data-modelling vocabulary</h2>
+</section>
+
+<section id="ch_datatypes">
+  <h2>Datatypes</h2>
+</section>
+
+<section id="ch_collectionvocab" class="informative">
+  <h2>RDF Collections</h2>
+  <p>RDF containers are open in the sense that the core RDF specifications
+    define no mechanism to state that there are no more members. The RDF
+    Collection vocabulary of classes and properties can describe a closed
+    collection, i.e. one that can have no more members.</p>
+  <p>A collection is represented as a list of items, a representation that
+    will be familiar to those with experience of Lisp and similar
+    programming languages. There is a <a data-cite="RDF12-TURTLE#collections">shorthand
+      notation</a> in the Turtle syntax specification for representing
+    collections.</p>
+  <p class="note">
+    RDFS does not require that there be only one first element of a
+    list-like structure, or even that a list-like structure have a first
+    element.
+  </p>
+  <section id="ch_list">
+    <h3><code>rdf:List</code></h3>
+    <p><code>rdf:List</code> is an instance of <a href="#ch_class"><code>rdfs:Class</code></a>
+      that can be used to build descriptions of lists and other list-like
+      structures.
+    </p>
+  </section>
+
+  <section id="ch_first">
+    <h3><code>rdf:first</code></h3>
+    <p><code>rdf:first</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
+      that can be used to build descriptions of lists and other list-like
+      structures.
+    </p>
+    <p>A triple of the form:</p>
+    <blockquote> <code>L rdf:first O</code>
+    </blockquote>
+    <p>states that there is a first-element relationship between <var>L</var> and <var>O</var>.</p>
+    <p>
+      The <a href="#ch_domain"><code>rdfs:domain</code></a> of <code>rdf:first</code>
+      is <a href="#ch_list"><code>rdf:List</code></a>. The <a href="#ch_range"><code>rdfs:range</code></a>
+      of <code>rdf:first</code> is <a href="#ch_resource"><code>rdfs:Resource</code></a>.
+    </p>
+  </section>
+
+  <section id="ch_rest">
+    <h3><code>rdf:rest</code></h3>
+    <p><code>rdf:rest</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
+      that can be used to build descriptions of lists and other list-like
+      structures.
+    </p>
+    <p>A triple of the form:</p>
+    <blockquote> <code>L rdf:rest O</code>
+    </blockquote>
+    <p>states that there is a rest-of-list relationship between <var>L</var> and <var>O</var>.</p>
+    <p>
+      The <a href="#ch_domain"><code>rdfs:domain</code></a> of <code>rdf:rest</code>
+      is <a href="#ch_list"><code>rdf:List</code></a>. The <a href="#ch_range"><code>rdfs:range</code></a>
+      of <code>rdf:rest</code> is <a href="#ch_list"><code>rdf:List</code></a>.
+    </p>
+  </section>
+
+  <section id="ch_nil">
+    <h3><code>rdf:nil</code></h3>
+    <p>The resource <code>rdf:nil</code> is an instance of <a href="#ch_list"><code>rdf:List</code></a>
+      that can be used to represent an empty list or other list-like
+      structure.</p>
+    <p>A triple of the form:</p>
+    <blockquote> <code>L rdf:rest rdf:nil</code>
+    </blockquote>
+    <p>states that <var>L</var> is an instance of <a href="#ch_list"><code>rdf:List</code></a>
+      that has one item; that item can be indicated using the <a href="#ch_first"><code>rdf:first</code></a>
+      property.</p>
+  </section>
+</section>
+
 <section id="ch_classes">
   <h2>Classes</h2>
   <p>Resources may be divided into groups called classes. The members of a

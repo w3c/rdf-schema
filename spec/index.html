@@ -171,6 +171,248 @@
     with the prefix concatenated with the suffix.</p>
 </section>
 
+<section id="ch_vocabulary">
+  <h2>Data-modelling vocabulary</h2>
+</section>
+
+<section id="ch_datatypes">
+  <h2>Datatypes</h2>
+</section>
+
+<section id="ch_collectionvocab" class="informative">
+  <h2>RDF Collections</h2>
+</section>
+
+<section id="ch_ttrei">
+  <h2>Triple-term based reification</h2>
+</section>
+
+<section id="ch_utilvocab">
+  <h2>Utility Properties</h2>
+</section>
+
+<section id="ch_legacyvocab" class="informative">
+  <h2>Legacy vocabularies</h2>
+</section>
+
+<section class="informative" id="ch_summary">
+  <h2>RDF Schema summary</h2>
+  <p>The tables in this section provide an overview of the RDF Schema vocabulary.</p>
+
+  <section id="ch_sumclasses">
+    <h3>RDF classes</h3>
+    <table>
+      <tbody>
+        <tr>
+          <th>Class name</th>
+          <th>comment</th>
+        </tr>
+        <tr>
+          <td><a href="#ch_resource"><code>rdfs:Resource</code></a></td>
+          <td>The class resource, everything.</td>
+        </tr>
+        <tr>
+          <td><a href="#ch_literal"><code>rdfs:Literal</code></a></td>
+          <td>The class of literal values, e.g. textual strings and
+            integers.</td>
+        </tr>
+        <tr>
+          <td><a href="#ch_langstring"><code>rdf:langString</code></a></td>
+          <td>The class of language-tagged string literal values.</td>
+        </tr>
+        <tr>
+          <td><a href="#ch_dirlangstring"><code>rdf:dirLangString</code></a></td>
+          <td>The class of directional language-tagged string literal values.</td>
+        </tr>
+        <tr>
+          <td><a href="#ch_html"><code>rdf:HTML</code></a></td>
+          <td>The class of HTML literal values.</td>
+        </tr>
+        <tr>
+          <td><a href="#ch_xmlliteral"><code>rdf:XMLLiteral</code></a></td>
+          <td>The class of XML literal values.</td>
+        </tr>
+        <tr>
+          <td><a href="#ch_json"><code>rdf:JSON</code></a></td>
+          <td>The class of JSON literal values.</td>
+        </tr>
+        <tr>
+          <td><a href="#ch_class"><code>rdfs:Class</code></a></td>
+          <td>The class of classes.</td>
+        </tr>
+        <tr>
+          <td><a href="#ch_property"><code>rdf:Property</code></a></td>
+          <td>The class of RDF properties.</td>
+        </tr>
+        <tr>
+          <td><a href="#ch_proposition"><code>rdf:Proposition</code></a></td>
+          <td>The class of reified triples. </td>
+        </tr>
+        <tr>
+          <td><a href="#ch_datatype"><code>rdfs:Datatype</code></a></td>
+          <td>The class of RDF datatypes.</td>
+        </tr>
+        <tr>
+          <td><a href="#ch_statement"><code>rdf:Statement</code></a></td>
+          <td>The class of RDF statements.</td>
+        </tr>
+        <tr>
+          <td><a href="#ch_bag"><code>rdf:Bag</code></a></td>
+          <td>The class of unordered containers.</td>
+        </tr>
+        <tr>
+          <td><a href="#ch_seq"><code>rdf:Seq</code></a></td>
+          <td>The class of ordered containers.</td>
+        </tr>
+        <tr>
+          <td><a href="#ch_alt"><code>rdf:Alt</code></a></td>
+          <td>The class of containers of alternatives.</td>
+        </tr>
+        <tr>
+          <td><a href="#ch_container"><code>rdfs:Container</code></a></td>
+          <td>The class of RDF containers.</td>
+        </tr>
+        <tr>
+          <td><a href="#ch_containermembershipproperty"><code>rdfs:ContainerMembershipProperty</code></a></td>
+          <td>The class of container membership properties, <code>rdf:_1</code>, <code>rdf:_2</code>,
+            ..., all of which are sub-properties of 'member'.</td>
+        </tr>
+        <tr>
+          <td><a href="#ch_list"><code>rdf:List</code></a></td>
+          <td>The class of RDF Lists.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="ch_sumproperties">
+    <h3>RDF properties</h3>
+    <table>
+      <tbody>
+        <tr>
+          <th>Property name</th>
+          <th>comment</th>
+          <th>domain</th>
+          <th>range</th>
+        </tr>
+        <tr>
+          <td><a href="#ch_type"><code>rdf:type</code></a></td>
+          <td>The subject is an instance of a class.</td>
+          <td><code>rdfs:Resource</code></td>
+          <td><code>rdfs:Class</code></td>
+        </tr>
+        <tr>
+          <td><a href="#ch_reifies"><code>rdf:reifies</code></a></td>
+          <td>Associates a resource with a reified triple.</td>
+          <td><code>rdfs:Resource</code></td>
+          <td><code>rdf:Proposition</code></td>
+        </tr>
+        <tr>
+          <td><a href="#ch_subclassof"><code>rdfs:subClassOf</code></a></td>
+          <td>The subject is a subclass of a class.</td>
+          <td><code>rdfs:Class</code></td>
+          <td><code>rdfs:Class</code></td>
+        </tr>
+        <tr>
+          <td><a href="#ch_subpropertyof"><code>rdfs:subPropertyOf</code></a></td>
+          <td>The subject is a subproperty of a property.</td>
+          <td><code>rdf:Property</code></td>
+          <td><code>rdf:Property</code></td>
+        </tr>
+        <tr>
+          <td><a href="#ch_domain"><code>rdfs:domain</code></a></td>
+          <td>A domain of the subject property.</td>
+          <td><code>rdf:Property</code></td>
+          <td><code>rdfs:Class</code></td>
+        </tr>
+        <tr>
+          <td><a href="#ch_range"><code>rdfs:range</code></a></td>
+          <td>A range of the subject property.</td>
+          <td><code>rdf:Property</code></td>
+          <td><code>rdfs:Class</code></td>
+        </tr>
+        <tr>
+          <td><a href="#ch_label"><code>rdfs:label</code></a></td>
+          <td>A human-readable name for the subject.</td>
+          <td><code>rdfs:Resource</code></td>
+          <td><code>rdfs:Literal</code></td>
+        </tr>
+        <tr>
+          <td><a href="#ch_comment"><code>rdfs:comment</code></a></td>
+          <td>A description of the subject resource.</td>
+          <td><code>rdfs:Resource</code></td>
+          <td><code>rdfs:Literal</code></td>
+        </tr>
+        <tr>
+          <td><a href="#ch_member"><code>rdfs:member</code></a></td>
+          <td>A member of the subject resource.</td>
+          <td><code>rdfs:Resource</code></td>
+          <td><code>rdfs:Resource</code></td>
+        </tr>
+        <tr>
+          <td><a href="#ch_first"><code>rdf:first</code></a></td>
+          <td>The first item in the subject RDF list.</td>
+          <td><code>rdf:List</code></td>
+          <td><code>rdfs:Resource</code></td>
+        </tr>
+        <tr>
+          <td><a href="#ch_rest"><code>rdf:rest</code></a></td>
+          <td>The rest of the subject RDF list after the first item.</td>
+          <td><code>rdf:List</code></td>
+          <td><code>rdf:List</code></td>
+        </tr>
+        <tr>
+          <td><a href="#ch_seealso"><code>rdfs:seeAlso</code></a></td>
+          <td>Further information about the subject resource.</td>
+          <td><code>rdfs:Resource</code></td>
+          <td><code>rdfs:Resource</code></td>
+        </tr>
+        <tr>
+          <td><a href="#ch_isdefinedby"><code>rdfs:isDefinedBy</code></a></td>
+          <td>The definition of the subject resource.</td>
+          <td><code>rdfs:Resource</code></td>
+          <td><code>rdfs:Resource</code></td>
+        </tr>
+        <tr>
+          <td><a href="#ch_value"><code>rdf:value</code></a></td>
+          <td>Idiomatic property used for structured values.</td>
+          <td><code>rdfs:Resource</code></td>
+          <td><code>rdfs:Resource</code></td>
+        </tr>
+        <tr>
+          <td><a href="#ch_subject"><code>rdf:subject</code></a></td>
+          <td>The subject of the subject RDF statement.</td>
+          <td><code>rdf:Statement</code></td>
+          <td><code>rdfs:Resource</code></td>
+        </tr>
+        <tr>
+          <td><a href="#ch_predicate"><code>rdf:predicate</code></a></td>
+          <td>The predicate of the subject RDF statement.</td>
+          <td><code>rdf:Statement</code></td>
+          <td><code>rdfs:Resource</code></td>
+        </tr>
+        <tr>
+          <td><a href="#ch_object"><code>rdf:object</code></a></td>
+          <td>The object of the subject RDF statement.</td>
+          <td><code>rdf:Statement</code></td>
+          <td><code>rdfs:Resource</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>In addition to these classes and properties, RDF also uses properties
+      called <code>rdf:_1</code>, <code>rdf:_2</code>, <code>rdf:_3</code>...
+      etc.,
+      each of which is both a sub-property of <code>rdfs:member</code> and
+      an
+      instance of the class <code>rdfs:ContainerMembershipProperty</code>.
+      There is
+      also an instance of <code>rdf:List</code> called <code>rdf:nil</code>
+      that is
+      an empty <code>rdf:List</code>.</p>
+  </section>
+</section>
+
 <section id="ch_classes">
   <h2>Classes</h2>
   <p>Resources may be divided into groups called classes. The members of a

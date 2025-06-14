@@ -171,6 +171,59 @@
     with the prefix concatenated with the suffix.</p>
 </section>
 
+<section id="ch_vocabulary">
+  <h2>Data-modelling vocabulary</h2>
+</section>
+
+<section id="ch_datatypes">
+  <h2>Datatypes</h2>
+</section>
+
+<section id="ch_collectionvocab" class="informative">
+  <h2>RDF Collections</h2>
+</section>
+
+<section id="ch_ttrei">
+  <h2>Triple-term based reification</h2>
+  <p>A triple term is a construct defined in the RDF 1.2 Concepts and Abstract 
+    Syntax specification [[RDF12-CONCEPTS]], referring to an RDF triple that 
+    is used as a value, specifically, in the object position of another triple. 
+    Importantly, a triple term does not imply assertion; that is, the triple it 
+    denotes is not necessarily asserted in the RDF graph. This enables the 
+    representation of metadata or commentary about triples that may or may not 
+    be part of the asserted graph content, including potentially contradictory 
+    relationships. For a triple term to be considered an asserted triple, it 
+    must also appear explicitly in an RDF graph as a top-level triple. Otherwise, 
+    it remains unasserted and serves primarily as a reference or subject of metadata.</p>
+  <p>A triple term can be the object of a triple whose predicate is 
+    <a href="#ch_reifies"><code>rdf:reifies</code></a>. In such cases, the resulting triple is referred 
+    to as a reifying triple, and its subject is termed a reifier. The reifier 
+    can be used to make further statements about the triple term.</p>
+  <section id="ch_proposition">
+    <h3><code>rdf:Proposition</code></h3>
+    <p><code>rdf:Proposition</code> is the class of reified triples.
+      <code>rdf:Proposition</code> is an instance of <a href="#ch_class"><code>rdfs:Class</code></a>.</p>
+  </section>
+
+  <section id="ch_reifies">
+    <h3><code>rdf:reifies</code></h3>
+    <p><code>rdf:reifies</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
+      that is used to associate a resource (reifier) with a triple (proposition).</p>
+    <p>A triple of the form:</p>
+    <blockquote> <code>R rdf:reifies &lt;&lt;S P O&gt;&gt;</code> </blockquote>
+    <p>states that <em>R</em> is an instance of <a href="#ch_resource"><code>rdfs:Resource</code></a> 
+      and reifies the triple term <code>&lt;&lt;S P O&gt;&gt;</code>, where <em>S</em>, <em>P</em>, and <em>O</em> represent 
+      the subject, predicate, and object of the reified triple, respectively. The object 
+      <code>&lt;&lt;S P O&gt;&gt;</code> is an instance of the class 
+      <a href="#ch_proposition"><code>rdf:Proposition</code></a>.</p>
+    <p>The <a href="#ch_domain"><code>rdfs:domain</code></a> of
+      <code>rdf:reifies</code> is <a href="#ch_resource"><code>rdfs:Resource</code></a>.
+      The <a href="#ch_range"><code>rdfs:range</code></a> of <code>rdf:reifies</code> is 
+      <a href="#ch_proposition"><code>rdf:Proposition</code></a>.</p>
+  </section>
+</section>
+
+
 <section id="ch_classes">
   <h2>Classes</h2>
   <p>Resources may be divided into groups called classes. The members of a

@@ -543,6 +543,20 @@
 
 <section id="ch_datatypes">
   <h2>Datatypes</h2>
+  <p>An RDF datatype is a class of literal values with an associated value space, lexical space, and lexical-to-value mapping, 
+     identified by a datatype IRI [[RDF12-CONCEPTS]].</p>
+  <p>RDF 1.2 recognizes both RDF‑native datatypes (e.g., <code>rdf:langString</code>, <code>rdf:dirLangString</code>, 
+     <code>rdf:HTML</code>, <code>rdf:XMLLiteral</code>, <code>rdf:JSON</code>) and the RDF‑compatible subset of XML Schema 1.1 
+     datatypes, which are enumerated below.</p>
+  <figure id="fig-datatypes">
+    <a href="datatypes.svg">
+      <object data="datatypes.svg" aria-describedby="fig-datatypes-alt"
+        aria-label="Built-in datatypes hierarchy"></object>
+    </a>
+    <figcaption id="fig-datatypes-alt">
+        Built-in datatypes hierarchy illustrating the relationships among primitive and derived data types defined in XML Schema and RDF. 
+    </figcaption>
+  </figure>
   <section id="ch_langstring">
     <h3><code>rdf:langString</code></h3>
     <p>The class <code>rdf:langString</code> is the class of

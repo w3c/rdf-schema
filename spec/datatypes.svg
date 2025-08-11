@@ -1,0 +1,1135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="76cm"
+   height="64cm"
+   viewBox="19 118 1504 1274"
+   version="1.1"
+   id="svg88"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="bg">
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="20"
+       y="1060"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect1" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="95"
+       y="1086"
+       id="text1"><tspan
+         x="95"
+         y="1086"
+         id="tspan1">anyAtomicType</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="213.5"
+       y="269"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect2" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="288.5"
+       y="292"
+       id="text2"><tspan
+         x="288.5"
+         y="292"
+         id="tspan2">xsd:string</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="388.096"
+       y="120.041"
+       width="175.799"
+       height="31.9188"
+       rx="0"
+       ry="0"
+       id="rect3" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="475.995"
+       y="146"
+       id="text3"><tspan
+         x="475.995"
+         y="146"
+         id="tspan3">xsd:normalizedString</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="590"
+       y="170"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect4" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="665"
+       y="196"
+       id="text4"><tspan
+         x="665"
+         y="196"
+         id="tspan4">xsd:token</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="790"
+       y="119"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect5" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="865"
+       y="145"
+       id="text5"><tspan
+         x="865"
+         y="145"
+         id="tspan5">xsd:language</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="790"
+       y="169"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect6" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="865"
+       y="190.547"
+       id="text6"><tspan
+         x="865"
+         y="190.547"
+         id="tspan6">xsd:Name</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="986.5"
+       y="169"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect7" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="1061.5"
+       y="190.547"
+       id="text7"><tspan
+         x="1061.5"
+         y="190.547"
+         id="tspan7">xsd:NCName</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="790"
+       y="222"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect8" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="865"
+       y="248"
+       id="text8"><tspan
+         x="865"
+         y="248"
+         id="tspan8">xsd:NMTOKEN</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="400.995"
+       y="179"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect9" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="475.995"
+       y="205"
+       id="text9"><tspan
+         x="475.995"
+         y="205"
+         id="tspan9">rdf:XMLLiteral</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="400.995"
+       y="229"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect10" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="475.995"
+       y="255"
+       id="text10"><tspan
+         x="475.995"
+         y="255"
+         id="tspan10">rdf:HTML</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="400.995"
+       y="279"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect11" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="475.995"
+       y="305"
+       id="text11"><tspan
+         x="475.995"
+         y="305"
+         id="tspan11">rdf:JSON</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="400.995"
+       y="329"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect12" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="475.995"
+       y="355"
+       id="text12"><tspan
+         x="475.995"
+         y="355"
+         id="tspan12">rdf:langString</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="400.995"
+       y="379"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect13" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="475.995"
+       y="405"
+       id="text13"><tspan
+         x="475.995"
+         y="405"
+         id="tspan13">rdf:dirLangString</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="213.5"
+       y="513"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect14" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="288.5"
+       y="539"
+       id="text14"><tspan
+         x="288.5"
+         y="539"
+         id="tspan14">xsd:boolean</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="215"
+       y="620"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect15" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="290"
+       y="646"
+       id="text15"><tspan
+         x="290"
+         y="646"
+         id="tspan15">xsd:decimal</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="400.995"
+       y="497.25"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect16" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="475.995"
+       y="518.797"
+       id="text16"><tspan
+         x="475.995"
+         y="518.797"
+         id="tspan16">xsd:integer</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="583.102"
+       y="390.047"
+       width="179.768"
+       height="31.9069"
+       rx="0"
+       ry="0"
+       id="rect17" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="670"
+       y="416"
+       id="text17"><tspan
+         x="670"
+         y="416"
+         id="tspan17">xsd:nonPositiveInteger</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="790"
+       y="390"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect18" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="865"
+       y="413"
+       id="text18"><tspan
+         x="865"
+         y="413"
+         id="tspan18">xsd:negativeInteger</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="595"
+       y="497.25"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect19" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="670"
+       y="518.797"
+       id="text19"><tspan
+         x="670"
+         y="518.797"
+         id="tspan19">xsd:long</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="790"
+       y="497.25"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect20" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="865"
+       y="518.797"
+       id="text20"><tspan
+         x="865"
+         y="518.797"
+         id="tspan20">xsd:int</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="986.5"
+       y="497.25"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect21" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="1061.5"
+       y="518.797"
+       id="text21"><tspan
+         x="1061.5"
+         y="518.797"
+         id="tspan21">xsd:short</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="1179.5"
+       y="497.25"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect22" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="1254.5"
+       y="518.797"
+       id="text22"><tspan
+         x="1254.5"
+         y="518.797"
+         id="tspan22">xsd:byte</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="572.138"
+       y="577.055"
+       width="185.723"
+       height="31.8892"
+       rx="0"
+       ry="0"
+       id="rect23" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="665"
+       y="598.547"
+       id="text23"><tspan
+         x="665"
+         y="598.547"
+         id="tspan23">xsd:nonNegativeInteger</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="790"
+       y="577"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect24" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="865"
+       y="598.547"
+       id="text24"><tspan
+         x="865"
+         y="598.547"
+         id="tspan24">xsd:unsignedLong</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="986.5"
+       y="577"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect25" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="1061.5"
+       y="598.547"
+       id="text25"><tspan
+         x="1061.5"
+         y="598.547"
+         id="tspan25">xsd:unsignedInt</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="1179.5"
+       y="577"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect26" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="1254.5"
+       y="598.547"
+       id="text26"><tspan
+         x="1254.5"
+         y="598.547"
+         id="tspan26">xsd:unsignedShort</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="1372"
+       y="577"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect27" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="1447"
+       y="598.547"
+       id="text27"><tspan
+         x="1447"
+         y="598.547"
+         id="tspan27">xsd:unsignedByte</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="790"
+       y="658"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect28" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="865"
+       y="684"
+       id="text28"><tspan
+         x="865"
+         y="684"
+         id="tspan28">xsd:positiveInteger</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="219"
+       y="696"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect29" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="294"
+       y="722"
+       id="text29"><tspan
+         x="294"
+         y="722"
+         id="tspan29">xsd:double</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="219"
+       y="746"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect30" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="294"
+       y="772"
+       id="text30"><tspan
+         x="294"
+         y="772"
+         id="tspan30">xsd:float</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="219"
+       y="796"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect31" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="294"
+       y="822"
+       id="text31"><tspan
+         x="294"
+         y="822"
+         id="tspan31">xsd:dateTime</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="410.995"
+       y="796"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect32" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="485.995"
+       y="822"
+       id="text32"><tspan
+         x="485.995"
+         y="822"
+         id="tspan32">xsd:dataTimeStamp</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="220"
+       y="850"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect33" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="295"
+       y="876"
+       id="text33"><tspan
+         x="295"
+         y="876"
+         id="tspan33">xsd:date</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="220"
+       y="900"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect34" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="295"
+       y="926"
+       id="text34"><tspan
+         x="295"
+         y="926"
+         id="tspan34">xsd:time</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="220"
+       y="950"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect35" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="295"
+       y="976"
+       id="text35"><tspan
+         x="295"
+         y="976"
+         id="tspan35">xsd:gYearMonth</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="220"
+       y="1000"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect36" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="295"
+       y="1026"
+       id="text36"><tspan
+         x="295"
+         y="1026"
+         id="tspan36">xsd:gYear</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="220"
+       y="1050"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect37" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="295"
+       y="1076"
+       id="text37"><tspan
+         x="295"
+         y="1076"
+         id="tspan37">xsd:gMonthDay</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="220"
+       y="1100"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect38" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="295"
+       y="1126"
+       id="text38"><tspan
+         x="295"
+         y="1126"
+         id="tspan38">xsd:gDay</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="220"
+       y="1150"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect39" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="295"
+       y="1176"
+       id="text39"><tspan
+         x="295"
+         y="1176"
+         id="tspan39">xsd:gMonth</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="220"
+       y="1206"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect40" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="295"
+       y="1232"
+       id="text40"><tspan
+         x="295"
+         y="1232"
+         id="tspan40">xsd:duration</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="394.126"
+       y="1182.05"
+       width="183.738"
+       height="31.8951"
+       rx="0"
+       ry="0"
+       id="rect41" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="485.995"
+       y="1208"
+       id="text41"><tspan
+         x="485.995"
+         y="1208"
+         id="tspan41">xsd:yearMonthDuration</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="400.495"
+       y="1232"
+       width="171"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect42" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="485.995"
+       y="1258"
+       id="text42"><tspan
+         x="485.995"
+         y="1258"
+         id="tspan42">xsd:dayTimeDuration</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="220"
+       y="1259"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect43" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="295"
+       y="1285"
+       id="text43"><tspan
+         x="295"
+         y="1285"
+         id="tspan43">xsd:base64Binary</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="220"
+       y="1309"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect44" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="295"
+       y="1335"
+       id="text44"><tspan
+         x="295"
+         y="1335"
+         id="tspan44">xsd:hexBinary</tspan></text>
+    <rect
+       style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x="220"
+       y="1359"
+       width="150"
+       height="32"
+       rx="0"
+       ry="0"
+       id="rect45" />
+    <text
+       font-size="16"
+       style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Arial;font-style:normal;font-weight:normal"
+       x="295"
+       y="1385"
+       id="text45"><tspan
+         x="295"
+         y="1385"
+         id="tspan45">xsd:anyURI</tspan></text>
+    <line
+       style="fill: none; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x1="169.593"
+       y1="1079.98"
+       x2="215"
+       y2="636"
+       id="line45" />
+    <line
+       style="fill: none; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x1="169.683"
+       y1="1079.99"
+       x2="213.5"
+       y2="529"
+       id="line46" />
+    <line
+       style="fill: none; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x1="169.78"
+       y1="1079.99"
+       x2="213.5"
+       y2="285"
+       id="line47" />
+    <line
+       style="fill: none; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x1="169.466"
+       y1="1079.96"
+       x2="219"
+       y2="712"
+       id="line48" />
+    <line
+       style="fill: none; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x1="169.383"
+       y1="1079.95"
+       x2="219"
+       y2="762"
+       id="line49" />
+    <line
+       style="fill: none; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x1="169.27"
+       y1="1079.93"
+       x2="219"
+       y2="812"
+       id="line50" />
+    <line
+       style="fill: none; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x1="169.074"
+       y1="1079.89"
+       x2="220"
+       y2="866"
+       id="line51" />
+    <line
+       style="fill: none; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x1="168.807"
+       y1="1079.82"
+       x2="220"
+       y2="916"
+       id="line52" />
+    <line
+       style="fill: none; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x1="168.345"
+       y1="1079.64"
+       x2="220"
+       y2="966"
+       id="line53" />
+    <line
+       style="fill: none; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x1="167.439"
+       y1="1079.07"
+       x2="220"
+       y2="1016"
+       id="line54" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.912883;stroke-opacity:1"
+       x1="170.01445"
+       y1="1075.6426"
+       x2="220.01027"
+       y2="1065.9535"
+       id="line55" />
+    <line
+       style="fill: none; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x1="166.877"
+       y1="1073.5"
+       x2="220"
+       y2="1116"
+       id="line56" />
+    <line
+       style="fill: none; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x1="168.057"
+       y1="1072.5"
+       x2="220"
+       y2="1166"
+       id="line57" />
+    <line
+       style="fill: none; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x1="168.704"
+       y1="1072.22"
+       x2="220"
+       y2="1222"
+       id="line58" />
+    <line
+       style="fill: none; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x1="169.025"
+       y1="1072.12"
+       x2="220"
+       y2="1275"
+       id="line59" />
+    <line
+       style="fill: none; stroke-opacity: 1; stroke-width: 1; stroke: #000000"
+       x1="169.213"
+       y1="1072.08"
+       x2="220"
+       y2="1325"
+       id="line60" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.959395;stroke-opacity:1"
+       x1="170.45406"
+       y1="1075.5138"
+       x2="220.02531"
+       y2="1375.0056"
+       id="line61" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.965701;stroke-opacity:1"
+       x1="364.01288"
+       y1="285.39908"
+       x2="388.11615"
+       y2="135.99588"
+       id="line62" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.959273;stroke-opacity:1"
+       x1="363.52209"
+       y1="284.75296"
+       x2="401.01358"
+       y2="194.99229"
+       id="line63" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.934592;stroke-opacity:1"
+       x1="363.50284"
+       y1="285.17767"
+       x2="401.01889"
+       y2="244.97762"
+       id="line64" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.9409;stroke-opacity:1"
+       x1="363.18265"
+       y1="284.34149"
+       x2="400.99939"
+       y2="295.02216"
+       id="line65" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.953993;stroke-opacity:1"
+       x1="363.33362"
+       y1="284.35831"
+       x2="401.01474"
+       y2="345.01239"
+       id="line66" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.967961;stroke-opacity:1"
+       x1="363.771"
+       y1="283.97061"
+       x2="401.01169"
+       y2="395.00607"
+       id="line67" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.954273;stroke-opacity:1"
+       x1="563.60034"
+       y1="134.41594"
+       x2="590.02142"
+       y2="186.01141"
+       id="line68" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.948867;stroke-opacity:1"
+       x1="739.94446"
+       y1="186.11121"
+       x2="790.01825"
+       y2="134.9821"
+       id="line69" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.963989;stroke-opacity:1"
+       x1="739.94958"
+       y1="186.08142"
+       x2="789.99811"
+       y2="184.99858"
+       id="line70" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.942081;stroke-opacity:1"
+       x1="740.3645"
+       y1="186.2543"
+       x2="790.02087"
+       y2="238.02008"
+       id="line71" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.96419;stroke-opacity:1"
+       x1="939.55206"
+       y1="185"
+       x2="986.5"
+       y2="185"
+       id="line72" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.969817;stroke-opacity:1"
+       x1="365.43567"
+       y1="637.47559"
+       x2="401.01199"
+       y2="513.24438"
+       id="line73" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.96674;stroke-opacity:1"
+       x1="551.01581"
+       y1="513.53485"
+       x2="583.11823"
+       y2="405.99506"
+       id="line74" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.962292;stroke-opacity:1"
+       x1="550.54706"
+       y1="513.25"
+       x2="595"
+       y2="513.25"
+       id="line75" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.961788;stroke-opacity:1"
+       x1="550.74182"
+       y1="512.93164"
+       x2="572.15552"
+       y2="593.00439"
+       id="line76" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.941221;stroke-opacity:1"
+       x1="762.42206"
+       y1="406"
+       x2="790"
+       y2="406"
+       id="line77" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.954673;stroke-opacity:1"
+       x1="745.34137"
+       y1="513.25"
+       x2="790"
+       y2="513.25"
+       id="line78" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.96419;stroke-opacity:1"
+       x1="939.55206"
+       y1="513.25"
+       x2="986.5"
+       y2="513.25"
+       id="line79" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.956631;stroke-opacity:1"
+       x1="1136.4467"
+       y1="513.25"
+       x2="1179.01"
+       y2="513.25"
+       id="line80" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.938014;stroke-opacity:1"
+       x1="758.20239"
+       y1="593"
+       x2="790"
+       y2="593"
+       id="line81" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.96419;stroke-opacity:1"
+       x1="939.55206"
+       y1="593"
+       x2="986.5"
+       y2="593"
+       id="line82" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.96147;stroke-opacity:1"
+       x1="1136.052"
+       y1="593"
+       x2="1179.5"
+       y2="593"
+       id="line83" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.956621;stroke-opacity:1"
+       x1="1329.4467"
+       y1="593"
+       x2="1372"
+       y2="593"
+       id="line84" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.956264;stroke-opacity:1"
+       x1="757.94403"
+       y1="592.82574"
+       x2="790.02069"
+       y2="674.0083"
+       id="line85" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.960611;stroke-opacity:1"
+       x1="368.55203"
+       y1="812"
+       x2="410.995"
+       y2="812"
+       id="line86" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.892694;stroke-opacity:1"
+       x1="369.88885"
+       y1="1221.7006"
+       x2="394.16385"
+       y2="1197.9619"
+       id="line87" />
+    <line
+       style="fill:none;stroke:#000000;stroke-width:0.912512;stroke-opacity:1"
+       x1="369.69012"
+       y1="1222.1293"
+       x2="400.52356"
+       y2="1248.0334"
+       id="line88" />
+  </g>
+</svg>
+
+

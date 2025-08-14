@@ -835,9 +835,9 @@
     to as a reifying triple, and its subject is termed a reifier. The reifier 
     can be used to make further statements about the triple term.</p>
   <section id="ch_proposition">
-    <h3><code>rdf:Proposition</code></h3>
-    <p><code>rdf:Proposition</code> is the class of reified triples.
-      <code>rdf:Proposition</code> is an instance of <a href="#ch_class"><code>rdfs:Class</code></a>.</p>
+    <h3><code>rdfs:Proposition</code></h3>
+    <p><code>rdfs:Proposition</code> is the class of reified triples.
+      <code>rdfs:Proposition</code> is an instance of <a href="#ch_class"><code>rdfs:Class</code></a>.</p>
   </section>
   <section id="ch_reifies">
     <h3><code>rdf:reifies</code></h3>
@@ -849,11 +849,11 @@
       and reifies the triple term <code>&lt;&lt;S P O&gt;&gt;</code>, where <em>S</em>, <em>P</em>, and <em>O</em> represent 
       the subject, predicate, and object of the reified triple, respectively. The object 
       <code>&lt;&lt;S P O&gt;&gt;</code> is an instance of the class 
-      <a href="#ch_proposition"><code>rdf:Proposition</code></a>.</p>
+      <a href="#ch_proposition"><code>rdfs:Proposition</code></a>.</p>
     <p>The <a href="#ch_domain"><code>rdfs:domain</code></a> of
       <code>rdf:reifies</code> is <a href="#ch_resource"><code>rdfs:Resource</code></a>.
       The <a href="#ch_range"><code>rdfs:range</code></a> of <code>rdf:reifies</code> is 
-      <a href="#ch_proposition"><code>rdf:Proposition</code></a>.</p>
+      <a href="#ch_proposition"><code>rdfs:Proposition</code></a>.</p>
   </section>
 </section>
 
@@ -1294,7 +1294,7 @@
           <td>The class of RDF properties.</td>
         </tr>
         <tr>
-          <td><a href="#ch_proposition"><code>rdf:Proposition</code></a></td>
+          <td><a href="#ch_proposition"><code>rdfs:Proposition</code></a></td>
           <td>The class of reified triples. </td>
         </tr>
         <tr>
@@ -1353,7 +1353,7 @@
           <td><a href="#ch_reifies"><code>rdf:reifies</code></a></td>
           <td>Associates a resource with a reified triple.</td>
           <td><code>rdfs:Resource</code></td>
-          <td><code>rdf:Proposition</code></td>
+          <td><code>rdfs:Proposition</code></td>
         </tr>
         <tr>
           <td><a href="#ch_subclassof"><code>rdfs:subClassOf</code></a></td>
@@ -1571,7 +1571,7 @@
   <ul>
     <li>Added the datatype <code>rdf:dirLangString</code>.
     <li>Added the datatype <code>rdf:JSON</code>.</li>
-    <li>Added the class <code>rdf:Proposition</code> and the property <code>rdf:reifies</code>.</li>
+    <li>Added the class <code>rdfs:Proposition</code> and the property <code>rdf:reifies</code>.</li>
     <li>Reorganization of the document structure.</li>
   </ul>
 </section>

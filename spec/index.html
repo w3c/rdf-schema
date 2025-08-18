@@ -1446,9 +1446,9 @@
           <td><code>rdfs:Resource</code></td>
         </tr>
       </tbody>
-    </table>    <p>In addition to these classes and properties, RDF also uses properties
-      called <code>rdf:_1</code>, <code>rdf:_2</code>, <code>rdf:_3</code>...
-      etc.,
+    </table>
+    <p>In addition to these classes and properties, RDF uses properties
+      called <code>rdf:_1</code>, <code>rdf:_2</code>, <code>rdf:_3</code>, etc.,
       each of which is both a sub-property of <code>rdfs:member</code> and
       an
       instance of the class <code>rdfs:ContainerMembershipProperty</code>.
@@ -1457,6 +1457,105 @@
       that is
       an empty <code>rdf:List</code>.</p>
   </section>
+</section>
+
+<section class="appendix informative" id="ch_Registry">
+  <h2>Vocabulary Registry</h2>
+  <p>This section defines a registry for the vocabulary in the RDF core namespaces
+    in accordance with <a href="https://www.w3.org/policies/process/#registries">§ 6.5
+    The Registry Track</a> of the W3C Process [[W3C-PROCESS]].</p>
+  <p>The purpose of this registry is to provide a central index where anyone can
+    find out what vocabulary entries exist in the RDF core namespaces and where
+    they are formally defined, to avoid collisions and duplication.</p>
+  <p>Each registry table has the following three fields: an IRI, the governing
+    specification, and any relevant notes (such as applicable scope).</p>
+  <p>The policy for changes to existing entries is as follows:</p>
+  <ul>
+    <li>Entries can be marked as deprecated but not deleted.</li>
+    <li>Entries can be updated to reflect any changes to the governing specification or the notes.</li>
+  </ul>
+  <p>The custodian for all registry tables is the RDF &amp; SPARQL Working Group.</p>
+
+  <section class="informative">
+    <h3><code>rdf:</code> Namespace</h3>
+    <p>The following registry table lists all the IRIs defined in the <code>rdf:</code> namespace.</p>
+    <p>A machine-readable version of this table is available at <a 
+      href="http://www.w3.org/1999/02/22-rdf-syntax-ns">
+      <code>http://www.w3.org/1999/02/22-rdf-syntax-ns</code></a>.</p>
+<table>
+  <thead>
+    <tr>
+      <th>IRI</th>
+      <th>Specification</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><code>rdf:Alt</code></td><td>This document</td><td></td></tr>
+    <tr><td><code>rdf:Bag</code></td><td>This document</td><td></td></tr>
+    <tr><td><code>rdf:Seq</code></td><td>This document</td><td></td></tr>
+    <tr><td><code>rdf:HTML</code></td><td>This document</td><td></td></tr>
+    <tr><td><code>rdf:JSON </code></td><td>This document</td><td></td></tr>
+    <tr><td><code>rdf:XMLLiteral</code></td><td>This document</td><td></td></tr>
+    <tr><td><code>rdf:List</code></td><td>This document</td><td></td></tr>
+    <tr><td><code>rdf:Property</code></td><td>This document</td><td></td></tr>
+    <tr><td><code>rdf:Statement</code></td><td>This document</td><td></td></tr>
+    <tr><td><code>rdf:nil</code></td><td>This document</td><td></td></tr>
+    <tr><td><code>rdf:rest</code></td><td>This document</td><td></td></tr>
+    <tr><td><code>rdf:dirLangString</code></td><td>This document</td><td></td></tr>
+    <tr><td><code>rdf:first</code></td><td>This document</td><td></td></tr>
+    <tr><td><code>rdf:langString</code></td><td>This document</td><td></td></tr>
+    <tr><td><code>rdf:object</code></td><td>This document</td><td></td></tr>
+    <tr><td><code>rdf:predicate</code></td><td>This document</td><td></td></tr>
+    <tr><td><code>rdf:subject</code></td><td>This document</td><td></td></tr>
+    <tr><td><code>rdf:reifies</code></td><td>This document</td><td></td></tr>
+    <tr><td><code>rdf:type</code></td><td>This document</td><td></td></tr>
+    <tr><td><code>rdf:value</code></td><td>This document</td><td></td></tr>
+    <tr><td><code>rdf:CompoundLiteral</code></td><td>[[JSON-LD11]]</td><td>Consideration should be given to the use of <code>rdf:dirLangString</code>. This term is considered archaic but retained for compatibility with JSON-LD.</td></tr>
+    <tr><td><code>rdf:direction</code></td><td>[[JSON-LD11]]</td><td>Consideration should be given to the use of <code>rdf:dirLangString</code>. This term is considered archaic but retained for compatibility with JSON-LD.</td></tr>
+    <tr><td><code>rdf:language</code></td><td>[[JSON-LD11]]</td><td>Consideration should be given to the use of <code>rdf:dirLangString</code>. This term is considered archaic but retained for compatibility with JSON-LD.</td></tr>
+    <tr><td><code>rdf:PlainLiteral</code></td><td>[[RDF-PLAIN-LITERAL]]</td><td>Only used in OWL [[OWL2-OVERVIEW]]</td></tr>
+    <tr><td><code>rdf:langRange</code></td><td>[[RDF-PLAIN-LITERAL]]</td><td>Only used in OWL [[OWL2-OVERVIEW]]</td></tr>
+  </tbody>
+</table>
+
+  </section>
+
+  <section class="informative">
+    <h3><code>rdfs:</code> Namespace</h3>
+    <p>The following registry table lists all the IRIs defined in the <code>rdfs:</code> namespace.</p>
+    <p>A machine-readable version of this table is available at <a href="http://www.w3.org/2000/01/rdf-schema"><code>http://www.w3.org/2000/01/rdf-schema</code></a>.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>IRI</th>
+          <th>Specification</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr><td><code>rdfs:Class</code></td><td>This document</td></tr>
+        <tr><td><code>rdfs:Container</code></td><td>This document</td></tr>
+        <tr><td><code>rdfs:ContainerMembershipProperty</code></td><td>This document</td></tr>
+        <tr><td><code>rdfs:Datatype</code></td><td>This document</td></tr>
+        <tr><td><code>rdfs:Literal</code></td><td>This document</td></tr>
+        <tr><td><code>rdfs:Proposition</code></td><td>This document</td></tr>
+        <tr><td><code>rdfs:Resource</code></td><td>This document</td></tr>
+        <tr><td><code>rdfs:comment</code></td><td>This document</td></tr>
+        <tr><td><code>rdfs:domain</code></td><td>This document</td></tr>
+        <tr><td><code>rdfs:isDefinedBy</code></td><td>This document</td></tr>
+        <tr><td><code>rdfs:label</code></td><td>This document</td></tr>
+        <tr><td><code>rdfs:member</code></td><td>This document</td></tr>
+        <tr><td><code>rdfs:range</code></td><td>This document</td></tr>
+        <tr><td><code>rdfs:seeAlso</code></td><td>This document</td></tr>
+        <tr><td><code>rdfs:subClassOf</code></td><td>This document</td></tr>
+        <tr><td><code>rdfs:subPropertyOf</code></td><td>This document</td></tr>
+      </tbody>
+    </table>
+
+  </section>
+
 </section>
 
 <section class="appendix informative" id="ch_Acknowledgments">
@@ -1573,6 +1672,7 @@
     <li>Added the datatype <code>rdf:JSON</code>.</li>
     <li>Added the class <code>rdfs:Proposition</code> and the property <code>rdf:reifies</code>.</li>
     <li>Reorganization of the document structure.</li>
+    <li>Added the vocabulary registry.</li>
   </ul>
 </section>
 

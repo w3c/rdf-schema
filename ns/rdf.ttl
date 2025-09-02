@@ -166,3 +166,32 @@ rdf:direction a rdf:Property ;
 	rdfs:domain rdf:CompoundLiteral ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
 	rdfs:seeAlso <https://www.w3.org/TR/json-ld11/#the-rdf-compoundliteral-class-and-the-rdf-language-and-rdf-direction-properties> .
+
+## Controlled vocabulary for versions.
+## URIs for versions of RDF and SPARQL
+## The rdfs:label corresponds to the constant defined in RDF Concepts.
+## It can apply to RDF and SPARQL.
+
+rdf:version-1.2 a rdfs:Resource ;
+    rdfs:label "1.2" ;
+    rdfs:comment "Version 1.2." ;
+    rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
+    .
+
+rdf:version-1.2-basic
+    rdfs:label "1.2-basic" ;
+    rdfs:comment "Version 1.2-basic" ;
+    rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
+    .
+
+rdf:version-1.1
+    rdfs:label "1.1" ;
+    rdfs:comment "Version 1.1" ;
+    rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
+    .
+
+rdf:version-1.0
+    rdfs:label "1.0" ;
+    rdfs:comment "Version 1.0" ;
+    rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
+    .

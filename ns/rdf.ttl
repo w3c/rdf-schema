@@ -178,19 +178,19 @@ rdf:version-1.2 a rdfs:Resource ;
     rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
     .
 
-rdf:version-1.2-basic
+rdf:version-1.2-basic a rdfs:Resource ;
     rdfs:label "1.2-basic" ;
     rdfs:comment "Version 1.2-basic" ;
     rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
     .
 
-rdf:version-1.1
+rdf:version-1.1 a rdfs:Resource ;
     rdfs:label "1.1" ;
     rdfs:comment "Version 1.1" ;
     rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
     .
 
-rdf:version-1.0
+rdf:version-1.0 a rdfs:Resource ;
     rdfs:label "1.0" ;
     rdfs:comment "Version 1.0" ;
     rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;

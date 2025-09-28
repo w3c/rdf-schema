@@ -10,275 +10,290 @@
   dc:description "This file is a description of the XML Schema datatypes used in RDF" .
 
 xsd:string a rdfs:Datatype ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#string> ;
   rdfs:label "string" ;
   rdfs:comment "Character strings. Value space: finite-length sequences of Unicode characters. Lexical form: any finite-length sequence of XML characters matching the XML Char production (i.e., any Unicode scalar value allowed by XML)." .
 
 xsd:boolean a rdfs:Datatype ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#boolean> ;
   rdfs:label "boolean" ;
   rdfs:comment "Two-valued logic. Lexical forms: 'true', 'false', '1', '0'. Value space: {true, false}." .
 
 xsd:decimal a rdfs:Datatype ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#decimal> ;
   rdfs:label "decimal" ;
   rdfs:comment "Arbitrary-precision decimal numbers. Value space: numbers of the form i/10^n with i and n integers (n ≥ 0). No special values (INF/NaN) and no exponential notation in lexical form. Lexical form: an optional leading sign followed by digits, with an optional fractional part using '.' as the decimal separator; no exponent is permitted (e.g., '-1.23', '210', '+100000.00')." .
 
 xsd:integer a rdfs:Datatype ;
   rdfs:subClassOf xsd:decimal ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#integer> ;
   rdfs:label "integer" ;
   rdfs:comment "Signed integers of arbitrary size. Derived from xsd:decimal with fractionDigits=0. Lexical form: optional leading sign followed by one or more decimal digits; no decimal point or exponent (e.g., '-1', '0', '+100000')." .
 
 xsd:double a rdfs:Datatype ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#double> ;
   rdfs:label "double" ;
-  rdfs:comment "IEEE 754 64-bit floating-point. Lexical forms use decimal or scientific notation with optional leading sign and exponent; special tokens 'INF', '+INF', '-INF', and 'NaN' are permitted; '+0' and '-0' are distinct lexical forms. Mapping from lexical forms to values is specific to this datatype and its precision. Lexical form (regex-style): (\+|-)?([0-9]+(\.[0-9]*)?|\.[0-9]+)([Ee](\+|-)?[0-9]+)? |(\+|-)?INF|NaN." .
+  rdfs:comment "IEEE 754 64-bit floating-point. Lexical forms use decimal or scientific notation with optional leading sign and exponent; special tokens 'INF', '+INF', '-INF', and 'NaN' are permitted; '+0' and '-0' are distinct lexical forms. Mapping from lexical forms to values is specific to this datatype and its precision. Lexical form (regex-style): (\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN." .
 
 xsd:float a rdfs:Datatype ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#float> ;
   rdfs:label "float" ;
-  rdfs:comment "IEEE 754 32-bit floating-point. Lexical forms use decimal or scientific notation with optional leading sign and exponent; special tokens 'INF', '+INF', '-INF', and 'NaN' are permitted; '+0' and '-0' are distinct lexical forms. Mapping from lexical forms to values is specific to this datatype and its precision. Lexical form (regex-style): (\+|-)?([0-9]+(\.[0-9]*)?|\.[0-9]+)([Ee](\+|-)?[0-9]+)? |(\+|-)?INF|NaN." .
+  rdfs:comment "IEEE 754 32-bit floating-point. Lexical forms use decimal or scientific notation with optional leading sign and exponent; special tokens 'INF', '+INF', '-INF', and 'NaN' are permitted; '+0' and '-0' are distinct lexical forms. Mapping from lexical forms to values is specific to this datatype and its precision. Lexical form (regex-style): (\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN." .
 
 xsd:date a rdfs:Datatype ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#date> ;
   rdfs:label "date" ;
   rdfs:comment "Calendar dates as top-open day intervals. Lexical form: YYYY-MM-DD with optional timezone. Timezone lexical forms: 'Z' or an offset of the form ±hh:mm with 00 ≤ mm ≤ 59 and |offset| ≤ 14:00 (e.g., '2025-09-27Z', '2025-09-27+02:00')." .
 
 xsd:time a rdfs:Datatype ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#time> ;
   rdfs:label "time" ;
   rdfs:comment "Times that recur each day or occur on some day. Lexical form: hh:mm:ss(.s+)? with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '23:59:59Z', '08:15:30.5-05:00')." .
 
 xsd:dateTime a rdfs:Datatype ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#dateTime> ;
   rdfs:label "dateTime" ;
   rdfs:comment "Instants of time, optionally with timezone. Lexical form: YYYY-MM-DDThh:mm:ss(.s+)? with optional timezone. Values with different explicit offsets can be equal as instants. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '2025-09-27T14:03:00+02:00')." .
 
 xsd:dateTimeStamp a rdfs:Datatype ;
   rdfs:subClassOf xsd:dateTime ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#dateTimeStamp> ;
   rdfs:label "dateTimeStamp" ;
   rdfs:comment "dateTime with a required explicit timezone offset. Lexical form: YYYY-MM-DDThh:mm:ss(.s+)?(Z|±hh:mm); the timezone offset is mandatory." .
 
 xsd:gYear a rdfs:Datatype ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#gYear> ;
   rdfs:label "gYear" ;
   rdfs:comment "Gregorian year. Lexical form: CCYY (optionally with a leading '-' for years BCE and optional timezone). Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00; years are matched by -?([1-9][0-9]{3,}|0[0-9]{3})." .
 
 xsd:gMonth a rdfs:Datatype ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#gMonth> ;
   rdfs:label "gMonth" ;
   rdfs:comment "Gregorian month recurring each year. Lexical form: --MM with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '--02Z', '--11+05:30')." .
 
 xsd:gDay a rdfs:Datatype ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#gDay> ;
   rdfs:label "gDay" ;
   rdfs:comment "Day in a month recurring each month. Lexical form: ---DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '---05Z', '---31-03:00')." .
 
 xsd:gYearMonth a rdfs:Datatype ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#gYearMonth> ;
   rdfs:label "gYearMonth" ;
   rdfs:comment "Gregorian year and month. Lexical form: CCYY-MM with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '2025-09Z', '1999-12+01:00')." .
 
 xsd:gMonthDay a rdfs:Datatype ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#gMonthDay> ;
   rdfs:label "gMonthDay" ;
   rdfs:comment "Month and day recurring each year. Lexical form: --MM-DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '--12-31Z', '--02-29+09:00')." .
 
 xsd:duration a rdfs:Datatype ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#duration> ;
   rdfs:label "duration" ;
   rdfs:comment "Time durations per ISO 8601 (PnYnMnDTnHnMnS), optionally with a leading '-'. Value space pairs a months component and a seconds component; only a partial order is defined. Lexical form: 'P' followed by year/month/day and optionally 'T' followed by hour/minute/second fragments; at least one component must be present; a fractional part is allowed on seconds only (e.g., 'P3Y6M4DT12H30M5.5S', '-P15D')." .
 
 xsd:yearMonthDuration a rdfs:Datatype ;
   rdfs:subClassOf xsd:duration ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#yearMonthDuration> ;
   rdfs:label "yearMonthDuration" ;
   rdfs:comment "Duration restricted to year and month fields (seconds component is 0). Totally ordered; lexical form uses PnYnM with optional leading '-' (e.g., 'P2Y', 'P3M', '-P1Y2M')." .
 
 xsd:dayTimeDuration a rdfs:Datatype ;
   rdfs:subClassOf xsd:duration ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#dayTimeDuration> ;
   rdfs:label "dayTimeDuration" ;
   rdfs:comment "Duration restricted to day, hour, minute, second fields (months component is 0). Totally ordered; lexical form 'PnDTnHnMnS' with optional leading '-' and optional fractional seconds (e.g., 'P30D', 'PT12H30M', 'PT5.25S', '-P1DT2H')." .
 
 xsd:byte a rdfs:Datatype ;
   rdfs:subClassOf xsd:short ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#byte> ;
   rdfs:label "byte" ;
   rdfs:comment "8-bit signed integer. Value space: [-128 .. 127]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent (e.g., '-1', '0', '+100')." .
 
 xsd:short a rdfs:Datatype ;
   rdfs:subClassOf xsd:int ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#short> ;
   rdfs:label "short" ;
   rdfs:comment "16-bit signed integer. Value space: [-32768 .. 32767]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent (e.g., '-1', '0', '+10000')." .
 
 xsd:int a rdfs:Datatype ;
   rdfs:subClassOf xsd:long ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#int> ;
   rdfs:label "int" ;
   rdfs:comment "32-bit signed integer. Value space: [-2147483648 .. 2147483647]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent (e.g., '-1', '0', '+100000')." .
 
 xsd:long a rdfs:Datatype ;
   rdfs:subClassOf xsd:integer ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#long> ;
   rdfs:label "long" ;
   rdfs:comment "64-bit signed integer. Value space: [-9223372036854775808 .. 9223372036854775807]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent." .
 
 xsd:unsignedByte a rdfs:Datatype ;
   rdfs:subClassOf xsd:unsignedShort ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#unsignedByte> ;
   rdfs:label "unsignedByte" ;
   rdfs:comment "8-bit unsigned integer. Value space: [0 .. 255]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space." .
 
 xsd:unsignedShort a rdfs:Datatype ;
   rdfs:subClassOf xsd:unsignedInt ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#unsignedShort> ;
   rdfs:label "unsignedShort" ;
   rdfs:comment "16-bit unsigned integer. Value space: [0 .. 65535]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space." .
 
 xsd:unsignedInt a rdfs:Datatype ;
   rdfs:subClassOf xsd:unsignedLong ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#unsignedInt> ;
   rdfs:label "unsignedInt" ;
   rdfs:comment "32-bit unsigned integer. Value space: [0 .. 4294967295]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space." .
 
 xsd:unsignedLong a rdfs:Datatype ;
   rdfs:subClassOf xsd:nonNegativeInteger ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#unsignedLong> ;
   rdfs:label "unsignedLong" ;
   rdfs:comment "64-bit unsigned integer. Value space: [0 .. 18446744073709551615]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space." .
 
 xsd:positiveInteger a rdfs:Datatype ;
   rdfs:subClassOf xsd:nonNegativeInteger ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#positiveInteger> ;
   rdfs:label "positiveInteger" ;
   rdfs:comment "Integers greater than zero. Value space: {1, 2, ...}. Derived from xsd:nonNegativeInteger with minInclusive=1. Lexical form: optional '+' sign followed by one or more digits; no zero or negative forms." .
 
 xsd:nonNegativeInteger a rdfs:Datatype ;
   rdfs:subClassOf xsd:integer ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#nonNegativeInteger> ;
   rdfs:label "nonNegativeInteger" ;
   rdfs:comment "Integers greater than or equal to zero. Value space: {0, 1, 2, ...}. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign." .
 
 xsd:negativeInteger a rdfs:Datatype ;
   rdfs:subClassOf xsd:nonPositiveInteger ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#negativeInteger> ;
   rdfs:label "negativeInteger" ;
   rdfs:comment "Integers less than zero. Value space: {..., -2, -1}. Derived from xsd:nonPositiveInteger with maxInclusive=-1. Lexical form: mandatory '-' sign followed by one or more digits." .
 
 xsd:nonPositiveInteger a rdfs:Datatype ;
   rdfs:subClassOf xsd:integer ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#nonPositiveInteger> ;
   rdfs:label "nonPositiveInteger" ;
   rdfs:comment "Integers less than or equal to zero. Value space: {..., -2, -1, 0}. Lexical form: optional sign for zero, otherwise a mandatory '-' sign followed by digits." .
 
 xsd:hexBinary a rdfs:Datatype ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#hexBinary> ;
   rdfs:label "hexBinary" ;
   rdfs:comment "Arbitrary binary data encoded as pairs of hexadecimal digits; each octet is represented by two hex characters [0-9A-Fa-f]. Lexical form: an even-length sequence of hexadecimal digits; two hex digits encode each octet (e.g., '0FB7')." .
 
 xsd:base64Binary a rdfs:Datatype ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#base64Binary> ;
   rdfs:label "base64Binary" ;
   rdfs:comment "Arbitrary binary data encoded using Base64. Lexical space per RFC 2045/3548; optional whitespace allowed per XML rules. Lexical form: Base64 alphabet 'A–Z', 'a–z', '0–9', '+', '/' with optional '=' padding; whitespace is collapsed during validation." .
 
 xsd:anyURI a rdfs:Datatype ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#anyURI> ;
   rdfs:label "anyURI" ;
   rdfs:comment "Internationalized Resource Identifier (IRI) or IRI reference per RFC 3987. Lexical space is simply xsd:string (no fixed grammar is enforced by XSD); typical lexical forms include absolute or relative IRIs and optional fragment identifiers; processors may apply escaping/IRI-to-URI mapping." .
 
 xsd:language a rdfs:Datatype ;
   rdfs:subClassOf xsd:token ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#language> ;
   rdfs:label "language" ;
   rdfs:comment "Natural language identifiers per BCP 47. Lexical pattern: [a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*." .
 
 xsd:normalizedString a rdfs:Datatype ;
   rdfs:subClassOf xsd:string ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#normalizedString> ;
   rdfs:label "normalizedString" ;
   rdfs:comment "Strings with carriage return, line feed, and tab characters disallowed. Derived from xsd:string; whitespace normalized to replace those characters with spaces. Lexical form: any string not containing #xD, #xA or #x9 (per XML), i.e., with those characters replaced during normalization." .
 
 xsd:token a rdfs:Datatype ;
   rdfs:subClassOf xsd:normalizedString ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#token> ;
   rdfs:label "token" ;
   rdfs:comment "Tokenized strings derived from xsd:normalizedString: no leading or trailing spaces and no internal sequences of multiple spaces. Lexical form: strings with whitespace collapsed (runs of spaces collapsed to a single space; leading/trailing spaces removed)." .
 
 xsd:NMTOKEN a rdfs:Datatype ;
   rdfs:subClassOf xsd:token ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#NMTOKEN> ;
   rdfs:label "NMTOKEN" ;
   rdfs:comment "Values matching the XML Nmtoken production. Derived from xsd:token. Lexical form: one or more NameChar per XML (i.e., matches the XML Nmtoken production)." .
 
 xsd:Name a rdfs:Datatype ;
   rdfs:subClassOf xsd:token ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#Name> ;
   rdfs:label "Name" ;
   rdfs:comment "Values matching the XML Name production. Derived from xsd:token. Lexical form: NameStartChar followed by zero or more NameChar per XML." .
 
 xsd:NCName a rdfs:Datatype ;
   rdfs:subClassOf xsd:Name ;
-  rdfs:isDefinedBy <http://www.w3.org/2001/XMLSchema#> ;
+  rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#NCName> ;
   rdfs:label "NCName" ;
   rdfs:comment "XML 'non-colonized' names matching the NCName production (i.e., Name without the colon). Derived from xsd:Name. Lexical form: XML NCName (same as Name but disallowing ':')." .
 
+# Facets
 xsd:length a rdf:Property ;
+    rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#rf-length> ;
     rdfs:label "length" ;
     rdfs:comment "Exact length of the value; units depend on the base type (characters for string/anyURI, octets for binary, items for list types)." .
 
 xsd:minLength a rdf:Property ;
+    rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#rf-minLength> ;
     rdfs:label "min length" ;
     rdfs:comment "Minimum length of the value; measured in characters (string/anyURI), octets (binary), or list items for list types." .
 
 xsd:maxLength a rdf:Property ;
+    rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#rf-maxLength> ;
     rdfs:label "max length" ;
     rdfs:comment "Maximum length of the value; measured in characters (string/anyURI), octets (binary), or list items for list types." .
 
 xsd:pattern a rdf:Property ;
+    rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#rf-pattern> ;
     rdfs:label "pattern" ;
     rdfs:comment "Constrains the lexical space by requiring each literal to match the supplied regular expression(s)." .
 
 xsd:enumeration a rdf:Property ;
+    rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#rf-enumeration> ;
     rdfs:label "enumeration" ;
     rdfs:comment "Restricts the value space to a specified set of values (no ordering implied by the facet itself)." .
 
 xsd:whiteSpace a rdf:Property ;
+    rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#rf-whiteSpace> ;
     rdfs:label "white space" ;
     rdfs:comment "Controls whitespace normalization during validation (preserve, replace, collapse), which can indirectly affect lexical forms." .
 
 xsd:maxInclusive a rdf:Property ;
+    rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#rf-maxInclusive> ;
     rdfs:label "max inclusive" ;
     rdfs:comment "Inclusive upper bound of the value space for ordered datatypes." .
 
 xsd:maxExclusive a rdf:Property ;
+    rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#rf-maxExclusive> ;
     rdfs:label "max exclusive" ;
     rdfs:comment "Exclusive upper bound of the value space for ordered datatypes." .
 
 xsd:minExclusive a rdf:Property ;
+    rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#rf-minExclusive> ;
     rdfs:label "min exclusive" ;
     rdfs:comment "Exclusive lower bound of the value space for ordered datatypes." .
 
 xsd:minInclusive a rdf:Property ;
+    rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#rf-minInclusive> ;
     rdfs:label "min inclusive" ;
     rdfs:comment "Inclusive lower bound of the value space for ordered datatypes." .
 
 xsd:totalDigits a rdf:Property ;
+    rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#rf-totalDigits> ;
     rdfs:label "total digits" ;
     rdfs:comment "Upper bound on the total number of decimal digits in a value (both before and after the decimal point)." .
 
 xsd:fractionDigits a rdf:Property ;
+    rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#rf-fractionDigits> ;
     rdfs:label "fraction digits" ;
     rdfs:comment "Upper bound on the number of digits allowed in the fractional part of a decimal value; must not exceed totalDigits." .
 
 xsd:assertions a rdf:Property ;
+    rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#rf-assertions> ;
     rdfs:label "assertions" ;
     rdfs:comment "Requires values to satisfy given XPath expressions; the facet value is a sequence of assertion components." .
 
 xsd:explicitTimezone a rdf:Property ;
+    rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#rf-explicitTimezone> ;
     rdfs:label "explicit timezone" ;
     rdfs:comment "Three-valued facet (required | prohibited | optional) controlling the presence of a time-zone offset for date/time datatypes." .
 

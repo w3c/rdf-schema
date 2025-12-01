@@ -167,6 +167,37 @@ rdf:direction a rdf:Property ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
 	rdfs:seeAlso <https://www.w3.org/TR/json-ld11/#the-rdf-compoundliteral-class-and-the-rdf-language-and-rdf-direction-properties> .
 
+rdf:TripleForm a rdfs:Class ;
+	rdfs:label "TripleForm" ;
+	rdfs:comment "The class of abstract, atomic triple forms." ;
+	rdfs:subClassOf rdfs:Resource ;
+	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
+	rdfs:seeAlso <https://www.w3.org/TR/rdf12-interop/> .
+
+rdf:tripleFormSubject a rdf:Property ;
+	rdfs:label "tripleFormSubject" ;
+	rdfs:comment "The subject component of a triple form." ;
+	rdfs:domain rdf:TripleForm ;
+	rdfs:range rdfs:Resource ;
+	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
+	rdfs:seeAlso <https://www.w3.org/TR/rdf12-interop/> .
+
+rdf:tripleFormPredicate a rdf:Property ;
+	rdfs:label "tripleFormPredicate" ;
+	rdfs:comment "The predicate component of a triple form." ;
+	rdfs:domain rdf:TripleForm ;
+	rdfs:range rdf:Property ;
+	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
+	rdfs:seeAlso <https://www.w3.org/TR/rdf12-interop/> .
+
+rdf:tripleFormObject a rdf:Property ;
+	rdfs:label "tripleFormObject" ;
+	rdfs:comment "The object component of a triple form." ;
+	rdfs:domain rdf:TripleForm ;
+	rdfs:range rdfs:Resource ;
+	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
+	rdfs:seeAlso <https://www.w3.org/TR/rdf12-interop/> .
+
 ## Controlled vocabulary for versions.
 ## URIs for versions of RDF and SPARQL
 ## The rdfs:label corresponds to the constant defined in RDF Concepts.

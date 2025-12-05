@@ -15,7 +15,7 @@ rdfs:Proposition a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
 	rdfs:label "Proposition" ;
 	rdfs:comment "The class of abstract, atomic, logical propositions." ;
-	rdfs:subClassOf rdf:TripleForm .
+	rdfs:subClassOf rdfs:Resource .
 
 rdfs:Class a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;

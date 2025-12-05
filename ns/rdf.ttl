@@ -167,33 +167,33 @@ rdf:direction a rdf:Property ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
 	rdfs:seeAlso <https://www.w3.org/TR/json-ld11/#the-rdf-compoundliteral-class-and-the-rdf-language-and-rdf-direction-properties> .
 
-rdf:TripleForm a rdfs:Class ;
-	rdfs:label "TripleForm" ;
-	rdfs:comment "The class of abstract, atomic triple forms." ;
+rdf:PropositionForm a rdfs:Class ;
+	rdfs:label "PropositionForm" ;
+	rdfs:comment "The class of abstract, atomic proposition forms. Reserved for basic encoding of propositions." ;
 	rdfs:subClassOf rdfs:Resource ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
 	rdfs:seeAlso <https://www.w3.org/TR/rdf12-interop/> .
 
-rdf:tripleFormSubject a rdf:Property ;
-	rdfs:label "tripleFormSubject" ;
-	rdfs:comment "The subject component of a triple form." ;
-	rdfs:domain rdf:TripleForm ;
+rdf:propositionFormSubject a rdf:Property ;
+	rdfs:label "propositionFormSubject" ;
+	rdfs:comment "The subject component of a proposition. Reserved for basic encoding of propositions." ;
+	rdfs:domain rdf:PropositionForm ;
 	rdfs:range rdfs:Resource ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
 	rdfs:seeAlso <https://www.w3.org/TR/rdf12-interop/> .
 
-rdf:tripleFormPredicate a rdf:Property ;
-	rdfs:label "tripleFormPredicate" ;
-	rdfs:comment "The predicate component of a triple form." ;
-	rdfs:domain rdf:TripleForm ;
+rdf:propositionFormPredicate a rdf:Property ;
+	rdfs:label "propositionFormPredicate" ;
+	rdfs:comment "The predicate component of a proposition. Reserved for basic encoding of propositions." ;
+	rdfs:domain rdf:PropositionForm ;
 	rdfs:range rdf:Property ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
 	rdfs:seeAlso <https://www.w3.org/TR/rdf12-interop/> .
 
-rdf:tripleFormObject a rdf:Property ;
-	rdfs:label "tripleFormObject" ;
-	rdfs:comment "The object component of a triple form." ;
-	rdfs:domain rdf:TripleForm ;
+rdf:propositionFormObject a rdf:Property ;
+	rdfs:label "propositionFormObject" ;
+	rdfs:comment "The object component of a proposition. Reserved for basic encoding of propositions." ;
+	rdfs:domain rdf:PropositionForm ;
 	rdfs:range rdfs:Resource ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
 	rdfs:seeAlso <https://www.w3.org/TR/rdf12-interop/> .

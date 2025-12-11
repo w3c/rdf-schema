@@ -176,7 +176,7 @@ rdf:PropositionForm a rdfs:Class ;
 
 rdf:propositionFormSubject a rdf:Property ;
 	rdfs:label "propositionFormSubject" ;
-	rdfs:comment "The subject component of a proposition. Reserved for basic encoding of propositions." ;
+	rdfs:comment "The subject component of a proposition form. Reserved for basic encoding of propositions." ;
 	rdfs:domain rdf:PropositionForm ;
 	rdfs:range rdfs:Resource ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
@@ -184,7 +184,7 @@ rdf:propositionFormSubject a rdf:Property ;
 
 rdf:propositionFormPredicate a rdf:Property ;
 	rdfs:label "propositionFormPredicate" ;
-	rdfs:comment "The predicate component of a proposition. Reserved for basic encoding of propositions." ;
+	rdfs:comment "The predicate component of a proposition form. Reserved for basic encoding of propositions." ;
 	rdfs:domain rdf:PropositionForm ;
 	rdfs:range rdf:Property ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
@@ -192,7 +192,7 @@ rdf:propositionFormPredicate a rdf:Property ;
 
 rdf:propositionFormObject a rdf:Property ;
 	rdfs:label "propositionFormObject" ;
-	rdfs:comment "The object component of a proposition. Reserved for basic encoding of propositions." ;
+	rdfs:comment "The object component of a proposition form. Reserved for basic encoding of propositions." ;
 	rdfs:domain rdf:PropositionForm ;
 	rdfs:range rdfs:Resource ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;

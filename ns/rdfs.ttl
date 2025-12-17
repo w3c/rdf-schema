@@ -14,7 +14,7 @@ rdfs:Resource a rdfs:Class ;
 rdfs:Proposition a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
 	rdfs:label "Proposition" ;
-	rdfs:comment "The class propositions, simple logical expressions describing a relationship between two entities." ;
+	rdfs:comment "The class of propositions, simple logical expressions describing a relationship between two entities." ;
 	rdfs:subClassOf rdfs:Resource .
 
 rdfs:Class a rdfs:Class ;

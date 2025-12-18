@@ -824,12 +824,12 @@
 <section id="ch_ttrei">
   <h2>Triple-term based reification</h2>
   <p>
-    A triple term is a construct defined in [[RDF12-CONCEPTS]], referring to an RDF triple that is used 
+    A triple term is a construct defined in [[RDF12-CONCEPTS]], consisting in an RDF triple that is used 
     as a value, specifically, in the object position of another triple. This use represents a reference to a proposition, 
     and, importantly, a triple term does not by itself imply assertion; that is, the proposition it denotes 
     is not necessarily a fact asserted by the RDF graph. This is only the case if that triple is also 
     asserted in the RDF graph — that is, if it is a direct element of that set of triples.
-    Otherwise, it remains unasserted and serves primarily as a reference or as the subject of metadata. 
+    Otherwise, it remains unasserted and serves primarily as a reference.
     This enables the representation of metadata or commentary about triples that may or may not be part 
     of the asserted graph content, including potentially contradictory relationships.
   </p>
@@ -847,10 +847,6 @@
     When the triple term of a reifying triple also appears in the same graph as an asserted triple, 
     the subset of triples that share the same 
     reifier as subject is called a <em><a data-cite="RDF12-CONCEPTS#dfn-triple-annotation">triple annotation</a></em>.
-  </p>
-
-  <p class="note">
-    When the underlying triple <code>S P O</code> is <strong>not</strong> asserted in the graph, a reifying triple (i.e., a triple whose predicate is <code>rdf:reifies</code> and whose object is the triple term <code>&lt;&lt;S P O&gt;&gt;</code>) together with further triples that use its <em>reifier</em> as subject constitute a description of the <em>reifier</em> resource, which denotes the proposition expressed by <code>&lt;&lt;S P O&gt;&gt;</code>. This is distinct from a <em>triple annotation</em> as defined in <a data-cite="RDF12-CONCEPTS#dfn-triple-annotation">RDF Concepts</a>, which requires that the underlying triple be asserted in the same graph.
   </p>
 
   <p>
@@ -872,14 +868,7 @@
   <section id="ch_reifies">
     <h3><code>rdf:reifies</code></h3>
     <p><code>rdf:reifies</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
-      that is used to associate a resource (reifier) with a triple (proposition).</p>
-    <p>A triple of the form:</p>
-    <blockquote> <code>R rdf:reifies &lt;&lt;(&nbsp;S P O&nbsp;)&gt;&gt;</code> </blockquote>
-    <p>states that <em>R</em> is an instance of <a href="#ch_resource"><code>rdfs:Resource</code></a> 
-      and reifies the triple term <code>&lt;&lt;(&nbsp;S P O&nbsp;)&gt;&gt;</code>, where <em>S</em>, <em>P</em>, and <em>O</em> represent 
-      the subject, predicate, and object of the reified triple, respectively. The object 
-      <code>&lt;&lt;(&nbsp;S P O&nbsp;)&gt;&gt;</code> is an instance of the class 
-      <a href="#ch_proposition"><code>rdfs:Proposition</code></a>.</p>
+      that is used to associate a resource with a proposition.</p>
     <p>The <a href="#ch_domain"><code>rdfs:domain</code></a> of
       <code>rdf:reifies</code> is <a href="#ch_resource"><code>rdfs:Resource</code></a>.
       The <a href="#ch_range"><code>rdfs:range</code></a> of <code>rdf:reifies</code> is 

@@ -167,6 +167,37 @@ rdf:direction a rdf:Property ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
 	rdfs:seeAlso <https://www.w3.org/TR/json-ld11/#the-rdf-compoundliteral-class-and-the-rdf-language-and-rdf-direction-properties> .
 
+rdf:PropositionForm a rdfs:Class ;
+	rdfs:label "PropositionForm" ;
+	rdfs:comment "The class of abstract, atomic proposition forms. Reserved for basic encoding of propositions." ;
+	rdfs:subClassOf rdfs:Resource ;
+	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
+	rdfs:seeAlso <https://www.w3.org/TR/rdf12-interop/> .
+
+rdf:propositionFormSubject a rdf:Property ;
+	rdfs:label "propositionFormSubject" ;
+	rdfs:comment "The subject component of a proposition form. Reserved for basic encoding of propositions." ;
+	rdfs:domain rdf:PropositionForm ;
+	rdfs:range rdfs:Resource ;
+	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
+	rdfs:seeAlso <https://www.w3.org/TR/rdf12-interop/> .
+
+rdf:propositionFormPredicate a rdf:Property ;
+	rdfs:label "propositionFormPredicate" ;
+	rdfs:comment "The predicate component of a proposition form. Reserved for basic encoding of propositions." ;
+	rdfs:domain rdf:PropositionForm ;
+	rdfs:range rdf:Property ;
+	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
+	rdfs:seeAlso <https://www.w3.org/TR/rdf12-interop/> .
+
+rdf:propositionFormObject a rdf:Property ;
+	rdfs:label "propositionFormObject" ;
+	rdfs:comment "The object component of a proposition form. Reserved for basic encoding of propositions." ;
+	rdfs:domain rdf:PropositionForm ;
+	rdfs:range rdfs:Resource ;
+	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
+	rdfs:seeAlso <https://www.w3.org/TR/rdf12-interop/> .
+
 ## Controlled vocabulary for versions.
 ## URIs for versions of RDF and SPARQL
 ## The rdfs:label corresponds to the constant defined in RDF Concepts.

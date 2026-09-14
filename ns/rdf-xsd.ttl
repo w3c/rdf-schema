@@ -2,12 +2,12 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
-@prefix dc:   <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms:   <http://purl.org/dc/terms/> .
 
 <http://www.w3.org/2001/XMLSchema#> a owl:Ontology ;
-  dc:title "RDF XSD datatypes" ;
-  dc:date "2025-09-08" ;
-  dc:description "This file is a description of the XML Schema datatypes used in RDF" .
+  dcterms:title "RDF XSD datatypes" ;
+  dcterms:date "2025-09-08" ;
+  dcterms:description "This file is a description of the XML Schema datatypes used in RDF" .
 
 xsd:string a rdfs:Datatype ;
   rdfs:isDefinedBy <https://www.w3.org/TR/xmlschema11-2/#string> ;

@@ -1,12 +1,12 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 
 <http://www.w3.org/1999/02/22-rdf-syntax-ns#> a owl:Ontology ;
-	dc:title "The RDF Concepts Vocabulary (RDF)" ;
-	dc:date "2019-12-16" ;
-	dc:description "This is the RDF Schema for the RDF vocabulary terms in the RDF Namespace, defined in RDF 1.1 Concepts." .
+	dcterms:title "The RDF Concepts Vocabulary (RDF)" ;
+	dcterms:date "2019-12-16" ;
+	dcterms:description "This is the RDF Schema for the RDF vocabulary terms in the RDF Namespace, defined in RDF 1.1 Concepts." .
 
 rdf:HTML a rdfs:Datatype ;
 	rdfs:subClassOf rdfs:Literal ;

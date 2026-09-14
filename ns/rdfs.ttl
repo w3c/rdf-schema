@@ -4,109 +4,109 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 
 <http://www.w3.org/2000/01/rdf-schema#> a owl:Ontology ;
-	dc:title "The RDF Schema vocabulary (RDFS)" .
+	dc:title "The RDF Schema vocabulary (RDFS)"@en .
 
 rdfs:Resource a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "resource" ;
-	rdfs:comment "The class resource, everything." .
+	rdfs:label "resource"@en ;
+	rdfs:comment "The class resource, everything."@en .
 
 rdfs:Proposition a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "proposition" ;
-	rdfs:comment "The class of propositions, simple logical expressions describing a relationship between two entities." ;
+	rdfs:label "proposition"@en ;
+	rdfs:comment "The class of propositions, simple logical expressions describing a relationship between two entities."@en ;
 	rdfs:subClassOf rdfs:Resource .
 
 rdfs:Class a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "class" ;
-	rdfs:comment "The class of classes." ;
+	rdfs:label "class"@en ;
+	rdfs:comment "The class of classes."@en ;
 	rdfs:subClassOf rdfs:Resource .
 
 rdfs:subClassOf a rdf:Property ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "is subclass of" ;
-	rdfs:comment "The subject is a subclass of a class." ;
+	rdfs:label "is subclass of"@en ;
+	rdfs:comment "The subject is a subclass of a class."@en ;
 	rdfs:range rdfs:Class ;
 	rdfs:domain rdfs:Class .
 
 rdfs:subPropertyOf a rdf:Property ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "is subproperty of" ;
-	rdfs:comment "The subject is a subproperty of a property." ;
+	rdfs:label "is subproperty of"@en ;
+	rdfs:comment "The subject is a subproperty of a property."@en ;
 	rdfs:range rdf:Property ;
 	rdfs:domain rdf:Property .
 
 rdfs:comment a rdf:Property ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "comment" ;
-	rdfs:comment "A description of the subject resource." ;
+	rdfs:label "comment"@en ;
+	rdfs:comment "A description of the subject resource."@en ;
 	rdfs:domain rdfs:Resource ;
 	rdfs:range rdfs:Literal .
 
 rdfs:label a rdf:Property ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "label" ;
-	rdfs:comment "A human-readable name for the subject." ;
+	rdfs:label "label"@en ;
+	rdfs:comment "A human-readable name for the subject."@en ;
 	rdfs:domain rdfs:Resource ;
 	rdfs:range rdfs:Literal .
 
 rdfs:domain a rdf:Property ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "domain" ;
-	rdfs:comment "A domain of the subject property." ;
+	rdfs:label "domain"@en ;
+	rdfs:comment "A domain of the subject property."@en ;
 	rdfs:range rdfs:Class ;
 	rdfs:domain rdf:Property .
 
 rdfs:range a rdf:Property ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "range" ;
-	rdfs:comment "A range of the subject property." ;
+	rdfs:label "range"@en ;
+	rdfs:comment "A range of the subject property."@en ;
 	rdfs:range rdfs:Class ;
 	rdfs:domain rdf:Property .
 
 rdfs:seeAlso a rdf:Property ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "see also" ;
-	rdfs:comment "Further information about the subject resource." ;
+	rdfs:label "see also"@en ;
+	rdfs:comment "Further information about the subject resource."@en ;
 	rdfs:range rdfs:Resource ;
 	rdfs:domain rdfs:Resource .
 
 rdfs:isDefinedBy a rdf:Property ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
 	rdfs:subPropertyOf rdfs:seeAlso ;
-	rdfs:label "is defined by" ;
-	rdfs:comment "The definition of the subject resource." ;
+	rdfs:label "is defined by"@en ;
+	rdfs:comment "The definition of the subject resource."@en ;
 	rdfs:range rdfs:Resource ;
 	rdfs:domain rdfs:Resource .
 
 rdfs:Literal a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "literal" ;
-	rdfs:comment "The class of literal values, eg. textual strings and integers." ;
+	rdfs:label "literal"@en ;
+	rdfs:comment "The class of literal values, eg. textual strings and integers."@en ;
 	rdfs:subClassOf rdfs:Resource .
 
 rdfs:Container a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "container" ;
+	rdfs:label "container"@en ;
 	rdfs:subClassOf rdfs:Resource ;
-	rdfs:comment "The class of RDF containers." .
+	rdfs:comment "The class of RDF containers."@en .
 
 rdfs:ContainerMembershipProperty a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "container membership property" ;
-	rdfs:comment """The class of container membership properties, rdf:_1, rdf:_2, ..., all of which are sub-properties of 'member'.""" ;
+	rdfs:label "container membership property"@en ;
+	rdfs:comment """The class of container membership properties, rdf:_1, rdf:_2, ..., all of which are sub-properties of 'member'."""@en ;
 	rdfs:subClassOf rdf:Property .
 
 rdfs:member a rdf:Property ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "member" ;
-	rdfs:comment "A member of the subject resource." ;
+	rdfs:label "member"@en ;
+	rdfs:comment "A member of the subject resource."@en ;
 	rdfs:domain rdfs:Resource ;
 	rdfs:range rdfs:Resource .
 
 rdfs:Datatype a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "datatype" ;
-	rdfs:comment "The class of RDF datatypes." ;
+	rdfs:label "datatype"@en ;
+	rdfs:comment "The class of RDF datatypes."@en ;
 	rdfs:subClassOf rdfs:Class .

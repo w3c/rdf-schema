@@ -19,13 +19,13 @@ rdf:langString a rdfs:Datatype ;
 	rdfs:subClassOf rdfs:Literal ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
 	rdfs:seeAlso <http://www.w3.org/TR/rdf11-concepts/#section-Graph-Literal> ;
-	rdfs:label "langString" ;
+	rdfs:label "language-tagged string" ;
 	rdfs:comment "The datatype of language-tagged string values" .
 
 rdf:dirLangString a rdfs:Datatype ;
 	rdfs:subClassOf rdfs:Literal ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:label "dirLangString" ;
+	rdfs:label "directional language-tagged string" ;
 	rdfs:comment "The datatype of directional language-tagged string values, which includes a language tag and a base direction (either 'ltr' or 'rtl')" .
 
 rdf:PlainLiteral a rdfs:Datatype ;
@@ -33,7 +33,7 @@ rdf:PlainLiteral a rdfs:Datatype ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
 	rdfs:subClassOf rdfs:Literal ;
 	rdfs:seeAlso <http://www.w3.org/TR/rdf-plain-literal/> ;
-	rdfs:label "PlainLiteral" ;
+	rdfs:label "plain literal" ;
 	rdfs:comment "The class of plain (i.e., untyped) literal values, as used in RIF and OWL 2.  Will not be removed until no longer needed there." .
 
 rdf:type a rdf:Property ;
@@ -52,13 +52,13 @@ rdf:reifies a rdf:Property ;
 
 rdf:Property a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:label "Property" ;
+	rdfs:label "property" ;
 	rdfs:comment "The class of RDF properties." ;
 	rdfs:subClassOf rdfs:Resource .
 
 rdf:Statement a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:label "Statement" ;
+	rdfs:label "statement" ;
 	rdfs:subClassOf rdfs:Resource ;
 	rdfs:comment "The class of RDF statements." .
 
@@ -85,19 +85,19 @@ rdf:object a rdf:Property ;
 
 rdf:Bag a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:label "Bag" ;
+	rdfs:label "bag" ;
 	rdfs:comment "The class of unordered containers." ;
 	rdfs:subClassOf rdfs:Container .
 
 rdf:Seq a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:label "Seq" ;
+	rdfs:label "sequence" ;
 	rdfs:comment "The class of ordered containers." ;
 	rdfs:subClassOf rdfs:Container .
 
 rdf:Alt a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:label "Alt" ;
+	rdfs:label "alternatives" ;
 	rdfs:comment "The class of containers of alternatives." ;
 	rdfs:subClassOf rdfs:Container .
 
@@ -110,13 +110,13 @@ rdf:value a rdf:Property ;
 
 rdf:List a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:label "List" ;
+	rdfs:label "list" ;
 	rdfs:comment "The class of RDF Lists." ;
 	rdfs:subClassOf rdfs:Resource .
 
 rdf:nil a rdf:List ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:label "nil" ;
+	rdfs:label "empty list" ;
 	rdfs:comment "The empty list, with no items in it. If the rest of a list is nil then the list has no more items in it." .
 
 rdf:first a rdf:Property ;
@@ -136,7 +136,7 @@ rdf:rest a rdf:Property ;
 rdf:XMLLiteral a rdfs:Datatype ;
 	rdfs:subClassOf rdfs:Literal ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:label "XMLLiteral" ;
+	rdfs:label "XML literal" ;
 	rdfs:comment "The datatype of XML literal values." .
 
 rdf:JSON a rdfs:Datatype ;
@@ -147,7 +147,7 @@ rdf:JSON a rdfs:Datatype ;
         rdfs:seeAlso <https://www.w3.org/TR/rdf-concepts/#section-json> .
 
 rdf:CompoundLiteral a rdfs:Class ;
-	rdfs:label "CompoundLiteral" ;
+	rdfs:label "compound literal" ;
 	rdfs:comment "A class representing a compound literal." ;
 	rdfs:subClassOf rdfs:Resource ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
@@ -168,14 +168,14 @@ rdf:direction a rdf:Property ;
 	rdfs:seeAlso <https://www.w3.org/TR/json-ld11/#the-rdf-compoundliteral-class-and-the-rdf-language-and-rdf-direction-properties> .
 
 rdf:PropositionForm a rdfs:Class ;
-	rdfs:label "PropositionForm" ;
+	rdfs:label "proposition form" ;
 	rdfs:comment "The class of abstract, atomic proposition forms. Reserved for basic encoding of propositions." ;
 	rdfs:subClassOf rdfs:Resource ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
 	rdfs:seeAlso <https://www.w3.org/TR/rdf12-interop/> .
 
 rdf:propositionFormSubject a rdf:Property ;
-	rdfs:label "propositionFormSubject" ;
+	rdfs:label "proposition form subject" ;
 	rdfs:comment "The subject component of a proposition form. Reserved for basic encoding of propositions." ;
 	rdfs:domain rdf:PropositionForm ;
 	rdfs:range rdfs:Resource ;
@@ -183,7 +183,7 @@ rdf:propositionFormSubject a rdf:Property ;
 	rdfs:seeAlso <https://www.w3.org/TR/rdf12-interop/> .
 
 rdf:propositionFormPredicate a rdf:Property ;
-	rdfs:label "propositionFormPredicate" ;
+	rdfs:label "proposition form predicate" ;
 	rdfs:comment "The predicate component of a proposition form. Reserved for basic encoding of propositions." ;
 	rdfs:domain rdf:PropositionForm ;
 	rdfs:range rdf:Property ;
@@ -191,7 +191,7 @@ rdf:propositionFormPredicate a rdf:Property ;
 	rdfs:seeAlso <https://www.w3.org/TR/rdf12-interop/> .
 
 rdf:propositionFormObject a rdf:Property ;
-	rdfs:label "propositionFormObject" ;
+	rdfs:label "proposition form object" ;
 	rdfs:comment "The object component of a proposition form. Reserved for basic encoding of propositions." ;
 	rdfs:domain rdf:PropositionForm ;
 	rdfs:range rdfs:Resource ;

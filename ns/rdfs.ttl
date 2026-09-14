@@ -8,31 +8,31 @@
 
 rdfs:Resource a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "Resource" ;
+	rdfs:label "resource" ;
 	rdfs:comment "The class resource, everything." .
 
 rdfs:Proposition a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "Proposition" ;
+	rdfs:label "proposition" ;
 	rdfs:comment "The class of propositions, simple logical expressions describing a relationship between two entities." ;
 	rdfs:subClassOf rdfs:Resource .
 
 rdfs:Class a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "Class" ;
+	rdfs:label "class" ;
 	rdfs:comment "The class of classes." ;
 	rdfs:subClassOf rdfs:Resource .
 
 rdfs:subClassOf a rdf:Property ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "subClassOf" ;
+	rdfs:label "is subclass of" ;
 	rdfs:comment "The subject is a subclass of a class." ;
 	rdfs:range rdfs:Class ;
 	rdfs:domain rdfs:Class .
 
 rdfs:subPropertyOf a rdf:Property ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "subPropertyOf" ;
+	rdfs:label "is subproperty of" ;
 	rdfs:comment "The subject is a subproperty of a property." ;
 	rdfs:range rdf:Property ;
 	rdfs:domain rdf:Property .
@@ -67,7 +67,7 @@ rdfs:range a rdf:Property ;
 
 rdfs:seeAlso a rdf:Property ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "seeAlso" ;
+	rdfs:label "see also" ;
 	rdfs:comment "Further information about the subject resource." ;
 	rdfs:range rdfs:Resource ;
 	rdfs:domain rdfs:Resource .
@@ -75,26 +75,26 @@ rdfs:seeAlso a rdf:Property ;
 rdfs:isDefinedBy a rdf:Property ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
 	rdfs:subPropertyOf rdfs:seeAlso ;
-	rdfs:label "isDefinedBy" ;
+	rdfs:label "is defined by" ;
 	rdfs:comment "The definition of the subject resource." ;
 	rdfs:range rdfs:Resource ;
 	rdfs:domain rdfs:Resource .
 
 rdfs:Literal a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "Literal" ;
+	rdfs:label "literal" ;
 	rdfs:comment "The class of literal values, eg. textual strings and integers." ;
 	rdfs:subClassOf rdfs:Resource .
 
 rdfs:Container a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "Container" ;
+	rdfs:label "container" ;
 	rdfs:subClassOf rdfs:Resource ;
 	rdfs:comment "The class of RDF containers." .
 
 rdfs:ContainerMembershipProperty a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "ContainerMembershipProperty" ;
+	rdfs:label "container membership property" ;
 	rdfs:comment """The class of container membership properties, rdf:_1, rdf:_2, ..., all of which are sub-properties of 'member'.""" ;
 	rdfs:subClassOf rdf:Property .
 
@@ -107,6 +107,6 @@ rdfs:member a rdf:Property ;
 
 rdfs:Datatype a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
-	rdfs:label "Datatype" ;
+	rdfs:label "datatype" ;
 	rdfs:comment "The class of RDF datatypes." ;
 	rdfs:subClassOf rdfs:Class .

@@ -1,0 +1,97 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://www.w3.org/2000/01/rdf-schema#>
+    dcterms:title "Słownik RDF Schema (RDFS)"@pl, "The RDF Schema vocabulary (RDFS)"@en .
+
+rdfs:Resource
+    rdfs:label "zasób"@pl, "Resource"@en ;
+    skos:prefLabel "zasób"@pl, "resource"@en ;
+    skos:altLabel "Resource"@en ;
+    rdfs:comment "Klasa zasobów, obejmująca wszystko."@pl, "The class resource, everything."@en .
+
+rdfs:Proposition
+    rdfs:label "sąd logiczny"@pl, "Proposition"@en ;
+    skos:prefLabel "sąd logiczny"@pl, "proposition"@en ;
+    skos:altLabel "Proposition"@en ;
+    rdfs:comment "Klasa sądów logicznych, czyli prostych wyrażeń logicznych opisujących relację między dwiema jednostkami."@pl, "The class of propositions, simple logical expressions describing a relationship between two entities."@en .
+
+rdfs:Class
+    rdfs:label "klasa"@pl, "Class"@en ;
+    skos:prefLabel "klasa"@pl, "class"@en ;
+    skos:altLabel "Class"@en ;
+    rdfs:comment "Klasa klas."@pl, "The class of classes."@en .
+
+rdfs:subClassOf
+    rdfs:label "jest podklasą"@pl, "subClassOf"@en ;
+    skos:prefLabel "jest podklasą"@pl, "is subclass of"@en ;
+    skos:altLabel "subClassOf"@en ;
+    rdfs:comment "Temat jest podklasą klasy."@pl, "The subject is a subclass of a class."@en .
+
+rdfs:subPropertyOf
+    rdfs:label "jest podwłaściwością"@pl, "subPropertyOf"@en ;
+    skos:prefLabel "jest podwłaściwością"@pl, "is subproperty of"@en ;
+    skos:altLabel "subPropertyOf"@en ;
+    rdfs:comment "Temat jest podwłaściwością właściwości."@pl, "The subject is a subproperty of a property."@en .
+
+rdfs:comment
+    rdfs:label "komentarz"@pl, "comment"@en ;
+    skos:prefLabel "komentarz"@pl, "comment"@en ;
+    rdfs:comment "Opis zasobu będącego tematem."@pl, "A description of the subject resource."@en .
+
+rdfs:label
+    rdfs:label "etykieta"@pl, "label"@en ;
+    skos:prefLabel "etykieta"@pl, "label"@en ;
+    rdfs:comment "Czytelna dla człowieka nazwa tematu."@pl, "A human-readable name for the subject."@en .
+
+rdfs:domain
+    rdfs:label "dziedzina"@pl, "domain"@en ;
+    skos:prefLabel "dziedzina"@pl, "domain"@en ;
+    rdfs:comment "Dziedzina właściwości będącej tematem opisu."@pl, "A domain of the subject property."@en .
+
+rdfs:range
+    rdfs:label "zakres"@pl, "range"@en ;
+    skos:prefLabel "zakres"@pl, "range"@en ;
+    rdfs:comment "Zakres właściwości będącej tematem opisu."@pl, "A range of the subject property."@en .
+
+rdfs:seeAlso
+    rdfs:label "zobacz także"@pl, "seeAlso"@en ;
+    skos:prefLabel "zobacz także"@pl, "see also"@en ;
+    skos:altLabel "seeAlso"@en ;
+    rdfs:comment "Dalsze informacje o zasobie będącym tematem."@pl, "Further information about the subject resource."@en .
+
+rdfs:isDefinedBy
+    rdfs:label "jest zdefiniowany przez"@pl, "isDefinedBy"@en ;
+    skos:prefLabel "jest zdefiniowany przez"@pl, "is defined by"@en ;
+    skos:altLabel "isDefinedBy"@en ;
+    rdfs:comment "Definicja zasobu będącego tematem."@pl, "The definition of the subject resource."@en .
+
+rdfs:Literal
+    rdfs:label "literał"@pl, "Literal"@en ;
+    skos:prefLabel "literał"@pl, "literal"@en ;
+    skos:altLabel "Literal"@en ;
+    rdfs:comment "Klasa wartości literalnych, np. ciągów znaków i liczb całkowitych."@pl, "The class of literal values, eg. textual strings and integers."@en .
+
+rdfs:Container
+    rdfs:label "kontener"@pl, "Container"@en ;
+    skos:prefLabel "kontener"@pl, "container"@en ;
+    skos:altLabel "Container"@en ;
+    rdfs:comment "Klasa kontenerów RDF."@pl, "The class of RDF containers."@en .
+
+rdfs:ContainerMembershipProperty
+    rdfs:label "właściwość przynależności do kontenera"@pl, "ContainerMembershipProperty"@en ;
+    skos:prefLabel "właściwość przynależności do kontenera"@pl, "container membership property"@en ;
+    skos:altLabel "ContainerMembershipProperty"@en ;
+    rdfs:comment "Klasa właściwości przynależności do kontenera, rdf:_1, rdf:_2, ..., z których każda jest podwłaściwością 'member'."@pl, "The class of container membership properties, rdf:_1, rdf:_2, ..., all of which are sub-properties of 'member'."@en .
+
+rdfs:member
+    rdfs:label "element"@pl, "member"@en ;
+    skos:prefLabel "element"@pl, "member"@en ;
+    rdfs:comment "Element zasobu będącego tematem."@pl, "A member of the subject resource."@en .
+
+rdfs:Datatype
+    rdfs:label "typ danych"@pl, "Datatype"@en ;
+    skos:prefLabel "typ danych"@pl, "datatype"@en ;
+    skos:altLabel "Datatype"@en ;
+    rdfs:comment "Klasa typów danych RDF."@pl, "The class of RDF datatypes."@en .

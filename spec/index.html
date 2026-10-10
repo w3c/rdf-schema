@@ -83,14 +83,6 @@
 <section id="ch_introduction">
   <h2>Introduction</h2>
 
-  <p>RDF Schema provides a data-modelling vocabulary for RDF data.
-    It is complemented by several companion documents which
-    describe the basic concepts and abstract syntax of RDF
-    [[RDF12-CONCEPTS]], the formal semantics of RDF [[RDF12-SEMANTICS]], and
-    various concrete syntaxes for RDF, such as Turtle [[RDF12-TURTLE]],
-    TriG, [[RDF12-TRIG]], and JSON-LD [[JSON-LD11]]. The RDF Primer
-    [[RDF12-PRIMER]] provides an informal introduction and
-    examples of the use of the concepts specified in this document.</p>
   <p>This document serves two complementary purposes:</p>
   <ul>
     <li>It defines RDF Schema as a vocabulary for specifying lightweight 
@@ -101,6 +93,17 @@
     ontology construction and general-purpose terms used broadly within 
     RDF applications.</li>
   </ul>
+
+  <p>RDF Schema is a data-modelling vocabulary for RDF data,
+    as well as a <a data-cite="RDF12-SEMANTICS#semantic-extensions-and-entailment-regimes">semantic
+      extension</a> of RDF. It provides mechanisms for describing groups of
+    related resources and the relationships between these resources. RDF
+    Schema is written in RDF
+    using the terms described in this document. These resources are used to
+    determine characteristics of other resources, such as the <a href="#ch_domain">domains</a>
+    and <a href="#ch_range">ranges</a> of properties.
+  </p>
+
   <p>This document is intended to provide a clear specification of RDF
     Schema to those who find the formal semantics
     specification [[RDF12-SEMANTICS]]
@@ -111,16 +114,6 @@
     and the RDF Semantics specification, the RDF Semantics specification
     should
     be taken to be correct.</p>
-
-  <p>
-    RDF Schema is a <a data-cite="RDF12-SEMANTICS#semantic-extensions-and-entailment-regimes">semantic
-      extension</a> of RDF. It provides mechanisms for describing groups of
-    related resources and the relationships between these resources. RDF
-    Schema is written in RDF
-    using the terms described in this document. These resources are used to
-    determine characteristics of other resources, such as the <a href="#ch_domain">domains</a>
-    and <a href="#ch_range">ranges</a> of properties.
-  </p>
   <p>The RDF Schema class and property system is similar to the type
     systems of object-oriented programming languages such as Java. RDF
     Schema differs from many such systems in that instead of defining a
@@ -133,7 +126,7 @@
     define the <code>eg:author</code> property to have a domain of <code>eg:Document</code>
     and a range of
     <code>eg:Person</code>, whereas a classical object oriented system might
-    typically define a class <code>eg:Book</code> with an attribute called
+    typically define a class <code>eg:Document</code> with an attribute called
     <code>eg:author</code> of type <code>eg:Person</code>. Using the RDF
     approach, it is easy for others to subsequently define additional
     properties with a domain of <code>eg:Document</code> or a range of
@@ -144,11 +137,6 @@
     allows anyone to extend the description of existing resources, one of
     the
     architectural principles of the Web [[RDF-NOT]].</p>
-  <p>However, RDF Schema also includes numerous terms in the <cite>rdf:</cite> 
-    and <cite>rdfs:</cite> namespaces that support broader RDF functionality 
-    and general data representation needs. These terms are not exclusively 
-    tied to ontology specification but serve essential roles in RDF’s 
-    broader architecture.</p>
   <p>This specification does not attempt to enumerate all the possible forms
     of
     representing the meaning of RDF
@@ -868,7 +856,6 @@
     <p><code>rdfs:Proposition</code> is the class of propositions, simple logical expressions describing a relationship between two entities.
       <code>rdfs:Proposition</code> is an instance of <a href="#ch_class"><code>rdfs:Class</code></a>
       and a <a href="#def-subclass">subclass</a> of <a href="#ch_resource"><code>rdfs:Resource</code></a>.</p>
-    </p>
   </section>
   <section id="ch_reifies">
     <h3><code>rdf:reifies</code></h3>
@@ -887,7 +874,7 @@
     core
     namespaces.</p>
   <section id="ch_value">
-    <h4><code>rdf:value</code></h4>
+    <h3><code>rdf:value</code></h3>
     <p><code>rdf:value</code> is an instance of <a href="#ch_property"><code>rdf:Property</code></a>
       that may be used in
       describing structured values.</p>

@@ -8,9 +8,9 @@
     dcterms:description "Diese Datei beschreibt die in RDF verwendeten XML-Schema-Datentypen."@de, "This file is a description of the XML Schema datatypes used in RDF"@en .
 
 xsd:string
-    rdfs:label "Zeichenkette"@de, "string"@en ;
-    skos:prefLabel "Zeichenkette"@de, "string"@en ;
-    rdfs:comment "Zeichenketten. Werteraum: endliche Folgen von Unicode-Zeichen. Lexikalische Form: eine beliebige endliche Folge von XML-Zeichen gemäß der XML-Produktion Char (d. h. beliebige in XML zulässige Unicode-Skalarwerte)."@de, "Character strings. Value space: finite-length sequences of Unicode characters. Lexical form: any finite-length sequence of XML characters matching the XML Char production (i.e., any Unicode scalar value allowed by XML)."@en .
+    rdfs:label "String"@de, "string"@en ;
+    skos:prefLabel "String"@de, "string"@en ;
+    rdfs:comment "Strings. Werteraum: endliche Folgen von Unicode-Zeichen. Lexikalische Form: eine beliebige endliche Folge von XML-Zeichen gemäß der XML-Produktion Char (d. h. beliebige in XML zulässige Unicode-Skalarwerte)."@de, "Character strings. Value space: finite-length sequences of Unicode characters. Lexical form: any finite-length sequence of XML characters matching the XML Char production (i.e., any Unicode scalar value allowed by XML)."@en .
 
 xsd:boolean
     rdfs:label "boolescher Wert"@de, "boolean"@en ;
@@ -42,7 +42,7 @@ xsd:float
 xsd:date
     rdfs:label "Datum"@de, "date"@en ;
     skos:prefLabel "Datum"@de, "date"@en ;
-    rdfs:comment "Kalenderdaten als rechts offene Tagesintervalle. Lexikalische Form: YYYY-MM-DD mit optionaler Zeitzone. Lexikalische Formen der Zeitzone: 'Z' oder ein Versatz der Form ±hh:mm mit 00 ≤ mm ≤ 59 und |offset| ≤ 14:00 (z. B. '2025-09-27Z', '2025-09-27+02:00')."@de, "Calendar dates as top-open day intervals. Lexical form: YYYY-MM-DD with optional timezone. Timezone lexical forms: 'Z' or an offset of the form ±hh:mm with 00 ≤ mm ≤ 59 and |offset| ≤ 14:00 (e.g., '2025-09-27Z', '2025-09-27+02:00')."@en .
+    rdfs:comment "Kalenderdaten als rechts offene Tagesintervalle. Lexikalische Form: YYYY-MM-DD mit optionaler Zeitzone. Lexikalische Formen der Zeitzone: 'Z' oder ein UTC-Offset der Form ±hh:mm mit 00 ≤ mm ≤ 59 und |offset| ≤ 14:00 (z. B. '2025-09-27Z', '2025-09-27+02:00')."@de, "Calendar dates as top-open day intervals. Lexical form: YYYY-MM-DD with optional timezone. Timezone lexical forms: 'Z' or an offset of the form ±hh:mm with 00 ≤ mm ≤ 59 and |offset| ≤ 14:00 (e.g., '2025-09-27Z', '2025-09-27+02:00')."@en .
 
 xsd:time
     rdfs:label "Uhrzeit"@de, "time"@en ;
@@ -53,13 +53,13 @@ xsd:dateTime
     rdfs:label "Datum und Uhrzeit"@de, "dateTime"@en ;
     skos:prefLabel "Datum und Uhrzeit"@de, "date and time"@en ;
     skos:altLabel "dateTime"@en ;
-    rdfs:comment "Zeitpunkte, optional mit Zeitzone. Lexikalische Form: YYYY-MM-DDThh:mm:ss(.s+)? mit optionaler Zeitzone. Werte mit unterschiedlichen expliziten Versätzen können denselben Zeitpunkt bezeichnen. Lexikalische Formen der Zeitzone: 'Z' oder ±hh:mm mit |offset| ≤ 14:00 (z. B. '2025-09-27T14:03:00+02:00')."@de, "Instants of time, optionally with timezone. Lexical form: YYYY-MM-DDThh:mm:ss(.s+)? with optional timezone. Values with different explicit offsets can be equal as instants. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '2025-09-27T14:03:00+02:00')."@en .
+    rdfs:comment "Zeitpunkte, optional mit Zeitzone. Lexikalische Form: YYYY-MM-DDThh:mm:ss(.s+)? mit optionaler Zeitzone. Werte mit unterschiedlichen expliziten UTC-Offsets können denselben Zeitpunkt bezeichnen. Lexikalische Formen der Zeitzone: 'Z' oder ±hh:mm mit |offset| ≤ 14:00 (z. B. '2025-09-27T14:03:00+02:00')."@de, "Instants of time, optionally with timezone. Lexical form: YYYY-MM-DDThh:mm:ss(.s+)? with optional timezone. Values with different explicit offsets can be equal as instants. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '2025-09-27T14:03:00+02:00')."@en .
 
 xsd:dateTimeStamp
     rdfs:label "Datum und Uhrzeit mit Zeitzone"@de, "dateTimeStamp"@en ;
     skos:prefLabel "Datum und Uhrzeit mit Zeitzone"@de, "date and time with timezone"@en ;
     skos:altLabel "dateTimeStamp"@en ;
-    rdfs:comment "dateTime mit verpflichtendem explizitem Zeitzonenversatz. Lexikalische Form: YYYY-MM-DDThh:mm:ss(.s+)?(Z|±hh:mm); der Zeitzonenversatz ist obligatorisch."@de, "dateTime with a required explicit timezone offset. Lexical form: YYYY-MM-DDThh:mm:ss(.s+)?(Z|±hh:mm); the timezone offset is mandatory."@en .
+    rdfs:comment "dateTime mit verpflichtendem explizitem UTC-Offset. Lexikalische Form: YYYY-MM-DDThh:mm:ss(.s+)?(Z|±hh:mm); der UTC-Offset ist obligatorisch."@de, "dateTime with a required explicit timezone offset. Lexical form: YYYY-MM-DDThh:mm:ss(.s+)?(Z|±hh:mm); the timezone offset is mandatory."@en .
 
 xsd:gYear
     rdfs:label "gregorianisches Jahr"@de, "gYear"@en ;
@@ -190,13 +190,13 @@ xsd:base64Binary
     rdfs:label "Base64-Binärdaten"@de, "base64Binary"@en ;
     skos:prefLabel "Base64-Binärdaten"@de, "Base64 binary data"@en ;
     skos:altLabel "base64Binary"@en ;
-    rdfs:comment "Beliebige Binärdaten, kodiert mit Base64. Lexikalischer Raum gemäß RFC 2045/3548; optionale Leerraumzeichen gemäß XML-Regeln zulässig. Lexikalische Form: Base64-Alphabet 'A–Z', 'a–z', '0–9', '+', '/' mit optionalem '=' als Füllzeichen; Leerraumzeichen werden bei der Validierung gemäß dem Modus collapse normalisiert."@de, "Arbitrary binary data encoded using Base64. Lexical space per RFC 2045/3548; optional whitespace allowed per XML rules. Lexical form: Base64 alphabet 'A–Z', 'a–z', '0–9', '+', '/' with optional '=' padding; whitespace is collapsed during validation."@en .
+    rdfs:comment "Beliebige Binärdaten, kodiert mit Base64. Lexikalischer Raum gemäß RFC 2045/3548; optionale Leerraumzeichen gemäß XML-Regeln zulässig. Lexikalische Form: Base64-Alphabet 'A–Z', 'a–z', '0–9', '+', '/' mit optionalem '=' als Padding; Leerraumzeichen werden bei der Validierung gemäß dem Modus collapse normalisiert."@de, "Arbitrary binary data encoded using Base64. Lexical space per RFC 2045/3548; optional whitespace allowed per XML rules. Lexical form: Base64 alphabet 'A–Z', 'a–z', '0–9', '+', '/' with optional '=' padding; whitespace is collapsed during validation."@en .
 
 xsd:anyURI
     rdfs:label "IRI-Referenz"@de, "anyURI"@en ;
     skos:prefLabel "IRI-Referenz"@de, "IRI reference"@en ;
     skos:altLabel "anyURI"@en ;
-    rdfs:comment "Internationalisierter Ressourcenbezeichner (IRI) oder IRI-Referenz gemäß RFC 3987. Der lexikalische Raum ist einfach xsd:string (XSD erzwingt keine feste Grammatik); typische lexikalische Formen enthalten absolute oder relative IRIs und optionale Fragmentbezeichner; Prozessoren können Maskierung oder eine Abbildung von IRI auf URI anwenden."@de, "Internationalized Resource Identifier (IRI) or IRI reference per RFC 3987. Lexical space is simply xsd:string (no fixed grammar is enforced by XSD); typical lexical forms include absolute or relative IRIs and optional fragment identifiers; processors may apply escaping/IRI-to-URI mapping."@en .
+    rdfs:comment "Internationalisierter Ressourcenbezeichner (IRI) oder IRI-Referenz gemäß RFC 3987. Der lexikalische Raum ist einfach xsd:string (XSD erzwingt keine feste Grammatik); typische lexikalische Formen enthalten absolute oder relative IRIs und optionale Fragmentbezeichner; Prozessoren können Escaping oder eine Abbildung von IRI auf URI anwenden."@de, "Internationalized Resource Identifier (IRI) or IRI reference per RFC 3987. Lexical space is simply xsd:string (no fixed grammar is enforced by XSD); typical lexical forms include absolute or relative IRIs and optional fragment identifiers; processors may apply escaping/IRI-to-URI mapping."@en .
 
 xsd:language
     rdfs:label "Sprachbezeichner"@de, "language"@en ;
@@ -205,16 +205,16 @@ xsd:language
     rdfs:comment "Bezeichner natürlicher Sprachen gemäß BCP 47. Lexikalisches Muster: [a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*."@de, "Natural language identifiers per BCP 47. Lexical pattern: [a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*."@en .
 
 xsd:normalizedString
-    rdfs:label "normalisierte Zeichenkette"@de, "normalizedString"@en ;
-    skos:prefLabel "normalisierte Zeichenkette"@de, "normalized string"@en ;
+    rdfs:label "normalisierter String"@de, "normalizedString"@en ;
+    skos:prefLabel "normalisierter String"@de, "normalized string"@en ;
     skos:altLabel "normalizedString"@en ;
-    rdfs:comment "Zeichenketten ohne Wagenrücklauf-, Zeilenvorschub- und Tabulatorzeichen. Abgeleitet von xsd:string; bei der Leerraumnormalisierung werden diese Zeichen durch Leerzeichen ersetzt. Lexikalische Form: eine beliebige Zeichenkette ohne #xD, #xA oder #x9 (gemäß XML), d. h. mit diesen bei der Normalisierung ersetzten Zeichen."@de, "Strings with carriage return, line feed, and tab characters disallowed. Derived from xsd:string; whitespace normalized to replace those characters with spaces. Lexical form: any string not containing #xD, #xA or #x9 (per XML), i.e., with those characters replaced during normalization."@en .
+    rdfs:comment "Strings ohne Wagenrücklauf-, Zeilenvorschub- und Tabulatorzeichen. Abgeleitet von xsd:string; bei der Leerraumnormalisierung werden diese Zeichen durch Leerzeichen ersetzt. Lexikalische Form: ein beliebiger String ohne #xD, #xA oder #x9 (gemäß XML); diese Zeichen werden bei der Normalisierung durch Leerzeichen ersetzt."@de, "Strings with carriage return, line feed, and tab characters disallowed. Derived from xsd:string; whitespace normalized to replace those characters with spaces. Lexical form: any string not containing #xD, #xA or #x9 (per XML), i.e., with those characters replaced during normalization."@en .
 
 xsd:token
     rdfs:label "Zeichenkette mit reduziertem Leerraum"@de, "token"@en ;
     skos:prefLabel "Zeichenkette mit reduziertem Leerraum"@de, "tokenized string"@en ;
     skos:altLabel "token"@en ;
-    rdfs:comment "Tokenisierte Zeichenketten, abgeleitet von xsd:normalizedString: ohne führende oder nachgestellte Leerzeichen und ohne interne Folgen mehrerer Leerzeichen. Lexikalische Form: Zeichenketten mit reduziertem Leerraum (Folgen von Leerzeichen werden zu einem Leerzeichen zusammengefasst; führende und nachgestellte Leerzeichen werden entfernt)."@de, "Tokenized strings derived from xsd:normalizedString: no leading or trailing spaces and no internal sequences of multiple spaces. Lexical form: strings with whitespace collapsed (runs of spaces collapsed to a single space; leading/trailing spaces removed)."@en .
+    rdfs:comment "Tokenisierte Strings, abgeleitet von xsd:normalizedString: ohne führende oder nachgestellte Leerzeichen und ohne interne Folgen mehrerer Leerzeichen. Lexikalische Form: Strings mit reduziertem Leerraum (Folgen von Leerzeichen werden zu einem Leerzeichen zusammengefasst; führende und nachgestellte Leerzeichen werden entfernt)."@de, "Tokenized strings derived from xsd:normalizedString: no leading or trailing spaces and no internal sequences of multiple spaces. Lexical form: strings with whitespace collapsed (runs of spaces collapsed to a single space; leading/trailing spaces removed)."@en .
 
 xsd:NMTOKEN
     rdfs:label "XML-Namenstoken"@de, "NMTOKEN"@en ;
@@ -232,4 +232,4 @@ xsd:NCName
     rdfs:label "XML-Name ohne Doppelpunkt"@de, "NCName"@en ;
     skos:prefLabel "XML-Name ohne Doppelpunkt"@de, "XML name without a colon"@en ;
     skos:altLabel "NCName"@en ;
-    rdfs:comment "XML-Namen ohne Doppelpunkt gemäß der Produktion NCName (d. h. Name ohne Doppelpunkt). Abgeleitet von xsd:Name. Lexikalische Form: XML NCName (wie Name, aber ohne zulässiges ':')."@de, "XML 'non-colonized' names matching the NCName production (i.e., Name without the colon). Derived from xsd:Name. Lexical form: XML NCName (same as Name but disallowing ':')."@en .
+    rdfs:comment "XML-Namen ohne Doppelpunkt gemäß der Produktion NCName (d. h. Name ohne Doppelpunkt). Abgeleitet von xsd:Name. Lexikalische Form: NCName gemäß XML (wie Name, jedoch ist ':' nicht zulässig)."@de, "XML 'non-colonized' names matching the NCName production (i.e., Name without the colon). Derived from xsd:Name. Lexical form: XML NCName (same as Name but disallowing ':')."@en .

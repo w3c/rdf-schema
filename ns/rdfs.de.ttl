@@ -48,12 +48,12 @@ rdfs:label
 rdfs:domain
     rdfs:label "Definitionsbereich"@de, "domain"@en ;
     skos:prefLabel "Definitionsbereich"@de, "domain"@en ;
-    rdfs:comment "Ein Definitionsbereich der Eigenschaft, die das Subjekt dieser Beschreibung ist."@de, "A domain of the subject property."@en .
+    rdfs:comment "Ein Definitionsbereich der als Subjekt angegebenen Eigenschaft."@de, "A domain of the subject property."@en .
 
 rdfs:range
     rdfs:label "Wertebereich"@de, "range"@en ;
     skos:prefLabel "Wertebereich"@de, "range"@en ;
-    rdfs:comment "Ein Wertebereich der Eigenschaft, die das Subjekt dieser Beschreibung ist."@de, "A range of the subject property."@en .
+    rdfs:comment "Ein Wertebereich der als Subjekt angegebenen Eigenschaft."@de, "A range of the subject property."@en .
 
 rdfs:seeAlso
     rdfs:label "siehe auch"@de, "seeAlso"@en ;
@@ -71,7 +71,7 @@ rdfs:Literal
     rdfs:label "Literal"@de, "Literal"@en ;
     skos:prefLabel "Literal"@de, "literal"@en ;
     skos:altLabel "Literal"@en ;
-    rdfs:comment "Die Klasse der Literalwerte, z. B. Zeichenketten und ganze Zahlen."@de, "The class of literal values, eg. textual strings and integers."@en .
+    rdfs:comment "Die Klasse der Literalwerte, z. B. Strings und ganze Zahlen."@de, "The class of literal values, eg. textual strings and integers."@en .
 
 rdfs:Container
     rdfs:label "Container"@de, "Container"@en ;

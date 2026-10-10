@@ -13,16 +13,16 @@ rdf:HTML
     rdfs:comment "Der Datentyp für RDF-Literale, die Fragmente von HTML-Inhalten speichern."@de, "The datatype of RDF literals storing fragments of HTML content"@en .
 
 rdf:langString
-    rdfs:label "Zeichenkette mit Sprachkennzeichnung"@de, "langString"@en ;
-    skos:prefLabel "Zeichenkette mit Sprachkennzeichnung"@de, "language-tagged string"@en ;
+    rdfs:label "String mit Sprachkennzeichnung"@de, "langString"@en ;
+    skos:prefLabel "String mit Sprachkennzeichnung"@de, "language-tagged string"@en ;
     skos:altLabel "langString"@en ;
-    rdfs:comment "Der Datentyp für Zeichenketten mit Sprachkennzeichnung."@de, "The datatype of language-tagged string values"@en .
+    rdfs:comment "Der Datentyp für Strings mit Sprachkennzeichnung, z. B. \"Hallo\"@de und \"Hello\"@en-US."@de, "The datatype of language-tagged string values"@en .
 
 rdf:dirLangString
-    rdfs:label "Zeichenkette mit Sprachkennzeichnung und Schreibrichtung"@de, "dirLangString"@en ;
-    skos:prefLabel "Zeichenkette mit Sprachkennzeichnung und Schreibrichtung"@de, "directional language-tagged string"@en ;
+    rdfs:label "String mit Sprachkennzeichnung und Grundrichtung"@de, "dirLangString"@en ;
+    skos:prefLabel "String mit Sprachkennzeichnung und Grundrichtung"@de, "directional language-tagged string"@en ;
     skos:altLabel "dirLangString"@en ;
-    rdfs:comment "Der Datentyp für Zeichenketten mit Sprachkennzeichnung und Schreibrichtung; er umfasst eine Sprachkennzeichnung und eine Grundrichtung ('ltr' oder 'rtl')."@de, "The datatype of directional language-tagged string values, which includes a language tag and a base direction (either 'ltr' or 'rtl')"@en .
+    rdfs:comment "Der Datentyp für Strings mit Sprachkennzeichnung und Grundrichtung des Textes; er umfasst eine Sprachkennzeichnung und eine Grundrichtung ('ltr' für links nach rechts oder 'rtl' für rechts nach links)."@de, "The datatype of directional language-tagged string values, which includes a language tag and a base direction (either 'ltr' or 'rtl')"@en .
 
 rdf:PlainLiteral
     rdfs:label "einfaches Literal"@de, "PlainLiteral"@en ;
@@ -55,17 +55,17 @@ rdf:Statement
 rdf:subject
     rdfs:label "Subjekt"@de, "subject"@en ;
     skos:prefLabel "Subjekt"@de, "subject"@en ;
-    rdfs:comment "Das Subjekt der RDF-Aussage, die das Subjekt dieser Beschreibung ist."@de, "The subject of the subject RDF statement."@en .
+    rdfs:comment "Das Subjekt der RDF-Aussage, die durch die Subjektressource dieses Tripels repräsentiert wird."@de, "The subject of the subject RDF statement."@en .
 
 rdf:predicate
     rdfs:label "Prädikat"@de, "predicate"@en ;
     skos:prefLabel "Prädikat"@de, "predicate"@en ;
-    rdfs:comment "Das Prädikat der RDF-Aussage, die das Subjekt dieser Beschreibung ist."@de, "The predicate of the subject RDF statement."@en .
+    rdfs:comment "Das Prädikat der RDF-Aussage, die durch die Subjektressource dieses Tripels repräsentiert wird."@de, "The predicate of the subject RDF statement."@en .
 
 rdf:object
     rdfs:label "Objekt"@de, "object"@en ;
     skos:prefLabel "Objekt"@de, "object"@en ;
-    rdfs:comment "Das Objekt der RDF-Aussage, die das Subjekt dieser Beschreibung ist."@de, "The object of the subject RDF statement."@en .
+    rdfs:comment "Das Objekt der RDF-Aussage, die durch die Subjektressource dieses Tripels repräsentiert wird."@de, "The object of the subject RDF statement."@en .
 
 rdf:Bag
     rdfs:label "Multimenge"@de, "Bag"@en ;
@@ -105,12 +105,12 @@ rdf:nil
 rdf:first
     rdfs:label "erstes Element"@de, "first"@en ;
     skos:prefLabel "erstes Element"@de, "first"@en ;
-    rdfs:comment "Das erste Element der RDF-Liste, die das Subjekt dieser Beschreibung ist."@de, "The first item in the subject RDF list."@en .
+    rdfs:comment "Das erste Element der als Subjekt angegebenen RDF-Liste."@de, "The first item in the subject RDF list."@en .
 
 rdf:rest
     rdfs:label "Rest"@de, "rest"@en ;
     skos:prefLabel "Rest"@de, "rest"@en ;
-    rdfs:comment "Der Rest der RDF-Liste, die das Subjekt dieser Beschreibung ist, nach dem ersten Element."@de, "The rest of the subject RDF list after the first item."@en .
+    rdfs:comment "Der Rest der als Subjekt angegebenen RDF-Liste nach dem ersten Element."@de, "The rest of the subject RDF list after the first item."@en .
 
 rdf:XMLLiteral
     rdfs:label "XML-Literal"@de, "XMLLiteral"@en ;
@@ -132,12 +132,12 @@ rdf:CompoundLiteral
 rdf:language
     rdfs:label "Sprache"@de, "language"@en ;
     skos:prefLabel "Sprache"@de, "language"@en ;
-    rdfs:comment "Die Sprachkomponente eines CompoundLiteral."@de, "The language component of a CompoundLiteral."@en .
+    rdfs:comment "Die Sprachkomponente eines zusammengesetzten Literals (rdf:CompoundLiteral)."@de, "The language component of a CompoundLiteral."@en .
 
 rdf:direction
     rdfs:label "Grundrichtung"@de, "direction"@en ;
     skos:prefLabel "Grundrichtung"@de, "direction"@en ;
-    rdfs:comment "Die Komponente der Grundrichtung eines CompoundLiteral."@de, "The base direction component of a CompoundLiteral."@en .
+    rdfs:comment "Die Komponente der Grundrichtung eines zusammengesetzten Literals (rdf:CompoundLiteral)."@de, "The base direction component of a CompoundLiteral."@en .
 
 rdf:PropositionForm
     rdfs:label "Propositionsform"@de, "PropositionForm"@en ;

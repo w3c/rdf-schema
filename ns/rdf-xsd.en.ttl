@@ -1,0 +1,203 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://www.w3.org/2001/XMLSchema#>
+    dcterms:title "RDF XSD datatypes"@en ;
+    dcterms:description "This file is a description of the XML Schema datatypes used in RDF"@en .
+
+xsd:string
+    rdfs:label "string"@en ;
+    skos:prefLabel "string"@en ;
+    rdfs:comment "Character strings. Value space: finite-length sequences of Unicode characters. Lexical form: any finite-length sequence of XML characters matching the XML Char production (i.e., any Unicode scalar value allowed by XML)."@en .
+
+xsd:boolean
+    rdfs:label "boolean"@en ;
+    skos:prefLabel "boolean"@en ;
+    rdfs:comment "Two-valued logic. Lexical forms: 'true', 'false', '1', '0'. Value space: {true, false}."@en .
+
+xsd:decimal
+    rdfs:label "decimal"@en ;
+    skos:prefLabel "decimal"@en ;
+    rdfs:comment "Arbitrary-precision decimal numbers. Value space: numbers of the form i/10^n with i and n integers (n ≥ 0). No special values (INF/NaN) and no exponential notation in lexical form. Lexical form: an optional leading sign followed by digits, with an optional fractional part using '.' as the decimal separator; no exponent is permitted (e.g., '-1.23', '210', '+100000.00')."@en .
+
+xsd:integer
+    rdfs:label "integer"@en ;
+    skos:prefLabel "integer"@en ;
+    rdfs:comment "Signed integers of arbitrary size. Derived from xsd:decimal with fractionDigits=0. Lexical form: optional leading sign followed by one or more decimal digits; no decimal point or exponent (e.g., '-1', '0', '+100000')."@en .
+
+xsd:double
+    rdfs:label "double"@en ;
+    skos:prefLabel "64-bit floating-point number"@en ;
+    rdfs:comment "IEEE 754 64-bit floating-point. Lexical forms use decimal or scientific notation with optional leading sign and exponent; special tokens 'INF', '+INF', '-INF', and 'NaN' are permitted; '+0' and '-0' are distinct lexical forms. Mapping from lexical forms to values is specific to this datatype and its precision. Lexical form (regex-style): (\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@en .
+
+xsd:float
+    rdfs:label "float"@en ;
+    skos:prefLabel "32-bit floating-point number"@en ;
+    rdfs:comment "IEEE 754 32-bit floating-point. Lexical forms use decimal or scientific notation with optional leading sign and exponent; special tokens 'INF', '+INF', '-INF', and 'NaN' are permitted; '+0' and '-0' are distinct lexical forms. Mapping from lexical forms to values is specific to this datatype and its precision. Lexical form (regex-style): (\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@en .
+
+xsd:date
+    rdfs:label "date"@en ;
+    skos:prefLabel "date"@en ;
+    rdfs:comment "Calendar dates as top-open day intervals. Lexical form: YYYY-MM-DD with optional timezone. Timezone lexical forms: 'Z' or an offset of the form ±hh:mm with 00 ≤ mm ≤ 59 and |offset| ≤ 14:00 (e.g., '2025-09-27Z', '2025-09-27+02:00')."@en .
+
+xsd:time
+    rdfs:label "time"@en ;
+    skos:prefLabel "time"@en ;
+    rdfs:comment "Times that recur each day or occur on some day. Lexical form: hh:mm:ss(.s+)? with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '23:59:59Z', '08:15:30.5-05:00')."@en .
+
+xsd:dateTime
+    rdfs:label "dateTime"@en ;
+    skos:prefLabel "date and time"@en ;
+    rdfs:comment "Instants of time, optionally with timezone. Lexical form: YYYY-MM-DDThh:mm:ss(.s+)? with optional timezone. Values with different explicit offsets can be equal as instants. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '2025-09-27T14:03:00+02:00')."@en .
+
+xsd:dateTimeStamp
+    rdfs:label "dateTimeStamp"@en ;
+    skos:prefLabel "date and time with timezone"@en ;
+    rdfs:comment "dateTime with a required explicit timezone offset. Lexical form: YYYY-MM-DDThh:mm:ss(.s+)?(Z|±hh:mm); the timezone offset is mandatory."@en .
+
+xsd:gYear
+    rdfs:label "gYear"@en ;
+    skos:prefLabel "Gregorian year"@en ;
+    rdfs:comment "Gregorian year. Lexical form: CCYY (optionally with a leading '-' for years BCE and optional timezone). Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00; years are matched by -?([1-9][0-9]{3,}|0[0-9]{3})."@en .
+
+xsd:gMonth
+    rdfs:label "gMonth"@en ;
+    skos:prefLabel "Gregorian month"@en ;
+    rdfs:comment "Gregorian month recurring each year. Lexical form: --MM with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '--02Z', '--11+05:30')."@en .
+
+xsd:gDay
+    rdfs:label "gDay"@en ;
+    skos:prefLabel "Gregorian day"@en ;
+    rdfs:comment "Day in a month recurring each month. Lexical form: ---DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '---05Z', '---31-03:00')."@en .
+
+xsd:gYearMonth
+    rdfs:label "gYearMonth"@en ;
+    skos:prefLabel "Gregorian year and month"@en ;
+    rdfs:comment "Gregorian year and month. Lexical form: CCYY-MM with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '2025-09Z', '1999-12+01:00')."@en .
+
+xsd:gMonthDay
+    rdfs:label "gMonthDay"@en ;
+    skos:prefLabel "Gregorian month and day"@en ;
+    rdfs:comment "Month and day recurring each year. Lexical form: --MM-DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '--12-31Z', '--02-29+09:00')."@en .
+
+xsd:duration
+    rdfs:label "duration"@en ;
+    skos:prefLabel "duration"@en ;
+    rdfs:comment "Time durations per ISO 8601 (PnYnMnDTnHnMnS), optionally with a leading '-'. Value space pairs a months component and a seconds component; only a partial order is defined. Lexical form: 'P' followed by year/month/day and optionally 'T' followed by hour/minute/second fragments; at least one component must be present; a fractional part is allowed on seconds only (e.g., 'P3Y6M4DT12H30M5.5S', '-P15D')."@en .
+
+xsd:yearMonthDuration
+    rdfs:label "yearMonthDuration"@en ;
+    skos:prefLabel "year and month duration"@en ;
+    rdfs:comment "Duration restricted to year and month fields (seconds component is 0). Totally ordered; lexical form uses PnYnM with optional leading '-' (e.g., 'P2Y', 'P3M', '-P1Y2M')."@en .
+
+xsd:dayTimeDuration
+    rdfs:label "dayTimeDuration"@en ;
+    skos:prefLabel "duration in days, hours, minutes and seconds"@en ;
+    rdfs:comment "Duration restricted to day, hour, minute, second fields (months component is 0). Totally ordered; lexical form 'PnDTnHnMnS' with optional leading '-' and optional fractional seconds (e.g., 'P30D', 'PT12H30M', 'PT5.25S', '-P1DT2H')."@en .
+
+xsd:byte
+    rdfs:label "byte"@en ;
+    skos:prefLabel "8-bit signed integer"@en ;
+    rdfs:comment "8-bit signed integer. Value space: [-128 .. 127]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent (e.g., '-1', '0', '+100')."@en .
+
+xsd:short
+    rdfs:label "short"@en ;
+    skos:prefLabel "16-bit signed integer"@en ;
+    rdfs:comment "16-bit signed integer. Value space: [-32768 .. 32767]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent (e.g., '-1', '0', '+10000')."@en .
+
+xsd:int
+    rdfs:label "int"@en ;
+    skos:prefLabel "32-bit signed integer"@en ;
+    rdfs:comment "32-bit signed integer. Value space: [-2147483648 .. 2147483647]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent (e.g., '-1', '0', '+100000')."@en .
+
+xsd:long
+    rdfs:label "long"@en ;
+    skos:prefLabel "64-bit signed integer"@en ;
+    rdfs:comment "64-bit signed integer. Value space: [-9223372036854775808 .. 9223372036854775807]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent."@en .
+
+xsd:unsignedByte
+    rdfs:label "unsignedByte"@en ;
+    skos:prefLabel "8-bit unsigned integer"@en ;
+    rdfs:comment "8-bit unsigned integer. Value space: [0 .. 255]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
+
+xsd:unsignedShort
+    rdfs:label "unsignedShort"@en ;
+    skos:prefLabel "16-bit unsigned integer"@en ;
+    rdfs:comment "16-bit unsigned integer. Value space: [0 .. 65535]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
+
+xsd:unsignedInt
+    rdfs:label "unsignedInt"@en ;
+    skos:prefLabel "32-bit unsigned integer"@en ;
+    rdfs:comment "32-bit unsigned integer. Value space: [0 .. 4294967295]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
+
+xsd:unsignedLong
+    rdfs:label "unsignedLong"@en ;
+    skos:prefLabel "64-bit unsigned integer"@en ;
+    rdfs:comment "64-bit unsigned integer. Value space: [0 .. 18446744073709551615]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
+
+xsd:positiveInteger
+    rdfs:label "positiveInteger"@en ;
+    skos:prefLabel "positive integer"@en ;
+    rdfs:comment "Integers greater than zero. Value space: {1, 2, ...}. Derived from xsd:nonNegativeInteger with minInclusive=1. Lexical form: optional '+' sign followed by one or more digits; no zero or negative forms."@en .
+
+xsd:nonNegativeInteger
+    rdfs:label "nonNegativeInteger"@en ;
+    skos:prefLabel "non-negative integer"@en ;
+    rdfs:comment "Integers greater than or equal to zero. Value space: {0, 1, 2, ...}. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign."@en .
+
+xsd:negativeInteger
+    rdfs:label "negativeInteger"@en ;
+    skos:prefLabel "negative integer"@en ;
+    rdfs:comment "Integers less than zero. Value space: {..., -2, -1}. Derived from xsd:nonPositiveInteger with maxInclusive=-1. Lexical form: mandatory '-' sign followed by one or more digits."@en .
+
+xsd:nonPositiveInteger
+    rdfs:label "nonPositiveInteger"@en ;
+    skos:prefLabel "non-positive integer"@en ;
+    rdfs:comment "Integers less than or equal to zero. Value space: {..., -2, -1, 0}. Lexical form: optional sign for zero, otherwise a mandatory '-' sign followed by digits."@en .
+
+xsd:hexBinary
+    rdfs:label "hexBinary"@en ;
+    skos:prefLabel "hexadecimal binary data"@en ;
+    rdfs:comment "Arbitrary binary data encoded as pairs of hexadecimal digits; each octet is represented by two hex characters [0-9A-Fa-f]. Lexical form: an even-length sequence of hexadecimal digits; two hex digits encode each octet (e.g., '0FB7')."@en .
+
+xsd:base64Binary
+    rdfs:label "base64Binary"@en ;
+    skos:prefLabel "Base64 binary data"@en ;
+    rdfs:comment "Arbitrary binary data encoded using Base64. Lexical space per RFC 2045/3548; optional whitespace allowed per XML rules. Lexical form: Base64 alphabet 'A–Z', 'a–z', '0–9', '+', '/' with optional '=' padding; whitespace is collapsed during validation."@en .
+
+xsd:anyURI
+    rdfs:label "anyURI"@en ;
+    skos:prefLabel "IRI reference"@en ;
+    rdfs:comment "Internationalized Resource Identifier (IRI) or IRI reference per RFC 3987. Lexical space is simply xsd:string (no fixed grammar is enforced by XSD); typical lexical forms include absolute or relative IRIs and optional fragment identifiers; processors may apply escaping/IRI-to-URI mapping."@en .
+
+xsd:language
+    rdfs:label "language"@en ;
+    skos:prefLabel "language identifier"@en ;
+    rdfs:comment "Natural language identifiers per BCP 47. Lexical pattern: [a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*."@en .
+
+xsd:normalizedString
+    rdfs:label "normalizedString"@en ;
+    skos:prefLabel "normalized string"@en ;
+    rdfs:comment "Strings with carriage return, line feed, and tab characters disallowed. Derived from xsd:string; whitespace normalized to replace those characters with spaces. Lexical form: any string not containing #xD, #xA or #x9 (per XML), i.e., with those characters replaced during normalization."@en .
+
+xsd:token
+    rdfs:label "token"@en ;
+    skos:prefLabel "tokenized string"@en ;
+    rdfs:comment "Tokenized strings derived from xsd:normalizedString: no leading or trailing spaces and no internal sequences of multiple spaces. Lexical form: strings with whitespace collapsed (runs of spaces collapsed to a single space; leading/trailing spaces removed)."@en .
+
+xsd:NMTOKEN
+    rdfs:label "NMTOKEN"@en ;
+    skos:prefLabel "XML name token"@en ;
+    rdfs:comment "Values matching the XML Nmtoken production. Derived from xsd:token. Lexical form: one or more NameChar per XML (i.e., matches the XML Nmtoken production)."@en .
+
+xsd:Name
+    rdfs:label "Name"@en ;
+    skos:prefLabel "XML name"@en ;
+    rdfs:comment "Values matching the XML Name production. Derived from xsd:token. Lexical form: NameStartChar followed by zero or more NameChar per XML."@en .
+
+xsd:NCName
+    rdfs:label "NCName"@en ;
+    skos:prefLabel "XML name without a colon"@en ;
+    rdfs:comment "XML 'non-colonized' names matching the NCName production (i.e., Name without the colon). Derived from xsd:Name. Lexical form: XML NCName (same as Name but disallowing ':')."@en .

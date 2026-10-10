@@ -1,0 +1,235 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://www.w3.org/2001/XMLSchema#>
+    dcterms:title "Types de données XSD en RDF"@fr, "RDF XSD datatypes"@en ;
+    dcterms:description "Ce fichier décrit les types de données XML Schema utilisés dans RDF."@fr, "This file is a description of the XML Schema datatypes used in RDF"@en .
+
+xsd:string
+    rdfs:label "chaîne de caractères"@fr, "string"@en ;
+    skos:prefLabel "chaîne de caractères"@fr, "string"@en ;
+    rdfs:comment "Chaînes de caractères. Espace des valeurs : séquences de longueur finie de caractères Unicode. Forme lexicale : toute séquence de longueur finie de caractères XML conforme à la production XML Char (c’est-à-dire toute valeur scalaire Unicode autorisée par XML)."@fr, "Character strings. Value space: finite-length sequences of Unicode characters. Lexical form: any finite-length sequence of XML characters matching the XML Char production (i.e., any Unicode scalar value allowed by XML)."@en .
+
+xsd:boolean
+    rdfs:label "booléen"@fr, "boolean"@en ;
+    skos:prefLabel "booléen"@fr, "boolean"@en ;
+    rdfs:comment "Logique à deux valeurs. Formes lexicales : 'true', 'false', '1', '0'. Espace des valeurs : {true, false}."@fr, "Two-valued logic. Lexical forms: 'true', 'false', '1', '0'. Value space: {true, false}."@en .
+
+xsd:decimal
+    rdfs:label "nombre décimal"@fr, "decimal"@en ;
+    skos:prefLabel "nombre décimal"@fr, "decimal"@en ;
+    rdfs:comment "Nombres décimaux de précision arbitraire. Espace des valeurs : nombres de la forme i/10^n, avec i et n entiers (n ≥ 0). Aucune valeur spéciale (INF/NaN) ni notation exponentielle dans la forme lexicale. Forme lexicale : signe initial facultatif suivi de chiffres, avec une partie fractionnaire facultative utilisant '.' comme séparateur décimal ; aucun exposant n’est autorisé (par exemple, '-1.23', '210', '+100000.00')."@fr, "Arbitrary-precision decimal numbers. Value space: numbers of the form i/10^n with i and n integers (n ≥ 0). No special values (INF/NaN) and no exponential notation in lexical form. Lexical form: an optional leading sign followed by digits, with an optional fractional part using '.' as the decimal separator; no exponent is permitted (e.g., '-1.23', '210', '+100000.00')."@en .
+
+xsd:integer
+    rdfs:label "entier"@fr, "integer"@en ;
+    skos:prefLabel "entier"@fr, "integer"@en ;
+    rdfs:comment "Entiers signés de taille arbitraire. Type dérivé de xsd:decimal avec fractionDigits=0. Forme lexicale : signe facultatif suivi d’un ou plusieurs chiffres décimaux ; sans point décimal ni exposant (par exemple, '-1', '0', '+100000')."@fr, "Signed integers of arbitrary size. Derived from xsd:decimal with fractionDigits=0. Lexical form: optional leading sign followed by one or more decimal digits; no decimal point or exponent (e.g., '-1', '0', '+100000')."@en .
+
+xsd:double
+    rdfs:label "nombre à virgule flottante sur 64 bits"@fr, "double"@en ;
+    skos:prefLabel "nombre à virgule flottante sur 64 bits"@fr, "64-bit floating-point number"@en ;
+    skos:altLabel "double"@en ;
+    rdfs:comment "Nombres à virgule flottante IEEE 754 sur 64 bits. Les formes lexicales utilisent la notation décimale ou scientifique avec signe et exposant facultatifs ; les jetons spéciaux 'INF', '+INF', '-INF' et 'NaN' sont autorisés ; '+0' et '-0' sont des formes lexicales distinctes. La correspondance entre formes lexicales et valeurs est propre à ce type de données et à sa précision. Forme lexicale (notation d’expression régulière) : (\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@fr, "IEEE 754 64-bit floating-point. Lexical forms use decimal or scientific notation with optional leading sign and exponent; special tokens 'INF', '+INF', '-INF', and 'NaN' are permitted; '+0' and '-0' are distinct lexical forms. Mapping from lexical forms to values is specific to this datatype and its precision. Lexical form (regex-style): (\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@en .
+
+xsd:float
+    rdfs:label "nombre à virgule flottante sur 32 bits"@fr, "float"@en ;
+    skos:prefLabel "nombre à virgule flottante sur 32 bits"@fr, "32-bit floating-point number"@en ;
+    skos:altLabel "float"@en ;
+    rdfs:comment "Nombres à virgule flottante IEEE 754 sur 32 bits. Les formes lexicales utilisent la notation décimale ou scientifique avec signe et exposant facultatifs ; les jetons spéciaux 'INF', '+INF', '-INF' et 'NaN' sont autorisés ; '+0' et '-0' sont des formes lexicales distinctes. La correspondance entre formes lexicales et valeurs est propre à ce type de données et à sa précision. Forme lexicale (notation d’expression régulière) : (\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@fr, "IEEE 754 32-bit floating-point. Lexical forms use decimal or scientific notation with optional leading sign and exponent; special tokens 'INF', '+INF', '-INF', and 'NaN' are permitted; '+0' and '-0' are distinct lexical forms. Mapping from lexical forms to values is specific to this datatype and its precision. Lexical form (regex-style): (\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@en .
+
+xsd:date
+    rdfs:label "date"@fr, "date"@en ;
+    skos:prefLabel "date"@fr, "date"@en ;
+    rdfs:comment "Dates calendaires sous forme d’intervalles de jours ouverts à droite. Forme lexicale : YYYY-MM-DD avec fuseau horaire facultatif. Formes lexicales du fuseau horaire : 'Z' ou un décalage de la forme ±hh:mm avec 00 ≤ mm ≤ 59 et |offset| ≤ 14:00 (par exemple, '2025-09-27Z', '2025-09-27+02:00')."@fr, "Calendar dates as top-open day intervals. Lexical form: YYYY-MM-DD with optional timezone. Timezone lexical forms: 'Z' or an offset of the form ±hh:mm with 00 ≤ mm ≤ 59 and |offset| ≤ 14:00 (e.g., '2025-09-27Z', '2025-09-27+02:00')."@en .
+
+xsd:time
+    rdfs:label "heure"@fr, "time"@en ;
+    skos:prefLabel "heure"@fr, "time"@en ;
+    rdfs:comment "Heures qui se répètent chaque jour ou se situent un jour donné. Forme lexicale : hh:mm:ss(.s+)? avec fuseau horaire facultatif. Formes lexicales du fuseau horaire : 'Z' ou ±hh:mm avec |offset| ≤ 14:00 (par exemple, '23:59:59Z', '08:15:30.5-05:00')."@fr, "Times that recur each day or occur on some day. Lexical form: hh:mm:ss(.s+)? with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '23:59:59Z', '08:15:30.5-05:00')."@en .
+
+xsd:dateTime
+    rdfs:label "date et heure"@fr, "dateTime"@en ;
+    skos:prefLabel "date et heure"@fr, "date and time"@en ;
+    skos:altLabel "dateTime"@en ;
+    rdfs:comment "Instants dans le temps, avec fuseau horaire facultatif. Forme lexicale : YYYY-MM-DDThh:mm:ss(.s+)? avec fuseau horaire facultatif. Des valeurs avec des décalages explicites différents peuvent désigner le même instant. Formes lexicales du fuseau horaire : 'Z' ou ±hh:mm avec |offset| ≤ 14:00 (par exemple, '2025-09-27T14:03:00+02:00')."@fr, "Instants of time, optionally with timezone. Lexical form: YYYY-MM-DDThh:mm:ss(.s+)? with optional timezone. Values with different explicit offsets can be equal as instants. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '2025-09-27T14:03:00+02:00')."@en .
+
+xsd:dateTimeStamp
+    rdfs:label "date et heure avec fuseau horaire"@fr, "dateTimeStamp"@en ;
+    skos:prefLabel "date et heure avec fuseau horaire"@fr, "date and time with timezone"@en ;
+    skos:altLabel "dateTimeStamp"@en ;
+    rdfs:comment "dateTime avec un décalage explicite de fuseau horaire obligatoire. Forme lexicale : YYYY-MM-DDThh:mm:ss(.s+)?(Z|±hh:mm) ; le décalage de fuseau horaire est obligatoire."@fr, "dateTime with a required explicit timezone offset. Lexical form: YYYY-MM-DDThh:mm:ss(.s+)?(Z|±hh:mm); the timezone offset is mandatory."@en .
+
+xsd:gYear
+    rdfs:label "année grégorienne"@fr, "gYear"@en ;
+    skos:prefLabel "année grégorienne"@fr, "Gregorian year"@en ;
+    skos:altLabel "gYear"@en ;
+    rdfs:comment "Année grégorienne. Forme lexicale : CCYY (avec un '-' initial facultatif pour les années avant notre ère et un fuseau horaire facultatif). Formes lexicales du fuseau horaire : 'Z' ou ±hh:mm avec |offset| ≤ 14:00 ; les années correspondent à -?([1-9][0-9]{3,}|0[0-9]{3})."@fr, "Gregorian year. Lexical form: CCYY (optionally with a leading '-' for years BCE and optional timezone). Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00; years are matched by -?([1-9][0-9]{3,}|0[0-9]{3})."@en .
+
+xsd:gMonth
+    rdfs:label "mois grégorien"@fr, "gMonth"@en ;
+    skos:prefLabel "mois grégorien"@fr, "Gregorian month"@en ;
+    skos:altLabel "gMonth"@en ;
+    rdfs:comment "Mois grégorien se répétant chaque année. Forme lexicale : --MM avec fuseau horaire facultatif. Formes lexicales du fuseau horaire : 'Z' ou ±hh:mm avec |offset| ≤ 14:00 (par exemple, '--02Z', '--11+05:30')."@fr, "Gregorian month recurring each year. Lexical form: --MM with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '--02Z', '--11+05:30')."@en .
+
+xsd:gDay
+    rdfs:label "jour grégorien"@fr, "gDay"@en ;
+    skos:prefLabel "jour grégorien"@fr, "Gregorian day"@en ;
+    skos:altLabel "gDay"@en ;
+    rdfs:comment "Jour du mois se répétant chaque mois. Forme lexicale : ---DD avec fuseau horaire facultatif. Formes lexicales du fuseau horaire : 'Z' ou ±hh:mm avec |offset| ≤ 14:00 (par exemple, '---05Z', '---31-03:00')."@fr, "Day in a month recurring each month. Lexical form: ---DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '---05Z', '---31-03:00')."@en .
+
+xsd:gYearMonth
+    rdfs:label "année et mois grégoriens"@fr, "gYearMonth"@en ;
+    skos:prefLabel "année et mois grégoriens"@fr, "Gregorian year and month"@en ;
+    skos:altLabel "gYearMonth"@en ;
+    rdfs:comment "Année et mois grégoriens. Forme lexicale : CCYY-MM avec fuseau horaire facultatif. Formes lexicales du fuseau horaire : 'Z' ou ±hh:mm avec |offset| ≤ 14:00 (par exemple, '2025-09Z', '1999-12+01:00')."@fr, "Gregorian year and month. Lexical form: CCYY-MM with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '2025-09Z', '1999-12+01:00')."@en .
+
+xsd:gMonthDay
+    rdfs:label "mois et jour grégoriens"@fr, "gMonthDay"@en ;
+    skos:prefLabel "mois et jour grégoriens"@fr, "Gregorian month and day"@en ;
+    skos:altLabel "gMonthDay"@en ;
+    rdfs:comment "Mois et jour se répétant chaque année. Forme lexicale : --MM-DD avec fuseau horaire facultatif. Formes lexicales du fuseau horaire : 'Z' ou ±hh:mm avec |offset| ≤ 14:00 (par exemple, '--12-31Z', '--02-29+09:00')."@fr, "Month and day recurring each year. Lexical form: --MM-DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '--12-31Z', '--02-29+09:00')."@en .
+
+xsd:duration
+    rdfs:label "durée"@fr, "duration"@en ;
+    skos:prefLabel "durée"@fr, "duration"@en ;
+    rdfs:comment "Durées selon ISO 8601 (PnYnMnDTnHnMnS), avec un '-' initial facultatif. L’espace des valeurs associe une composante en mois et une composante en secondes ; seul un ordre partiel est défini. Forme lexicale : 'P' suivi de composantes années/mois/jours et, facultativement, de 'T' suivi de composantes heures/minutes/secondes ; au moins une composante est requise ; seule la composante secondes peut avoir une partie fractionnaire (par exemple, 'P3Y6M4DT12H30M5.5S', '-P15D')."@fr, "Time durations per ISO 8601 (PnYnMnDTnHnMnS), optionally with a leading '-'. Value space pairs a months component and a seconds component; only a partial order is defined. Lexical form: 'P' followed by year/month/day and optionally 'T' followed by hour/minute/second fragments; at least one component must be present; a fractional part is allowed on seconds only (e.g., 'P3Y6M4DT12H30M5.5S', '-P15D')."@en .
+
+xsd:yearMonthDuration
+    rdfs:label "durée en années et mois"@fr, "yearMonthDuration"@en ;
+    skos:prefLabel "durée en années et mois"@fr, "year and month duration"@en ;
+    skos:altLabel "yearMonthDuration"@en ;
+    rdfs:comment "Durée limitée aux champs années et mois (la composante secondes vaut 0). Totalement ordonnée ; la forme lexicale utilise PnYnM avec un '-' initial facultatif (par exemple, 'P2Y', 'P3M', '-P1Y2M')."@fr, "Duration restricted to year and month fields (seconds component is 0). Totally ordered; lexical form uses PnYnM with optional leading '-' (e.g., 'P2Y', 'P3M', '-P1Y2M')."@en .
+
+xsd:dayTimeDuration
+    rdfs:label "durée en jours, heures, minutes et secondes"@fr, "dayTimeDuration"@en ;
+    skos:prefLabel "durée en jours, heures, minutes et secondes"@fr, "duration in days, hours, minutes and seconds"@en ;
+    skos:altLabel "dayTimeDuration"@en ;
+    rdfs:comment "Durée limitée aux champs jours, heures, minutes et secondes (la composante mois vaut 0). Totalement ordonnée ; forme lexicale 'PnDTnHnMnS' avec un '-' initial facultatif et une partie fractionnaire facultative pour les secondes (par exemple, 'P30D', 'PT12H30M', 'PT5.25S', '-P1DT2H')."@fr, "Duration restricted to day, hour, minute, second fields (months component is 0). Totally ordered; lexical form 'PnDTnHnMnS' with optional leading '-' and optional fractional seconds (e.g., 'P30D', 'PT12H30M', 'PT5.25S', '-P1DT2H')."@en .
+
+xsd:byte
+    rdfs:label "entier signé sur 8 bits"@fr, "byte"@en ;
+    skos:prefLabel "entier signé sur 8 bits"@fr, "8-bit signed integer"@en ;
+    skos:altLabel "byte"@en ;
+    rdfs:comment "Entier signé sur 8 bits. Espace des valeurs : [-128 .. 127]. Forme lexicale : signe facultatif suivi d’un ou plusieurs chiffres ; sans point décimal ni exposant (par exemple, '-1', '0', '+100')."@fr, "8-bit signed integer. Value space: [-128 .. 127]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent (e.g., '-1', '0', '+100')."@en .
+
+xsd:short
+    rdfs:label "entier signé sur 16 bits"@fr, "short"@en ;
+    skos:prefLabel "entier signé sur 16 bits"@fr, "16-bit signed integer"@en ;
+    skos:altLabel "short"@en ;
+    rdfs:comment "Entier signé sur 16 bits. Espace des valeurs : [-32768 .. 32767]. Forme lexicale : signe facultatif suivi d’un ou plusieurs chiffres ; sans point décimal ni exposant (par exemple, '-1', '0', '+10000')."@fr, "16-bit signed integer. Value space: [-32768 .. 32767]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent (e.g., '-1', '0', '+10000')."@en .
+
+xsd:int
+    rdfs:label "entier signé sur 32 bits"@fr, "int"@en ;
+    skos:prefLabel "entier signé sur 32 bits"@fr, "32-bit signed integer"@en ;
+    skos:altLabel "int"@en ;
+    rdfs:comment "Entier signé sur 32 bits. Espace des valeurs : [-2147483648 .. 2147483647]. Forme lexicale : signe facultatif suivi d’un ou plusieurs chiffres ; sans point décimal ni exposant (par exemple, '-1', '0', '+100000')."@fr, "32-bit signed integer. Value space: [-2147483648 .. 2147483647]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent (e.g., '-1', '0', '+100000')."@en .
+
+xsd:long
+    rdfs:label "entier signé sur 64 bits"@fr, "long"@en ;
+    skos:prefLabel "entier signé sur 64 bits"@fr, "64-bit signed integer"@en ;
+    skos:altLabel "long"@en ;
+    rdfs:comment "Entier signé sur 64 bits. Espace des valeurs : [-9223372036854775808 .. 9223372036854775807]. Forme lexicale : signe facultatif suivi d’un ou plusieurs chiffres ; sans point décimal ni exposant."@fr, "64-bit signed integer. Value space: [-9223372036854775808 .. 9223372036854775807]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent."@en .
+
+xsd:unsignedByte
+    rdfs:label "entier non signé sur 8 bits"@fr, "unsignedByte"@en ;
+    skos:prefLabel "entier non signé sur 8 bits"@fr, "8-bit unsigned integer"@en ;
+    skos:altLabel "unsignedByte"@en ;
+    rdfs:comment "Entier non signé sur 8 bits. Espace des valeurs : [0 .. 255]. Forme lexicale : signe facultatif suivi de chiffres ; si un signe est présent, il doit être '+', sauf pour zéro, qui peut s’écrire avec un signe facultatif '+' ou '-' dans l’espace lexical de XSD 1.1."@fr, "8-bit unsigned integer. Value space: [0 .. 255]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
+
+xsd:unsignedShort
+    rdfs:label "entier non signé sur 16 bits"@fr, "unsignedShort"@en ;
+    skos:prefLabel "entier non signé sur 16 bits"@fr, "16-bit unsigned integer"@en ;
+    skos:altLabel "unsignedShort"@en ;
+    rdfs:comment "Entier non signé sur 16 bits. Espace des valeurs : [0 .. 65535]. Forme lexicale : signe facultatif suivi de chiffres ; si un signe est présent, il doit être '+', sauf pour zéro, qui peut s’écrire avec un signe facultatif '+' ou '-' dans l’espace lexical de XSD 1.1."@fr, "16-bit unsigned integer. Value space: [0 .. 65535]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
+
+xsd:unsignedInt
+    rdfs:label "entier non signé sur 32 bits"@fr, "unsignedInt"@en ;
+    skos:prefLabel "entier non signé sur 32 bits"@fr, "32-bit unsigned integer"@en ;
+    skos:altLabel "unsignedInt"@en ;
+    rdfs:comment "Entier non signé sur 32 bits. Espace des valeurs : [0 .. 4294967295]. Forme lexicale : signe facultatif suivi de chiffres ; si un signe est présent, il doit être '+', sauf pour zéro, qui peut s’écrire avec un signe facultatif '+' ou '-' dans l’espace lexical de XSD 1.1."@fr, "32-bit unsigned integer. Value space: [0 .. 4294967295]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
+
+xsd:unsignedLong
+    rdfs:label "entier non signé sur 64 bits"@fr, "unsignedLong"@en ;
+    skos:prefLabel "entier non signé sur 64 bits"@fr, "64-bit unsigned integer"@en ;
+    skos:altLabel "unsignedLong"@en ;
+    rdfs:comment "Entier non signé sur 64 bits. Espace des valeurs : [0 .. 18446744073709551615]. Forme lexicale : signe facultatif suivi de chiffres ; si un signe est présent, il doit être '+', sauf pour zéro, qui peut s’écrire avec un signe facultatif '+' ou '-' dans l’espace lexical de XSD 1.1."@fr, "64-bit unsigned integer. Value space: [0 .. 18446744073709551615]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
+
+xsd:positiveInteger
+    rdfs:label "entier strictement positif"@fr, "positiveInteger"@en ;
+    skos:prefLabel "entier strictement positif"@fr, "positive integer"@en ;
+    skos:altLabel "positiveInteger"@en ;
+    rdfs:comment "Entiers strictement supérieurs à zéro. Espace des valeurs : {1, 2, ...}. Type dérivé de xsd:nonNegativeInteger avec minInclusive=1. Forme lexicale : signe '+' facultatif suivi d’un ou plusieurs chiffres ; aucune forme nulle ou négative."@fr, "Integers greater than zero. Value space: {1, 2, ...}. Derived from xsd:nonNegativeInteger with minInclusive=1. Lexical form: optional '+' sign followed by one or more digits; no zero or negative forms."@en .
+
+xsd:nonNegativeInteger
+    rdfs:label "entier positif ou nul"@fr, "nonNegativeInteger"@en ;
+    skos:prefLabel "entier positif ou nul"@fr, "non-negative integer"@en ;
+    skos:altLabel "nonNegativeInteger"@en ;
+    rdfs:comment "Entiers supérieurs ou égaux à zéro. Espace des valeurs : {0, 1, 2, ...}. Forme lexicale : signe facultatif suivi de chiffres ; si un signe est présent, il doit être '+', sauf pour zéro, qui peut s’écrire avec un signe facultatif '+' ou '-'."@fr, "Integers greater than or equal to zero. Value space: {0, 1, 2, ...}. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign."@en .
+
+xsd:negativeInteger
+    rdfs:label "entier strictement négatif"@fr, "negativeInteger"@en ;
+    skos:prefLabel "entier strictement négatif"@fr, "negative integer"@en ;
+    skos:altLabel "negativeInteger"@en ;
+    rdfs:comment "Entiers strictement inférieurs à zéro. Espace des valeurs : {..., -2, -1}. Type dérivé de xsd:nonPositiveInteger avec maxInclusive=-1. Forme lexicale : signe '-' obligatoire suivi d’un ou plusieurs chiffres."@fr, "Integers less than zero. Value space: {..., -2, -1}. Derived from xsd:nonPositiveInteger with maxInclusive=-1. Lexical form: mandatory '-' sign followed by one or more digits."@en .
+
+xsd:nonPositiveInteger
+    rdfs:label "entier négatif ou nul"@fr, "nonPositiveInteger"@en ;
+    skos:prefLabel "entier négatif ou nul"@fr, "non-positive integer"@en ;
+    skos:altLabel "nonPositiveInteger"@en ;
+    rdfs:comment "Entiers inférieurs ou égaux à zéro. Espace des valeurs : {..., -2, -1, 0}. Forme lexicale : signe facultatif pour zéro, sinon signe '-' obligatoire suivi de chiffres."@fr, "Integers less than or equal to zero. Value space: {..., -2, -1, 0}. Lexical form: optional sign for zero, otherwise a mandatory '-' sign followed by digits."@en .
+
+xsd:hexBinary
+    rdfs:label "données binaires hexadécimales"@fr, "hexBinary"@en ;
+    skos:prefLabel "données binaires hexadécimales"@fr, "hexadecimal binary data"@en ;
+    skos:altLabel "hexBinary"@en ;
+    rdfs:comment "Données binaires arbitraires encodées par paires de chiffres hexadécimaux ; chaque octet est représenté par deux caractères hexadécimaux [0-9A-Fa-f]. Forme lexicale : séquence de longueur paire de chiffres hexadécimaux ; deux chiffres hexadécimaux encodent chaque octet (par exemple, '0FB7')."@fr, "Arbitrary binary data encoded as pairs of hexadecimal digits; each octet is represented by two hex characters [0-9A-Fa-f]. Lexical form: an even-length sequence of hexadecimal digits; two hex digits encode each octet (e.g., '0FB7')."@en .
+
+xsd:base64Binary
+    rdfs:label "données binaires en Base64"@fr, "base64Binary"@en ;
+    skos:prefLabel "données binaires en Base64"@fr, "Base64 binary data"@en ;
+    skos:altLabel "base64Binary"@en ;
+    rdfs:comment "Données binaires arbitraires encodées en Base64. Espace lexical selon RFC 2045/3548 ; espaces blancs facultatifs autorisés selon les règles XML. Forme lexicale : alphabet Base64 'A–Z', 'a–z', '0–9', '+', '/' avec remplissage '=' facultatif ; les espaces blancs sont normalisés selon le mode collapse lors de la validation."@fr, "Arbitrary binary data encoded using Base64. Lexical space per RFC 2045/3548; optional whitespace allowed per XML rules. Lexical form: Base64 alphabet 'A–Z', 'a–z', '0–9', '+', '/' with optional '=' padding; whitespace is collapsed during validation."@en .
+
+xsd:anyURI
+    rdfs:label "référence IRI"@fr, "anyURI"@en ;
+    skos:prefLabel "référence IRI"@fr, "IRI reference"@en ;
+    skos:altLabel "anyURI"@en ;
+    rdfs:comment "Identifiant de ressource internationalisé (IRI) ou référence IRI selon RFC 3987. L’espace lexical est simplement xsd:string (XSD n’impose aucune grammaire fixe) ; les formes lexicales typiques comprennent des IRI absolus ou relatifs et des identifiants de fragments facultatifs ; les processeurs peuvent appliquer un échappement ou une conversion d’IRI en URI."@fr, "Internationalized Resource Identifier (IRI) or IRI reference per RFC 3987. Lexical space is simply xsd:string (no fixed grammar is enforced by XSD); typical lexical forms include absolute or relative IRIs and optional fragment identifiers; processors may apply escaping/IRI-to-URI mapping."@en .
+
+xsd:language
+    rdfs:label "identifiant de langue"@fr, "language"@en ;
+    skos:prefLabel "identifiant de langue"@fr, "language identifier"@en ;
+    skos:altLabel "language"@en ;
+    rdfs:comment "Identifiants de langues naturelles selon BCP 47. Motif lexical : [a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*."@fr, "Natural language identifiers per BCP 47. Lexical pattern: [a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*."@en .
+
+xsd:normalizedString
+    rdfs:label "chaîne de caractères normalisée"@fr, "normalizedString"@en ;
+    skos:prefLabel "chaîne de caractères normalisée"@fr, "normalized string"@en ;
+    skos:altLabel "normalizedString"@en ;
+    rdfs:comment "Chaînes de caractères sans retour chariot, saut de ligne ni tabulation. Type dérivé de xsd:string ; la normalisation des espaces blancs remplace ces caractères par des espaces. Forme lexicale : toute chaîne ne contenant ni #xD, ni #xA, ni #x9 (selon XML), c’est-à-dire avec ces caractères remplacés lors de la normalisation."@fr, "Strings with carriage return, line feed, and tab characters disallowed. Derived from xsd:string; whitespace normalized to replace those characters with spaces. Lexical form: any string not containing #xD, #xA or #x9 (per XML), i.e., with those characters replaced during normalization."@en .
+
+xsd:token
+    rdfs:label "chaîne de caractères à espaces blancs réduits"@fr, "token"@en ;
+    skos:prefLabel "chaîne de caractères à espaces blancs réduits"@fr, "tokenized string"@en ;
+    skos:altLabel "token"@en ;
+    rdfs:comment "Chaînes de caractères de type token dérivées de xsd:normalizedString : sans espaces initiaux ou finaux ni séquences internes de plusieurs espaces. Forme lexicale : chaînes dont les espaces blancs sont réduits (les suites d’espaces sont remplacées par un seul espace ; les espaces initiaux et finaux sont supprimés)."@fr, "Tokenized strings derived from xsd:normalizedString: no leading or trailing spaces and no internal sequences of multiple spaces. Lexical form: strings with whitespace collapsed (runs of spaces collapsed to a single space; leading/trailing spaces removed)."@en .
+
+xsd:NMTOKEN
+    rdfs:label "jeton de nom XML"@fr, "NMTOKEN"@en ;
+    skos:prefLabel "jeton de nom XML"@fr, "XML name token"@en ;
+    skos:altLabel "NMTOKEN"@en ;
+    rdfs:comment "Valeurs conformes à la production XML Nmtoken. Type dérivé de xsd:token. Forme lexicale : un ou plusieurs caractères NameChar selon XML (c’est-à-dire une forme conforme à la production XML Nmtoken)."@fr, "Values matching the XML Nmtoken production. Derived from xsd:token. Lexical form: one or more NameChar per XML (i.e., matches the XML Nmtoken production)."@en .
+
+xsd:Name
+    rdfs:label "nom XML"@fr, "Name"@en ;
+    skos:prefLabel "nom XML"@fr, "XML name"@en ;
+    skos:altLabel "Name"@en ;
+    rdfs:comment "Valeurs conformes à la production XML Name. Type dérivé de xsd:token. Forme lexicale : un caractère NameStartChar suivi de zéro ou plusieurs caractères NameChar selon XML."@fr, "Values matching the XML Name production. Derived from xsd:token. Lexical form: NameStartChar followed by zero or more NameChar per XML."@en .
+
+xsd:NCName
+    rdfs:label "nom XML sans deux-points"@fr, "NCName"@en ;
+    skos:prefLabel "nom XML sans deux-points"@fr, "XML name without a colon"@en ;
+    skos:altLabel "NCName"@en ;
+    rdfs:comment "Noms XML sans deux-points conformes à la production NCName (c’est-à-dire Name sans deux-points). Type dérivé de xsd:Name. Forme lexicale : XML NCName (comme Name, mais sans autoriser ':')."@fr, "XML 'non-colonized' names matching the NCName production (i.e., Name without the colon). Derived from xsd:Name. Lexical form: XML NCName (same as Name but disallowing ':')."@en .

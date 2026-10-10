@@ -1493,6 +1493,12 @@
     they are formally defined, to avoid collisions and duplication.</p>
   <p>Each registry table has the following three fields: an IRI, the governing
     specification, and any relevant notes (such as applicable scope).</p>
+  <p>New entries in either registry table must meet both of the following criteria:</p>
+  <ul>
+    <li>They are defined by a W3C Recommendation-track specification [[W3C-PROCESS]].</li>
+    <li>They are of general utility for RDF. Terms specific to a particular application
+      or domain should be defined in a separate vocabulary.</li>
+  </ul>
   <p>The policy for changes to existing entries is as follows:</p>
   <ul>
     <li>Entries can be marked as deprecated but not deleted.</li>
@@ -1501,7 +1507,6 @@
   <p>The custodian for all registry tables is the RDF &amp; SPARQL Working Group.</p>
 
   <p class=issue data-number=81></p>
-  <p class=issue data-number=80></p>
 
   <section class="informative">
     <h3><code>rdf:</code> Namespace</h3>

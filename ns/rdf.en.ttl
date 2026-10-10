@@ -1,0 +1,168 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    dcterms:title "The RDF Concepts Vocabulary (RDF)"@en ;
+    dcterms:description "This is the RDF Schema for the RDF vocabulary terms in the RDF Namespace, defined in RDF 1.1 Concepts."@en .
+
+rdf:HTML
+    rdfs:label "HTML"@en ;
+    skos:prefLabel "HTML"@en ;
+    rdfs:comment "The datatype of RDF literals storing fragments of HTML content"@en .
+
+rdf:langString
+    rdfs:label "langString"@en ;
+    skos:prefLabel "language-tagged string"@en ;
+    rdfs:comment "The datatype of language-tagged string values"@en .
+
+rdf:dirLangString
+    rdfs:label "dirLangString"@en ;
+    skos:prefLabel "directional language-tagged string"@en ;
+    rdfs:comment "The datatype of directional language-tagged string values, which includes a language tag and a base direction (either 'ltr' or 'rtl')"@en .
+
+rdf:PlainLiteral
+    rdfs:label "PlainLiteral"@en ;
+    skos:prefLabel "plain literal"@en ;
+    rdfs:comment "The class of plain (i.e., untyped) literal values, as used in RIF and OWL 2.  Will not be removed until no longer needed there."@en .
+
+rdf:type
+    rdfs:label "type"@en ;
+    skos:prefLabel "type"@en ;
+    rdfs:comment "The subject is an instance of a class."@en .
+
+rdf:reifies
+    rdfs:label "reifies"@en ;
+    skos:prefLabel "reifies"@en ;
+    rdfs:comment "The abstract proposition of a more concrete circumstance."@en .
+
+rdf:Property
+    rdfs:label "Property"@en ;
+    skos:prefLabel "property"@en ;
+    rdfs:comment "The class of RDF properties."@en .
+
+rdf:Statement
+    rdfs:label "Statement"@en ;
+    skos:prefLabel "statement"@en ;
+    rdfs:comment "The class of RDF statements."@en .
+
+rdf:subject
+    rdfs:label "subject"@en ;
+    skos:prefLabel "subject"@en ;
+    rdfs:comment "The subject of the subject RDF statement."@en .
+
+rdf:predicate
+    rdfs:label "predicate"@en ;
+    skos:prefLabel "predicate"@en ;
+    rdfs:comment "The predicate of the subject RDF statement."@en .
+
+rdf:object
+    rdfs:label "object"@en ;
+    skos:prefLabel "object"@en ;
+    rdfs:comment "The object of the subject RDF statement."@en .
+
+rdf:Bag
+    rdfs:label "Bag"@en ;
+    skos:prefLabel "bag"@en ;
+    rdfs:comment "The class of unordered containers."@en .
+
+rdf:Seq
+    rdfs:label "Seq"@en ;
+    skos:prefLabel "sequence"@en ;
+    rdfs:comment "The class of ordered containers."@en .
+
+rdf:Alt
+    rdfs:label "Alt"@en ;
+    skos:prefLabel "alternatives"@en ;
+    rdfs:comment "The class of containers of alternatives."@en .
+
+rdf:value
+    rdfs:label "value"@en ;
+    skos:prefLabel "value"@en ;
+    rdfs:comment "Idiomatic property used for structured values."@en .
+
+rdf:List
+    rdfs:label "List"@en ;
+    skos:prefLabel "list"@en ;
+    rdfs:comment "The class of RDF Lists."@en .
+
+rdf:nil
+    rdfs:label "nil"@en ;
+    skos:prefLabel "empty list"@en ;
+    rdfs:comment "The empty list, with no items in it. If the rest of a list is nil then the list has no more items in it."@en .
+
+rdf:first
+    rdfs:label "first"@en ;
+    skos:prefLabel "first"@en ;
+    rdfs:comment "The first item in the subject RDF list."@en .
+
+rdf:rest
+    rdfs:label "rest"@en ;
+    skos:prefLabel "rest"@en ;
+    rdfs:comment "The rest of the subject RDF list after the first item."@en .
+
+rdf:XMLLiteral
+    rdfs:label "XMLLiteral"@en ;
+    skos:prefLabel "XML literal"@en ;
+    rdfs:comment "The datatype of XML literal values."@en .
+
+rdf:JSON
+    rdfs:label "JSON"@en ;
+    skos:prefLabel "JSON"@en ;
+    rdfs:comment "The datatype of RDF literals storing JSON content."@en .
+
+rdf:CompoundLiteral
+    rdfs:label "CompoundLiteral"@en ;
+    skos:prefLabel "compound literal"@en ;
+    rdfs:comment "A class representing a compound literal."@en .
+
+rdf:language
+    rdfs:label "language"@en ;
+    skos:prefLabel "language"@en ;
+    rdfs:comment "The language component of a CompoundLiteral."@en .
+
+rdf:direction
+    rdfs:label "direction"@en ;
+    skos:prefLabel "direction"@en ;
+    rdfs:comment "The base direction component of a CompoundLiteral."@en .
+
+rdf:PropositionForm
+    rdfs:label "PropositionForm"@en ;
+    skos:prefLabel "proposition form"@en ;
+    rdfs:comment "The class of abstract, atomic proposition forms. Reserved for basic encoding of propositions."@en .
+
+rdf:propositionFormSubject
+    rdfs:label "propositionFormSubject"@en ;
+    skos:prefLabel "proposition form subject"@en ;
+    rdfs:comment "The subject component of a proposition form. Reserved for basic encoding of propositions."@en .
+
+rdf:propositionFormPredicate
+    rdfs:label "propositionFormPredicate"@en ;
+    skos:prefLabel "proposition form predicate"@en ;
+    rdfs:comment "The predicate component of a proposition form. Reserved for basic encoding of propositions."@en .
+
+rdf:propositionFormObject
+    rdfs:label "propositionFormObject"@en ;
+    skos:prefLabel "proposition form object"@en ;
+    rdfs:comment "The object component of a proposition form. Reserved for basic encoding of propositions."@en .
+
+rdf:version-1.2
+    rdfs:label "1.2"@en ;
+    skos:prefLabel "1.2"@en ;
+    rdfs:comment "Version 1.2."@en .
+
+rdf:version-1.2-basic
+    rdfs:label "1.2-basic"@en ;
+    skos:prefLabel "1.2-basic"@en ;
+    rdfs:comment "Version 1.2-basic"@en .
+
+rdf:version-1.1
+    rdfs:label "1.1"@en ;
+    skos:prefLabel "1.1"@en ;
+    rdfs:comment "Version 1.1"@en .
+
+rdf:version-1.0
+    rdfs:label "1.0"@en ;
+    skos:prefLabel "1.0"@en ;
+    rdfs:comment "Version 1.0"@en .

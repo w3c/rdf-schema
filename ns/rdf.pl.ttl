@@ -65,7 +65,7 @@ rdf:predicate
 rdf:object
     rdfs:label "obiekt"@pl, "object"@en ;
     skos:prefLabel "obiekt"@pl, "object"@en ;
-    rdfs:comment "Obiekt stwierdzenia RDF będącego tematem opisu."@pl, "The object of the subject RDF statement."@en .
+    rdfs:comment "Obiekt stwierdzenia RDF będącego tematem."@pl, "The object of the subject RDF statement."@en .
 
 rdf:Bag
     rdfs:label "worek"@pl, "Bag"@en ;

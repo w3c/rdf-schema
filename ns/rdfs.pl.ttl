@@ -53,7 +53,7 @@ rdfs:domain
 rdfs:range
     rdfs:label "zakres"@pl, "range"@en ;
     skos:prefLabel "zakres"@pl, "range"@en ;
-    rdfs:comment "Zakres właściwości będącej tematem opisu."@pl, "A range of the subject property."@en .
+    rdfs:comment "Zakres właściwości będącej tematem."@pl, "A range of the subject property."@en .
 
 rdfs:seeAlso
     rdfs:label "zobacz także"@pl, "seeAlso"@en ;

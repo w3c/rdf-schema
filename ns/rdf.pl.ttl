@@ -105,7 +105,7 @@ rdf:nil
 rdf:first
     rdfs:label "pierwszy element"@pl, "first"@en ;
     skos:prefLabel "pierwszy element"@pl, "first"@en ;
-    rdfs:comment "Pierwszy element listy RDF będącej tematem opisu."@pl, "The first item in the subject RDF list."@en .
+    rdfs:comment "Pierwszy element listy RDF będącej tematem."@pl, "The first item in the subject RDF list."@en .
 
 rdf:rest
     rdfs:label "reszta"@pl, "rest"@en ;

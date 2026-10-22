@@ -1,0 +1,86 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://www.w3.org/2000/01/rdf-schema#>
+    dcterms:title "The RDF Schema vocabulary (RDFS)"@en .
+
+rdfs:Resource
+    rdfs:label "Resource"@en ;
+    skos:prefLabel "resource"@en ;
+    rdfs:comment "The class resource, everything."@en .
+
+rdfs:Proposition
+    rdfs:label "Proposition"@en ;
+    skos:prefLabel "proposition"@en ;
+    rdfs:comment "The class of propositions, simple logical expressions describing a relationship between two entities."@en .
+
+rdfs:Class
+    rdfs:label "Class"@en ;
+    skos:prefLabel "class"@en ;
+    rdfs:comment "The class of classes."@en .
+
+rdfs:subClassOf
+    rdfs:label "subClassOf"@en ;
+    skos:prefLabel "is subclass of"@en ;
+    rdfs:comment "The subject is a subclass of a class."@en .
+
+rdfs:subPropertyOf
+    rdfs:label "subPropertyOf"@en ;
+    skos:prefLabel "is subproperty of"@en ;
+    rdfs:comment "The subject is a subproperty of a property."@en .
+
+rdfs:comment
+    rdfs:label "comment"@en ;
+    skos:prefLabel "comment"@en ;
+    rdfs:comment "A description of the subject resource."@en .
+
+rdfs:label
+    rdfs:label "label"@en ;
+    skos:prefLabel "label"@en ;
+    rdfs:comment "A human-readable name for the subject."@en .
+
+rdfs:domain
+    rdfs:label "domain"@en ;
+    skos:prefLabel "domain"@en ;
+    rdfs:comment "A domain of the subject property."@en .
+
+rdfs:range
+    rdfs:label "range"@en ;
+    skos:prefLabel "range"@en ;
+    rdfs:comment "A range of the subject property."@en .
+
+rdfs:seeAlso
+    rdfs:label "seeAlso"@en ;
+    skos:prefLabel "see also"@en ;
+    rdfs:comment "Further information about the subject resource."@en .
+
+rdfs:isDefinedBy
+    rdfs:label "isDefinedBy"@en ;
+    skos:prefLabel "is defined by"@en ;
+    rdfs:comment "The definition of the subject resource."@en .
+
+rdfs:Literal
+    rdfs:label "Literal"@en ;
+    skos:prefLabel "literal"@en ;
+    rdfs:comment "The class of literal values, eg. textual strings and integers."@en .
+
+rdfs:Container
+    rdfs:label "Container"@en ;
+    skos:prefLabel "container"@en ;
+    rdfs:comment "The class of RDF containers."@en .
+
+rdfs:ContainerMembershipProperty
+    rdfs:label "ContainerMembershipProperty"@en ;
+    skos:prefLabel "container membership property"@en ;
+    rdfs:comment "The class of container membership properties, rdf:_1, rdf:_2, ..., all of which are sub-properties of 'member'."@en .
+
+rdfs:member
+    rdfs:label "member"@en ;
+    skos:prefLabel "member"@en ;
+    rdfs:comment "A member of the subject resource."@en .
+
+rdfs:Datatype
+    rdfs:label "Datatype"@en ;
+    skos:prefLabel "datatype"@en ;
+    rdfs:comment "The class of RDF datatypes."@en .

@@ -55,7 +55,7 @@ rdf:Statement
 rdf:subject
     rdfs:label "temat"@pl, "subject"@en ;
     skos:prefLabel "temat"@pl, "subject"@en ;
-    rdfs:comment "Temat stwierdzenia RDF będącego tematem opisu."@pl, "The subject of the subject RDF statement."@en .
+    rdfs:comment "Temat stwierdzenia RDF będącego tematem."@pl, "The subject of the subject RDF statement."@en .
 
 rdf:predicate
     rdfs:label "predykat"@pl, "predicate"@en ;

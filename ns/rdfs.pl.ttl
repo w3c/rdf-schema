@@ -48,7 +48,7 @@ rdfs:label
 rdfs:domain
     rdfs:label "dziedzina"@pl, "domain"@en ;
     skos:prefLabel "dziedzina"@pl, "domain"@en ;
-    rdfs:comment "Dziedzina właściwości będącej tematem opisu."@pl, "A domain of the subject property."@en .
+    rdfs:comment "Dziedzina właściwości będącej tematem."@pl, "A domain of the subject property."@en .
 
 rdfs:range
     rdfs:label "zakres"@pl, "range"@en ;

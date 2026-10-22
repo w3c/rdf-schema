@@ -60,7 +60,7 @@ rdf:subject
 rdf:predicate
     rdfs:label "predykat"@pl, "predicate"@en ;
     skos:prefLabel "predykat"@pl, "predicate"@en ;
-    rdfs:comment "Predykat stwierdzenia RDF będącego tematem opisu."@pl, "The predicate of the subject RDF statement."@en .
+    rdfs:comment "Predykat stwierdzenia RDF będącego tematem."@pl, "The predicate of the subject RDF statement."@en .
 
 rdf:object
     rdfs:label "obiekt"@pl, "object"@en ;

@@ -1,35 +1,35 @@
 # French vocabulary annotations
 
 These three files provide French annotations for all 87 terms
-in the base RDF (32), RDFS (16) and XML Schema
-(39) vocabulary files. Every source label, comment, vocabulary title
-and description has a counterpart in this language.
+in the base RDF (32), RDFS (16), and XML Schema (39) vocabulary
+files. Every source label, comment, vocabulary title, and
+description has a counterpart in this language.
 
 The separate files follow the [review feedback on PR #76](https://github.com/w3c/rdf-schema/pull/76#issuecomment-5890689702).
-The annotations cover every term in these three source files.
 Source revision: `e8eebcdcee2265735ab1058d1cc7a2b365a70567`; source files: `ns/rdf.ttl`, `ns/rdfs.ttl`, `ns/rdf-xsd.ttl`.
 
-Load `rdf.fr.ttl`, `rdfs.fr.ttl` and `rdf-xsd.fr.ttl` alongside their
+Load `rdf.fr.ttl`, `rdfs.fr.ttl`, and `rdf-xsd.fr.ttl` alongside their
 corresponding base files in `ns/`. These are supplementary annotation graphs.
-Schema axioms, links, dates and deprecation flags remain in the base files.
+Schema axioms, links, dates, and deprecation flags remain in the base files.
 All subjects use the original namespace IRIs.
 
 `rdfs:label` supplies a language-tagged name for consumers using RDFS.
 `skos:prefLabel` supplies one preferred, readable name per term in this language.
-`rdfs:comment` supplies the description. Vocabulary titles and descriptions use
-`dcterms:title` and `dcterms:description`. SKOS labeling properties can label
-resources without declaring them `skos:Concept`; see the
-[SKOS reference](https://www.w3.org/TR/skos-reference/#labels).
+`rdfs:comment` supplies the description, again in this language. Vocabulary
+titles and descriptions use `dcterms:title` and `dcterms:description`. SKOS
+labeling properties can label resources without declaring them `skos:Concept`;
+see the [SKOS reference](https://www.w3.org/TR/skos-reference/#labels).
 
 Translated `rdfs:label` and `skos:prefLabel` strings agree. The labels and comments
 use `@fr` tags. Class and datatype labels are nouns; relational properties such
 as `rdfs:subClassOf` use phrases that read from subject to object. Labels follow
 the capitalization conventions of this language. Technical identifiers, numeric bounds,
-example literals and the floating-point regular expression retain their source form.
+example literals, and floating-point regular expressions retain their source form.
 
-Each file also includes all annotations from its English counterpart: original
-labels, comments, vocabulary titles and descriptions tagged `@en`, together with
-the English preferred labels. English text is copied without changes.
+Each file also includes all annotations from its English counterpart:
+labels, comments, vocabulary titles, and descriptions tagged `@en`, together with
+the English preferred labels. English text matches the English annotation files,
+including the added comma after `i/10^n` in the `xsd:decimal` comment.
 `skos:altLabel` retains the original English source name when it differs from the
 English `skos:prefLabel`. A source name is not added as an alternative if it is
 already the English preferred label. Each term has one preferred label per language.

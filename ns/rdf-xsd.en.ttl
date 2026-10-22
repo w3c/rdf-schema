@@ -20,7 +20,7 @@ xsd:boolean
 xsd:decimal
     rdfs:label "decimal"@en ;
     skos:prefLabel "decimal"@en ;
-    rdfs:comment "Arbitrary-precision decimal numbers. Value space: numbers of the form i/10^n with i and n integers (n ≥ 0). No special values (INF/NaN) and no exponential notation in lexical form. Lexical form: an optional leading sign followed by digits, with an optional fractional part using '.' as the decimal separator; no exponent is permitted (e.g., '-1.23', '210', '+100000.00')."@en .
+    rdfs:comment "Arbitrary-precision decimal numbers. Value space: numbers of the form i/10^n, with i and n integers (n ≥ 0). No special values (INF/NaN) and no exponential notation in lexical form. Lexical form: an optional leading sign followed by digits, with an optional fractional part using '.' as the decimal separator; no exponent is permitted (e.g., '-1.23', '210', '+100000.00')."@en .
 
 xsd:integer
     rdfs:label "integer"@en ;

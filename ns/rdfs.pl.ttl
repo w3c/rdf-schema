@@ -15,7 +15,7 @@ rdfs:Proposition
     rdfs:label "sąd logiczny"@pl, "Proposition"@en ;
     skos:prefLabel "sąd logiczny"@pl, "proposition"@en ;
     skos:altLabel "Proposition"@en ;
-    rdfs:comment "Klasa sądów logicznych, czyli prostych wyrażeń logicznych opisujących relację między dwiema jednostkami."@pl, "The class of propositions, simple logical expressions describing a relationship between two entities."@en .
+    rdfs:comment "Klasa sądów logicznych, czyli prostych wyrażeń logicznych opisujących relację między dwoma bytami."@pl, "The class of propositions, simple logical expressions describing a relationship between two entities."@en .
 
 rdfs:Class
     rdfs:label "klasa"@pl, "Class"@en ;

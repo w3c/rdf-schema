@@ -110,7 +110,7 @@ rdf:first
 rdf:rest
     rdfs:label "reszta"@pl, "rest"@en ;
     skos:prefLabel "reszta"@pl, "rest"@en ;
-    rdfs:comment "Reszta listy RDF będącej tematem opisu, po pierwszym elemencie."@pl, "The rest of the subject RDF list after the first item."@en .
+    rdfs:comment "Reszta listy RDF będącej tematem, po pierwszym elemencie."@pl, "The rest of the subject RDF list after the first item."@en .
 
 rdf:XMLLiteral
     rdfs:label "literał XML"@pl, "XMLLiteral"@en ;

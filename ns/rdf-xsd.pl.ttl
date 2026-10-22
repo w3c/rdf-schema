@@ -232,4 +232,4 @@ xsd:NCName
     rdfs:label "nazwa XML bez dwukropka"@pl, "NCName"@en ;
     skos:prefLabel "nazwa XML bez dwukropka"@pl, "XML name without a colon"@en ;
     skos:altLabel "NCName"@en ;
-    rdfs:comment "Nazwy XML bez dwukropka zgodne z produkcją NCName (tj. Name bez dwukropka). Typ pochodny xsd:Name. Postać leksykalna: XML NCName (jak Name, lecz bez dozwolonego ':')."@pl, "XML 'non-colonized' names matching the NCName production (i.e., Name without the colon). Derived from xsd:Name. Lexical form: XML NCName (same as Name but disallowing ':')."@en .
+    rdfs:comment "Nazwy XML bez dwukropka zgodne z produkcją NCName (tj. Name bez dwukropka). Typ pochodny xsd:Name. Postać leksykalna: XML NCName (jak Name, lecz znak ':' jest niedozwolony)."@pl, "XML 'non-colonized' names matching the NCName production (i.e., Name without the colon). Derived from xsd:Name. Lexical form: XML NCName (same as Name but disallowing ':')."@en .

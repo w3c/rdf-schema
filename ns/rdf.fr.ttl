@@ -1,0 +1,184 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    dcterms:title "Le vocabulaire des concepts RDF (RDF)"@fr, "The RDF Concepts Vocabulary (RDF)"@en ;
+    dcterms:description "Le schéma RDF des termes du vocabulaire RDF dans l’espace de noms RDF, définis dans RDF 1.1 Concepts."@fr, "This is the RDF Schema for the RDF vocabulary terms in the RDF Namespace, defined in RDF 1.1 Concepts."@en .
+
+rdf:HTML
+    rdfs:label "HTML"@fr, "HTML"@en ;
+    skos:prefLabel "HTML"@fr, "HTML"@en ;
+    rdfs:comment "Le type de données des littéraux RDF contenant des fragments de contenu HTML."@fr, "The datatype of RDF literals storing fragments of HTML content"@en .
+
+rdf:langString
+    rdfs:label "chaîne de caractères avec étiquette de langue"@fr, "langString"@en ;
+    skos:prefLabel "chaîne de caractères avec étiquette de langue"@fr, "language-tagged string"@en ;
+    skos:altLabel "langString"@en ;
+    rdfs:comment "Le type de données des chaînes de caractères avec étiquette de langue."@fr, "The datatype of language-tagged string values"@en .
+
+rdf:dirLangString
+    rdfs:label "chaîne de caractères avec étiquette de langue et direction d’écriture"@fr, "dirLangString"@en ;
+    skos:prefLabel "chaîne de caractères avec étiquette de langue et direction d’écriture"@fr, "directional language-tagged string"@en ;
+    skos:altLabel "dirLangString"@en ;
+    rdfs:comment "Le type de données des chaînes de caractères avec étiquette de langue et direction d’écriture ; il comprend une étiquette de langue et une direction de base ('ltr' ou 'rtl')."@fr, "The datatype of directional language-tagged string values, which includes a language tag and a base direction (either 'ltr' or 'rtl')"@en .
+
+rdf:PlainLiteral
+    rdfs:label "littéral simple"@fr, "PlainLiteral"@en ;
+    skos:prefLabel "littéral simple"@fr, "plain literal"@en ;
+    skos:altLabel "PlainLiteral"@en ;
+    rdfs:comment "La classe des valeurs littérales simples (c’est-à-dire non typées), utilisées dans RIF et OWL 2. Elle ne sera pas supprimée tant qu’elle y sera nécessaire."@fr, "The class of plain (i.e., untyped) literal values, as used in RIF and OWL 2.  Will not be removed until no longer needed there."@en .
+
+rdf:type
+    rdfs:label "type"@fr, "type"@en ;
+    skos:prefLabel "type"@fr, "type"@en ;
+    rdfs:comment "Le sujet est une instance d’une classe."@fr, "The subject is an instance of a class."@en .
+
+rdf:reifies
+    rdfs:label "réifie"@fr, "reifies"@en ;
+    skos:prefLabel "réifie"@fr, "reifies"@en ;
+    rdfs:comment "La proposition abstraite correspondant à une circonstance plus concrète."@fr, "The abstract proposition of a more concrete circumstance."@en .
+
+rdf:Property
+    rdfs:label "propriété"@fr, "Property"@en ;
+    skos:prefLabel "propriété"@fr, "property"@en ;
+    skos:altLabel "Property"@en ;
+    rdfs:comment "La classe des propriétés RDF."@fr, "The class of RDF properties."@en .
+
+rdf:Statement
+    rdfs:label "énoncé"@fr, "Statement"@en ;
+    skos:prefLabel "énoncé"@fr, "statement"@en ;
+    skos:altLabel "Statement"@en ;
+    rdfs:comment "La classe des énoncés RDF."@fr, "The class of RDF statements."@en .
+
+rdf:subject
+    rdfs:label "sujet"@fr, "subject"@en ;
+    skos:prefLabel "sujet"@fr, "subject"@en ;
+    rdfs:comment "Le sujet de l’énoncé RDF qui est le sujet de cette description."@fr, "The subject of the subject RDF statement."@en .
+
+rdf:predicate
+    rdfs:label "prédicat"@fr, "predicate"@en ;
+    skos:prefLabel "prédicat"@fr, "predicate"@en ;
+    rdfs:comment "Le prédicat de l’énoncé RDF qui est le sujet de cette description."@fr, "The predicate of the subject RDF statement."@en .
+
+rdf:object
+    rdfs:label "objet"@fr, "object"@en ;
+    skos:prefLabel "objet"@fr, "object"@en ;
+    rdfs:comment "L’objet de l’énoncé RDF qui est le sujet de cette description."@fr, "The object of the subject RDF statement."@en .
+
+rdf:Bag
+    rdfs:label "sac"@fr, "Bag"@en ;
+    skos:prefLabel "sac"@fr, "bag"@en ;
+    skos:altLabel "Bag"@en ;
+    rdfs:comment "La classe des conteneurs non ordonnés."@fr, "The class of unordered containers."@en .
+
+rdf:Seq
+    rdfs:label "séquence"@fr, "Seq"@en ;
+    skos:prefLabel "séquence"@fr, "sequence"@en ;
+    skos:altLabel "Seq"@en ;
+    rdfs:comment "La classe des conteneurs ordonnés."@fr, "The class of ordered containers."@en .
+
+rdf:Alt
+    rdfs:label "alternatives"@fr, "Alt"@en ;
+    skos:prefLabel "alternatives"@fr, "alternatives"@en ;
+    skos:altLabel "Alt"@en ;
+    rdfs:comment "La classe des conteneurs d’alternatives."@fr, "The class of containers of alternatives."@en .
+
+rdf:value
+    rdfs:label "valeur"@fr, "value"@en ;
+    skos:prefLabel "valeur"@fr, "value"@en ;
+    rdfs:comment "Une propriété utilisée par convention pour les valeurs structurées."@fr, "Idiomatic property used for structured values."@en .
+
+rdf:List
+    rdfs:label "liste"@fr, "List"@en ;
+    skos:prefLabel "liste"@fr, "list"@en ;
+    skos:altLabel "List"@en ;
+    rdfs:comment "La classe des listes RDF."@fr, "The class of RDF Lists."@en .
+
+rdf:nil
+    rdfs:label "liste vide"@fr, "nil"@en ;
+    skos:prefLabel "liste vide"@fr, "empty list"@en ;
+    skos:altLabel "nil"@en ;
+    rdfs:comment "La liste vide, sans élément. Si le reste d’une liste est nil, la liste ne contient plus d’éléments."@fr, "The empty list, with no items in it. If the rest of a list is nil then the list has no more items in it."@en .
+
+rdf:first
+    rdfs:label "premier élément"@fr, "first"@en ;
+    skos:prefLabel "premier élément"@fr, "first"@en ;
+    rdfs:comment "Le premier élément de la liste RDF qui est le sujet de cette description."@fr, "The first item in the subject RDF list."@en .
+
+rdf:rest
+    rdfs:label "reste"@fr, "rest"@en ;
+    skos:prefLabel "reste"@fr, "rest"@en ;
+    rdfs:comment "Le reste de la liste RDF qui est le sujet de cette description, après le premier élément."@fr, "The rest of the subject RDF list after the first item."@en .
+
+rdf:XMLLiteral
+    rdfs:label "littéral XML"@fr, "XMLLiteral"@en ;
+    skos:prefLabel "littéral XML"@fr, "XML literal"@en ;
+    skos:altLabel "XMLLiteral"@en ;
+    rdfs:comment "Le type de données des valeurs littérales XML."@fr, "The datatype of XML literal values."@en .
+
+rdf:JSON
+    rdfs:label "JSON"@fr, "JSON"@en ;
+    skos:prefLabel "JSON"@fr, "JSON"@en ;
+    rdfs:comment "Le type de données des littéraux RDF contenant du contenu JSON."@fr, "The datatype of RDF literals storing JSON content."@en .
+
+rdf:CompoundLiteral
+    rdfs:label "littéral composé"@fr, "CompoundLiteral"@en ;
+    skos:prefLabel "littéral composé"@fr, "compound literal"@en ;
+    skos:altLabel "CompoundLiteral"@en ;
+    rdfs:comment "Une classe représentant un littéral composé."@fr, "A class representing a compound literal."@en .
+
+rdf:language
+    rdfs:label "langue"@fr, "language"@en ;
+    skos:prefLabel "langue"@fr, "language"@en ;
+    rdfs:comment "La composante de langue d’un CompoundLiteral."@fr, "The language component of a CompoundLiteral."@en .
+
+rdf:direction
+    rdfs:label "direction d’écriture"@fr, "direction"@en ;
+    skos:prefLabel "direction d’écriture"@fr, "direction"@en ;
+    rdfs:comment "La composante de direction de base d’un CompoundLiteral."@fr, "The base direction component of a CompoundLiteral."@en .
+
+rdf:PropositionForm
+    rdfs:label "forme de proposition"@fr, "PropositionForm"@en ;
+    skos:prefLabel "forme de proposition"@fr, "proposition form"@en ;
+    skos:altLabel "PropositionForm"@en ;
+    rdfs:comment "La classe des formes de propositions abstraites et atomiques. Réservée à l’encodage de base des propositions."@fr, "The class of abstract, atomic proposition forms. Reserved for basic encoding of propositions."@en .
+
+rdf:propositionFormSubject
+    rdfs:label "sujet d’une forme de proposition"@fr, "propositionFormSubject"@en ;
+    skos:prefLabel "sujet d’une forme de proposition"@fr, "proposition form subject"@en ;
+    skos:altLabel "propositionFormSubject"@en ;
+    rdfs:comment "La composante sujet d’une forme de proposition. Réservée à l’encodage de base des propositions."@fr, "The subject component of a proposition form. Reserved for basic encoding of propositions."@en .
+
+rdf:propositionFormPredicate
+    rdfs:label "prédicat d’une forme de proposition"@fr, "propositionFormPredicate"@en ;
+    skos:prefLabel "prédicat d’une forme de proposition"@fr, "proposition form predicate"@en ;
+    skos:altLabel "propositionFormPredicate"@en ;
+    rdfs:comment "La composante prédicat d’une forme de proposition. Réservée à l’encodage de base des propositions."@fr, "The predicate component of a proposition form. Reserved for basic encoding of propositions."@en .
+
+rdf:propositionFormObject
+    rdfs:label "objet d’une forme de proposition"@fr, "propositionFormObject"@en ;
+    skos:prefLabel "objet d’une forme de proposition"@fr, "proposition form object"@en ;
+    skos:altLabel "propositionFormObject"@en ;
+    rdfs:comment "La composante objet d’une forme de proposition. Réservée à l’encodage de base des propositions."@fr, "The object component of a proposition form. Reserved for basic encoding of propositions."@en .
+
+rdf:version-1.2
+    rdfs:label "1.2"@fr, "1.2"@en ;
+    skos:prefLabel "1.2"@fr, "1.2"@en ;
+    rdfs:comment "Version 1.2."@fr, "Version 1.2."@en .
+
+rdf:version-1.2-basic
+    rdfs:label "1.2-basic"@fr, "1.2-basic"@en ;
+    skos:prefLabel "1.2-basic"@fr, "1.2-basic"@en ;
+    rdfs:comment "Version 1.2-basic"@fr, "Version 1.2-basic"@en .
+
+rdf:version-1.1
+    rdfs:label "1.1"@fr, "1.1"@en ;
+    skos:prefLabel "1.1"@fr, "1.1"@en ;
+    rdfs:comment "Version 1.1"@fr, "Version 1.1"@en .
+
+rdf:version-1.0
+    rdfs:label "1.0"@fr, "1.0"@en ;
+    skos:prefLabel "1.0"@fr, "1.0"@en ;
+    rdfs:comment "Version 1.0"@fr, "Version 1.0"@en .

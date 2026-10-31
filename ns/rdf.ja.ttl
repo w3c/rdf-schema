@@ -1,0 +1,184 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    dcterms:title "RDF概念語彙（RDF）"@ja, "The RDF Concepts Vocabulary (RDF)"@en ;
+    dcterms:description "これは、RDF 1.1概念で定義された、RDF名前空間内のRDF語彙の用語に対するRDFスキーマです。"@ja, "This is the RDF Schema for the RDF vocabulary terms in the RDF Namespace, defined in RDF 1.1 Concepts."@en .
+
+rdf:HTML
+    rdfs:label "HTML"@ja, "HTML"@en ;
+    skos:prefLabel "HTML"@ja, "HTML"@en ;
+    rdfs:comment "HTMLコンテンツの断片を格納するRDFリテラルのデータ型。"@ja, "The datatype of RDF literals storing fragments of HTML content"@en .
+
+rdf:langString
+    rdfs:label "言語タグ付き文字列"@ja, "langString"@en ;
+    skos:prefLabel "言語タグ付き文字列"@ja, "language-tagged string"@en ;
+    skos:altLabel "langString"@en ;
+    rdfs:comment "言語タグ付き文字列値のデータ型。"@ja, "The datatype of language-tagged string values"@en .
+
+rdf:dirLangString
+    rdfs:label "方向付き言語タグ付き文字列"@ja, "dirLangString"@en ;
+    skos:prefLabel "方向付き言語タグ付き文字列"@ja, "directional language-tagged string"@en ;
+    skos:altLabel "dirLangString"@en ;
+    rdfs:comment "言語タグと基本方向（'ltr'または'rtl'）を含む、方向付き言語タグ付き文字列値のデータ型。"@ja, "The datatype of directional language-tagged string values, which includes a language tag and a base direction (either 'ltr' or 'rtl')"@en .
+
+rdf:PlainLiteral
+    rdfs:label "プレーンリテラル"@ja, "PlainLiteral"@en ;
+    skos:prefLabel "プレーンリテラル"@ja, "plain literal"@en ;
+    skos:altLabel "PlainLiteral"@en ;
+    rdfs:comment "RIFとOWL 2で使用されるプレーンな（すなわち型のない）リテラル値のクラス。これらで不要になるまでは削除されません。"@ja, "The class of plain (i.e., untyped) literal values, as used in RIF and OWL 2.  Will not be removed until no longer needed there."@en .
+
+rdf:type
+    rdfs:label "型"@ja, "type"@en ;
+    skos:prefLabel "型"@ja, "type"@en ;
+    rdfs:comment "主語はクラスのインスタンスです。"@ja, "The subject is an instance of a class."@en .
+
+rdf:reifies
+    rdfs:label "具体化する"@ja, "reifies"@en ;
+    skos:prefLabel "具体化する"@ja, "reifies"@en ;
+    rdfs:comment "より具体的な状況の抽象的な命題。"@ja, "The abstract proposition of a more concrete circumstance."@en .
+
+rdf:Property
+    rdfs:label "プロパティ"@ja, "Property"@en ;
+    skos:prefLabel "プロパティ"@ja, "property"@en ;
+    skos:altLabel "Property"@en ;
+    rdfs:comment "RDFプロパティのクラス。"@ja, "The class of RDF properties."@en .
+
+rdf:Statement
+    rdfs:label "文"@ja, "Statement"@en ;
+    skos:prefLabel "文"@ja, "statement"@en ;
+    skos:altLabel "Statement"@en ;
+    rdfs:comment "RDF文のクラス。"@ja, "The class of RDF statements."@en .
+
+rdf:subject
+    rdfs:label "主語"@ja, "subject"@en ;
+    skos:prefLabel "主語"@ja, "subject"@en ;
+    rdfs:comment "主語であるRDF文の主語。"@ja, "The subject of the subject RDF statement."@en .
+
+rdf:predicate
+    rdfs:label "述語"@ja, "predicate"@en ;
+    skos:prefLabel "述語"@ja, "predicate"@en ;
+    rdfs:comment "主語であるRDF文の述語。"@ja, "The predicate of the subject RDF statement."@en .
+
+rdf:object
+    rdfs:label "目的語"@ja, "object"@en ;
+    skos:prefLabel "目的語"@ja, "object"@en ;
+    rdfs:comment "主語であるRDF文の目的語。"@ja, "The object of the subject RDF statement."@en .
+
+rdf:Bag
+    rdfs:label "バッグ"@ja, "Bag"@en ;
+    skos:prefLabel "バッグ"@ja, "bag"@en ;
+    skos:altLabel "Bag"@en ;
+    rdfs:comment "順序なしコンテナのクラス。"@ja, "The class of unordered containers."@en .
+
+rdf:Seq
+    rdfs:label "シーケンス"@ja, "Seq"@en ;
+    skos:prefLabel "シーケンス"@ja, "sequence"@en ;
+    skos:altLabel "Seq"@en ;
+    rdfs:comment "順序付きコンテナのクラス。"@ja, "The class of ordered containers."@en .
+
+rdf:Alt
+    rdfs:label "選択肢"@ja, "Alt"@en ;
+    skos:prefLabel "選択肢"@ja, "alternatives"@en ;
+    skos:altLabel "Alt"@en ;
+    rdfs:comment "選択肢を持つコンテナのクラス。"@ja, "The class of containers of alternatives."@en .
+
+rdf:value
+    rdfs:label "値"@ja, "value"@en ;
+    skos:prefLabel "値"@ja, "value"@en ;
+    rdfs:comment "構造化された値に使用される慣用的なプロパティ。"@ja, "Idiomatic property used for structured values."@en .
+
+rdf:List
+    rdfs:label "リスト"@ja, "List"@en ;
+    skos:prefLabel "リスト"@ja, "list"@en ;
+    skos:altLabel "List"@en ;
+    rdfs:comment "RDFリストのクラス。"@ja, "The class of RDF Lists."@en .
+
+rdf:nil
+    rdfs:label "空リスト"@ja, "nil"@en ;
+    skos:prefLabel "空リスト"@ja, "empty list"@en ;
+    skos:altLabel "nil"@en ;
+    rdfs:comment "項目を持たない空のリスト。リストの残りがnilであれば、そのリストにはそれ以上の項目はありません。"@ja, "The empty list, with no items in it. If the rest of a list is nil then the list has no more items in it."@en .
+
+rdf:first
+    rdfs:label "最初の項目"@ja, "first"@en ;
+    skos:prefLabel "最初の項目"@ja, "first"@en ;
+    rdfs:comment "主語RDFリスト内の最初の項目。"@ja, "The first item in the subject RDF list."@en .
+
+rdf:rest
+    rdfs:label "残り"@ja, "rest"@en ;
+    skos:prefLabel "残り"@ja, "rest"@en ;
+    rdfs:comment "主語RDFリストの最初の項目の後にある残りの部分。"@ja, "The rest of the subject RDF list after the first item."@en .
+
+rdf:XMLLiteral
+    rdfs:label "XMLリテラル"@ja, "XMLLiteral"@en ;
+    skos:prefLabel "XMLリテラル"@ja, "XML literal"@en ;
+    skos:altLabel "XMLLiteral"@en ;
+    rdfs:comment "XMLリテラル値のデータ型。"@ja, "The datatype of XML literal values."@en .
+
+rdf:JSON
+    rdfs:label "JSON"@ja, "JSON"@en ;
+    skos:prefLabel "JSON"@ja, "JSON"@en ;
+    rdfs:comment "JSONコンテンツを格納するRDFリテラルのデータ型。"@ja, "The datatype of RDF literals storing JSON content."@en .
+
+rdf:CompoundLiteral
+    rdfs:label "複合リテラル"@ja, "CompoundLiteral"@en ;
+    skos:prefLabel "複合リテラル"@ja, "compound literal"@en ;
+    skos:altLabel "CompoundLiteral"@en ;
+    rdfs:comment "複合リテラルを表すクラス。"@ja, "A class representing a compound literal."@en .
+
+rdf:language
+    rdfs:label "言語"@ja, "language"@en ;
+    skos:prefLabel "言語"@ja, "language"@en ;
+    rdfs:comment "CompoundLiteralの言語成分。"@ja, "The language component of a CompoundLiteral."@en .
+
+rdf:direction
+    rdfs:label "方向"@ja, "direction"@en ;
+    skos:prefLabel "方向"@ja, "direction"@en ;
+    rdfs:comment "CompoundLiteralの基本方向成分。"@ja, "The base direction component of a CompoundLiteral."@en .
+
+rdf:PropositionForm
+    rdfs:label "命題形式"@ja, "PropositionForm"@en ;
+    skos:prefLabel "命題形式"@ja, "proposition form"@en ;
+    skos:altLabel "PropositionForm"@en ;
+    rdfs:comment "抽象的で原子的な命題形式のクラス。命題の基本エンコーディングのために予約されています。"@ja, "The class of abstract, atomic proposition forms. Reserved for basic encoding of propositions."@en .
+
+rdf:propositionFormSubject
+    rdfs:label "命題形式の主語"@ja, "propositionFormSubject"@en ;
+    skos:prefLabel "命題形式の主語"@ja, "proposition form subject"@en ;
+    skos:altLabel "propositionFormSubject"@en ;
+    rdfs:comment "命題形式の主語成分。命題の基本エンコーディングのために予約されています。"@ja, "The subject component of a proposition form. Reserved for basic encoding of propositions."@en .
+
+rdf:propositionFormPredicate
+    rdfs:label "命題形式の述語"@ja, "propositionFormPredicate"@en ;
+    skos:prefLabel "命題形式の述語"@ja, "proposition form predicate"@en ;
+    skos:altLabel "propositionFormPredicate"@en ;
+    rdfs:comment "命題形式の述語成分。命題の基本エンコーディングのために予約されています。"@ja, "The predicate component of a proposition form. Reserved for basic encoding of propositions."@en .
+
+rdf:propositionFormObject
+    rdfs:label "命題形式の目的語"@ja, "propositionFormObject"@en ;
+    skos:prefLabel "命題形式の目的語"@ja, "proposition form object"@en ;
+    skos:altLabel "propositionFormObject"@en ;
+    rdfs:comment "命題形式の目的語成分。命題の基本エンコーディングのために予約されています。"@ja, "The object component of a proposition form. Reserved for basic encoding of propositions."@en .
+
+rdf:version-1.2
+    rdfs:label "1.2"@ja, "1.2"@en ;
+    skos:prefLabel "1.2"@ja, "1.2"@en ;
+    rdfs:comment "バージョン1.2。"@ja, "Version 1.2."@en .
+
+rdf:version-1.2-basic
+    rdfs:label "1.2-basic"@ja, "1.2-basic"@en ;
+    skos:prefLabel "1.2-basic"@ja, "1.2-basic"@en ;
+    rdfs:comment "バージョン1.2-basic。"@ja, "Version 1.2-basic"@en .
+
+rdf:version-1.1
+    rdfs:label "1.1"@ja, "1.1"@en ;
+    skos:prefLabel "1.1"@ja, "1.1"@en ;
+    rdfs:comment "バージョン1.1。"@ja, "Version 1.1"@en .
+
+rdf:version-1.0
+    rdfs:label "1.0"@ja, "1.0"@en ;
+    skos:prefLabel "1.0"@ja, "1.0"@en ;
+    rdfs:comment "バージョン1.0。"@ja, "Version 1.0"@en .

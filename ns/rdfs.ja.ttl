@@ -1,0 +1,97 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://www.w3.org/2000/01/rdf-schema#>
+    dcterms:title "RDFスキーマ語彙（RDFS）"@ja, "The RDF Schema vocabulary (RDFS)"@en .
+
+rdfs:Resource
+    rdfs:label "リソース"@ja, "Resource"@en ;
+    skos:prefLabel "リソース"@ja, "resource"@en ;
+    skos:altLabel "Resource"@en ;
+    rdfs:comment "すべてのものを含む、リソースのクラス。"@ja, "The class resource, everything."@en .
+
+rdfs:Proposition
+    rdfs:label "命題"@ja, "Proposition"@en ;
+    skos:prefLabel "命題"@ja, "proposition"@en ;
+    skos:altLabel "Proposition"@en ;
+    rdfs:comment "2つのエンティティ間の関係を記述する単純な論理式である、命題のクラス。"@ja, "The class of propositions, simple logical expressions describing a relationship between two entities."@en .
+
+rdfs:Class
+    rdfs:label "クラス"@ja, "Class"@en ;
+    skos:prefLabel "クラス"@ja, "class"@en ;
+    skos:altLabel "Class"@en ;
+    rdfs:comment "クラスのクラス。"@ja, "The class of classes."@en .
+
+rdfs:subClassOf
+    rdfs:label "のサブクラスである"@ja, "subClassOf"@en ;
+    skos:prefLabel "のサブクラスである"@ja, "is subclass of"@en ;
+    skos:altLabel "subClassOf"@en ;
+    rdfs:comment "主語はクラスのサブクラスです。"@ja, "The subject is a subclass of a class."@en .
+
+rdfs:subPropertyOf
+    rdfs:label "のサブプロパティである"@ja, "subPropertyOf"@en ;
+    skos:prefLabel "のサブプロパティである"@ja, "is subproperty of"@en ;
+    skos:altLabel "subPropertyOf"@en ;
+    rdfs:comment "主語はプロパティのサブプロパティです。"@ja, "The subject is a subproperty of a property."@en .
+
+rdfs:comment
+    rdfs:label "コメント"@ja, "comment"@en ;
+    skos:prefLabel "コメント"@ja, "comment"@en ;
+    rdfs:comment "主語リソースの説明。"@ja, "A description of the subject resource."@en .
+
+rdfs:label
+    rdfs:label "ラベル"@ja, "label"@en ;
+    skos:prefLabel "ラベル"@ja, "label"@en ;
+    rdfs:comment "主語の人間可読な名前。"@ja, "A human-readable name for the subject."@en .
+
+rdfs:domain
+    rdfs:label "ドメイン"@ja, "domain"@en ;
+    skos:prefLabel "ドメイン"@ja, "domain"@en ;
+    rdfs:comment "主語プロパティのドメイン。"@ja, "A domain of the subject property."@en .
+
+rdfs:range
+    rdfs:label "範囲"@ja, "range"@en ;
+    skos:prefLabel "範囲"@ja, "range"@en ;
+    rdfs:comment "主語プロパティの範囲。"@ja, "A range of the subject property."@en .
+
+rdfs:seeAlso
+    rdfs:label "参照"@ja, "seeAlso"@en ;
+    skos:prefLabel "参照"@ja, "see also"@en ;
+    skos:altLabel "seeAlso"@en ;
+    rdfs:comment "主語リソースについての追加情報。"@ja, "Further information about the subject resource."@en .
+
+rdfs:isDefinedBy
+    rdfs:label "によって定義される"@ja, "isDefinedBy"@en ;
+    skos:prefLabel "によって定義される"@ja, "is defined by"@en ;
+    skos:altLabel "isDefinedBy"@en ;
+    rdfs:comment "主語リソースの定義。"@ja, "The definition of the subject resource."@en .
+
+rdfs:Literal
+    rdfs:label "リテラル"@ja, "Literal"@en ;
+    skos:prefLabel "リテラル"@ja, "literal"@en ;
+    skos:altLabel "Literal"@en ;
+    rdfs:comment "テキスト文字列や整数などのリテラル値のクラス。"@ja, "The class of literal values, eg. textual strings and integers."@en .
+
+rdfs:Container
+    rdfs:label "コンテナ"@ja, "Container"@en ;
+    skos:prefLabel "コンテナ"@ja, "container"@en ;
+    skos:altLabel "Container"@en ;
+    rdfs:comment "RDFコンテナのクラス。"@ja, "The class of RDF containers."@en .
+
+rdfs:ContainerMembershipProperty
+    rdfs:label "コンテナメンバーシッププロパティ"@ja, "ContainerMembershipProperty"@en ;
+    skos:prefLabel "コンテナメンバーシッププロパティ"@ja, "container membership property"@en ;
+    skos:altLabel "ContainerMembershipProperty"@en ;
+    rdfs:comment "コンテナメンバーシッププロパティrdf:_1、rdf:_2、…のクラス。これらはすべて'member'のサブプロパティです。"@ja, "The class of container membership properties, rdf:_1, rdf:_2, ..., all of which are sub-properties of 'member'."@en .
+
+rdfs:member
+    rdfs:label "メンバー"@ja, "member"@en ;
+    skos:prefLabel "メンバー"@ja, "member"@en ;
+    rdfs:comment "主語リソースのメンバー。"@ja, "A member of the subject resource."@en .
+
+rdfs:Datatype
+    rdfs:label "データ型"@ja, "Datatype"@en ;
+    skos:prefLabel "データ型"@ja, "datatype"@en ;
+    skos:altLabel "Datatype"@en ;
+    rdfs:comment "RDFデータ型のクラス。"@ja, "The class of RDF datatypes."@en .

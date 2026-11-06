@@ -20,10 +20,19 @@ titles and descriptions use `dcterms:title` and `dcterms:description`. SKOS
 labeling properties can label resources without declaring them `skos:Concept`;
 see the [SKOS reference](https://www.w3.org/TR/skos-reference/#labels).
 
-English `rdfs:label` and `rdfs:comment` strings are copied from the base files and
-given `@en` tags here. The `xsd:decimal` comment adds a comma after `i/10^n` in all
-language annotation files. Proposed `skos:prefLabel` strings expand technical names
+English `rdfs:label` and `rdfs:comment` strings come from the base files and use
+`@en` tags here. Comments include reviewed wording for consistent descriptions
+of datatype values. Proposed `skos:prefLabel` strings expand technical names
 where useful and use sentence case.
+
+Datatype comments use plural forms for individual values where the language
+distinguishes number. The `xsd:dateTimeStamp` comments use natural-language names.
+Translations localize Boolean value names; the lexical forms `'true'`, `'false'`,
+`'1'`, and `'0'` are unchanged.
+
+For `xsd:base64Binary`, [RFC 4648, section 4](https://www.rfc-editor.org/rfc/rfc4648.html#section-4)
+supplies the Base64 alphabet. [XML Schema 1.1, section 3.3.16](https://www.w3.org/TR/xmlschema11-2/#base64Binary)
+still cites RFC 3548 and defines lexical forms, padding, and whitespace handling.
 
 Existing vocabulary files and specification documents remain unchanged. This
 proposal adds no content negotiation or publication configuration. The choice of

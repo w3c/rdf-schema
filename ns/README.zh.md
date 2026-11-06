@@ -11,8 +11,9 @@ Related tracking issue: [#90](https://github.com/w3c/rdf-schema/issues/90).
 Source revision: `476ad2dc997a9f6085204bbdead2b14cee511d70`; source files:
 `ns/rdf.ttl`, `ns/rdfs.ttl`, `ns/rdf-xsd.ttl`.
 These base files are unchanged from the revision used by the existing language PRs.
-English annotations are copied without textual changes from
+English annotations were initially copied from
 [`vocabulary-en` at `aff0700`](https://github.com/w3c/rdf-schema/tree/aff07007e0a618b6417be205bfb9dd4debe4e614/ns).
+Shared wording corrections are described below.
 The supplementary annotation structure follows
 [`vocabulary-fr` at `6c5e527`](https://github.com/w3c/rdf-schema/tree/6c5e5276bc9af0a3102cd15aacc5ed2398e80a1d/ns).
 
@@ -39,7 +40,7 @@ other language PRs. The Chinese text uses Simplified Chinese characters.
 Each file also includes all annotations from its English counterpart:
 labels, comments, vocabulary titles, and descriptions tagged `@en`, together with
 the English preferred labels. English text matches the English annotation files,
-including the added comma after `i/10^n` in the `xsd:decimal` comment.
+including the reviewed wording of datatype comments.
 `skos:altLabel` retains the original English source name when it differs from the
 English `skos:prefLabel`. A source name is not added as an alternative if it is
 already the English preferred label. Each term has one preferred label per language.
@@ -58,6 +59,15 @@ These initial translations were prepared with OpenAI GPT-6 (Codex) assistance.
 They have been checked against the English comments and the terminology sources
 above; no independent native-speaker or second-model review is claimed.
 Review by fluent speakers is welcome.
+
+Datatype comments use plural forms for individual values where the language
+distinguishes number. The `xsd:dateTimeStamp` comments use natural-language names.
+Translations localize Boolean value names; the lexical forms `'true'`, `'false'`,
+`'1'`, and `'0'` are unchanged.
+
+For `xsd:base64Binary`, [RFC 4648, section 4](https://www.rfc-editor.org/rfc/rfc4648.html#section-4)
+supplies the Base64 alphabet. [XML Schema 1.1, section 3.3.16](https://www.w3.org/TR/xmlschema11-2/#base64Binary)
+still cites RFC 3548 and defines lexical forms, padding, and whitespace handling.
 
 Existing vocabulary files and specification documents remain unchanged. This
 proposal adds no content negotiation or publication configuration. The choice of

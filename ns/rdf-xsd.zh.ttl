@@ -15,7 +15,7 @@ xsd:string
 xsd:boolean
     rdfs:label "布尔值"@zh, "boolean"@en ;
     skos:prefLabel "布尔值"@zh, "boolean"@en ;
-    rdfs:comment "二值逻辑。词法形式：'true'、'false'、'1'、'0'。值空间：{true, false}。"@zh, "Two-valued logic. Lexical forms: 'true', 'false', '1', '0'. Value space: {true, false}."@en .
+    rdfs:comment "二值逻辑。词法形式：'true'、'false'、'1'、'0'。值空间：{真, 假}。"@zh, "Two-valued logic. Lexical forms: 'true', 'false', '1', '0'. Value space: {true, false}."@en .
 
 xsd:decimal
     rdfs:label "十进制数"@zh, "decimal"@en ;
@@ -31,13 +31,13 @@ xsd:double
     rdfs:label "64 位浮点数"@zh, "double"@en ;
     skos:prefLabel "64 位浮点数"@zh, "64-bit floating-point number"@en ;
     skos:altLabel "double"@en ;
-    rdfs:comment "IEEE 754 64 位浮点数。词法形式使用十进制或科学记数法，可带有前导符号和指数；允许特殊标记 'INF'、'+INF'、'-INF' 和 'NaN'；'+0' 和 '-0' 是不同的词法形式。词法形式到值的映射取决于此数据类型及其精度。词法形式（正则表达式风格）：(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@zh, "IEEE 754 64-bit floating-point. Lexical forms use decimal or scientific notation with optional leading sign and exponent; special tokens 'INF', '+INF', '-INF', and 'NaN' are permitted; '+0' and '-0' are distinct lexical forms. Mapping from lexical forms to values is specific to this datatype and its precision. Lexical form (regex-style): (\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@en .
+    rdfs:comment "IEEE 754 64 位浮点数。词法形式使用十进制或科学记数法，可带有前导符号和指数；允许特殊标记 'INF'、'+INF'、'-INF' 和 'NaN'；'+0' 和 '-0' 是不同的词法形式。词法形式到值的映射取决于此数据类型及其精度。词法形式（正则表达式风格）：(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@zh, "IEEE 754 64-bit floating-point numbers. Lexical forms use decimal or scientific notation with optional leading sign and exponent; special tokens 'INF', '+INF', '-INF', and 'NaN' are permitted; '+0' and '-0' are distinct lexical forms. Mapping from lexical forms to values is specific to this datatype and its precision. Lexical form (regex-style): (\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@en .
 
 xsd:float
     rdfs:label "32 位浮点数"@zh, "float"@en ;
     skos:prefLabel "32 位浮点数"@zh, "32-bit floating-point number"@en ;
     skos:altLabel "float"@en ;
-    rdfs:comment "IEEE 754 32 位浮点数。词法形式使用十进制或科学记数法，可带有前导符号和指数；允许特殊标记 'INF'、'+INF'、'-INF' 和 'NaN'；'+0' 和 '-0' 是不同的词法形式。词法形式到值的映射取决于此数据类型及其精度。词法形式（正则表达式风格）：(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@zh, "IEEE 754 32-bit floating-point. Lexical forms use decimal or scientific notation with optional leading sign and exponent; special tokens 'INF', '+INF', '-INF', and 'NaN' are permitted; '+0' and '-0' are distinct lexical forms. Mapping from lexical forms to values is specific to this datatype and its precision. Lexical form (regex-style): (\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@en .
+    rdfs:comment "IEEE 754 32 位浮点数。词法形式使用十进制或科学记数法，可带有前导符号和指数；允许特殊标记 'INF'、'+INF'、'-INF' 和 'NaN'；'+0' 和 '-0' 是不同的词法形式。词法形式到值的映射取决于此数据类型及其精度。词法形式（正则表达式风格）：(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@zh, "IEEE 754 32-bit floating-point numbers. Lexical forms use decimal or scientific notation with optional leading sign and exponent; special tokens 'INF', '+INF', '-INF', and 'NaN' are permitted; '+0' and '-0' are distinct lexical forms. Mapping from lexical forms to values is specific to this datatype and its precision. Lexical form (regex-style): (\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@en .
 
 xsd:date
     rdfs:label "日期"@zh, "date"@en ;
@@ -59,37 +59,37 @@ xsd:dateTimeStamp
     rdfs:label "带时区的日期和时间"@zh, "dateTimeStamp"@en ;
     skos:prefLabel "带时区的日期和时间"@zh, "date and time with timezone"@en ;
     skos:altLabel "dateTimeStamp"@en ;
-    rdfs:comment "必须具有显式时区偏移量的 dateTime。词法形式：YYYY-MM-DDThh:mm:ss(.s+)?(Z|±hh:mm)；时区偏移量为必需。"@zh, "dateTime with a required explicit timezone offset. Lexical form: YYYY-MM-DDThh:mm:ss(.s+)?(Z|±hh:mm); the timezone offset is mandatory."@en .
+    rdfs:comment "必须具有显式时区偏移量的日期和时间。词法形式：YYYY-MM-DDThh:mm:ss(.s+)?(Z|±hh:mm)；时区偏移量为必需。"@zh, "Dates and times with a required explicit timezone offset. Lexical form: YYYY-MM-DDThh:mm:ss(.s+)?(Z|±hh:mm); the timezone offset is mandatory."@en .
 
 xsd:gYear
     rdfs:label "公历年份"@zh, "gYear"@en ;
     skos:prefLabel "公历年份"@zh, "Gregorian year"@en ;
     skos:altLabel "gYear"@en ;
-    rdfs:comment "公历年份。词法形式：CCYY（公元前年份可带有前导 '-'，时区可选）。时区词法形式：'Z' 或 ±hh:mm，其中 |offset| ≤ 14:00；年份符合 -?([1-9][0-9]{3,}|0[0-9]{3})。"@zh, "Gregorian year. Lexical form: CCYY (optionally with a leading '-' for years BCE and optional timezone). Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00; years are matched by -?([1-9][0-9]{3,}|0[0-9]{3})."@en .
+    rdfs:comment "公历年份。词法形式：CCYY（公元前年份可带有前导 '-'，时区可选）。时区词法形式：'Z' 或 ±hh:mm，其中 |offset| ≤ 14:00；年份符合 -?([1-9][0-9]{3,}|0[0-9]{3})。"@zh, "Gregorian years. Lexical form: CCYY (optionally with a leading '-' for years BCE and optional timezone). Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00; years are matched by -?([1-9][0-9]{3,}|0[0-9]{3})."@en .
 
 xsd:gMonth
     rdfs:label "公历月份"@zh, "gMonth"@en ;
     skos:prefLabel "公历月份"@zh, "Gregorian month"@en ;
     skos:altLabel "gMonth"@en ;
-    rdfs:comment "每年重复的公历月份。词法形式：--MM，可带时区。时区词法形式：'Z' 或 ±hh:mm，其中 |offset| ≤ 14:00（例如 '--02Z'、'--11+05:30'）。"@zh, "Gregorian month recurring each year. Lexical form: --MM with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '--02Z', '--11+05:30')."@en .
+    rdfs:comment "每年重复的公历月份。词法形式：--MM，可带时区。时区词法形式：'Z' 或 ±hh:mm，其中 |offset| ≤ 14:00（例如 '--02Z'、'--11+05:30'）。"@zh, "Gregorian months recurring each year. Lexical form: --MM with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '--02Z', '--11+05:30')."@en .
 
 xsd:gDay
     rdfs:label "公历每月中的日期"@zh, "gDay"@en ;
     skos:prefLabel "公历每月中的日期"@zh, "Gregorian day"@en ;
     skos:altLabel "gDay"@en ;
-    rdfs:comment "每月重复的月份中的日。词法形式：---DD，可带时区。时区词法形式：'Z' 或 ±hh:mm，其中 |offset| ≤ 14:00（例如 '---05Z'、'---31-03:00'）。"@zh, "Day in a month recurring each month. Lexical form: ---DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '---05Z', '---31-03:00')."@en .
+    rdfs:comment "每月重复的月份中的日。词法形式：---DD，可带时区。时区词法形式：'Z' 或 ±hh:mm，其中 |offset| ≤ 14:00（例如 '---05Z'、'---31-03:00'）。"@zh, "Days in a month recurring each month. Lexical form: ---DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '---05Z', '---31-03:00')."@en .
 
 xsd:gYearMonth
     rdfs:label "公历年份和月份"@zh, "gYearMonth"@en ;
     skos:prefLabel "公历年份和月份"@zh, "Gregorian year and month"@en ;
     skos:altLabel "gYearMonth"@en ;
-    rdfs:comment "公历年份和月份。词法形式：CCYY-MM，可带时区。时区词法形式：'Z' 或 ±hh:mm，其中 |offset| ≤ 14:00（例如 '2025-09Z'、'1999-12+01:00'）。"@zh, "Gregorian year and month. Lexical form: CCYY-MM with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '2025-09Z', '1999-12+01:00')."@en .
+    rdfs:comment "公历年份和月份。词法形式：CCYY-MM，可带时区。时区词法形式：'Z' 或 ±hh:mm，其中 |offset| ≤ 14:00（例如 '2025-09Z'、'1999-12+01:00'）。"@zh, "Gregorian year-month pairs. Lexical form: CCYY-MM with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '2025-09Z', '1999-12+01:00')."@en .
 
 xsd:gMonthDay
     rdfs:label "公历月份和日"@zh, "gMonthDay"@en ;
     skos:prefLabel "公历月份和日"@zh, "Gregorian month and day"@en ;
     skos:altLabel "gMonthDay"@en ;
-    rdfs:comment "每年重复的月份和日。词法形式：--MM-DD，可带时区。时区词法形式：'Z' 或 ±hh:mm，其中 |offset| ≤ 14:00（例如 '--12-31Z'、'--02-29+09:00'）。"@zh, "Month and day recurring each year. Lexical form: --MM-DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '--12-31Z', '--02-29+09:00')."@en .
+    rdfs:comment "每年重复的月份和日。词法形式：--MM-DD，可带时区。时区词法形式：'Z' 或 ±hh:mm，其中 |offset| ≤ 14:00（例如 '--12-31Z'、'--02-29+09:00'）。"@zh, "Month-day pairs recurring each year. Lexical form: --MM-DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '--12-31Z', '--02-29+09:00')."@en .
 
 xsd:duration
     rdfs:label "持续时间"@zh, "duration"@en ;
@@ -100,61 +100,61 @@ xsd:yearMonthDuration
     rdfs:label "年和月持续时间"@zh, "yearMonthDuration"@en ;
     skos:prefLabel "年和月持续时间"@zh, "year and month duration"@en ;
     skos:altLabel "yearMonthDuration"@en ;
-    rdfs:comment "限制为年和月字段的持续时间（秒分量为 0）。具有全序；词法形式使用 PnYnM，可带有前导 '-'（例如 'P2Y'、'P3M'、'-P1Y2M'）。"@zh, "Duration restricted to year and month fields (seconds component is 0). Totally ordered; lexical form uses PnYnM with optional leading '-' (e.g., 'P2Y', 'P3M', '-P1Y2M')."@en .
+    rdfs:comment "限制为年和月字段的持续时间（秒分量为 0）。具有全序；词法形式使用 PnYnM，可带有前导 '-'（例如 'P2Y'、'P3M'、'-P1Y2M'）。"@zh, "Durations restricted to year and month fields (seconds component is 0). Totally ordered; lexical form uses PnYnM with optional leading '-' (e.g., 'P2Y', 'P3M', '-P1Y2M')."@en .
 
 xsd:dayTimeDuration
     rdfs:label "天、小时、分钟和秒持续时间"@zh, "dayTimeDuration"@en ;
     skos:prefLabel "天、小时、分钟和秒持续时间"@zh, "duration in days, hours, minutes and seconds"@en ;
     skos:altLabel "dayTimeDuration"@en ;
-    rdfs:comment "限制为天、小时、分钟和秒字段的持续时间（月份分量为 0）。具有全序；词法形式为 'PnDTnHnMnS'，可带有前导 '-' 和小数秒（例如 'P30D'、'PT12H30M'、'PT5.25S'、'-P1DT2H'）。"@zh, "Duration restricted to day, hour, minute, second fields (months component is 0). Totally ordered; lexical form 'PnDTnHnMnS' with optional leading '-' and optional fractional seconds (e.g., 'P30D', 'PT12H30M', 'PT5.25S', '-P1DT2H')."@en .
+    rdfs:comment "限制为天、小时、分钟和秒字段的持续时间（月份分量为 0）。具有全序；词法形式为 'PnDTnHnMnS'，可带有前导 '-' 和小数秒（例如 'P30D'、'PT12H30M'、'PT5.25S'、'-P1DT2H'）。"@zh, "Durations restricted to day, hour, minute, second fields (months component is 0). Totally ordered; lexical form 'PnDTnHnMnS' with optional leading '-' and optional fractional seconds (e.g., 'P30D', 'PT12H30M', 'PT5.25S', '-P1DT2H')."@en .
 
 xsd:byte
     rdfs:label "8 位有符号整数"@zh, "byte"@en ;
     skos:prefLabel "8 位有符号整数"@zh, "8-bit signed integer"@en ;
     skos:altLabel "byte"@en ;
-    rdfs:comment "8 位有符号整数。值空间：[-128 .. 127]。词法形式：可选的符号后跟一个或多个数字；无小数点或指数（例如 '-1', '0', '+100'）。"@zh, "8-bit signed integer. Value space: [-128 .. 127]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent (e.g., '-1', '0', '+100')."@en .
+    rdfs:comment "8 位有符号整数。值空间：[-128 .. 127]。词法形式：可选的符号后跟一个或多个数字；无小数点或指数（例如 '-1', '0', '+100'）。"@zh, "8-bit signed integers. Value space: [-128 .. 127]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent (e.g., '-1', '0', '+100')."@en .
 
 xsd:short
     rdfs:label "16 位有符号整数"@zh, "short"@en ;
     skos:prefLabel "16 位有符号整数"@zh, "16-bit signed integer"@en ;
     skos:altLabel "short"@en ;
-    rdfs:comment "16 位有符号整数。值空间：[-32768 .. 32767]。词法形式：可选的符号后跟一个或多个数字；无小数点或指数（例如 '-1', '0', '+10000'）。"@zh, "16-bit signed integer. Value space: [-32768 .. 32767]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent (e.g., '-1', '0', '+10000')."@en .
+    rdfs:comment "16 位有符号整数。值空间：[-32768 .. 32767]。词法形式：可选的符号后跟一个或多个数字；无小数点或指数（例如 '-1', '0', '+10000'）。"@zh, "16-bit signed integers. Value space: [-32768 .. 32767]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent (e.g., '-1', '0', '+10000')."@en .
 
 xsd:int
     rdfs:label "32 位有符号整数"@zh, "int"@en ;
     skos:prefLabel "32 位有符号整数"@zh, "32-bit signed integer"@en ;
     skos:altLabel "int"@en ;
-    rdfs:comment "32 位有符号整数。值空间：[-2147483648 .. 2147483647]。词法形式：可选的符号后跟一个或多个数字；无小数点或指数（例如 '-1', '0', '+100000'）。"@zh, "32-bit signed integer. Value space: [-2147483648 .. 2147483647]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent (e.g., '-1', '0', '+100000')."@en .
+    rdfs:comment "32 位有符号整数。值空间：[-2147483648 .. 2147483647]。词法形式：可选的符号后跟一个或多个数字；无小数点或指数（例如 '-1', '0', '+100000'）。"@zh, "32-bit signed integers. Value space: [-2147483648 .. 2147483647]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent (e.g., '-1', '0', '+100000')."@en .
 
 xsd:long
     rdfs:label "64 位有符号整数"@zh, "long"@en ;
     skos:prefLabel "64 位有符号整数"@zh, "64-bit signed integer"@en ;
     skos:altLabel "long"@en ;
-    rdfs:comment "64 位有符号整数。值空间：[-9223372036854775808 .. 9223372036854775807]。词法形式：可选的符号后跟一个或多个数字；无小数点或指数。"@zh, "64-bit signed integer. Value space: [-9223372036854775808 .. 9223372036854775807]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent."@en .
+    rdfs:comment "64 位有符号整数。值空间：[-9223372036854775808 .. 9223372036854775807]。词法形式：可选的符号后跟一个或多个数字；无小数点或指数。"@zh, "64-bit signed integers. Value space: [-9223372036854775808 .. 9223372036854775807]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent."@en .
 
 xsd:unsignedByte
     rdfs:label "8 位无符号整数"@zh, "unsignedByte"@en ;
     skos:prefLabel "8 位无符号整数"@zh, "8-bit unsigned integer"@en ;
     skos:altLabel "unsignedByte"@en ;
-    rdfs:comment "8 位无符号整数。值空间：[0 .. 255]。词法形式：可选的符号后跟数字；若有符号则必须为 '+'，但 XSD 1.1 词法空间中的零可以带有可选的 '+' 或 '-' 符号。"@zh, "8-bit unsigned integer. Value space: [0 .. 255]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
+    rdfs:comment "8 位无符号整数。值空间：[0 .. 255]。词法形式：可选的符号后跟数字；若有符号则必须为 '+'，但 XSD 1.1 词法空间中的零可以带有可选的 '+' 或 '-' 符号。"@zh, "8-bit unsigned integers. Value space: [0 .. 255]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
 
 xsd:unsignedShort
     rdfs:label "16 位无符号整数"@zh, "unsignedShort"@en ;
     skos:prefLabel "16 位无符号整数"@zh, "16-bit unsigned integer"@en ;
     skos:altLabel "unsignedShort"@en ;
-    rdfs:comment "16 位无符号整数。值空间：[0 .. 65535]。词法形式：可选的符号后跟数字；若有符号则必须为 '+'，但 XSD 1.1 词法空间中的零可以带有可选的 '+' 或 '-' 符号。"@zh, "16-bit unsigned integer. Value space: [0 .. 65535]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
+    rdfs:comment "16 位无符号整数。值空间：[0 .. 65535]。词法形式：可选的符号后跟数字；若有符号则必须为 '+'，但 XSD 1.1 词法空间中的零可以带有可选的 '+' 或 '-' 符号。"@zh, "16-bit unsigned integers. Value space: [0 .. 65535]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
 
 xsd:unsignedInt
     rdfs:label "32 位无符号整数"@zh, "unsignedInt"@en ;
     skos:prefLabel "32 位无符号整数"@zh, "32-bit unsigned integer"@en ;
     skos:altLabel "unsignedInt"@en ;
-    rdfs:comment "32 位无符号整数。值空间：[0 .. 4294967295]。词法形式：可选的符号后跟数字；若有符号则必须为 '+'，但 XSD 1.1 词法空间中的零可以带有可选的 '+' 或 '-' 符号。"@zh, "32-bit unsigned integer. Value space: [0 .. 4294967295]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
+    rdfs:comment "32 位无符号整数。值空间：[0 .. 4294967295]。词法形式：可选的符号后跟数字；若有符号则必须为 '+'，但 XSD 1.1 词法空间中的零可以带有可选的 '+' 或 '-' 符号。"@zh, "32-bit unsigned integers. Value space: [0 .. 4294967295]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
 
 xsd:unsignedLong
     rdfs:label "64 位无符号整数"@zh, "unsignedLong"@en ;
     skos:prefLabel "64 位无符号整数"@zh, "64-bit unsigned integer"@en ;
     skos:altLabel "unsignedLong"@en ;
-    rdfs:comment "64 位无符号整数。值空间：[0 .. 18446744073709551615]。词法形式：可选的符号后跟数字；若有符号则必须为 '+'，但 XSD 1.1 词法空间中的零可以带有可选的 '+' 或 '-' 符号。"@zh, "64-bit unsigned integer. Value space: [0 .. 18446744073709551615]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
+    rdfs:comment "64 位无符号整数。值空间：[0 .. 18446744073709551615]。词法形式：可选的符号后跟数字；若有符号则必须为 '+'，但 XSD 1.1 词法空间中的零可以带有可选的 '+' 或 '-' 符号。"@zh, "64-bit unsigned integers. Value space: [0 .. 18446744073709551615]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
 
 xsd:positiveInteger
     rdfs:label "正整数"@zh, "positiveInteger"@en ;
@@ -190,13 +190,13 @@ xsd:base64Binary
     rdfs:label "Base64 编码的二进制数据"@zh, "base64Binary"@en ;
     skos:prefLabel "Base64 编码的二进制数据"@zh, "Base64 binary data"@en ;
     skos:altLabel "base64Binary"@en ;
-    rdfs:comment "使用 Base64 编码的任意二进制数据。词法空间遵循 RFC 2045/3548；按 XML 规则允许可选空白。词法形式：Base64 字母表 'A–Z'、'a–z'、'0–9'、'+'、'/'，可带有 '=' 填充；验证时折叠空白。"@zh, "Arbitrary binary data encoded using Base64. Lexical space per RFC 2045/3548; optional whitespace allowed per XML rules. Lexical form: Base64 alphabet 'A–Z', 'a–z', '0–9', '+', '/' with optional '=' padding; whitespace is collapsed during validation."@en .
+    rdfs:comment "使用 Base64 编码的任意二进制数据。Base64 字母表遵循 RFC 4648；词法形式和空白处理遵循 XML Schema 规则。词法形式：Base64 字母表 'A–Z'、'a–z'、'0–9'、'+'、'/'，可带有 '=' 填充；验证时折叠空白。"@zh, "Arbitrary binary data encoded using Base64. Base64 alphabet per RFC 4648; lexical forms and whitespace handling follow XML Schema rules. Lexical form: Base64 alphabet 'A–Z', 'a–z', '0–9', '+', '/' with optional '=' padding; whitespace is collapsed during validation."@en .
 
 xsd:anyURI
     rdfs:label "IRI 引用"@zh, "anyURI"@en ;
     skos:prefLabel "IRI 引用"@zh, "IRI reference"@en ;
     skos:altLabel "anyURI"@en ;
-    rdfs:comment "RFC 3987 规定的国际化资源标识符（IRI）或 IRI 引用。词法空间就是 xsd:string（XSD 不强制采用固定语法）；典型词法形式包括绝对或相对 IRI 及可选的片段标识符；处理器可以应用转义／IRI 到 URI 的映射。"@zh, "Internationalized Resource Identifier (IRI) or IRI reference per RFC 3987. Lexical space is simply xsd:string (no fixed grammar is enforced by XSD); typical lexical forms include absolute or relative IRIs and optional fragment identifiers; processors may apply escaping/IRI-to-URI mapping."@en .
+    rdfs:comment "RFC 3987 规定的国际化资源标识符（IRI）或 IRI 引用。词法空间就是 xsd:string（XSD 不强制采用固定语法）；典型词法形式包括绝对或相对 IRI 及可选的片段标识符；处理器可以应用转义／IRI 到 URI 的映射。"@zh, "Internationalized Resource Identifiers (IRIs) or IRI references per RFC 3987. Lexical space is simply xsd:string (no fixed grammar is enforced by XSD); typical lexical forms include absolute or relative IRIs and optional fragment identifiers; processors may apply escaping/IRI-to-URI mapping."@en .
 
 xsd:language
     rdfs:label "语言标识符"@zh, "language"@en ;

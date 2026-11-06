@@ -15,7 +15,7 @@ xsd:string
 xsd:boolean
     rdfs:label "불리언"@ko, "boolean"@en ;
     skos:prefLabel "불리언"@ko, "boolean"@en ;
-    rdfs:comment "이진 논리입니다. 어휘 형식: 'true', 'false', '1', '0'입니다. 값 공간: {true, false}입니다."@ko, "Two-valued logic. Lexical forms: 'true', 'false', '1', '0'. Value space: {true, false}."@en .
+    rdfs:comment "이진 논리입니다. 어휘 형식: 'true', 'false', '1', '0'입니다. 값 공간: {참, 거짓}입니다."@ko, "Two-valued logic. Lexical forms: 'true', 'false', '1', '0'. Value space: {true, false}."@en .
 
 xsd:decimal
     rdfs:label "십진수"@ko, "decimal"@en ;
@@ -31,13 +31,13 @@ xsd:double
     rdfs:label "64비트 부동소수점 수"@ko, "double"@en ;
     skos:prefLabel "64비트 부동소수점 수"@ko, "64-bit floating-point number"@en ;
     skos:altLabel "double"@en ;
-    rdfs:comment "IEEE 754 64비트 부동소수점 수입니다. 어휘 형식은 십진 표기법 또는 과학적 표기법을 사용하며 선행 부호와 지수는 선택 사항입니다. 특수 토큰 'INF', '+INF', '-INF', 'NaN'이 허용됩니다. '+0'과 '-0'은 서로 다른 어휘 형식입니다. 어휘 형식에서 값으로의 매핑은 이 데이터형과 그 정밀도에 따라 다릅니다. 어휘 형식(정규식 스타일): (\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@ko, "IEEE 754 64-bit floating-point. Lexical forms use decimal or scientific notation with optional leading sign and exponent; special tokens 'INF', '+INF', '-INF', and 'NaN' are permitted; '+0' and '-0' are distinct lexical forms. Mapping from lexical forms to values is specific to this datatype and its precision. Lexical form (regex-style): (\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@en .
+    rdfs:comment "IEEE 754 64비트 부동소수점 수입니다. 어휘 형식은 십진 표기법 또는 과학적 표기법을 사용하며 선행 부호와 지수는 선택 사항입니다. 특수 토큰 'INF', '+INF', '-INF', 'NaN'이 허용됩니다. '+0'과 '-0'은 서로 다른 어휘 형식입니다. 어휘 형식에서 값으로의 매핑은 이 데이터형과 그 정밀도에 따라 다릅니다. 어휘 형식(정규식 스타일): (\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@ko, "IEEE 754 64-bit floating-point numbers. Lexical forms use decimal or scientific notation with optional leading sign and exponent; special tokens 'INF', '+INF', '-INF', and 'NaN' are permitted; '+0' and '-0' are distinct lexical forms. Mapping from lexical forms to values is specific to this datatype and its precision. Lexical form (regex-style): (\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@en .
 
 xsd:float
     rdfs:label "32비트 부동소수점 수"@ko, "float"@en ;
     skos:prefLabel "32비트 부동소수점 수"@ko, "32-bit floating-point number"@en ;
     skos:altLabel "float"@en ;
-    rdfs:comment "IEEE 754 32비트 부동소수점 수입니다. 어휘 형식은 십진 표기법 또는 과학적 표기법을 사용하며 선행 부호와 지수는 선택 사항입니다. 특수 토큰 'INF', '+INF', '-INF', 'NaN'이 허용됩니다. '+0'과 '-0'은 서로 다른 어휘 형식입니다. 어휘 형식에서 값으로의 매핑은 이 데이터형과 그 정밀도에 따라 다릅니다. 어휘 형식(정규식 스타일): (\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@ko, "IEEE 754 32-bit floating-point. Lexical forms use decimal or scientific notation with optional leading sign and exponent; special tokens 'INF', '+INF', '-INF', and 'NaN' are permitted; '+0' and '-0' are distinct lexical forms. Mapping from lexical forms to values is specific to this datatype and its precision. Lexical form (regex-style): (\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@en .
+    rdfs:comment "IEEE 754 32비트 부동소수점 수입니다. 어휘 형식은 십진 표기법 또는 과학적 표기법을 사용하며 선행 부호와 지수는 선택 사항입니다. 특수 토큰 'INF', '+INF', '-INF', 'NaN'이 허용됩니다. '+0'과 '-0'은 서로 다른 어휘 형식입니다. 어휘 형식에서 값으로의 매핑은 이 데이터형과 그 정밀도에 따라 다릅니다. 어휘 형식(정규식 스타일): (\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@ko, "IEEE 754 32-bit floating-point numbers. Lexical forms use decimal or scientific notation with optional leading sign and exponent; special tokens 'INF', '+INF', '-INF', and 'NaN' are permitted; '+0' and '-0' are distinct lexical forms. Mapping from lexical forms to values is specific to this datatype and its precision. Lexical form (regex-style): (\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@en .
 
 xsd:date
     rdfs:label "날짜"@ko, "date"@en ;
@@ -59,37 +59,37 @@ xsd:dateTimeStamp
     rdfs:label "시간대가 있는 날짜와 시간"@ko, "dateTimeStamp"@en ;
     skos:prefLabel "시간대가 있는 날짜와 시간"@ko, "date and time with timezone"@en ;
     skos:altLabel "dateTimeStamp"@en ;
-    rdfs:comment "명시적 시간대 오프셋이 필수인 dateTime입니다. 어휘 형식: YYYY-MM-DDThh:mm:ss(.s+)?(Z|±hh:mm)이며 시간대 오프셋은 필수입니다."@ko, "dateTime with a required explicit timezone offset. Lexical form: YYYY-MM-DDThh:mm:ss(.s+)?(Z|±hh:mm); the timezone offset is mandatory."@en .
+    rdfs:comment "명시적 시간대 오프셋이 필수인 날짜와 시간입니다. 어휘 형식: YYYY-MM-DDThh:mm:ss(.s+)?(Z|±hh:mm)이며 시간대 오프셋은 필수입니다."@ko, "Dates and times with a required explicit timezone offset. Lexical form: YYYY-MM-DDThh:mm:ss(.s+)?(Z|±hh:mm); the timezone offset is mandatory."@en .
 
 xsd:gYear
     rdfs:label "그레고리력 연도"@ko, "gYear"@en ;
     skos:prefLabel "그레고리력 연도"@ko, "Gregorian year"@en ;
     skos:altLabel "gYear"@en ;
-    rdfs:comment "그레고리력 연도입니다. 어휘 형식: CCYY이며 기원전 연도의 선행 '-'와 시간대는 선택 사항입니다. 시간대 어휘 형식: 'Z' 또는 |offset| ≤ 14:00인 ±hh:mm이며, 연도는 -?([1-9][0-9]{3,}|0[0-9]{3})에 일치합니다."@ko, "Gregorian year. Lexical form: CCYY (optionally with a leading '-' for years BCE and optional timezone). Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00; years are matched by -?([1-9][0-9]{3,}|0[0-9]{3})."@en .
+    rdfs:comment "그레고리력 연도입니다. 어휘 형식: CCYY이며 기원전 연도의 선행 '-'와 시간대는 선택 사항입니다. 시간대 어휘 형식: 'Z' 또는 |offset| ≤ 14:00인 ±hh:mm이며, 연도는 -?([1-9][0-9]{3,}|0[0-9]{3})에 일치합니다."@ko, "Gregorian years. Lexical form: CCYY (optionally with a leading '-' for years BCE and optional timezone). Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00; years are matched by -?([1-9][0-9]{3,}|0[0-9]{3})."@en .
 
 xsd:gMonth
     rdfs:label "그레고리력 월"@ko, "gMonth"@en ;
     skos:prefLabel "그레고리력 월"@ko, "Gregorian month"@en ;
     skos:altLabel "gMonth"@en ;
-    rdfs:comment "매년 반복되는 그레고리력 월입니다. 어휘 형식: --MM이며 시간대는 선택 사항입니다. 시간대 어휘 형식: 'Z' 또는 |offset| ≤ 14:00인 ±hh:mm입니다(예: '--02Z', '--11+05:30')."@ko, "Gregorian month recurring each year. Lexical form: --MM with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '--02Z', '--11+05:30')."@en .
+    rdfs:comment "매년 반복되는 그레고리력 월입니다. 어휘 형식: --MM이며 시간대는 선택 사항입니다. 시간대 어휘 형식: 'Z' 또는 |offset| ≤ 14:00인 ±hh:mm입니다(예: '--02Z', '--11+05:30')."@ko, "Gregorian months recurring each year. Lexical form: --MM with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '--02Z', '--11+05:30')."@en .
 
 xsd:gDay
     rdfs:label "그레고리력 월의 일"@ko, "gDay"@en ;
     skos:prefLabel "그레고리력 월의 일"@ko, "Gregorian day"@en ;
     skos:altLabel "gDay"@en ;
-    rdfs:comment "매월 반복되는 월의 일입니다. 어휘 형식: ---DD이며 시간대는 선택 사항입니다. 시간대 어휘 형식: 'Z' 또는 |offset| ≤ 14:00인 ±hh:mm입니다(예: '---05Z', '---31-03:00')."@ko, "Day in a month recurring each month. Lexical form: ---DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '---05Z', '---31-03:00')."@en .
+    rdfs:comment "매월 반복되는 월의 일입니다. 어휘 형식: ---DD이며 시간대는 선택 사항입니다. 시간대 어휘 형식: 'Z' 또는 |offset| ≤ 14:00인 ±hh:mm입니다(예: '---05Z', '---31-03:00')."@ko, "Days in a month recurring each month. Lexical form: ---DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '---05Z', '---31-03:00')."@en .
 
 xsd:gYearMonth
     rdfs:label "그레고리력 연도와 월"@ko, "gYearMonth"@en ;
     skos:prefLabel "그레고리력 연도와 월"@ko, "Gregorian year and month"@en ;
     skos:altLabel "gYearMonth"@en ;
-    rdfs:comment "그레고리력 연도와 월입니다. 어휘 형식: CCYY-MM이며 시간대는 선택 사항입니다. 시간대 어휘 형식: 'Z' 또는 |offset| ≤ 14:00인 ±hh:mm입니다(예: '2025-09Z', '1999-12+01:00')."@ko, "Gregorian year and month. Lexical form: CCYY-MM with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '2025-09Z', '1999-12+01:00')."@en .
+    rdfs:comment "그레고리력 연도와 월입니다. 어휘 형식: CCYY-MM이며 시간대는 선택 사항입니다. 시간대 어휘 형식: 'Z' 또는 |offset| ≤ 14:00인 ±hh:mm입니다(예: '2025-09Z', '1999-12+01:00')."@ko, "Gregorian year-month pairs. Lexical form: CCYY-MM with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '2025-09Z', '1999-12+01:00')."@en .
 
 xsd:gMonthDay
     rdfs:label "그레고리력 월과 일"@ko, "gMonthDay"@en ;
     skos:prefLabel "그레고리력 월과 일"@ko, "Gregorian month and day"@en ;
     skos:altLabel "gMonthDay"@en ;
-    rdfs:comment "매년 반복되는 월과 일입니다. 어휘 형식: --MM-DD이며 시간대는 선택 사항입니다. 시간대 어휘 형식: 'Z' 또는 |offset| ≤ 14:00인 ±hh:mm입니다(예: '--12-31Z', '--02-29+09:00')."@ko, "Month and day recurring each year. Lexical form: --MM-DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '--12-31Z', '--02-29+09:00')."@en .
+    rdfs:comment "매년 반복되는 월과 일입니다. 어휘 형식: --MM-DD이며 시간대는 선택 사항입니다. 시간대 어휘 형식: 'Z' 또는 |offset| ≤ 14:00인 ±hh:mm입니다(예: '--12-31Z', '--02-29+09:00')."@ko, "Month-day pairs recurring each year. Lexical form: --MM-DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '--12-31Z', '--02-29+09:00')."@en .
 
 xsd:duration
     rdfs:label "기간"@ko, "duration"@en ;
@@ -100,61 +100,61 @@ xsd:yearMonthDuration
     rdfs:label "연도와 월의 기간"@ko, "yearMonthDuration"@en ;
     skos:prefLabel "연도와 월의 기간"@ko, "year and month duration"@en ;
     skos:altLabel "yearMonthDuration"@en ;
-    rdfs:comment "연도와 월 필드로 제한된 기간이며 초 구성 요소는 0입니다. 전순서를 가집니다. 어휘 형식은 PnYnM을 사용하며 선행 '-'는 선택 사항입니다(예: 'P2Y', 'P3M', '-P1Y2M')."@ko, "Duration restricted to year and month fields (seconds component is 0). Totally ordered; lexical form uses PnYnM with optional leading '-' (e.g., 'P2Y', 'P3M', '-P1Y2M')."@en .
+    rdfs:comment "연도와 월 필드로 제한된 기간이며 초 구성 요소는 0입니다. 전순서를 가집니다. 어휘 형식은 PnYnM을 사용하며 선행 '-'는 선택 사항입니다(예: 'P2Y', 'P3M', '-P1Y2M')."@ko, "Durations restricted to year and month fields (seconds component is 0). Totally ordered; lexical form uses PnYnM with optional leading '-' (e.g., 'P2Y', 'P3M', '-P1Y2M')."@en .
 
 xsd:dayTimeDuration
     rdfs:label "일, 시간, 분, 초의 기간"@ko, "dayTimeDuration"@en ;
     skos:prefLabel "일, 시간, 분, 초의 기간"@ko, "duration in days, hours, minutes and seconds"@en ;
     skos:altLabel "dayTimeDuration"@en ;
-    rdfs:comment "일, 시간, 분, 초 필드로 제한된 기간이며 월 구성 요소는 0입니다. 전순서를 가집니다. 어휘 형식은 'PnDTnHnMnS'이며 선행 '-'와 초의 소수부는 선택 사항입니다(예: 'P30D', 'PT12H30M', 'PT5.25S', '-P1DT2H')."@ko, "Duration restricted to day, hour, minute, second fields (months component is 0). Totally ordered; lexical form 'PnDTnHnMnS' with optional leading '-' and optional fractional seconds (e.g., 'P30D', 'PT12H30M', 'PT5.25S', '-P1DT2H')."@en .
+    rdfs:comment "일, 시간, 분, 초 필드로 제한된 기간이며 월 구성 요소는 0입니다. 전순서를 가집니다. 어휘 형식은 'PnDTnHnMnS'이며 선행 '-'와 초의 소수부는 선택 사항입니다(예: 'P30D', 'PT12H30M', 'PT5.25S', '-P1DT2H')."@ko, "Durations restricted to day, hour, minute, second fields (months component is 0). Totally ordered; lexical form 'PnDTnHnMnS' with optional leading '-' and optional fractional seconds (e.g., 'P30D', 'PT12H30M', 'PT5.25S', '-P1DT2H')."@en .
 
 xsd:byte
     rdfs:label "8비트 부호 있는 정수"@ko, "byte"@en ;
     skos:prefLabel "8비트 부호 있는 정수"@ko, "8-bit signed integer"@en ;
     skos:altLabel "byte"@en ;
-    rdfs:comment "8비트 부호 있는 정수입니다. 값 공간: [-128 .. 127]입니다. 어휘 형식: 선택적 부호 뒤에 하나 이상의 숫자가 옵니다. 소수점이나 지수는 없습니다(예: '-1', '0', '+100')."@ko, "8-bit signed integer. Value space: [-128 .. 127]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent (e.g., '-1', '0', '+100')."@en .
+    rdfs:comment "8비트 부호 있는 정수입니다. 값 공간: [-128 .. 127]입니다. 어휘 형식: 선택적 부호 뒤에 하나 이상의 숫자가 옵니다. 소수점이나 지수는 없습니다(예: '-1', '0', '+100')."@ko, "8-bit signed integers. Value space: [-128 .. 127]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent (e.g., '-1', '0', '+100')."@en .
 
 xsd:short
     rdfs:label "16비트 부호 있는 정수"@ko, "short"@en ;
     skos:prefLabel "16비트 부호 있는 정수"@ko, "16-bit signed integer"@en ;
     skos:altLabel "short"@en ;
-    rdfs:comment "16비트 부호 있는 정수입니다. 값 공간: [-32768 .. 32767]입니다. 어휘 형식: 선택적 부호 뒤에 하나 이상의 숫자가 옵니다. 소수점이나 지수는 없습니다(예: '-1', '0', '+10000')."@ko, "16-bit signed integer. Value space: [-32768 .. 32767]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent (e.g., '-1', '0', '+10000')."@en .
+    rdfs:comment "16비트 부호 있는 정수입니다. 값 공간: [-32768 .. 32767]입니다. 어휘 형식: 선택적 부호 뒤에 하나 이상의 숫자가 옵니다. 소수점이나 지수는 없습니다(예: '-1', '0', '+10000')."@ko, "16-bit signed integers. Value space: [-32768 .. 32767]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent (e.g., '-1', '0', '+10000')."@en .
 
 xsd:int
     rdfs:label "32비트 부호 있는 정수"@ko, "int"@en ;
     skos:prefLabel "32비트 부호 있는 정수"@ko, "32-bit signed integer"@en ;
     skos:altLabel "int"@en ;
-    rdfs:comment "32비트 부호 있는 정수입니다. 값 공간: [-2147483648 .. 2147483647]입니다. 어휘 형식: 선택적 부호 뒤에 하나 이상의 숫자가 옵니다. 소수점이나 지수는 없습니다(예: '-1', '0', '+100000')."@ko, "32-bit signed integer. Value space: [-2147483648 .. 2147483647]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent (e.g., '-1', '0', '+100000')."@en .
+    rdfs:comment "32비트 부호 있는 정수입니다. 값 공간: [-2147483648 .. 2147483647]입니다. 어휘 형식: 선택적 부호 뒤에 하나 이상의 숫자가 옵니다. 소수점이나 지수는 없습니다(예: '-1', '0', '+100000')."@ko, "32-bit signed integers. Value space: [-2147483648 .. 2147483647]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent (e.g., '-1', '0', '+100000')."@en .
 
 xsd:long
     rdfs:label "64비트 부호 있는 정수"@ko, "long"@en ;
     skos:prefLabel "64비트 부호 있는 정수"@ko, "64-bit signed integer"@en ;
     skos:altLabel "long"@en ;
-    rdfs:comment "64비트 부호 있는 정수입니다. 값 공간: [-9223372036854775808 .. 9223372036854775807]입니다. 어휘 형식: 선택적 부호 뒤에 하나 이상의 숫자가 옵니다. 소수점이나 지수는 없습니다."@ko, "64-bit signed integer. Value space: [-9223372036854775808 .. 9223372036854775807]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent."@en .
+    rdfs:comment "64비트 부호 있는 정수입니다. 값 공간: [-9223372036854775808 .. 9223372036854775807]입니다. 어휘 형식: 선택적 부호 뒤에 하나 이상의 숫자가 옵니다. 소수점이나 지수는 없습니다."@ko, "64-bit signed integers. Value space: [-9223372036854775808 .. 9223372036854775807]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent."@en .
 
 xsd:unsignedByte
     rdfs:label "8비트 부호 없는 정수"@ko, "unsignedByte"@en ;
     skos:prefLabel "8비트 부호 없는 정수"@ko, "8-bit unsigned integer"@en ;
     skos:altLabel "unsignedByte"@en ;
-    rdfs:comment "8비트 부호 없는 정수입니다. 값 공간: [0 .. 255]입니다. 어휘 형식: 선택적 부호 뒤에 숫자가 옵니다. 부호가 있으면 '+'여야 하지만, XSD 1.1 어휘 공간에서 0은 선택적으로 '+' 또는 '-' 부호를 붙여 쓸 수 있습니다."@ko, "8-bit unsigned integer. Value space: [0 .. 255]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
+    rdfs:comment "8비트 부호 없는 정수입니다. 값 공간: [0 .. 255]입니다. 어휘 형식: 선택적 부호 뒤에 숫자가 옵니다. 부호가 있으면 '+'여야 하지만, XSD 1.1 어휘 공간에서 0은 선택적으로 '+' 또는 '-' 부호를 붙여 쓸 수 있습니다."@ko, "8-bit unsigned integers. Value space: [0 .. 255]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
 
 xsd:unsignedShort
     rdfs:label "16비트 부호 없는 정수"@ko, "unsignedShort"@en ;
     skos:prefLabel "16비트 부호 없는 정수"@ko, "16-bit unsigned integer"@en ;
     skos:altLabel "unsignedShort"@en ;
-    rdfs:comment "16비트 부호 없는 정수입니다. 값 공간: [0 .. 65535]입니다. 어휘 형식: 선택적 부호 뒤에 숫자가 옵니다. 부호가 있으면 '+'여야 하지만, XSD 1.1 어휘 공간에서 0은 선택적으로 '+' 또는 '-' 부호를 붙여 쓸 수 있습니다."@ko, "16-bit unsigned integer. Value space: [0 .. 65535]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
+    rdfs:comment "16비트 부호 없는 정수입니다. 값 공간: [0 .. 65535]입니다. 어휘 형식: 선택적 부호 뒤에 숫자가 옵니다. 부호가 있으면 '+'여야 하지만, XSD 1.1 어휘 공간에서 0은 선택적으로 '+' 또는 '-' 부호를 붙여 쓸 수 있습니다."@ko, "16-bit unsigned integers. Value space: [0 .. 65535]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
 
 xsd:unsignedInt
     rdfs:label "32비트 부호 없는 정수"@ko, "unsignedInt"@en ;
     skos:prefLabel "32비트 부호 없는 정수"@ko, "32-bit unsigned integer"@en ;
     skos:altLabel "unsignedInt"@en ;
-    rdfs:comment "32비트 부호 없는 정수입니다. 값 공간: [0 .. 4294967295]입니다. 어휘 형식: 선택적 부호 뒤에 숫자가 옵니다. 부호가 있으면 '+'여야 하지만, XSD 1.1 어휘 공간에서 0은 선택적으로 '+' 또는 '-' 부호를 붙여 쓸 수 있습니다."@ko, "32-bit unsigned integer. Value space: [0 .. 4294967295]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
+    rdfs:comment "32비트 부호 없는 정수입니다. 값 공간: [0 .. 4294967295]입니다. 어휘 형식: 선택적 부호 뒤에 숫자가 옵니다. 부호가 있으면 '+'여야 하지만, XSD 1.1 어휘 공간에서 0은 선택적으로 '+' 또는 '-' 부호를 붙여 쓸 수 있습니다."@ko, "32-bit unsigned integers. Value space: [0 .. 4294967295]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
 
 xsd:unsignedLong
     rdfs:label "64비트 부호 없는 정수"@ko, "unsignedLong"@en ;
     skos:prefLabel "64비트 부호 없는 정수"@ko, "64-bit unsigned integer"@en ;
     skos:altLabel "unsignedLong"@en ;
-    rdfs:comment "64비트 부호 없는 정수입니다. 값 공간: [0 .. 18446744073709551615]입니다. 어휘 형식: 선택적 부호 뒤에 숫자가 옵니다. 부호가 있으면 '+'여야 하지만, XSD 1.1 어휘 공간에서 0은 선택적으로 '+' 또는 '-' 부호를 붙여 쓸 수 있습니다."@ko, "64-bit unsigned integer. Value space: [0 .. 18446744073709551615]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
+    rdfs:comment "64비트 부호 없는 정수입니다. 값 공간: [0 .. 18446744073709551615]입니다. 어휘 형식: 선택적 부호 뒤에 숫자가 옵니다. 부호가 있으면 '+'여야 하지만, XSD 1.1 어휘 공간에서 0은 선택적으로 '+' 또는 '-' 부호를 붙여 쓸 수 있습니다."@ko, "64-bit unsigned integers. Value space: [0 .. 18446744073709551615]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
 
 xsd:positiveInteger
     rdfs:label "양의 정수"@ko, "positiveInteger"@en ;
@@ -190,13 +190,13 @@ xsd:base64Binary
     rdfs:label "Base64로 인코딩된 이진 데이터"@ko, "base64Binary"@en ;
     skos:prefLabel "Base64로 인코딩된 이진 데이터"@ko, "Base64 binary data"@en ;
     skos:altLabel "base64Binary"@en ;
-    rdfs:comment "Base64를 사용하여 인코딩된 임의의 이진 데이터입니다. 어휘 공간은 RFC 2045/3548을 따르며 XML 규칙에 따른 선택적 공백이 허용됩니다. 어휘 형식: Base64 문자 집합 'A–Z', 'a–z', '0–9', '+', '/'와 선택적 '=' 패딩입니다. 검증 중 공백은 축약됩니다."@ko, "Arbitrary binary data encoded using Base64. Lexical space per RFC 2045/3548; optional whitespace allowed per XML rules. Lexical form: Base64 alphabet 'A–Z', 'a–z', '0–9', '+', '/' with optional '=' padding; whitespace is collapsed during validation."@en .
+    rdfs:comment "Base64를 사용하여 인코딩된 임의의 이진 데이터입니다. Base64 문자 집합은 RFC 4648을 따르며, 어휘 형식과 공백 처리는 XML Schema 규칙을 따릅니다. 어휘 형식: Base64 문자 집합 'A–Z', 'a–z', '0–9', '+', '/'와 선택적 '=' 패딩입니다. 검증 중 공백은 축약됩니다."@ko, "Arbitrary binary data encoded using Base64. Base64 alphabet per RFC 4648; lexical forms and whitespace handling follow XML Schema rules. Lexical form: Base64 alphabet 'A–Z', 'a–z', '0–9', '+', '/' with optional '=' padding; whitespace is collapsed during validation."@en .
 
 xsd:anyURI
     rdfs:label "IRI 참조"@ko, "anyURI"@en ;
     skos:prefLabel "IRI 참조"@ko, "IRI reference"@en ;
     skos:altLabel "anyURI"@en ;
-    rdfs:comment "RFC 3987에 따른 국제화 리소스 식별자(IRI) 또는 IRI 참조입니다. 어휘 공간은 단순히 xsd:string입니다(XSD는 고정 문법을 강제하지 않습니다). 일반적인 어휘 형식에는 절대 또는 상대 IRI와 선택적 프래그먼트 식별자가 포함됩니다. 처리기는 이스케이프 처리나 IRI에서 URI로의 매핑을 적용할 수 있습니다."@ko, "Internationalized Resource Identifier (IRI) or IRI reference per RFC 3987. Lexical space is simply xsd:string (no fixed grammar is enforced by XSD); typical lexical forms include absolute or relative IRIs and optional fragment identifiers; processors may apply escaping/IRI-to-URI mapping."@en .
+    rdfs:comment "RFC 3987에 따른 국제화 리소스 식별자(IRI) 또는 IRI 참조입니다. 어휘 공간은 단순히 xsd:string입니다(XSD는 고정 문법을 강제하지 않습니다). 일반적인 어휘 형식에는 절대 또는 상대 IRI와 선택적 프래그먼트 식별자가 포함됩니다. 처리기는 이스케이프 처리나 IRI에서 URI로의 매핑을 적용할 수 있습니다."@ko, "Internationalized Resource Identifiers (IRIs) or IRI references per RFC 3987. Lexical space is simply xsd:string (no fixed grammar is enforced by XSD); typical lexical forms include absolute or relative IRIs and optional fragment identifiers; processors may apply escaping/IRI-to-URI mapping."@en .
 
 xsd:language
     rdfs:label "언어 식별자"@ko, "language"@en ;

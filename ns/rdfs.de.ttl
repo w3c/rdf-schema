@@ -38,7 +38,7 @@ rdfs:subPropertyOf
 rdfs:comment
     rdfs:label "Kommentar"@de, "comment"@en ;
     skos:prefLabel "Kommentar"@de, "comment"@en ;
-    rdfs:comment "Eine Beschreibung der Ressource, die das Subjekt ist."@de, "A description of the subject resource."@en .
+    rdfs:comment "Eine Beschreibung der Subjektressource."@de, "A description of the subject resource."@en .
 
 rdfs:label
     rdfs:label "Bezeichnung"@de, "label"@en ;
@@ -48,24 +48,24 @@ rdfs:label
 rdfs:domain
     rdfs:label "Definitionsbereich"@de, "domain"@en ;
     skos:prefLabel "Definitionsbereich"@de, "domain"@en ;
-    rdfs:comment "Ein Definitionsbereich der als Subjekt angegebenen Eigenschaft."@de, "A domain of the subject property."@en .
+    rdfs:comment "Ein Definitionsbereich der Subjekteigenschaft."@de, "A domain of the subject property."@en .
 
 rdfs:range
     rdfs:label "Wertebereich"@de, "range"@en ;
     skos:prefLabel "Wertebereich"@de, "range"@en ;
-    rdfs:comment "Ein Wertebereich der als Subjekt angegebenen Eigenschaft."@de, "A range of the subject property."@en .
+    rdfs:comment "Ein Wertebereich der Subjekteigenschaft."@de, "A range of the subject property."@en .
 
 rdfs:seeAlso
     rdfs:label "siehe auch"@de, "seeAlso"@en ;
     skos:prefLabel "siehe auch"@de, "see also"@en ;
     skos:altLabel "seeAlso"@en ;
-    rdfs:comment "Weitere Informationen über die Ressource, die das Subjekt ist."@de, "Further information about the subject resource."@en .
+    rdfs:comment "Weitere Informationen über die Subjektressource."@de, "Further information about the subject resource."@en .
 
 rdfs:isDefinedBy
     rdfs:label "ist definiert durch"@de, "isDefinedBy"@en ;
     skos:prefLabel "ist definiert durch"@de, "is defined by"@en ;
     skos:altLabel "isDefinedBy"@en ;
-    rdfs:comment "Die Definition der Ressource, die das Subjekt ist."@de, "The definition of the subject resource."@en .
+    rdfs:comment "Die Definition der Subjektressource."@de, "The definition of the subject resource."@en .
 
 rdfs:Literal
     rdfs:label "Literal"@de, "Literal"@en ;
@@ -88,7 +88,7 @@ rdfs:ContainerMembershipProperty
 rdfs:member
     rdfs:label "Element"@de, "member"@en ;
     skos:prefLabel "Element"@de, "member"@en ;
-    rdfs:comment "Ein Element der Ressource, die das Subjekt ist."@de, "A member of the subject resource."@en .
+    rdfs:comment "Ein Element der Subjektressource."@de, "A member of the subject resource."@en .
 
 rdfs:Datatype
     rdfs:label "Datentyp"@de, "Datatype"@en ;

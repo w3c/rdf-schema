@@ -55,17 +55,17 @@ rdf:Statement
 rdf:subject
     rdfs:label "Subjekt"@de, "subject"@en ;
     skos:prefLabel "Subjekt"@de, "subject"@en ;
-    rdfs:comment "Das Subjekt der RDF-Aussage, die durch die Subjektressource dieses Tripels repräsentiert wird."@de, "The subject of the subject RDF statement."@en .
+    rdfs:comment "Das Subjekt der RDF-Aussage, die das Subjekt dieses Tripels ist."@de, "The subject of the subject RDF statement."@en .
 
 rdf:predicate
     rdfs:label "Prädikat"@de, "predicate"@en ;
     skos:prefLabel "Prädikat"@de, "predicate"@en ;
-    rdfs:comment "Das Prädikat der RDF-Aussage, die durch die Subjektressource dieses Tripels repräsentiert wird."@de, "The predicate of the subject RDF statement."@en .
+    rdfs:comment "Das Prädikat der RDF-Aussage, die das Subjekt dieses Tripels ist."@de, "The predicate of the subject RDF statement."@en .
 
 rdf:object
     rdfs:label "Objekt"@de, "object"@en ;
     skos:prefLabel "Objekt"@de, "object"@en ;
-    rdfs:comment "Das Objekt der RDF-Aussage, die durch die Subjektressource dieses Tripels repräsentiert wird."@de, "The object of the subject RDF statement."@en .
+    rdfs:comment "Das Objekt der RDF-Aussage, die das Subjekt dieses Tripels ist."@de, "The object of the subject RDF statement."@en .
 
 rdf:Bag
     rdfs:label "Multimenge"@de, "Bag"@en ;

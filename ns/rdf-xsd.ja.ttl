@@ -15,7 +15,7 @@ xsd:string
 xsd:boolean
     rdfs:label "真偽値"@ja, "boolean"@en ;
     skos:prefLabel "真偽値"@ja, "boolean"@en ;
-    rdfs:comment "二値論理。字句形式：'true'、'false'、'1'、'0'。値空間：{true, false}。"@ja, "Two-valued logic. Lexical forms: 'true', 'false', '1', '0'. Value space: {true, false}."@en .
+    rdfs:comment "二値論理。字句形式：'true'、'false'、'1'、'0'。値空間：{真, 偽}。"@ja, "Two-valued logic. Lexical forms: 'true', 'false', '1', '0'. Value space: {true, false}."@en .
 
 xsd:decimal
     rdfs:label "十進数"@ja, "decimal"@en ;
@@ -31,13 +31,13 @@ xsd:double
     rdfs:label "64ビット浮動小数点数"@ja, "double"@en ;
     skos:prefLabel "64ビット浮動小数点数"@ja, "64-bit floating-point number"@en ;
     skos:altLabel "double"@en ;
-    rdfs:comment "IEEE 754の64ビット浮動小数点数。字句形式は十進表記または科学表記を使用し、先頭符号と指数は任意です。特殊トークン'INF'、'+INF'、'-INF'、'NaN'を使用できます。'+0'と'-0'は異なる字句形式です。字句形式から値への写像は、このデータ型とその精度に固有です。字句形式（正規表現風）：(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@ja, "IEEE 754 64-bit floating-point. Lexical forms use decimal or scientific notation with optional leading sign and exponent; special tokens 'INF', '+INF', '-INF', and 'NaN' are permitted; '+0' and '-0' are distinct lexical forms. Mapping from lexical forms to values is specific to this datatype and its precision. Lexical form (regex-style): (\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@en .
+    rdfs:comment "IEEE 754の64ビット浮動小数点数。字句形式は十進表記または科学表記を使用し、先頭符号と指数は任意です。特殊トークン'INF'、'+INF'、'-INF'、'NaN'を使用できます。'+0'と'-0'は異なる字句形式です。字句形式から値への写像は、このデータ型とその精度に固有です。字句形式（正規表現風）：(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@ja, "IEEE 754 64-bit floating-point numbers. Lexical forms use decimal or scientific notation with optional leading sign and exponent; special tokens 'INF', '+INF', '-INF', and 'NaN' are permitted; '+0' and '-0' are distinct lexical forms. Mapping from lexical forms to values is specific to this datatype and its precision. Lexical form (regex-style): (\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@en .
 
 xsd:float
     rdfs:label "32ビット浮動小数点数"@ja, "float"@en ;
     skos:prefLabel "32ビット浮動小数点数"@ja, "32-bit floating-point number"@en ;
     skos:altLabel "float"@en ;
-    rdfs:comment "IEEE 754の32ビット浮動小数点数。字句形式は十進表記または科学表記を使用し、先頭符号と指数は任意です。特殊トークン'INF'、'+INF'、'-INF'、'NaN'を使用できます。'+0'と'-0'は異なる字句形式です。字句形式から値への写像は、このデータ型とその精度に固有です。字句形式（正規表現風）：(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@ja, "IEEE 754 32-bit floating-point. Lexical forms use decimal or scientific notation with optional leading sign and exponent; special tokens 'INF', '+INF', '-INF', and 'NaN' are permitted; '+0' and '-0' are distinct lexical forms. Mapping from lexical forms to values is specific to this datatype and its precision. Lexical form (regex-style): (\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@en .
+    rdfs:comment "IEEE 754の32ビット浮動小数点数。字句形式は十進表記または科学表記を使用し、先頭符号と指数は任意です。特殊トークン'INF'、'+INF'、'-INF'、'NaN'を使用できます。'+0'と'-0'は異なる字句形式です。字句形式から値への写像は、このデータ型とその精度に固有です。字句形式（正規表現風）：(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@ja, "IEEE 754 32-bit floating-point numbers. Lexical forms use decimal or scientific notation with optional leading sign and exponent; special tokens 'INF', '+INF', '-INF', and 'NaN' are permitted; '+0' and '-0' are distinct lexical forms. Mapping from lexical forms to values is specific to this datatype and its precision. Lexical form (regex-style): (\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)? |(\\+|-)?INF|NaN."@en .
 
 xsd:date
     rdfs:label "日付"@ja, "date"@en ;
@@ -59,37 +59,37 @@ xsd:dateTimeStamp
     rdfs:label "タイムゾーン付き日付と時刻"@ja, "dateTimeStamp"@en ;
     skos:prefLabel "タイムゾーン付き日付と時刻"@ja, "date and time with timezone"@en ;
     skos:altLabel "dateTimeStamp"@en ;
-    rdfs:comment "明示的なタイムゾーンオフセットを必須とするdateTime。字句形式：YYYY-MM-DDThh:mm:ss(.s+)?(Z|±hh:mm)。タイムゾーンオフセットは必須です。"@ja, "dateTime with a required explicit timezone offset. Lexical form: YYYY-MM-DDThh:mm:ss(.s+)?(Z|±hh:mm); the timezone offset is mandatory."@en .
+    rdfs:comment "明示的なタイムゾーンオフセットを必須とする日付と時刻。字句形式：YYYY-MM-DDThh:mm:ss(.s+)?(Z|±hh:mm)。タイムゾーンオフセットは必須です。"@ja, "Dates and times with a required explicit timezone offset. Lexical form: YYYY-MM-DDThh:mm:ss(.s+)?(Z|±hh:mm); the timezone offset is mandatory."@en .
 
 xsd:gYear
     rdfs:label "グレゴリオ暦の年"@ja, "gYear"@en ;
     skos:prefLabel "グレゴリオ暦の年"@ja, "Gregorian year"@en ;
     skos:altLabel "gYear"@en ;
-    rdfs:comment "グレゴリオ暦の年。字句形式：CCYY（紀元前の年を表す先頭の'-'とタイムゾーンは任意です）。タイムゾーンの字句形式：'Z'、または|offset| ≤ 14:00を満たす±hh:mm。年は-?([1-9][0-9]{3,}|0[0-9]{3})に一致します。"@ja, "Gregorian year. Lexical form: CCYY (optionally with a leading '-' for years BCE and optional timezone). Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00; years are matched by -?([1-9][0-9]{3,}|0[0-9]{3})."@en .
+    rdfs:comment "グレゴリオ暦の年。字句形式：CCYY（紀元前の年を表す先頭の'-'とタイムゾーンは任意です）。タイムゾーンの字句形式：'Z'、または|offset| ≤ 14:00を満たす±hh:mm。年は-?([1-9][0-9]{3,}|0[0-9]{3})に一致します。"@ja, "Gregorian years. Lexical form: CCYY (optionally with a leading '-' for years BCE and optional timezone). Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00; years are matched by -?([1-9][0-9]{3,}|0[0-9]{3})."@en .
 
 xsd:gMonth
     rdfs:label "グレゴリオ暦の月"@ja, "gMonth"@en ;
     skos:prefLabel "グレゴリオ暦の月"@ja, "Gregorian month"@en ;
     skos:altLabel "gMonth"@en ;
-    rdfs:comment "毎年繰り返すグレゴリオ暦の月。字句形式：--MMで、タイムゾーンは任意です。タイムゾーンの字句形式：'Z'、または|offset| ≤ 14:00を満たす±hh:mm（例：'--02Z'、'--11+05:30'）。"@ja, "Gregorian month recurring each year. Lexical form: --MM with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '--02Z', '--11+05:30')."@en .
+    rdfs:comment "毎年繰り返すグレゴリオ暦の月。字句形式：--MMで、タイムゾーンは任意です。タイムゾーンの字句形式：'Z'、または|offset| ≤ 14:00を満たす±hh:mm（例：'--02Z'、'--11+05:30'）。"@ja, "Gregorian months recurring each year. Lexical form: --MM with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '--02Z', '--11+05:30')."@en .
 
 xsd:gDay
     rdfs:label "グレゴリオ暦の月内の日"@ja, "gDay"@en ;
     skos:prefLabel "グレゴリオ暦の月内の日"@ja, "Gregorian day"@en ;
     skos:altLabel "gDay"@en ;
-    rdfs:comment "毎月繰り返す月内の日。字句形式：---DDで、タイムゾーンは任意です。タイムゾーンの字句形式：'Z'、または|offset| ≤ 14:00を満たす±hh:mm（例：'---05Z'、'---31-03:00'）。"@ja, "Day in a month recurring each month. Lexical form: ---DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '---05Z', '---31-03:00')."@en .
+    rdfs:comment "毎月繰り返す月内の日。字句形式：---DDで、タイムゾーンは任意です。タイムゾーンの字句形式：'Z'、または|offset| ≤ 14:00を満たす±hh:mm（例：'---05Z'、'---31-03:00'）。"@ja, "Days in a month recurring each month. Lexical form: ---DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '---05Z', '---31-03:00')."@en .
 
 xsd:gYearMonth
     rdfs:label "グレゴリオ暦の年と月"@ja, "gYearMonth"@en ;
     skos:prefLabel "グレゴリオ暦の年と月"@ja, "Gregorian year and month"@en ;
     skos:altLabel "gYearMonth"@en ;
-    rdfs:comment "グレゴリオ暦の年と月。字句形式：CCYY-MMで、タイムゾーンは任意です。タイムゾーンの字句形式：'Z'、または|offset| ≤ 14:00を満たす±hh:mm（例：'2025-09Z'、'1999-12+01:00'）。"@ja, "Gregorian year and month. Lexical form: CCYY-MM with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '2025-09Z', '1999-12+01:00')."@en .
+    rdfs:comment "グレゴリオ暦の年と月。字句形式：CCYY-MMで、タイムゾーンは任意です。タイムゾーンの字句形式：'Z'、または|offset| ≤ 14:00を満たす±hh:mm（例：'2025-09Z'、'1999-12+01:00'）。"@ja, "Gregorian year-month pairs. Lexical form: CCYY-MM with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '2025-09Z', '1999-12+01:00')."@en .
 
 xsd:gMonthDay
     rdfs:label "グレゴリオ暦の月と日"@ja, "gMonthDay"@en ;
     skos:prefLabel "グレゴリオ暦の月と日"@ja, "Gregorian month and day"@en ;
     skos:altLabel "gMonthDay"@en ;
-    rdfs:comment "毎年繰り返す月と日。字句形式：--MM-DDで、タイムゾーンは任意です。タイムゾーンの字句形式：'Z'、または|offset| ≤ 14:00を満たす±hh:mm（例：'--12-31Z'、'--02-29+09:00'）。"@ja, "Month and day recurring each year. Lexical form: --MM-DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '--12-31Z', '--02-29+09:00')."@en .
+    rdfs:comment "毎年繰り返す月と日。字句形式：--MM-DDで、タイムゾーンは任意です。タイムゾーンの字句形式：'Z'、または|offset| ≤ 14:00を満たす±hh:mm（例：'--12-31Z'、'--02-29+09:00'）。"@ja, "Month-day pairs recurring each year. Lexical form: --MM-DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '--12-31Z', '--02-29+09:00')."@en .
 
 xsd:duration
     rdfs:label "期間"@ja, "duration"@en ;
@@ -100,61 +100,61 @@ xsd:yearMonthDuration
     rdfs:label "年と月の期間"@ja, "yearMonthDuration"@en ;
     skos:prefLabel "年と月の期間"@ja, "year and month duration"@en ;
     skos:altLabel "yearMonthDuration"@en ;
-    rdfs:comment "年と月のフィールドに制限された期間（秒数成分は0）。全順序を持ちます。字句形式はPnYnMを使用し、先頭の'-'は任意です（例：'P2Y'、'P3M'、'-P1Y2M'）。"@ja, "Duration restricted to year and month fields (seconds component is 0). Totally ordered; lexical form uses PnYnM with optional leading '-' (e.g., 'P2Y', 'P3M', '-P1Y2M')."@en .
+    rdfs:comment "年と月のフィールドに制限された期間（秒数成分は0）。全順序を持ちます。字句形式はPnYnMを使用し、先頭の'-'は任意です（例：'P2Y'、'P3M'、'-P1Y2M'）。"@ja, "Durations restricted to year and month fields (seconds component is 0). Totally ordered; lexical form uses PnYnM with optional leading '-' (e.g., 'P2Y', 'P3M', '-P1Y2M')."@en .
 
 xsd:dayTimeDuration
     rdfs:label "日・時・分・秒の期間"@ja, "dayTimeDuration"@en ;
     skos:prefLabel "日・時・分・秒の期間"@ja, "duration in days, hours, minutes and seconds"@en ;
     skos:altLabel "dayTimeDuration"@en ;
-    rdfs:comment "日、時、分、秒のフィールドに制限された期間（月数成分は0）。全順序を持ちます。字句形式は'PnDTnHnMnS'で、先頭の'-'と秒の小数部は任意です（例：'P30D'、'PT12H30M'、'PT5.25S'、'-P1DT2H'）。"@ja, "Duration restricted to day, hour, minute, second fields (months component is 0). Totally ordered; lexical form 'PnDTnHnMnS' with optional leading '-' and optional fractional seconds (e.g., 'P30D', 'PT12H30M', 'PT5.25S', '-P1DT2H')."@en .
+    rdfs:comment "日、時、分、秒のフィールドに制限された期間（月数成分は0）。全順序を持ちます。字句形式は'PnDTnHnMnS'で、先頭の'-'と秒の小数部は任意です（例：'P30D'、'PT12H30M'、'PT5.25S'、'-P1DT2H'）。"@ja, "Durations restricted to day, hour, minute, second fields (months component is 0). Totally ordered; lexical form 'PnDTnHnMnS' with optional leading '-' and optional fractional seconds (e.g., 'P30D', 'PT12H30M', 'PT5.25S', '-P1DT2H')."@en .
 
 xsd:byte
     rdfs:label "8ビット符号付き整数"@ja, "byte"@en ;
     skos:prefLabel "8ビット符号付き整数"@ja, "8-bit signed integer"@en ;
     skos:altLabel "byte"@en ;
-    rdfs:comment "8ビット符号付き整数。値空間：[-128 .. 127]。字句形式：任意の符号に続く1個以上の数字。小数点や指数は使用しません（例：'-1', '0', '+100'）。"@ja, "8-bit signed integer. Value space: [-128 .. 127]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent (e.g., '-1', '0', '+100')."@en .
+    rdfs:comment "8ビット符号付き整数。値空間：[-128 .. 127]。字句形式：任意の符号に続く1個以上の数字。小数点や指数は使用しません（例：'-1', '0', '+100'）。"@ja, "8-bit signed integers. Value space: [-128 .. 127]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent (e.g., '-1', '0', '+100')."@en .
 
 xsd:short
     rdfs:label "16ビット符号付き整数"@ja, "short"@en ;
     skos:prefLabel "16ビット符号付き整数"@ja, "16-bit signed integer"@en ;
     skos:altLabel "short"@en ;
-    rdfs:comment "16ビット符号付き整数。値空間：[-32768 .. 32767]。字句形式：任意の符号に続く1個以上の数字。小数点や指数は使用しません（例：'-1', '0', '+10000'）。"@ja, "16-bit signed integer. Value space: [-32768 .. 32767]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent (e.g., '-1', '0', '+10000')."@en .
+    rdfs:comment "16ビット符号付き整数。値空間：[-32768 .. 32767]。字句形式：任意の符号に続く1個以上の数字。小数点や指数は使用しません（例：'-1', '0', '+10000'）。"@ja, "16-bit signed integers. Value space: [-32768 .. 32767]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent (e.g., '-1', '0', '+10000')."@en .
 
 xsd:int
     rdfs:label "32ビット符号付き整数"@ja, "int"@en ;
     skos:prefLabel "32ビット符号付き整数"@ja, "32-bit signed integer"@en ;
     skos:altLabel "int"@en ;
-    rdfs:comment "32ビット符号付き整数。値空間：[-2147483648 .. 2147483647]。字句形式：任意の符号に続く1個以上の数字。小数点や指数は使用しません（例：'-1', '0', '+100000'）。"@ja, "32-bit signed integer. Value space: [-2147483648 .. 2147483647]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent (e.g., '-1', '0', '+100000')."@en .
+    rdfs:comment "32ビット符号付き整数。値空間：[-2147483648 .. 2147483647]。字句形式：任意の符号に続く1個以上の数字。小数点や指数は使用しません（例：'-1', '0', '+100000'）。"@ja, "32-bit signed integers. Value space: [-2147483648 .. 2147483647]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent (e.g., '-1', '0', '+100000')."@en .
 
 xsd:long
     rdfs:label "64ビット符号付き整数"@ja, "long"@en ;
     skos:prefLabel "64ビット符号付き整数"@ja, "64-bit signed integer"@en ;
     skos:altLabel "long"@en ;
-    rdfs:comment "64ビット符号付き整数。値空間：[-9223372036854775808 .. 9223372036854775807]。字句形式：任意の符号に続く1個以上の数字。小数点や指数は使用しません。"@ja, "64-bit signed integer. Value space: [-9223372036854775808 .. 9223372036854775807]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent."@en .
+    rdfs:comment "64ビット符号付き整数。値空間：[-9223372036854775808 .. 9223372036854775807]。字句形式：任意の符号に続く1個以上の数字。小数点や指数は使用しません。"@ja, "64-bit signed integers. Value space: [-9223372036854775808 .. 9223372036854775807]. Lexical form: optional sign followed by one or more digits; no decimal point or exponent."@en .
 
 xsd:unsignedByte
     rdfs:label "8ビット符号なし整数"@ja, "unsignedByte"@en ;
     skos:prefLabel "8ビット符号なし整数"@ja, "8-bit unsigned integer"@en ;
     skos:altLabel "unsignedByte"@en ;
-    rdfs:comment "8ビット符号なし整数。値空間：[0 .. 255]。字句形式：任意の符号に続く数字列。符号を付ける場合は'+'に限られますが、XSD 1.1の字句空間では、ゼロに任意の'+'または'-'符号を付けられます。"@ja, "8-bit unsigned integer. Value space: [0 .. 255]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
+    rdfs:comment "8ビット符号なし整数。値空間：[0 .. 255]。字句形式：任意の符号に続く数字列。符号を付ける場合は'+'に限られますが、XSD 1.1の字句空間では、ゼロに任意の'+'または'-'符号を付けられます。"@ja, "8-bit unsigned integers. Value space: [0 .. 255]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
 
 xsd:unsignedShort
     rdfs:label "16ビット符号なし整数"@ja, "unsignedShort"@en ;
     skos:prefLabel "16ビット符号なし整数"@ja, "16-bit unsigned integer"@en ;
     skos:altLabel "unsignedShort"@en ;
-    rdfs:comment "16ビット符号なし整数。値空間：[0 .. 65535]。字句形式：任意の符号に続く数字列。符号を付ける場合は'+'に限られますが、XSD 1.1の字句空間では、ゼロに任意の'+'または'-'符号を付けられます。"@ja, "16-bit unsigned integer. Value space: [0 .. 65535]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
+    rdfs:comment "16ビット符号なし整数。値空間：[0 .. 65535]。字句形式：任意の符号に続く数字列。符号を付ける場合は'+'に限られますが、XSD 1.1の字句空間では、ゼロに任意の'+'または'-'符号を付けられます。"@ja, "16-bit unsigned integers. Value space: [0 .. 65535]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
 
 xsd:unsignedInt
     rdfs:label "32ビット符号なし整数"@ja, "unsignedInt"@en ;
     skos:prefLabel "32ビット符号なし整数"@ja, "32-bit unsigned integer"@en ;
     skos:altLabel "unsignedInt"@en ;
-    rdfs:comment "32ビット符号なし整数。値空間：[0 .. 4294967295]。字句形式：任意の符号に続く数字列。符号を付ける場合は'+'に限られますが、XSD 1.1の字句空間では、ゼロに任意の'+'または'-'符号を付けられます。"@ja, "32-bit unsigned integer. Value space: [0 .. 4294967295]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
+    rdfs:comment "32ビット符号なし整数。値空間：[0 .. 4294967295]。字句形式：任意の符号に続く数字列。符号を付ける場合は'+'に限られますが、XSD 1.1の字句空間では、ゼロに任意の'+'または'-'符号を付けられます。"@ja, "32-bit unsigned integers. Value space: [0 .. 4294967295]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
 
 xsd:unsignedLong
     rdfs:label "64ビット符号なし整数"@ja, "unsignedLong"@en ;
     skos:prefLabel "64ビット符号なし整数"@ja, "64-bit unsigned integer"@en ;
     skos:altLabel "unsignedLong"@en ;
-    rdfs:comment "64ビット符号なし整数。値空間：[0 .. 18446744073709551615]。字句形式：任意の符号に続く数字列。符号を付ける場合は'+'に限られますが、XSD 1.1の字句空間では、ゼロに任意の'+'または'-'符号を付けられます。"@ja, "64-bit unsigned integer. Value space: [0 .. 18446744073709551615]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
+    rdfs:comment "64ビット符号なし整数。値空間：[0 .. 18446744073709551615]。字句形式：任意の符号に続く数字列。符号を付ける場合は'+'に限られますが、XSD 1.1の字句空間では、ゼロに任意の'+'または'-'符号を付けられます。"@ja, "64-bit unsigned integers. Value space: [0 .. 18446744073709551615]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
 
 xsd:positiveInteger
     rdfs:label "正の整数"@ja, "positiveInteger"@en ;
@@ -190,13 +190,13 @@ xsd:base64Binary
     rdfs:label "Base64エンコードされたバイナリデータ"@ja, "base64Binary"@en ;
     skos:prefLabel "Base64エンコードされたバイナリデータ"@ja, "Base64 binary data"@en ;
     skos:altLabel "base64Binary"@en ;
-    rdfs:comment "Base64でエンコードされた任意のバイナリデータ。字句空間はRFC 2045/3548に従い、XMLの規則に従って任意の空白を使用できます。字句形式：Base64の文字集合'A–Z'、'a–z'、'0–9'、'+'、'/'と、任意の'='パディング。検証時に空白は縮約されます。"@ja, "Arbitrary binary data encoded using Base64. Lexical space per RFC 2045/3548; optional whitespace allowed per XML rules. Lexical form: Base64 alphabet 'A–Z', 'a–z', '0–9', '+', '/' with optional '=' padding; whitespace is collapsed during validation."@en .
+    rdfs:comment "Base64でエンコードされた任意のバイナリデータ。Base64の文字集合はRFC 4648に従い、字句形式と空白の処理はXML Schemaの規則に従います。字句形式：Base64の文字集合'A–Z'、'a–z'、'0–9'、'+'、'/'と、任意の'='パディング。検証時に空白は縮約されます。"@ja, "Arbitrary binary data encoded using Base64. Base64 alphabet per RFC 4648; lexical forms and whitespace handling follow XML Schema rules. Lexical form: Base64 alphabet 'A–Z', 'a–z', '0–9', '+', '/' with optional '=' padding; whitespace is collapsed during validation."@en .
 
 xsd:anyURI
     rdfs:label "IRI参照"@ja, "anyURI"@en ;
     skos:prefLabel "IRI参照"@ja, "IRI reference"@en ;
     skos:altLabel "anyURI"@en ;
-    rdfs:comment "RFC 3987による国際化リソース識別子（IRI）またはIRI参照。字句空間は単にxsd:stringです（XSDは固定の文法を強制しません）。典型的な字句形式には絶対IRIまたは相対IRIと任意のフラグメント識別子が含まれます。処理系はエスケープ処理やIRIからURIへの写像を適用する場合があります。"@ja, "Internationalized Resource Identifier (IRI) or IRI reference per RFC 3987. Lexical space is simply xsd:string (no fixed grammar is enforced by XSD); typical lexical forms include absolute or relative IRIs and optional fragment identifiers; processors may apply escaping/IRI-to-URI mapping."@en .
+    rdfs:comment "RFC 3987による国際化リソース識別子（IRI）またはIRI参照。字句空間は単にxsd:stringです（XSDは固定の文法を強制しません）。典型的な字句形式には絶対IRIまたは相対IRIと任意のフラグメント識別子が含まれます。処理系はエスケープ処理やIRIからURIへの写像を適用する場合があります。"@ja, "Internationalized Resource Identifiers (IRIs) or IRI references per RFC 3987. Lexical space is simply xsd:string (no fixed grammar is enforced by XSD); typical lexical forms include absolute or relative IRIs and optional fragment identifiers; processors may apply escaping/IRI-to-URI mapping."@en .
 
 xsd:language
     rdfs:label "言語識別子"@ja, "language"@en ;

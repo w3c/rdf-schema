@@ -65,7 +65,7 @@ rdfs:isDefinedBy
     rdfs:label "によって定義される"@ja, "isDefinedBy"@en ;
     skos:prefLabel "によって定義される"@ja, "is defined by"@en ;
     skos:altLabel "isDefinedBy"@en ;
-    rdfs:comment "主語リソースの定義。"@ja, "The definition of the subject resource."@en .
+    rdfs:comment "主語リソースを定義するリソース。"@ja, "A resource that defines the subject resource."@en .
 
 rdfs:Literal
     rdfs:label "リテラル"@ja, "Literal"@en ;

@@ -38,7 +38,7 @@ rdf:type
 rdf:reifies
     rdfs:label "具体化する"@ja, "reifies"@en ;
     skos:prefLabel "具体化する"@ja, "reifies"@en ;
-    rdfs:comment "より具体的な状況の抽象的な命題。"@ja, "The abstract proposition of a more concrete circumstance."@en .
+    rdfs:comment "主語リソースを命題に関連付けます。"@ja, "Associates the subject resource with a proposition."@en .
 
 rdf:Property
     rdfs:label "プロパティ"@ja, "Property"@en ;
@@ -143,25 +143,25 @@ rdf:PropositionForm
     rdfs:label "命題形式"@ja, "PropositionForm"@en ;
     skos:prefLabel "命題形式"@ja, "proposition form"@en ;
     skos:altLabel "PropositionForm"@en ;
-    rdfs:comment "抽象的で原子的な命題形式のクラス。命題の基本エンコーディングのために予約されています。"@ja, "The class of abstract, atomic proposition forms. Reserved for basic encoding of propositions."@en .
+    rdfs:comment "抽象的で原子的な命題形式のクラス。RDF 1.2 Basicでの命題のエンコーディングのために予約されています。"@ja, "The class of abstract, atomic proposition forms. Reserved for encoding propositions in RDF 1.2 Basic."@en .
 
 rdf:propositionFormSubject
     rdfs:label "命題形式の主語"@ja, "propositionFormSubject"@en ;
     skos:prefLabel "命題形式の主語"@ja, "proposition form subject"@en ;
     skos:altLabel "propositionFormSubject"@en ;
-    rdfs:comment "命題形式の主語成分。命題の基本エンコーディングのために予約されています。"@ja, "The subject component of a proposition form. Reserved for basic encoding of propositions."@en .
+    rdfs:comment "命題形式の主語成分。RDF 1.2 Basicでの命題のエンコーディングのために予約されています。"@ja, "The subject component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
 
 rdf:propositionFormPredicate
     rdfs:label "命題形式の述語"@ja, "propositionFormPredicate"@en ;
     skos:prefLabel "命題形式の述語"@ja, "proposition form predicate"@en ;
     skos:altLabel "propositionFormPredicate"@en ;
-    rdfs:comment "命題形式の述語成分。命題の基本エンコーディングのために予約されています。"@ja, "The predicate component of a proposition form. Reserved for basic encoding of propositions."@en .
+    rdfs:comment "命題形式の述語成分。RDF 1.2 Basicでの命題のエンコーディングのために予約されています。"@ja, "The predicate component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
 
 rdf:propositionFormObject
     rdfs:label "命題形式の目的語"@ja, "propositionFormObject"@en ;
     skos:prefLabel "命題形式の目的語"@ja, "proposition form object"@en ;
     skos:altLabel "propositionFormObject"@en ;
-    rdfs:comment "命題形式の目的語成分。命題の基本エンコーディングのために予約されています。"@ja, "The object component of a proposition form. Reserved for basic encoding of propositions."@en .
+    rdfs:comment "命題形式の目的語成分。RDF 1.2 Basicでの命題のエンコーディングのために予約されています。"@ja, "The object component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
 
 rdf:version-1.2
     rdfs:label "1.2"@ja, "1.2"@en ;

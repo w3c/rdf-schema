@@ -38,7 +38,7 @@ rdf:type
 rdf:reifies
     rdfs:label "구체화한다"@ko, "reifies"@en ;
     skos:prefLabel "구체화한다"@ko, "reifies"@en ;
-    rdfs:comment "더 구체적인 상황의 추상 명제입니다."@ko, "The abstract proposition of a more concrete circumstance."@en .
+    rdfs:comment "주어 리소스를 명제와 연결합니다."@ko, "Associates the subject resource with a proposition."@en .
 
 rdf:Property
     rdfs:label "속성"@ko, "Property"@en ;
@@ -143,25 +143,25 @@ rdf:PropositionForm
     rdfs:label "명제 형식"@ko, "PropositionForm"@en ;
     skos:prefLabel "명제 형식"@ko, "proposition form"@en ;
     skos:altLabel "PropositionForm"@en ;
-    rdfs:comment "추상적이고 원자적인 명제 형식의 클래스입니다. 명제의 기본 인코딩을 위해 예약되어 있습니다."@ko, "The class of abstract, atomic proposition forms. Reserved for basic encoding of propositions."@en .
+    rdfs:comment "추상적이고 원자적인 명제 형식의 클래스입니다. RDF 1.2 Basic에서 명제를 인코딩하기 위해 예약되어 있습니다."@ko, "The class of abstract, atomic proposition forms. Reserved for encoding propositions in RDF 1.2 Basic."@en .
 
 rdf:propositionFormSubject
     rdfs:label "명제 형식의 주어"@ko, "propositionFormSubject"@en ;
     skos:prefLabel "명제 형식의 주어"@ko, "proposition form subject"@en ;
     skos:altLabel "propositionFormSubject"@en ;
-    rdfs:comment "명제 형식의 주어 구성 요소입니다. 명제의 기본 인코딩을 위해 예약되어 있습니다."@ko, "The subject component of a proposition form. Reserved for basic encoding of propositions."@en .
+    rdfs:comment "명제 형식의 주어 구성 요소입니다. RDF 1.2 Basic에서 명제를 인코딩하기 위해 예약되어 있습니다."@ko, "The subject component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
 
 rdf:propositionFormPredicate
     rdfs:label "명제 형식의 술어"@ko, "propositionFormPredicate"@en ;
     skos:prefLabel "명제 형식의 술어"@ko, "proposition form predicate"@en ;
     skos:altLabel "propositionFormPredicate"@en ;
-    rdfs:comment "명제 형식의 술어 구성 요소입니다. 명제의 기본 인코딩을 위해 예약되어 있습니다."@ko, "The predicate component of a proposition form. Reserved for basic encoding of propositions."@en .
+    rdfs:comment "명제 형식의 술어 구성 요소입니다. RDF 1.2 Basic에서 명제를 인코딩하기 위해 예약되어 있습니다."@ko, "The predicate component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
 
 rdf:propositionFormObject
     rdfs:label "명제 형식의 목적어"@ko, "propositionFormObject"@en ;
     skos:prefLabel "명제 형식의 목적어"@ko, "proposition form object"@en ;
     skos:altLabel "propositionFormObject"@en ;
-    rdfs:comment "명제 형식의 목적어 구성 요소입니다. 명제의 기본 인코딩을 위해 예약되어 있습니다."@ko, "The object component of a proposition form. Reserved for basic encoding of propositions."@en .
+    rdfs:comment "명제 형식의 목적어 구성 요소입니다. RDF 1.2 Basic에서 명제를 인코딩하기 위해 예약되어 있습니다."@ko, "The object component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
 
 rdf:version-1.2
     rdfs:label "1.2"@ko, "1.2"@en ;

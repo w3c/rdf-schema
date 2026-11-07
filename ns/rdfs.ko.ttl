@@ -65,7 +65,7 @@ rdfs:isDefinedBy
     rdfs:label "에 의해 정의된다"@ko, "isDefinedBy"@en ;
     skos:prefLabel "에 의해 정의된다"@ko, "is defined by"@en ;
     skos:altLabel "isDefinedBy"@en ;
-    rdfs:comment "주어 리소스의 정의입니다."@ko, "The definition of the subject resource."@en .
+    rdfs:comment "주어 리소스를 정의하는 리소스입니다."@ko, "A resource that defines the subject resource."@en .
 
 rdfs:Literal
     rdfs:label "리터럴"@ko, "Literal"@en ;

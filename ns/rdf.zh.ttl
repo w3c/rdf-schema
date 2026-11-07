@@ -38,7 +38,7 @@ rdf:type
 rdf:reifies
     rdfs:label "具体化"@zh, "reifies"@en ;
     skos:prefLabel "具体化"@zh, "reifies"@en ;
-    rdfs:comment "更具体情境的抽象命题。"@zh, "The abstract proposition of a more concrete circumstance."@en .
+    rdfs:comment "将主体资源与一个命题关联。"@zh, "Associates the subject resource with a proposition."@en .
 
 rdf:Property
     rdfs:label "属性"@zh, "Property"@en ;
@@ -143,25 +143,25 @@ rdf:PropositionForm
     rdfs:label "命题形式"@zh, "PropositionForm"@en ;
     skos:prefLabel "命题形式"@zh, "proposition form"@en ;
     skos:altLabel "PropositionForm"@en ;
-    rdfs:comment "抽象的原子命题形式的类。保留用于命题的基本编码。"@zh, "The class of abstract, atomic proposition forms. Reserved for basic encoding of propositions."@en .
+    rdfs:comment "抽象的原子命题形式的类。保留用于 RDF 1.2 Basic 中的命题编码。"@zh, "The class of abstract, atomic proposition forms. Reserved for encoding propositions in RDF 1.2 Basic."@en .
 
 rdf:propositionFormSubject
     rdfs:label "命题形式主体"@zh, "propositionFormSubject"@en ;
     skos:prefLabel "命题形式主体"@zh, "proposition form subject"@en ;
     skos:altLabel "propositionFormSubject"@en ;
-    rdfs:comment "命题形式的主体分量。保留用于命题的基本编码。"@zh, "The subject component of a proposition form. Reserved for basic encoding of propositions."@en .
+    rdfs:comment "命题形式的主体分量。保留用于 RDF 1.2 Basic 中的命题编码。"@zh, "The subject component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
 
 rdf:propositionFormPredicate
     rdfs:label "命题形式谓词"@zh, "propositionFormPredicate"@en ;
     skos:prefLabel "命题形式谓词"@zh, "proposition form predicate"@en ;
     skos:altLabel "propositionFormPredicate"@en ;
-    rdfs:comment "命题形式的谓词分量。保留用于命题的基本编码。"@zh, "The predicate component of a proposition form. Reserved for basic encoding of propositions."@en .
+    rdfs:comment "命题形式的谓词分量。保留用于 RDF 1.2 Basic 中的命题编码。"@zh, "The predicate component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
 
 rdf:propositionFormObject
     rdfs:label "命题形式对象"@zh, "propositionFormObject"@en ;
     skos:prefLabel "命题形式对象"@zh, "proposition form object"@en ;
     skos:altLabel "propositionFormObject"@en ;
-    rdfs:comment "命题形式的对象分量。保留用于命题的基本编码。"@zh, "The object component of a proposition form. Reserved for basic encoding of propositions."@en .
+    rdfs:comment "命题形式的对象分量。保留用于 RDF 1.2 Basic 中的命题编码。"@zh, "The object component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
 
 rdf:version-1.2
     rdfs:label "1.2"@zh, "1.2"@en ;

@@ -60,6 +60,22 @@ They have been checked against the English comments and the terminology sources
 above; no independent native-speaker or second-model review is claimed.
 Review by fluent speakers is welcome.
 
+English `rdfs:label` values preserve the base vocabulary labels, including
+technical names such as `Name` and `first`. English `skos:prefLabel` values can
+expand those names, for example, `XML name` for `Name`. Translated `rdfs:label`
+and `skos:prefLabel` values both use a readable name in the target language;
+translations need not copy the English labels word for word.
+Matching values for preferred and RDFS labels are consistent with
+[SKOS S11](https://www.w3.org/TR/skos-reference/#S11).
+The disjoint properties in [SKOS S13](https://www.w3.org/TR/skos-reference/#S13)
+are `skos:prefLabel`, `skos:altLabel`, and `skos:hiddenLabel`.
+
+Reviewed comments clarify `rdf:reifies` and `rdfs:isDefinedBy` using the
+[RDF Schema definitions](https://www.w3.org/TR/rdf12-schema/).
+For `rdf:PropositionForm` and its three component properties, encoding in
+RDF 1.2 Basic refers to the transformation described in
+[RDF 1.2 Interoperability](https://www.w3.org/TR/rdf12-interop/).
+
 Datatype comments use plural forms for individual values where the language
 distinguishes number. The `xsd:dateTimeStamp` comments use natural-language names.
 Translations localize Boolean value names; the lexical forms `'true'`, `'false'`,

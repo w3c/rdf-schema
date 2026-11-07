@@ -65,7 +65,7 @@ rdfs:isDefinedBy
     rdfs:label "由……定义"@zh, "isDefinedBy"@en ;
     skos:prefLabel "由……定义"@zh, "is defined by"@en ;
     skos:altLabel "isDefinedBy"@en ;
-    rdfs:comment "主体资源的定义。"@zh, "The definition of the subject resource."@en .
+    rdfs:comment "用于定义主体资源的资源。"@zh, "A resource that defines the subject resource."@en .
 
 rdfs:Literal
     rdfs:label "字面量"@zh, "Literal"@en ;

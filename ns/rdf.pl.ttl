@@ -38,7 +38,7 @@ rdf:type
 rdf:reifies
     rdfs:label "reifikuje"@pl, "reifies"@en ;
     skos:prefLabel "reifikuje"@pl, "reifies"@en ;
-    rdfs:comment "Abstrakcyjny sąd logiczny odpowiadający bardziej konkretnej okoliczności."@pl, "The abstract proposition of a more concrete circumstance."@en .
+    rdfs:comment "Wiąże zasób będący tematem z sądem logicznym."@pl, "Associates the subject resource with a proposition."@en .
 
 rdf:Property
     rdfs:label "właściwość"@pl, "Property"@en ;
@@ -143,25 +143,25 @@ rdf:PropositionForm
     rdfs:label "forma sądu logicznego"@pl, "PropositionForm"@en ;
     skos:prefLabel "forma sądu logicznego"@pl, "proposition form"@en ;
     skos:altLabel "PropositionForm"@en ;
-    rdfs:comment "Klasa abstrakcyjnych, atomowych form sądów logicznych. Zarezerwowana dla podstawowego kodowania sądów logicznych."@pl, "The class of abstract, atomic proposition forms. Reserved for basic encoding of propositions."@en .
+    rdfs:comment "Klasa abstrakcyjnych, atomowych form sądów logicznych. Zarezerwowana dla kodowania sądów logicznych w RDF 1.2 Basic."@pl, "The class of abstract, atomic proposition forms. Reserved for encoding propositions in RDF 1.2 Basic."@en .
 
 rdf:propositionFormSubject
     rdfs:label "temat formy sądu logicznego"@pl, "propositionFormSubject"@en ;
     skos:prefLabel "temat formy sądu logicznego"@pl, "proposition form subject"@en ;
     skos:altLabel "propositionFormSubject"@en ;
-    rdfs:comment "Składowa tematu formy sądu logicznego. Zarezerwowana dla podstawowego kodowania sądów logicznych."@pl, "The subject component of a proposition form. Reserved for basic encoding of propositions."@en .
+    rdfs:comment "Składowa tematu formy sądu logicznego. Zarezerwowana dla kodowania sądów logicznych w RDF 1.2 Basic."@pl, "The subject component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
 
 rdf:propositionFormPredicate
     rdfs:label "predykat formy sądu logicznego"@pl, "propositionFormPredicate"@en ;
     skos:prefLabel "predykat formy sądu logicznego"@pl, "proposition form predicate"@en ;
     skos:altLabel "propositionFormPredicate"@en ;
-    rdfs:comment "Składowa predykatu formy sądu logicznego. Zarezerwowana dla podstawowego kodowania sądów logicznych."@pl, "The predicate component of a proposition form. Reserved for basic encoding of propositions."@en .
+    rdfs:comment "Składowa predykatu formy sądu logicznego. Zarezerwowana dla kodowania sądów logicznych w RDF 1.2 Basic."@pl, "The predicate component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
 
 rdf:propositionFormObject
     rdfs:label "obiekt formy sądu logicznego"@pl, "propositionFormObject"@en ;
     skos:prefLabel "obiekt formy sądu logicznego"@pl, "proposition form object"@en ;
     skos:altLabel "propositionFormObject"@en ;
-    rdfs:comment "Składowa obiektu formy sądu logicznego. Zarezerwowana dla podstawowego kodowania sądów logicznych."@pl, "The object component of a proposition form. Reserved for basic encoding of propositions."@en .
+    rdfs:comment "Składowa obiektu formy sądu logicznego. Zarezerwowana dla kodowania sądów logicznych w RDF 1.2 Basic."@pl, "The object component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
 
 rdf:version-1.2
     rdfs:label "1.2"@pl, "1.2"@en ;

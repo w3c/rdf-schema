@@ -20,10 +20,25 @@ titles and descriptions use `dcterms:title` and `dcterms:description`. SKOS
 labeling properties can label resources without declaring them `skos:Concept`;
 see the [SKOS reference](https://www.w3.org/TR/skos-reference/#labels).
 
-English `rdfs:label` and `rdfs:comment` strings come from the base files and use
-`@en` tags here. Comments include reviewed wording for consistent descriptions
-of datatype values. Proposed `skos:prefLabel` strings expand technical names
-where useful and use sentence case.
+English annotations use `@en` tags. Comments include reviewed clarifications
+and are identical across all language annotation files. Preferred labels use
+sentence case.
+
+English `rdfs:label` values preserve the base vocabulary labels, including
+technical names such as `Name` and `first`. English `skos:prefLabel` values can
+expand those names, for example, `XML name` for `Name`. Translated `rdfs:label`
+and `skos:prefLabel` values both use a readable name in the target language;
+translations need not copy the English labels word for word.
+Matching values for preferred and RDFS labels are consistent with
+[SKOS S11](https://www.w3.org/TR/skos-reference/#S11).
+The disjoint properties in [SKOS S13](https://www.w3.org/TR/skos-reference/#S13)
+are `skos:prefLabel`, `skos:altLabel`, and `skos:hiddenLabel`.
+
+Reviewed comments clarify `rdf:reifies` and `rdfs:isDefinedBy` using the
+[RDF Schema definitions](https://www.w3.org/TR/rdf12-schema/).
+For `rdf:PropositionForm` and its three component properties, encoding in
+RDF 1.2 Basic refers to the transformation described in
+[RDF 1.2 Interoperability](https://www.w3.org/TR/rdf12-interop/).
 
 Datatype comments use plural forms for individual values where the language
 distinguishes number. The `xsd:dateTimeStamp` comments use natural-language names.

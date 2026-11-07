@@ -35,7 +35,7 @@ rdf:type
 rdf:reifies
     rdfs:label "reifies"@en ;
     skos:prefLabel "reifies"@en ;
-    rdfs:comment "The abstract proposition of a more concrete circumstance."@en .
+    rdfs:comment "Associates the subject resource with a proposition."@en .
 
 rdf:Property
     rdfs:label "Property"@en ;
@@ -130,22 +130,22 @@ rdf:direction
 rdf:PropositionForm
     rdfs:label "PropositionForm"@en ;
     skos:prefLabel "proposition form"@en ;
-    rdfs:comment "The class of abstract, atomic proposition forms. Reserved for basic encoding of propositions."@en .
+    rdfs:comment "The class of abstract, atomic proposition forms. Reserved for encoding propositions in RDF 1.2 Basic."@en .
 
 rdf:propositionFormSubject
     rdfs:label "propositionFormSubject"@en ;
     skos:prefLabel "proposition form subject"@en ;
-    rdfs:comment "The subject component of a proposition form. Reserved for basic encoding of propositions."@en .
+    rdfs:comment "The subject component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
 
 rdf:propositionFormPredicate
     rdfs:label "propositionFormPredicate"@en ;
     skos:prefLabel "proposition form predicate"@en ;
-    rdfs:comment "The predicate component of a proposition form. Reserved for basic encoding of propositions."@en .
+    rdfs:comment "The predicate component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
 
 rdf:propositionFormObject
     rdfs:label "propositionFormObject"@en ;
     skos:prefLabel "proposition form object"@en ;
-    rdfs:comment "The object component of a proposition form. Reserved for basic encoding of propositions."@en .
+    rdfs:comment "The object component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
 
 rdf:version-1.2
     rdfs:label "1.2"@en ;

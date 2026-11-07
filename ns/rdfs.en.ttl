@@ -58,7 +58,7 @@ rdfs:seeAlso
 rdfs:isDefinedBy
     rdfs:label "isDefinedBy"@en ;
     skos:prefLabel "is defined by"@en ;
-    rdfs:comment "The definition of the subject resource."@en .
+    rdfs:comment "A resource that defines the subject resource."@en .
 
 rdfs:Literal
     rdfs:label "Literal"@en ;

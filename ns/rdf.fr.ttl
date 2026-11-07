@@ -38,7 +38,7 @@ rdf:type
 rdf:reifies
     rdfs:label "réifie"@fr, "reifies"@en ;
     skos:prefLabel "réifie"@fr, "reifies"@en ;
-    rdfs:comment "La proposition abstraite correspondant à une circonstance plus concrète."@fr, "The abstract proposition of a more concrete circumstance."@en .
+    rdfs:comment "Associe la ressource sujet à une proposition."@fr, "Associates the subject resource with a proposition."@en .
 
 rdf:Property
     rdfs:label "propriété"@fr, "Property"@en ;
@@ -143,25 +143,25 @@ rdf:PropositionForm
     rdfs:label "forme de proposition"@fr, "PropositionForm"@en ;
     skos:prefLabel "forme de proposition"@fr, "proposition form"@en ;
     skos:altLabel "PropositionForm"@en ;
-    rdfs:comment "La classe des formes de propositions abstraites et atomiques. Réservée à l’encodage de base des propositions."@fr, "The class of abstract, atomic proposition forms. Reserved for basic encoding of propositions."@en .
+    rdfs:comment "La classe des formes de propositions abstraites et atomiques. Réservée à l’encodage des propositions en RDF 1.2 Basic."@fr, "The class of abstract, atomic proposition forms. Reserved for encoding propositions in RDF 1.2 Basic."@en .
 
 rdf:propositionFormSubject
     rdfs:label "sujet d’une forme de proposition"@fr, "propositionFormSubject"@en ;
     skos:prefLabel "sujet d’une forme de proposition"@fr, "proposition form subject"@en ;
     skos:altLabel "propositionFormSubject"@en ;
-    rdfs:comment "La composante sujet d’une forme de proposition. Réservée à l’encodage de base des propositions."@fr, "The subject component of a proposition form. Reserved for basic encoding of propositions."@en .
+    rdfs:comment "La composante sujet d’une forme de proposition. Réservée à l’encodage des propositions en RDF 1.2 Basic."@fr, "The subject component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
 
 rdf:propositionFormPredicate
     rdfs:label "prédicat d’une forme de proposition"@fr, "propositionFormPredicate"@en ;
     skos:prefLabel "prédicat d’une forme de proposition"@fr, "proposition form predicate"@en ;
     skos:altLabel "propositionFormPredicate"@en ;
-    rdfs:comment "La composante prédicat d’une forme de proposition. Réservée à l’encodage de base des propositions."@fr, "The predicate component of a proposition form. Reserved for basic encoding of propositions."@en .
+    rdfs:comment "La composante prédicat d’une forme de proposition. Réservée à l’encodage des propositions en RDF 1.2 Basic."@fr, "The predicate component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
 
 rdf:propositionFormObject
     rdfs:label "objet d’une forme de proposition"@fr, "propositionFormObject"@en ;
     skos:prefLabel "objet d’une forme de proposition"@fr, "proposition form object"@en ;
     skos:altLabel "propositionFormObject"@en ;
-    rdfs:comment "La composante objet d’une forme de proposition. Réservée à l’encodage de base des propositions."@fr, "The object component of a proposition form. Reserved for basic encoding of propositions."@en .
+    rdfs:comment "La composante objet d’une forme de proposition. Réservée à l’encodage des propositions en RDF 1.2 Basic."@fr, "The object component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
 
 rdf:version-1.2
     rdfs:label "1.2"@fr, "1.2"@en ;

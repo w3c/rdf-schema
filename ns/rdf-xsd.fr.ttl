@@ -214,11 +214,11 @@ xsd:token
     rdfs:label "chaîne de caractères à espaces blancs réduits"@fr, "token"@en ;
     skos:prefLabel "chaîne de caractères à espaces blancs réduits"@fr, "tokenized string"@en ;
     skos:altLabel "token"@en ;
-    rdfs:comment "Chaînes de caractères de type token dérivées de xsd:normalizedString : sans espaces initiaux ou finaux ni séquences internes de plusieurs espaces. Forme lexicale : chaînes dont les espaces blancs sont réduits (les suites d’espaces sont remplacées par un seul espace ; les espaces initiaux et finaux sont supprimés)."@fr, "Tokenized strings derived from xsd:normalizedString: no leading or trailing spaces and no internal sequences of multiple spaces. Lexical form: strings with whitespace collapsed (runs of spaces collapsed to a single space; leading/trailing spaces removed)."@en .
+    rdfs:comment "Chaînes de caractères dérivées de xsd:normalizedString sans espaces initiaux ou finaux ni séquences internes de plusieurs espaces. Forme lexicale : chaînes dont les espaces blancs sont réduits (les suites d’espaces sont remplacées par un seul espace ; les espaces initiaux et finaux sont supprimés)."@fr, "Tokenized strings derived from xsd:normalizedString: no leading or trailing spaces and no internal sequences of multiple spaces. Lexical form: strings with whitespace collapsed (runs of spaces collapsed to a single space; leading/trailing spaces removed)."@en .
 
 xsd:NMTOKEN
-    rdfs:label "jeton de nom XML"@fr, "NMTOKEN"@en ;
-    skos:prefLabel "jeton de nom XML"@fr, "XML name token"@en ;
+    rdfs:label "unité lexicale de nom XML"@fr, "NMTOKEN"@en ;
+    skos:prefLabel "unité lexicale de nom XML"@fr, "XML name token"@en ;
     skos:altLabel "NMTOKEN"@en ;
     rdfs:comment "Valeurs conformes à la production XML Nmtoken. Type dérivé de xsd:token. Forme lexicale : un ou plusieurs caractères NameChar selon XML (c’est-à-dire une forme conforme à la production XML Nmtoken)."@fr, "Values matching the XML Nmtoken production. Derived from xsd:token. Lexical form: one or more NameChar per XML (i.e., matches the XML Nmtoken production)."@en .
 

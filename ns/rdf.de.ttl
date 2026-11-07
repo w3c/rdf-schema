@@ -38,7 +38,7 @@ rdf:type
 rdf:reifies
     rdfs:label "reifiziert"@de, "reifies"@en ;
     skos:prefLabel "reifiziert"@de, "reifies"@en ;
-    rdfs:comment "Die abstrakte Proposition zu einem konkreteren Umstand."@de, "The abstract proposition of a more concrete circumstance."@en .
+    rdfs:comment "Verknüpft die Subjektressource mit einer Proposition."@de, "Associates the subject resource with a proposition."@en .
 
 rdf:Property
     rdfs:label "Eigenschaft"@de, "Property"@en ;
@@ -143,25 +143,25 @@ rdf:PropositionForm
     rdfs:label "Propositionsform"@de, "PropositionForm"@en ;
     skos:prefLabel "Propositionsform"@de, "proposition form"@en ;
     skos:altLabel "PropositionForm"@en ;
-    rdfs:comment "Die Klasse der abstrakten, atomaren Propositionsformen. Reserviert für die Basiskodierung von Propositionen."@de, "The class of abstract, atomic proposition forms. Reserved for basic encoding of propositions."@en .
+    rdfs:comment "Die Klasse der abstrakten, atomaren Propositionsformen. Für die Kodierung von Propositionen in RDF 1.2 Basic reserviert."@de, "The class of abstract, atomic proposition forms. Reserved for encoding propositions in RDF 1.2 Basic."@en .
 
 rdf:propositionFormSubject
     rdfs:label "Subjekt einer Propositionsform"@de, "propositionFormSubject"@en ;
     skos:prefLabel "Subjekt einer Propositionsform"@de, "proposition form subject"@en ;
     skos:altLabel "propositionFormSubject"@en ;
-    rdfs:comment "Die Subjektkomponente einer Propositionsform. Reserviert für die Basiskodierung von Propositionen."@de, "The subject component of a proposition form. Reserved for basic encoding of propositions."@en .
+    rdfs:comment "Die Subjektkomponente einer Propositionsform. Für die Kodierung von Propositionen in RDF 1.2 Basic reserviert."@de, "The subject component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
 
 rdf:propositionFormPredicate
     rdfs:label "Prädikat einer Propositionsform"@de, "propositionFormPredicate"@en ;
     skos:prefLabel "Prädikat einer Propositionsform"@de, "proposition form predicate"@en ;
     skos:altLabel "propositionFormPredicate"@en ;
-    rdfs:comment "Die Prädikatkomponente einer Propositionsform. Reserviert für die Basiskodierung von Propositionen."@de, "The predicate component of a proposition form. Reserved for basic encoding of propositions."@en .
+    rdfs:comment "Die Prädikatkomponente einer Propositionsform. Für die Kodierung von Propositionen in RDF 1.2 Basic reserviert."@de, "The predicate component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
 
 rdf:propositionFormObject
     rdfs:label "Objekt einer Propositionsform"@de, "propositionFormObject"@en ;
     skos:prefLabel "Objekt einer Propositionsform"@de, "proposition form object"@en ;
     skos:altLabel "propositionFormObject"@en ;
-    rdfs:comment "Die Objektkomponente einer Propositionsform. Reserviert für die Basiskodierung von Propositionen."@de, "The object component of a proposition form. Reserved for basic encoding of propositions."@en .
+    rdfs:comment "Die Objektkomponente einer Propositionsform. Für die Kodierung von Propositionen in RDF 1.2 Basic reserviert."@de, "The object component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
 
 rdf:version-1.2
     rdfs:label "1.2"@de, "1.2"@en ;

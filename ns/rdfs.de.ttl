@@ -65,7 +65,7 @@ rdfs:isDefinedBy
     rdfs:label "ist definiert durch"@de, "isDefinedBy"@en ;
     skos:prefLabel "ist definiert durch"@de, "is defined by"@en ;
     skos:altLabel "isDefinedBy"@en ;
-    rdfs:comment "Die Definition der Subjektressource."@de, "The definition of the subject resource."@en .
+    rdfs:comment "Eine Ressource, die die Subjektressource definiert."@de, "A resource that defines the subject resource."@en .
 
 rdfs:Literal
     rdfs:label "Literal"@de, "Literal"@en ;

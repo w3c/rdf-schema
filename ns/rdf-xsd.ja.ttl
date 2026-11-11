@@ -42,12 +42,12 @@ xsd:float
 xsd:date
     rdfs:label "日付"@ja, "date"@en ;
     skos:prefLabel "日付"@ja, "date"@en ;
-    rdfs:comment "上端を含まない1日区間としての暦日。字句形式：YYYY-MM-DDで、タイムゾーンは任意です。タイムゾーンの字句形式：'Z'、または00 ≤ mm ≤ 59かつ|offset| ≤ 14:00を満たす±hh:mmの形のオフセット（例：'2025-09-27Z'、'2025-09-27+02:00'）。"@ja, "Calendar dates as top-open day intervals. Lexical form: YYYY-MM-DD with optional timezone. Timezone lexical forms: 'Z' or an offset of the form ±hh:mm with 00 ≤ mm ≤ 59 and |offset| ≤ 14:00 (e.g., '2025-09-27Z', '2025-09-27+02:00')."@en .
+    rdfs:comment "暦日は、その日の始まりを含み、翌日の始まりを含まない1日分の区間として表されます。字句形式：YYYY-MM-DDで、タイムゾーンは任意です。タイムゾーンの字句形式：'Z'、または00 ≤ mm ≤ 59かつ|offset| ≤ 14:00を満たす±hh:mmの形のオフセット（例：'2025-09-27Z'、'2025-09-27+02:00'）。"@ja, "Calendar dates as top-open day intervals. Lexical form: YYYY-MM-DD with optional timezone. Timezone lexical forms: 'Z' or an offset of the form ±hh:mm with 00 ≤ mm ≤ 59 and |offset| ≤ 14:00 (e.g., '2025-09-27Z', '2025-09-27+02:00')."@en .
 
 xsd:time
     rdfs:label "時刻"@ja, "time"@en ;
     skos:prefLabel "時刻"@ja, "time"@en ;
-    rdfs:comment "毎日繰り返す、またはある日に生じる時刻。字句形式：hh:mm:ss(.s+)?で、タイムゾーンは任意です。タイムゾーンの字句形式：'Z'、または|offset| ≤ 14:00を満たす±hh:mm（例：'23:59:59Z'、'08:15:30.5-05:00'）。"@ja, "Times that recur each day or occur on some day. Lexical form: hh:mm:ss(.s+)? with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '23:59:59Z', '08:15:30.5-05:00')."@en .
+    rdfs:comment "毎日繰り返される時刻、またはある日の時刻を表します。字句形式：hh:mm:ss(.s+)?で、タイムゾーンは任意です。タイムゾーンの字句形式：'Z'、または|offset| ≤ 14:00を満たす±hh:mm（例：'23:59:59Z'、'08:15:30.5-05:00'）。"@ja, "Times that recur each day or occur on some day. Lexical form: hh:mm:ss(.s+)? with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '23:59:59Z', '08:15:30.5-05:00')."@en .
 
 xsd:dateTime
     rdfs:label "日付と時刻"@ja, "dateTime"@en ;
@@ -77,7 +77,7 @@ xsd:gDay
     rdfs:label "グレゴリオ暦の月内の日"@ja, "gDay"@en ;
     skos:prefLabel "グレゴリオ暦の月内の日"@ja, "Gregorian day"@en ;
     skos:altLabel "gDay"@en ;
-    rdfs:comment "毎月繰り返す月内の日。字句形式：---DDで、タイムゾーンは任意です。タイムゾーンの字句形式：'Z'、または|offset| ≤ 14:00を満たす±hh:mm（例：'---05Z'、'---31-03:00'）。"@ja, "Days in a month recurring each month. Lexical form: ---DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '---05Z', '---31-03:00')."@en .
+    rdfs:comment "グレゴリオ暦で月の何日かを表します（例：毎月15日）。字句形式：---DDで、タイムゾーンは任意です。タイムゾーンの字句形式：'Z'、または|offset| ≤ 14:00を満たす±hh:mm（例：'---05Z'、'---31-03:00'）。"@ja, "Days in a month recurring each month. Lexical form: ---DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '---05Z', '---31-03:00')."@en .
 
 xsd:gYearMonth
     rdfs:label "グレゴリオ暦の年と月"@ja, "gYearMonth"@en ;
@@ -94,7 +94,7 @@ xsd:gMonthDay
 xsd:duration
     rdfs:label "期間"@ja, "duration"@en ;
     skos:prefLabel "期間"@ja, "duration"@en ;
-    rdfs:comment "ISO 8601による期間（PnYnMnDTnHnMnS）で、先頭の'-'は任意です。値空間は月数成分と秒数成分の対からなり、半順序のみが定義されています。字句形式：'P'に続く年／月／日の部分と、任意の'T'に続く時／分／秒の部分。少なくとも1つの成分が必要です。小数部は秒にのみ使用できます（例：'P3Y6M4DT12H30M5.5S'、'-P15D'）。"@ja, "Time durations per ISO 8601 (PnYnMnDTnHnMnS), optionally with a leading '-'. Value space pairs a months component and a seconds component; only a partial order is defined. Lexical form: 'P' followed by year/month/day and optionally 'T' followed by hour/minute/second fragments; at least one component must be present; a fractional part is allowed on seconds only (e.g., 'P3Y6M4DT12H30M5.5S', '-P15D')."@en .
+    rdfs:comment "ISO 8601による期間（PnYnMnDTnHnMnS）で、先頭の'-'は任意です。値空間は月数成分と秒数成分の対からなり、半順序のみが定義されています。字句形式：'P'の後に、年、月、日、時、分、秒の順で少なくとも1つの成分を記述します。時、分、秒の成分がある場合は、その最初の成分の前に'T'を付けます。小数部は秒の成分にのみ使用できます（例：'P3Y6M4DT12H30M5.5S'、'-P15D'）。"@ja, "Time durations per ISO 8601 (PnYnMnDTnHnMnS), optionally with a leading '-'. Value space pairs a months component and a seconds component; only a partial order is defined. Lexical form: 'P' followed by one or more year, month, day, hour, minute, or second fields in that order. If any hour, minute, or second field is present, put 'T' before the first of those fields. Only the seconds field may have a fractional part (e.g., 'P3Y6M4DT12H30M5.5S', '-P15D')."@en .
 
 xsd:yearMonthDuration
     rdfs:label "年と月の期間"@ja, "yearMonthDuration"@en ;
@@ -220,13 +220,13 @@ xsd:NMTOKEN
     rdfs:label "XML名前トークン"@ja, "NMTOKEN"@en ;
     skos:prefLabel "XML名前トークン"@ja, "XML name token"@en ;
     skos:altLabel "NMTOKEN"@en ;
-    rdfs:comment "XMLのNmtoken生成規則に一致する値。xsd:tokenから派生します。字句形式：XMLによる1個以上のNameChar（すなわちXMLのNmtoken生成規則に一致します）。"@ja, "Values matching the XML Nmtoken production. Derived from xsd:token. Lexical form: one or more NameChar per XML (i.e., matches the XML Nmtoken production)."@en .
+    rdfs:comment "XMLのNmtoken生成規則に一致する名前トークンを表します。xsd:tokenから派生します。字句形式：XMLによる1個以上のNameChar（すなわちXMLのNmtoken生成規則に一致します）。"@ja, "Values matching the XML Nmtoken production. Derived from xsd:token. Lexical form: one or more NameChar per XML (i.e., matches the XML Nmtoken production)."@en .
 
 xsd:Name
     rdfs:label "XML名"@ja, "Name"@en ;
     skos:prefLabel "XML名"@ja, "XML name"@en ;
     skos:altLabel "Name"@en ;
-    rdfs:comment "XMLのName生成規則に一致する値。xsd:tokenから派生します。字句形式：XMLによるNameStartCharに続く0個以上のNameChar。"@ja, "Values matching the XML Name production. Derived from xsd:token. Lexical form: NameStartChar followed by zero or more NameChar per XML."@en .
+    rdfs:comment "XMLのName生成規則に一致する名前を表します。xsd:tokenから派生します。字句形式：XMLによるNameStartCharに続く0個以上のNameChar。"@ja, "Values matching the XML Name production. Derived from xsd:token. Lexical form: NameStartChar followed by zero or more NameChar per XML."@en .
 
 xsd:NCName
     rdfs:label "コロンを含まないXML名"@ja, "NCName"@en ;

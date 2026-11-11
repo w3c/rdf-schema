@@ -42,12 +42,12 @@ xsd:float
 xsd:date
     rdfs:label "날짜"@ko, "date"@en ;
     skos:prefLabel "날짜"@ko, "date"@en ;
-    rdfs:comment "상한을 포함하지 않는 하루 구간으로 나타낸 달력 날짜입니다. 어휘 형식: YYYY-MM-DD이며 시간대는 선택 사항입니다. 시간대 어휘 형식: 'Z' 또는 00 ≤ mm ≤ 59이고 |offset| ≤ 14:00인 ±hh:mm 형태의 오프셋입니다(예: '2025-09-27Z', '2025-09-27+02:00')."@ko, "Calendar dates as top-open day intervals. Lexical form: YYYY-MM-DD with optional timezone. Timezone lexical forms: 'Z' or an offset of the form ±hh:mm with 00 ≤ mm ≤ 59 and |offset| ≤ 14:00 (e.g., '2025-09-27Z', '2025-09-27+02:00')."@en .
+    rdfs:comment "날짜는 그날의 시작을 포함하고 다음 날의 시작을 제외하는 하루 구간으로 나타냅니다. 어휘 형식: YYYY-MM-DD이며 시간대는 선택 사항입니다. 시간대 어휘 형식: 'Z' 또는 00 ≤ mm ≤ 59이고 |offset| ≤ 14:00인 ±hh:mm 형태의 오프셋입니다(예: '2025-09-27Z', '2025-09-27+02:00')."@ko, "Calendar dates as top-open day intervals. Lexical form: YYYY-MM-DD with optional timezone. Timezone lexical forms: 'Z' or an offset of the form ±hh:mm with 00 ≤ mm ≤ 59 and |offset| ≤ 14:00 (e.g., '2025-09-27Z', '2025-09-27+02:00')."@en .
 
 xsd:time
-    rdfs:label "시간"@ko, "time"@en ;
-    skos:prefLabel "시간"@ko, "time"@en ;
-    rdfs:comment "매일 반복되거나 어느 날에 발생하는 시간입니다. 어휘 형식: hh:mm:ss(.s+)?이며 시간대는 선택 사항입니다. 시간대 어휘 형식: 'Z' 또는 |offset| ≤ 14:00인 ±hh:mm입니다(예: '23:59:59Z', '08:15:30.5-05:00')."@ko, "Times that recur each day or occur on some day. Lexical form: hh:mm:ss(.s+)? with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '23:59:59Z', '08:15:30.5-05:00')."@en .
+    rdfs:label "시각"@ko, "time"@en ;
+    skos:prefLabel "시각"@ko, "time"@en ;
+    rdfs:comment "매일 되풀이되는 시각이나 어느 날의 시각을 나타냅니다. 어휘 형식: hh:mm:ss(.s+)?이며 시간대는 선택 사항입니다. 시간대 어휘 형식: 'Z' 또는 |offset| ≤ 14:00인 ±hh:mm입니다(예: '23:59:59Z', '08:15:30.5-05:00')."@ko, "Times that recur each day or occur on some day. Lexical form: hh:mm:ss(.s+)? with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '23:59:59Z', '08:15:30.5-05:00')."@en .
 
 xsd:dateTime
     rdfs:label "날짜와 시간"@ko, "dateTime"@en ;
@@ -74,10 +74,10 @@ xsd:gMonth
     rdfs:comment "매년 반복되는 그레고리력 월입니다. 어휘 형식: --MM이며 시간대는 선택 사항입니다. 시간대 어휘 형식: 'Z' 또는 |offset| ≤ 14:00인 ±hh:mm입니다(예: '--02Z', '--11+05:30')."@ko, "Gregorian months recurring each year. Lexical form: --MM with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '--02Z', '--11+05:30')."@en .
 
 xsd:gDay
-    rdfs:label "그레고리력 월의 일"@ko, "gDay"@en ;
-    skos:prefLabel "그레고리력 월의 일"@ko, "Gregorian day"@en ;
+    rdfs:label "그레고리력의 월중 일자"@ko, "gDay"@en ;
+    skos:prefLabel "그레고리력의 월중 일자"@ko, "Gregorian day"@en ;
     skos:altLabel "gDay"@en ;
-    rdfs:comment "매월 반복되는 월의 일입니다. 어휘 형식: ---DD이며 시간대는 선택 사항입니다. 시간대 어휘 형식: 'Z' 또는 |offset| ≤ 14:00인 ±hh:mm입니다(예: '---05Z', '---31-03:00')."@ko, "Days in a month recurring each month. Lexical form: ---DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '---05Z', '---31-03:00')."@en .
+    rdfs:comment "그레고리력에서 한 달 안의 일자를 나타냅니다(예: 매월 15일). 어휘 형식: ---DD이며 시간대는 선택 사항입니다. 시간대 어휘 형식: 'Z' 또는 |offset| ≤ 14:00인 ±hh:mm입니다(예: '---05Z', '---31-03:00')."@ko, "Days in a month recurring each month. Lexical form: ---DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '---05Z', '---31-03:00')."@en .
 
 xsd:gYearMonth
     rdfs:label "그레고리력 연도와 월"@ko, "gYearMonth"@en ;
@@ -94,7 +94,7 @@ xsd:gMonthDay
 xsd:duration
     rdfs:label "기간"@ko, "duration"@en ;
     skos:prefLabel "기간"@ko, "duration"@en ;
-    rdfs:comment "ISO 8601에 따른 시간의 기간(PnYnMnDTnHnMnS)이며 선행 '-'는 선택 사항입니다. 값 공간은 월 구성 요소와 초 구성 요소의 쌍이며, 부분 순서만 정의됩니다. 어휘 형식: 'P' 뒤에 연/월/일 부분이 오고, 선택적으로 'T' 뒤에 시/분/초 부분이 옵니다. 적어도 하나의 구성 요소가 있어야 하며 소수부는 초에만 허용됩니다(예: 'P3Y6M4DT12H30M5.5S', '-P15D')."@ko, "Time durations per ISO 8601 (PnYnMnDTnHnMnS), optionally with a leading '-'. Value space pairs a months component and a seconds component; only a partial order is defined. Lexical form: 'P' followed by year/month/day and optionally 'T' followed by hour/minute/second fragments; at least one component must be present; a fractional part is allowed on seconds only (e.g., 'P3Y6M4DT12H30M5.5S', '-P15D')."@en .
+    rdfs:comment "ISO 8601에 따른 기간(PnYnMnDTnHnMnS)이며, 앞에 '-'가 올 수 있습니다. 값 공간은 월 구성 요소와 초 구성 요소의 쌍이며, 부분 순서만 정의됩니다. 어휘 형식: 'P' 뒤에 연, 월, 일, 시, 분, 초 순서로 적어도 하나의 구성 요소를 씁니다. 시, 분, 초 중 하나라도 있으면 그중 첫 구성 요소 앞에 'T'를 붙입니다. 소수부는 초 구성 요소에만 허용됩니다(예: 'P3Y6M4DT12H30M5.5S', '-P15D')."@ko, "Time durations per ISO 8601 (PnYnMnDTnHnMnS), optionally with a leading '-'. Value space pairs a months component and a seconds component; only a partial order is defined. Lexical form: 'P' followed by one or more year, month, day, hour, minute, or second fields in that order. If any hour, minute, or second field is present, put 'T' before the first of those fields. Only the seconds field may have a fractional part (e.g., 'P3Y6M4DT12H30M5.5S', '-P15D')."@en .
 
 xsd:yearMonthDuration
     rdfs:label "연도와 월의 기간"@ko, "yearMonthDuration"@en ;
@@ -220,13 +220,13 @@ xsd:NMTOKEN
     rdfs:label "XML 이름 토큰"@ko, "NMTOKEN"@en ;
     skos:prefLabel "XML 이름 토큰"@ko, "XML name token"@en ;
     skos:altLabel "NMTOKEN"@en ;
-    rdfs:comment "XML Nmtoken 생성 규칙에 일치하는 값입니다. xsd:token에서 파생됩니다. 어휘 형식: XML에 따른 하나 이상의 NameChar입니다(즉, XML Nmtoken 생성 규칙에 일치합니다)."@ko, "Values matching the XML Nmtoken production. Derived from xsd:token. Lexical form: one or more NameChar per XML (i.e., matches the XML Nmtoken production)."@en .
+    rdfs:comment "XML Nmtoken 생성 규칙에 맞는 이름 토큰입니다. xsd:token에서 파생됩니다. 어휘 형식: XML에 따른 하나 이상의 NameChar입니다(즉, XML Nmtoken 생성 규칙에 일치합니다)."@ko, "Values matching the XML Nmtoken production. Derived from xsd:token. Lexical form: one or more NameChar per XML (i.e., matches the XML Nmtoken production)."@en .
 
 xsd:Name
     rdfs:label "XML 이름"@ko, "Name"@en ;
     skos:prefLabel "XML 이름"@ko, "XML name"@en ;
     skos:altLabel "Name"@en ;
-    rdfs:comment "XML Name 생성 규칙에 일치하는 값입니다. xsd:token에서 파생됩니다. 어휘 형식: XML에 따른 NameStartChar 뒤에 0개 이상의 NameChar가 옵니다."@ko, "Values matching the XML Name production. Derived from xsd:token. Lexical form: NameStartChar followed by zero or more NameChar per XML."@en .
+    rdfs:comment "XML Name 생성 규칙에 맞는 이름입니다. xsd:token에서 파생됩니다. 어휘 형식: XML에 따른 NameStartChar 뒤에 0개 이상의 NameChar가 옵니다."@ko, "Values matching the XML Name production. Derived from xsd:token. Lexical form: NameStartChar followed by zero or more NameChar per XML."@en .
 
 xsd:NCName
     rdfs:label "콜론이 없는 XML 이름"@ko, "NCName"@en ;

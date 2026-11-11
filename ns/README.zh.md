@@ -39,8 +39,9 @@ other language PRs. The Chinese text uses Simplified Chinese characters.
 
 Each file also includes all annotations from its English counterpart:
 labels, comments, vocabulary titles, and descriptions tagged `@en`, together with
-the English preferred labels. English text matches the English annotation files,
-including the reviewed wording of datatype comments.
+the English preferred labels. The `xsd:duration` comment clarifies that the
+calendar fields may be omitted and that `T` introduces at least one hour,
+minute, or second field.
 `skos:altLabel` retains the original English source name when it differs from the
 English `skos:prefLabel`. A source name is not added as an alternative if it is
 already the English preferred label. Each term has one preferred label per language.

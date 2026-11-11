@@ -42,12 +42,12 @@ xsd:float
 xsd:date
     rdfs:label "日期"@zh, "date"@en ;
     skos:prefLabel "日期"@zh, "date"@en ;
-    rdfs:comment "以上端不包含在内的一日区间表示的日历日期。词法形式：YYYY-MM-DD，可带时区。时区词法形式：'Z' 或形如 ±hh:mm 的偏移量，其中 00 ≤ mm ≤ 59 且 |offset| ≤ 14:00（例如 '2025-09-27Z'、'2025-09-27+02:00'）。"@zh, "Calendar dates as top-open day intervals. Lexical form: YYYY-MM-DD with optional timezone. Timezone lexical forms: 'Z' or an offset of the form ±hh:mm with 00 ≤ mm ≤ 59 and |offset| ≤ 14:00 (e.g., '2025-09-27Z', '2025-09-27+02:00')."@en .
+    rdfs:comment "日历日期表示为前闭后开的单日区间。词法形式：YYYY-MM-DD，可带时区。时区词法形式：'Z' 或形如 ±hh:mm 的偏移量，其中 00 ≤ mm ≤ 59 且 |offset| ≤ 14:00（例如 '2025-09-27Z'、'2025-09-27+02:00'）。"@zh, "Calendar dates as top-open day intervals. Lexical form: YYYY-MM-DD with optional timezone. Timezone lexical forms: 'Z' or an offset of the form ±hh:mm with 00 ≤ mm ≤ 59 and |offset| ≤ 14:00 (e.g., '2025-09-27Z', '2025-09-27+02:00')."@en .
 
 xsd:time
-    rdfs:label "时间"@zh, "time"@en ;
-    skos:prefLabel "时间"@zh, "time"@en ;
-    rdfs:comment "每天重复或在某一天出现的时间。词法形式：hh:mm:ss(.s+)?，可带时区。时区词法形式：'Z' 或 ±hh:mm，其中 |offset| ≤ 14:00（例如 '23:59:59Z'、'08:15:30.5-05:00'）。"@zh, "Times that recur each day or occur on some day. Lexical form: hh:mm:ss(.s+)? with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '23:59:59Z', '08:15:30.5-05:00')."@en .
+    rdfs:label "时刻"@zh, "time"@en ;
+    skos:prefLabel "时刻"@zh, "time"@en ;
+    rdfs:comment "每天的同一时刻，或某一天的某个时刻。词法形式：hh:mm:ss(.s+)?，可带时区。时区词法形式：'Z' 或 ±hh:mm，其中 |offset| ≤ 14:00（例如 '23:59:59Z'、'08:15:30.5-05:00'）。"@zh, "Times that recur each day or occur on some day. Lexical form: hh:mm:ss(.s+)? with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '23:59:59Z', '08:15:30.5-05:00')."@en .
 
 xsd:dateTime
     rdfs:label "日期和时间"@zh, "dateTime"@en ;
@@ -74,10 +74,10 @@ xsd:gMonth
     rdfs:comment "每年重复的公历月份。词法形式：--MM，可带时区。时区词法形式：'Z' 或 ±hh:mm，其中 |offset| ≤ 14:00（例如 '--02Z'、'--11+05:30'）。"@zh, "Gregorian months recurring each year. Lexical form: --MM with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '--02Z', '--11+05:30')."@en .
 
 xsd:gDay
-    rdfs:label "公历每月中的日期"@zh, "gDay"@en ;
-    skos:prefLabel "公历每月中的日期"@zh, "Gregorian day"@en ;
+    rdfs:label "公历月中的日"@zh, "gDay"@en ;
+    skos:prefLabel "公历月中的日"@zh, "Gregorian day"@en ;
     skos:altLabel "gDay"@en ;
-    rdfs:comment "每月重复的月份中的日。词法形式：---DD，可带时区。时区词法形式：'Z' 或 ±hh:mm，其中 |offset| ≤ 14:00（例如 '---05Z'、'---31-03:00'）。"@zh, "Days in a month recurring each month. Lexical form: ---DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '---05Z', '---31-03:00')."@en .
+    rdfs:comment "表示公历中一个月里的第几日，例如每月 15 日。词法形式：---DD，可带时区。时区词法形式：'Z' 或 ±hh:mm，其中 |offset| ≤ 14:00（例如 '---05Z'、'---31-03:00'）。"@zh, "Days in a month recurring each month. Lexical form: ---DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '---05Z', '---31-03:00')."@en .
 
 xsd:gYearMonth
     rdfs:label "公历年份和月份"@zh, "gYearMonth"@en ;
@@ -92,21 +92,21 @@ xsd:gMonthDay
     rdfs:comment "每年重复的月份和日。词法形式：--MM-DD，可带时区。时区词法形式：'Z' 或 ±hh:mm，其中 |offset| ≤ 14:00（例如 '--12-31Z'、'--02-29+09:00'）。"@zh, "Month-day pairs recurring each year. Lexical form: --MM-DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '--12-31Z', '--02-29+09:00')."@en .
 
 xsd:duration
-    rdfs:label "持续时间"@zh, "duration"@en ;
-    skos:prefLabel "持续时间"@zh, "duration"@en ;
-    rdfs:comment "按 ISO 8601 表示的时间持续时长（PnYnMnDTnHnMnS），可带有前导 '-'。值空间将月份分量和秒分量配对；仅定义了偏序。词法形式：'P' 后跟年／月／日部分，可再跟 'T' 及小时／分钟／秒部分；必须至少包含一个分量；仅秒允许带小数部分（例如 'P3Y6M4DT12H30M5.5S'、'-P15D'）。"@zh, "Time durations per ISO 8601 (PnYnMnDTnHnMnS), optionally with a leading '-'. Value space pairs a months component and a seconds component; only a partial order is defined. Lexical form: 'P' followed by year/month/day and optionally 'T' followed by hour/minute/second fragments; at least one component must be present; a fractional part is allowed on seconds only (e.g., 'P3Y6M4DT12H30M5.5S', '-P15D')."@en .
+    rdfs:label "时长"@zh, "duration"@en ;
+    skos:prefLabel "时长"@zh, "duration"@en ;
+    rdfs:comment "按 ISO 8601 表示的时长（PnYnMnDTnHnMnS），可带有前导 '-'。值空间将月份分量和秒分量配对；仅定义了偏序。词法形式：'P' 后按年、月、日、小时、分钟、秒的顺序写入至少一个字段。如果包含小时、分钟或秒字段，在其中第一个字段前加 'T'。仅秒字段可带小数部分（例如 'P3Y6M4DT12H30M5.5S'、'-P15D'）。"@zh, "Time durations per ISO 8601 (PnYnMnDTnHnMnS), optionally with a leading '-'. Value space pairs a months component and a seconds component; only a partial order is defined. Lexical form: 'P' followed by one or more year, month, day, hour, minute, or second fields in that order. If any hour, minute, or second field is present, put 'T' before the first of those fields. Only the seconds field may have a fractional part (e.g., 'P3Y6M4DT12H30M5.5S', '-P15D')."@en .
 
 xsd:yearMonthDuration
-    rdfs:label "年和月持续时间"@zh, "yearMonthDuration"@en ;
-    skos:prefLabel "年和月持续时间"@zh, "year and month duration"@en ;
+    rdfs:label "以年和月表示的时长"@zh, "yearMonthDuration"@en ;
+    skos:prefLabel "以年和月表示的时长"@zh, "year and month duration"@en ;
     skos:altLabel "yearMonthDuration"@en ;
-    rdfs:comment "限制为年和月字段的持续时间（秒分量为 0）。具有全序；词法形式使用 PnYnM，可带有前导 '-'（例如 'P2Y'、'P3M'、'-P1Y2M'）。"@zh, "Durations restricted to year and month fields (seconds component is 0). Totally ordered; lexical form uses PnYnM with optional leading '-' (e.g., 'P2Y', 'P3M', '-P1Y2M')."@en .
+    rdfs:comment "仅限年和月字段的时长（秒分量为 0）。具有全序；词法形式使用 PnYnM，可带有前导 '-'（例如 'P2Y'、'P3M'、'-P1Y2M'）。"@zh, "Durations restricted to year and month fields (seconds component is 0). Totally ordered; lexical form uses PnYnM with optional leading '-' (e.g., 'P2Y', 'P3M', '-P1Y2M')."@en .
 
 xsd:dayTimeDuration
-    rdfs:label "天、小时、分钟和秒持续时间"@zh, "dayTimeDuration"@en ;
-    skos:prefLabel "天、小时、分钟和秒持续时间"@zh, "duration in days, hours, minutes and seconds"@en ;
+    rdfs:label "以天、小时、分钟和秒表示的时长"@zh, "dayTimeDuration"@en ;
+    skos:prefLabel "以天、小时、分钟和秒表示的时长"@zh, "duration in days, hours, minutes and seconds"@en ;
     skos:altLabel "dayTimeDuration"@en ;
-    rdfs:comment "限制为天、小时、分钟和秒字段的持续时间（月份分量为 0）。具有全序；词法形式为 'PnDTnHnMnS'，可带有前导 '-' 和小数秒（例如 'P30D'、'PT12H30M'、'PT5.25S'、'-P1DT2H'）。"@zh, "Durations restricted to day, hour, minute, second fields (months component is 0). Totally ordered; lexical form 'PnDTnHnMnS' with optional leading '-' and optional fractional seconds (e.g., 'P30D', 'PT12H30M', 'PT5.25S', '-P1DT2H')."@en .
+    rdfs:comment "仅限天、小时、分钟和秒字段的时长（月份分量为 0）。具有全序；词法形式为 'PnDTnHnMnS'，可带有前导 '-' 和小数秒（例如 'P30D'、'PT12H30M'、'PT5.25S'、'-P1DT2H'）。"@zh, "Durations restricted to day, hour, minute, second fields (months component is 0). Totally ordered; lexical form 'PnDTnHnMnS' with optional leading '-' and optional fractional seconds (e.g., 'P30D', 'PT12H30M', 'PT5.25S', '-P1DT2H')."@en .
 
 xsd:byte
     rdfs:label "8 位有符号整数"@zh, "byte"@en ;
@@ -220,13 +220,13 @@ xsd:NMTOKEN
     rdfs:label "XML 名称标记"@zh, "NMTOKEN"@en ;
     skos:prefLabel "XML 名称标记"@zh, "XML name token"@en ;
     skos:altLabel "NMTOKEN"@en ;
-    rdfs:comment "符合 XML Nmtoken 产生式的值。从 xsd:token 派生。词法形式：按 XML 定义的一个或多个 NameChar（即符合 XML Nmtoken 产生式）。"@zh, "Values matching the XML Nmtoken production. Derived from xsd:token. Lexical form: one or more NameChar per XML (i.e., matches the XML Nmtoken production)."@en .
+    rdfs:comment "符合 XML Nmtoken 产生式的名称标记。从 xsd:token 派生。词法形式：按 XML 定义的一个或多个 NameChar（即符合 XML Nmtoken 产生式）。"@zh, "Values matching the XML Nmtoken production. Derived from xsd:token. Lexical form: one or more NameChar per XML (i.e., matches the XML Nmtoken production)."@en .
 
 xsd:Name
     rdfs:label "XML 名称"@zh, "Name"@en ;
     skos:prefLabel "XML 名称"@zh, "XML name"@en ;
     skos:altLabel "Name"@en ;
-    rdfs:comment "符合 XML Name 产生式的值。从 xsd:token 派生。词法形式：按 XML 定义的 NameStartChar 后跟零个或多个 NameChar。"@zh, "Values matching the XML Name production. Derived from xsd:token. Lexical form: NameStartChar followed by zero or more NameChar per XML."@en .
+    rdfs:comment "符合 XML Name 产生式的名称。从 xsd:token 派生。词法形式：按 XML 定义的 NameStartChar 后跟零个或多个 NameChar。"@zh, "Values matching the XML Name production. Derived from xsd:token. Lexical form: NameStartChar followed by zero or more NameChar per XML."@en .
 
 xsd:NCName
     rdfs:label "不含冒号的 XML 名称"@zh, "NCName"@en ;

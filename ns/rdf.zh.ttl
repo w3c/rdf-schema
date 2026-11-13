@@ -1,0 +1,184 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    dcterms:title "RDF 概念词汇表（RDF）"@zh, "The RDF Concepts Vocabulary (RDF)"@en ;
+    dcterms:description "这是 RDF 命名空间中 RDF 词汇术语的 RDF Schema，这些术语定义于 RDF 1.1 概念。"@zh, "This is the RDF Schema for the RDF vocabulary terms in the RDF Namespace, defined in RDF 1.1 Concepts."@en .
+
+rdf:HTML
+    rdfs:label "HTML"@zh, "HTML"@en ;
+    skos:prefLabel "HTML"@zh, "HTML"@en ;
+    rdfs:comment "存储 HTML 内容片段的 RDF 字面量的数据类型。"@zh, "The datatype of RDF literals storing fragments of HTML content"@en .
+
+rdf:langString
+    rdfs:label "带语言标记的字符串"@zh, "langString"@en ;
+    skos:prefLabel "带语言标记的字符串"@zh, "language-tagged string"@en ;
+    skos:altLabel "langString"@en ;
+    rdfs:comment "带语言标记的字符串值的数据类型。"@zh, "The datatype of language-tagged string values"@en .
+
+rdf:dirLangString
+    rdfs:label "带方向的语言标记字符串"@zh, "dirLangString"@en ;
+    skos:prefLabel "带方向的语言标记字符串"@zh, "directional language-tagged string"@en ;
+    skos:altLabel "dirLangString"@en ;
+    rdfs:comment "带方向的语言标记字符串值的数据类型，包含语言标签和基本方向（'ltr' 或 'rtl'）。"@zh, "The datatype of directional language-tagged string values, which includes a language tag and a base direction (either 'ltr' or 'rtl')"@en .
+
+rdf:PlainLiteral
+    rdfs:label "普通字面量"@zh, "PlainLiteral"@en ;
+    skos:prefLabel "普通字面量"@zh, "plain literal"@en ;
+    skos:altLabel "PlainLiteral"@en ;
+    rdfs:comment "RIF 和 OWL 2 中使用的普通（即无类型）字面量值的类。只有当它们不再需要此类时，才会将其移除。"@zh, "The class of plain (i.e., untyped) literal values, as used in RIF and OWL 2.  Will not be removed until no longer needed there."@en .
+
+rdf:type
+    rdfs:label "类型"@zh, "type"@en ;
+    skos:prefLabel "类型"@zh, "type"@en ;
+    rdfs:comment "主体是某个类的实例。"@zh, "The subject is an instance of a class."@en .
+
+rdf:reifies
+    rdfs:label "具体化"@zh, "reifies"@en ;
+    skos:prefLabel "具体化"@zh, "reifies"@en ;
+    rdfs:comment "将主体资源与一个命题关联。"@zh, "Associates the subject resource with a proposition."@en .
+
+rdf:Property
+    rdfs:label "属性"@zh, "Property"@en ;
+    skos:prefLabel "属性"@zh, "property"@en ;
+    skos:altLabel "Property"@en ;
+    rdfs:comment "RDF 属性的类。"@zh, "The class of RDF properties."@en .
+
+rdf:Statement
+    rdfs:label "陈述"@zh, "Statement"@en ;
+    skos:prefLabel "陈述"@zh, "statement"@en ;
+    skos:altLabel "Statement"@en ;
+    rdfs:comment "RDF 陈述的类。"@zh, "The class of RDF statements."@en .
+
+rdf:subject
+    rdfs:label "主体"@zh, "subject"@en ;
+    skos:prefLabel "主体"@zh, "subject"@en ;
+    rdfs:comment "作为主体的 RDF 陈述的主体。"@zh, "The subject of the subject RDF statement."@en .
+
+rdf:predicate
+    rdfs:label "谓词"@zh, "predicate"@en ;
+    skos:prefLabel "谓词"@zh, "predicate"@en ;
+    rdfs:comment "作为主体的 RDF 陈述的谓词。"@zh, "The predicate of the subject RDF statement."@en .
+
+rdf:object
+    rdfs:label "对象"@zh, "object"@en ;
+    skos:prefLabel "对象"@zh, "object"@en ;
+    rdfs:comment "作为主体的 RDF 陈述的对象。"@zh, "The object of the subject RDF statement."@en .
+
+rdf:Bag
+    rdfs:label "包"@zh, "Bag"@en ;
+    skos:prefLabel "包"@zh, "bag"@en ;
+    skos:altLabel "Bag"@en ;
+    rdfs:comment "无序容器的类。"@zh, "The class of unordered containers."@en .
+
+rdf:Seq
+    rdfs:label "序列"@zh, "Seq"@en ;
+    skos:prefLabel "序列"@zh, "sequence"@en ;
+    skos:altLabel "Seq"@en ;
+    rdfs:comment "有序容器的类。"@zh, "The class of ordered containers."@en .
+
+rdf:Alt
+    rdfs:label "替代项"@zh, "Alt"@en ;
+    skos:prefLabel "替代项"@zh, "alternatives"@en ;
+    skos:altLabel "Alt"@en ;
+    rdfs:comment "替代项容器的类。"@zh, "The class of containers of alternatives."@en .
+
+rdf:value
+    rdfs:label "值"@zh, "value"@en ;
+    skos:prefLabel "值"@zh, "value"@en ;
+    rdfs:comment "用于结构化值的惯用属性。"@zh, "Idiomatic property used for structured values."@en .
+
+rdf:List
+    rdfs:label "列表"@zh, "List"@en ;
+    skos:prefLabel "列表"@zh, "list"@en ;
+    skos:altLabel "List"@en ;
+    rdfs:comment "RDF 列表的类。"@zh, "The class of RDF Lists."@en .
+
+rdf:nil
+    rdfs:label "空列表"@zh, "nil"@en ;
+    skos:prefLabel "空列表"@zh, "empty list"@en ;
+    skos:altLabel "nil"@en ;
+    rdfs:comment "不包含任何项目的空列表。如果列表的其余部分为 nil，则该列表中不再有其他项目。"@zh, "The empty list, with no items in it. If the rest of a list is nil then the list has no more items in it."@en .
+
+rdf:first
+    rdfs:label "首项"@zh, "first"@en ;
+    skos:prefLabel "首项"@zh, "first"@en ;
+    rdfs:comment "主体 RDF 列表中的第一个项目。"@zh, "The first item in the subject RDF list."@en .
+
+rdf:rest
+    rdfs:label "其余部分"@zh, "rest"@en ;
+    skos:prefLabel "其余部分"@zh, "rest"@en ;
+    rdfs:comment "主体 RDF 列表中第一个项目之后的其余部分。"@zh, "The rest of the subject RDF list after the first item."@en .
+
+rdf:XMLLiteral
+    rdfs:label "XML 字面量"@zh, "XMLLiteral"@en ;
+    skos:prefLabel "XML 字面量"@zh, "XML literal"@en ;
+    skos:altLabel "XMLLiteral"@en ;
+    rdfs:comment "XML 字面量值的数据类型。"@zh, "The datatype of XML literal values."@en .
+
+rdf:JSON
+    rdfs:label "JSON"@zh, "JSON"@en ;
+    skos:prefLabel "JSON"@zh, "JSON"@en ;
+    rdfs:comment "存储 JSON 内容的 RDF 字面量的数据类型。"@zh, "The datatype of RDF literals storing JSON content."@en .
+
+rdf:CompoundLiteral
+    rdfs:label "复合字面量"@zh, "CompoundLiteral"@en ;
+    skos:prefLabel "复合字面量"@zh, "compound literal"@en ;
+    skos:altLabel "CompoundLiteral"@en ;
+    rdfs:comment "表示复合字面量的类。"@zh, "A class representing a compound literal."@en .
+
+rdf:language
+    rdfs:label "语言"@zh, "language"@en ;
+    skos:prefLabel "语言"@zh, "language"@en ;
+    rdfs:comment "CompoundLiteral 的语言分量。"@zh, "The language component of a CompoundLiteral."@en .
+
+rdf:direction
+    rdfs:label "方向"@zh, "direction"@en ;
+    skos:prefLabel "方向"@zh, "direction"@en ;
+    rdfs:comment "CompoundLiteral 的基本方向分量。"@zh, "The base direction component of a CompoundLiteral."@en .
+
+rdf:PropositionForm
+    rdfs:label "命题形式"@zh, "PropositionForm"@en ;
+    skos:prefLabel "命题形式"@zh, "proposition form"@en ;
+    skos:altLabel "PropositionForm"@en ;
+    rdfs:comment "抽象的原子命题形式的类。保留用于 RDF 1.2 Basic 中的命题编码。"@zh, "The class of abstract, atomic proposition forms. Reserved for encoding propositions in RDF 1.2 Basic."@en .
+
+rdf:propositionFormSubject
+    rdfs:label "命题形式主体"@zh, "propositionFormSubject"@en ;
+    skos:prefLabel "命题形式主体"@zh, "proposition form subject"@en ;
+    skos:altLabel "propositionFormSubject"@en ;
+    rdfs:comment "命题形式的主体分量。保留用于 RDF 1.2 Basic 中的命题编码。"@zh, "The subject component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
+
+rdf:propositionFormPredicate
+    rdfs:label "命题形式谓词"@zh, "propositionFormPredicate"@en ;
+    skos:prefLabel "命题形式谓词"@zh, "proposition form predicate"@en ;
+    skos:altLabel "propositionFormPredicate"@en ;
+    rdfs:comment "命题形式的谓词分量。保留用于 RDF 1.2 Basic 中的命题编码。"@zh, "The predicate component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
+
+rdf:propositionFormObject
+    rdfs:label "命题形式对象"@zh, "propositionFormObject"@en ;
+    skos:prefLabel "命题形式对象"@zh, "proposition form object"@en ;
+    skos:altLabel "propositionFormObject"@en ;
+    rdfs:comment "命题形式的对象分量。保留用于 RDF 1.2 Basic 中的命题编码。"@zh, "The object component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
+
+rdf:version-1.2
+    rdfs:label "1.2"@zh, "1.2"@en ;
+    skos:prefLabel "1.2"@zh, "1.2"@en ;
+    rdfs:comment "版本 1.2。"@zh, "Version 1.2."@en .
+
+rdf:version-1.2-basic
+    rdfs:label "1.2-basic"@zh, "1.2-basic"@en ;
+    skos:prefLabel "1.2-basic"@zh, "1.2-basic"@en ;
+    rdfs:comment "版本 1.2-basic。"@zh, "Version 1.2-basic"@en .
+
+rdf:version-1.1
+    rdfs:label "1.1"@zh, "1.1"@en ;
+    skos:prefLabel "1.1"@zh, "1.1"@en ;
+    rdfs:comment "版本 1.1。"@zh, "Version 1.1"@en .
+
+rdf:version-1.0
+    rdfs:label "1.0"@zh, "1.0"@en ;
+    skos:prefLabel "1.0"@zh, "1.0"@en ;
+    rdfs:comment "版本 1.0。"@zh, "Version 1.0"@en .

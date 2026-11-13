@@ -1,0 +1,97 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://www.w3.org/2000/01/rdf-schema#>
+    dcterms:title "RDF 스키마 어휘(RDFS)"@ko, "The RDF Schema vocabulary (RDFS)"@en .
+
+rdfs:Resource
+    rdfs:label "리소스"@ko, "Resource"@en ;
+    skos:prefLabel "리소스"@ko, "resource"@en ;
+    skos:altLabel "Resource"@en ;
+    rdfs:comment "모든 것을 포함하는 리소스의 클래스입니다."@ko, "The class resource, everything."@en .
+
+rdfs:Proposition
+    rdfs:label "명제"@ko, "Proposition"@en ;
+    skos:prefLabel "명제"@ko, "proposition"@en ;
+    skos:altLabel "Proposition"@en ;
+    rdfs:comment "두 엔티티 사이의 관계를 설명하는 단순한 논리 표현인 명제의 클래스입니다."@ko, "The class of propositions, simple logical expressions describing a relationship between two entities."@en .
+
+rdfs:Class
+    rdfs:label "클래스"@ko, "Class"@en ;
+    skos:prefLabel "클래스"@ko, "class"@en ;
+    skos:altLabel "Class"@en ;
+    rdfs:comment "클래스의 클래스입니다."@ko, "The class of classes."@en .
+
+rdfs:subClassOf
+    rdfs:label "의 하위 클래스이다"@ko, "subClassOf"@en ;
+    skos:prefLabel "의 하위 클래스이다"@ko, "is subclass of"@en ;
+    skos:altLabel "subClassOf"@en ;
+    rdfs:comment "주어가 클래스의 하위 클래스입니다."@ko, "The subject is a subclass of a class."@en .
+
+rdfs:subPropertyOf
+    rdfs:label "의 하위 속성이다"@ko, "subPropertyOf"@en ;
+    skos:prefLabel "의 하위 속성이다"@ko, "is subproperty of"@en ;
+    skos:altLabel "subPropertyOf"@en ;
+    rdfs:comment "주어가 속성의 하위 속성입니다."@ko, "The subject is a subproperty of a property."@en .
+
+rdfs:comment
+    rdfs:label "설명"@ko, "comment"@en ;
+    skos:prefLabel "설명"@ko, "comment"@en ;
+    rdfs:comment "주어 리소스에 대한 설명입니다."@ko, "A description of the subject resource."@en .
+
+rdfs:label
+    rdfs:label "레이블"@ko, "label"@en ;
+    skos:prefLabel "레이블"@ko, "label"@en ;
+    rdfs:comment "주어에 대한 사람이 읽을 수 있는 이름입니다."@ko, "A human-readable name for the subject."@en .
+
+rdfs:domain
+    rdfs:label "도메인"@ko, "domain"@en ;
+    skos:prefLabel "도메인"@ko, "domain"@en ;
+    rdfs:comment "주어 속성의 도메인입니다."@ko, "A domain of the subject property."@en .
+
+rdfs:range
+    rdfs:label "범위"@ko, "range"@en ;
+    skos:prefLabel "범위"@ko, "range"@en ;
+    rdfs:comment "주어 속성의 범위입니다."@ko, "A range of the subject property."@en .
+
+rdfs:seeAlso
+    rdfs:label "참조"@ko, "seeAlso"@en ;
+    skos:prefLabel "참조"@ko, "see also"@en ;
+    skos:altLabel "seeAlso"@en ;
+    rdfs:comment "주어 리소스에 대한 추가 정보입니다."@ko, "Further information about the subject resource."@en .
+
+rdfs:isDefinedBy
+    rdfs:label "에 의해 정의된다"@ko, "isDefinedBy"@en ;
+    skos:prefLabel "에 의해 정의된다"@ko, "is defined by"@en ;
+    skos:altLabel "isDefinedBy"@en ;
+    rdfs:comment "주어 리소스를 정의하는 리소스입니다."@ko, "A resource that defines the subject resource."@en .
+
+rdfs:Literal
+    rdfs:label "리터럴"@ko, "Literal"@en ;
+    skos:prefLabel "리터럴"@ko, "literal"@en ;
+    skos:altLabel "Literal"@en ;
+    rdfs:comment "텍스트 문자열과 정수 같은 리터럴 값의 클래스입니다."@ko, "The class of literal values, eg. textual strings and integers."@en .
+
+rdfs:Container
+    rdfs:label "컨테이너"@ko, "Container"@en ;
+    skos:prefLabel "컨테이너"@ko, "container"@en ;
+    skos:altLabel "Container"@en ;
+    rdfs:comment "RDF 컨테이너의 클래스입니다."@ko, "The class of RDF containers."@en .
+
+rdfs:ContainerMembershipProperty
+    rdfs:label "컨테이너 멤버십 속성"@ko, "ContainerMembershipProperty"@en ;
+    skos:prefLabel "컨테이너 멤버십 속성"@ko, "container membership property"@en ;
+    skos:altLabel "ContainerMembershipProperty"@en ;
+    rdfs:comment "컨테이너 멤버십 속성 rdf:_1, rdf:_2, ...의 클래스이며, 이들은 모두 'member'의 하위 속성입니다."@ko, "The class of container membership properties, rdf:_1, rdf:_2, ..., all of which are sub-properties of 'member'."@en .
+
+rdfs:member
+    rdfs:label "멤버"@ko, "member"@en ;
+    skos:prefLabel "멤버"@ko, "member"@en ;
+    rdfs:comment "주어 리소스의 멤버입니다."@ko, "A member of the subject resource."@en .
+
+rdfs:Datatype
+    rdfs:label "데이터형"@ko, "Datatype"@en ;
+    skos:prefLabel "데이터형"@ko, "datatype"@en ;
+    skos:altLabel "Datatype"@en ;
+    rdfs:comment "RDF 데이터형의 클래스입니다."@ko, "The class of RDF datatypes."@en .

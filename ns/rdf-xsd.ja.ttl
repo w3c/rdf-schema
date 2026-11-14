@@ -77,7 +77,7 @@ xsd:gDay
     rdfs:label "グレゴリオ暦の月内の日"@ja, "gDay"@en ;
     skos:prefLabel "グレゴリオ暦の月内の日"@ja, "Gregorian day"@en ;
     skos:altLabel "gDay"@en ;
-    rdfs:comment "グレゴリオ暦で月の何日かを表します（例：毎月15日）。字句形式：---DDで、タイムゾーンは任意です。タイムゾーンの字句形式：'Z'、または|offset| ≤ 14:00を満たす±hh:mm（例：'---05Z'、'---31-03:00'）。"@ja, "Days in a month recurring each month. Lexical form: ---DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '---05Z', '---31-03:00')."@en .
+    rdfs:comment "グレゴリオ暦で月の何日かを表します。字句形式：---DDで、タイムゾーンは任意です。タイムゾーンの字句形式：'Z'、または|offset| ≤ 14:00を満たす±hh:mm（例：'---05Z'、'---31-03:00'）。"@ja, "Days in a month recurring each month. Lexical form: ---DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '---05Z', '---31-03:00')."@en .
 
 xsd:gYearMonth
     rdfs:label "グレゴリオ暦の年と月"@ja, "gYearMonth"@en ;

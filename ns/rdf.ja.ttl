@@ -36,8 +36,8 @@ rdf:type
     rdfs:comment "主語はクラスのインスタンスです。"@ja, "The subject is an instance of a class."@en .
 
 rdf:reifies
-    rdfs:label "具体化する"@ja, "reifies"@en ;
-    skos:prefLabel "具体化する"@ja, "reifies"@en ;
+    rdfs:label "命題に関連付ける"@ja, "reifies"@en ;
+    skos:prefLabel "命題に関連付ける"@ja, "reifies"@en ;
     rdfs:comment "主語リソースを命題に関連付けます。"@ja, "Associates the subject resource with a proposition."@en .
 
 rdf:Property

@@ -1,0 +1,184 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    dcterms:title "RDF 개념 어휘(RDF)"@ko, "The RDF Concepts Vocabulary (RDF)"@en ;
+    dcterms:description "이것은 RDF 1.1 개념에서 정의한 RDF 네임스페이스 내 RDF 어휘 용어의 RDF 스키마입니다."@ko, "This is the RDF Schema for the RDF vocabulary terms in the RDF Namespace, defined in RDF 1.1 Concepts."@en .
+
+rdf:HTML
+    rdfs:label "HTML"@ko, "HTML"@en ;
+    skos:prefLabel "HTML"@ko, "HTML"@en ;
+    rdfs:comment "HTML 콘텐츠 조각을 저장하는 RDF 리터럴의 데이터형입니다."@ko, "The datatype of RDF literals storing fragments of HTML content"@en .
+
+rdf:langString
+    rdfs:label "언어 태그가 붙은 문자열"@ko, "langString"@en ;
+    skos:prefLabel "언어 태그가 붙은 문자열"@ko, "language-tagged string"@en ;
+    skos:altLabel "langString"@en ;
+    rdfs:comment "언어 태그가 붙은 문자열 값의 데이터형입니다."@ko, "The datatype of language-tagged string values"@en .
+
+rdf:dirLangString
+    rdfs:label "방향성이 있는 언어 태그가 붙은 문자열"@ko, "dirLangString"@en ;
+    skos:prefLabel "방향성이 있는 언어 태그가 붙은 문자열"@ko, "directional language-tagged string"@en ;
+    skos:altLabel "dirLangString"@en ;
+    rdfs:comment "언어 태그와 기본 방향('ltr' 또는 'rtl')을 포함하는, 방향성이 있는 언어 태그가 붙은 문자열 값의 데이터형입니다."@ko, "The datatype of directional language-tagged string values, which includes a language tag and a base direction (either 'ltr' or 'rtl')"@en .
+
+rdf:PlainLiteral
+    rdfs:label "일반 리터럴"@ko, "PlainLiteral"@en ;
+    skos:prefLabel "일반 리터럴"@ko, "plain literal"@en ;
+    skos:altLabel "PlainLiteral"@en ;
+    rdfs:comment "RIF와 OWL 2에서 사용하는 일반(즉, 타입이 없는) 리터럴 값의 클래스입니다. 이들에서 더 이상 필요하지 않게 될 때까지 제거되지 않습니다."@ko, "The class of plain (i.e., untyped) literal values, as used in RIF and OWL 2.  Will not be removed until no longer needed there."@en .
+
+rdf:type
+    rdfs:label "타입"@ko, "type"@en ;
+    skos:prefLabel "타입"@ko, "type"@en ;
+    rdfs:comment "주어가 클래스의 인스턴스입니다."@ko, "The subject is an instance of a class."@en .
+
+rdf:reifies
+    rdfs:label "구체화한다"@ko, "reifies"@en ;
+    skos:prefLabel "구체화한다"@ko, "reifies"@en ;
+    rdfs:comment "주어 리소스를 명제와 연결합니다."@ko, "Associates the subject resource with a proposition."@en .
+
+rdf:Property
+    rdfs:label "속성"@ko, "Property"@en ;
+    skos:prefLabel "속성"@ko, "property"@en ;
+    skos:altLabel "Property"@en ;
+    rdfs:comment "RDF 속성의 클래스입니다."@ko, "The class of RDF properties."@en .
+
+rdf:Statement
+    rdfs:label "문장"@ko, "Statement"@en ;
+    skos:prefLabel "문장"@ko, "statement"@en ;
+    skos:altLabel "Statement"@en ;
+    rdfs:comment "RDF 문장의 클래스입니다."@ko, "The class of RDF statements."@en .
+
+rdf:subject
+    rdfs:label "주어"@ko, "subject"@en ;
+    skos:prefLabel "주어"@ko, "subject"@en ;
+    rdfs:comment "주어인 RDF 문장의 주어입니다."@ko, "The subject of the subject RDF statement."@en .
+
+rdf:predicate
+    rdfs:label "술어"@ko, "predicate"@en ;
+    skos:prefLabel "술어"@ko, "predicate"@en ;
+    rdfs:comment "주어인 RDF 문장의 술어입니다."@ko, "The predicate of the subject RDF statement."@en .
+
+rdf:object
+    rdfs:label "목적어"@ko, "object"@en ;
+    skos:prefLabel "목적어"@ko, "object"@en ;
+    rdfs:comment "주어인 RDF 문장의 목적어입니다."@ko, "The object of the subject RDF statement."@en .
+
+rdf:Bag
+    rdfs:label "백"@ko, "Bag"@en ;
+    skos:prefLabel "백"@ko, "bag"@en ;
+    skos:altLabel "Bag"@en ;
+    rdfs:comment "순서 없는 컨테이너의 클래스입니다."@ko, "The class of unordered containers."@en .
+
+rdf:Seq
+    rdfs:label "시퀀스"@ko, "Seq"@en ;
+    skos:prefLabel "시퀀스"@ko, "sequence"@en ;
+    skos:altLabel "Seq"@en ;
+    rdfs:comment "순서 있는 컨테이너의 클래스입니다."@ko, "The class of ordered containers."@en .
+
+rdf:Alt
+    rdfs:label "선택지"@ko, "Alt"@en ;
+    skos:prefLabel "선택지"@ko, "alternatives"@en ;
+    skos:altLabel "Alt"@en ;
+    rdfs:comment "선택지 컨테이너의 클래스입니다."@ko, "The class of containers of alternatives."@en .
+
+rdf:value
+    rdfs:label "값"@ko, "value"@en ;
+    skos:prefLabel "값"@ko, "value"@en ;
+    rdfs:comment "구조화된 값에 사용되는 관용적 속성입니다."@ko, "Idiomatic property used for structured values."@en .
+
+rdf:List
+    rdfs:label "목록"@ko, "List"@en ;
+    skos:prefLabel "목록"@ko, "list"@en ;
+    skos:altLabel "List"@en ;
+    rdfs:comment "RDF 목록의 클래스입니다."@ko, "The class of RDF Lists."@en .
+
+rdf:nil
+    rdfs:label "빈 목록"@ko, "nil"@en ;
+    skos:prefLabel "빈 목록"@ko, "empty list"@en ;
+    skos:altLabel "nil"@en ;
+    rdfs:comment "항목이 없는 빈 목록입니다. 목록의 나머지가 nil이면 해당 목록에 더 이상의 항목이 없습니다."@ko, "The empty list, with no items in it. If the rest of a list is nil then the list has no more items in it."@en .
+
+rdf:first
+    rdfs:label "첫 번째 항목"@ko, "first"@en ;
+    skos:prefLabel "첫 번째 항목"@ko, "first"@en ;
+    rdfs:comment "주어 RDF 목록의 첫 번째 항목입니다."@ko, "The first item in the subject RDF list."@en .
+
+rdf:rest
+    rdfs:label "나머지"@ko, "rest"@en ;
+    skos:prefLabel "나머지"@ko, "rest"@en ;
+    rdfs:comment "주어 RDF 목록에서 첫 번째 항목 뒤에 오는 나머지입니다."@ko, "The rest of the subject RDF list after the first item."@en .
+
+rdf:XMLLiteral
+    rdfs:label "XML 리터럴"@ko, "XMLLiteral"@en ;
+    skos:prefLabel "XML 리터럴"@ko, "XML literal"@en ;
+    skos:altLabel "XMLLiteral"@en ;
+    rdfs:comment "XML 리터럴 값의 데이터형입니다."@ko, "The datatype of XML literal values."@en .
+
+rdf:JSON
+    rdfs:label "JSON"@ko, "JSON"@en ;
+    skos:prefLabel "JSON"@ko, "JSON"@en ;
+    rdfs:comment "JSON 콘텐츠를 저장하는 RDF 리터럴의 데이터형입니다."@ko, "The datatype of RDF literals storing JSON content."@en .
+
+rdf:CompoundLiteral
+    rdfs:label "복합 리터럴"@ko, "CompoundLiteral"@en ;
+    skos:prefLabel "복합 리터럴"@ko, "compound literal"@en ;
+    skos:altLabel "CompoundLiteral"@en ;
+    rdfs:comment "복합 리터럴을 나타내는 클래스입니다."@ko, "A class representing a compound literal."@en .
+
+rdf:language
+    rdfs:label "언어"@ko, "language"@en ;
+    skos:prefLabel "언어"@ko, "language"@en ;
+    rdfs:comment "CompoundLiteral의 언어 구성 요소입니다."@ko, "The language component of a CompoundLiteral."@en .
+
+rdf:direction
+    rdfs:label "방향"@ko, "direction"@en ;
+    skos:prefLabel "방향"@ko, "direction"@en ;
+    rdfs:comment "CompoundLiteral의 기본 방향 구성 요소입니다."@ko, "The base direction component of a CompoundLiteral."@en .
+
+rdf:PropositionForm
+    rdfs:label "명제 형식"@ko, "PropositionForm"@en ;
+    skos:prefLabel "명제 형식"@ko, "proposition form"@en ;
+    skos:altLabel "PropositionForm"@en ;
+    rdfs:comment "추상적이고 원자적인 명제 형식의 클래스입니다. RDF 1.2 Basic에서 명제를 인코딩하기 위해 예약되어 있습니다."@ko, "The class of abstract, atomic proposition forms. Reserved for encoding propositions in RDF 1.2 Basic."@en .
+
+rdf:propositionFormSubject
+    rdfs:label "명제 형식의 주어"@ko, "propositionFormSubject"@en ;
+    skos:prefLabel "명제 형식의 주어"@ko, "proposition form subject"@en ;
+    skos:altLabel "propositionFormSubject"@en ;
+    rdfs:comment "명제 형식의 주어 구성 요소입니다. RDF 1.2 Basic에서 명제를 인코딩하기 위해 예약되어 있습니다."@ko, "The subject component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
+
+rdf:propositionFormPredicate
+    rdfs:label "명제 형식의 술어"@ko, "propositionFormPredicate"@en ;
+    skos:prefLabel "명제 형식의 술어"@ko, "proposition form predicate"@en ;
+    skos:altLabel "propositionFormPredicate"@en ;
+    rdfs:comment "명제 형식의 술어 구성 요소입니다. RDF 1.2 Basic에서 명제를 인코딩하기 위해 예약되어 있습니다."@ko, "The predicate component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
+
+rdf:propositionFormObject
+    rdfs:label "명제 형식의 목적어"@ko, "propositionFormObject"@en ;
+    skos:prefLabel "명제 형식의 목적어"@ko, "proposition form object"@en ;
+    skos:altLabel "propositionFormObject"@en ;
+    rdfs:comment "명제 형식의 목적어 구성 요소입니다. RDF 1.2 Basic에서 명제를 인코딩하기 위해 예약되어 있습니다."@ko, "The object component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
+
+rdf:version-1.2
+    rdfs:label "1.2"@ko, "1.2"@en ;
+    skos:prefLabel "1.2"@ko, "1.2"@en ;
+    rdfs:comment "버전 1.2입니다."@ko, "Version 1.2."@en .
+
+rdf:version-1.2-basic
+    rdfs:label "1.2-basic"@ko, "1.2-basic"@en ;
+    skos:prefLabel "1.2-basic"@ko, "1.2-basic"@en ;
+    rdfs:comment "버전 1.2-basic입니다."@ko, "Version 1.2-basic"@en .
+
+rdf:version-1.1
+    rdfs:label "1.1"@ko, "1.1"@en ;
+    skos:prefLabel "1.1"@ko, "1.1"@en ;
+    rdfs:comment "버전 1.1입니다."@ko, "Version 1.1"@en .
+
+rdf:version-1.0
+    rdfs:label "1.0"@ko, "1.0"@en ;
+    skos:prefLabel "1.0"@ko, "1.0"@en ;
+    rdfs:comment "버전 1.0입니다."@ko, "Version 1.0"@en .

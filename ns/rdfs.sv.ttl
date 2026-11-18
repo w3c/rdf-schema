@@ -1,0 +1,97 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://www.w3.org/2000/01/rdf-schema#>
+    dcterms:title "RDF Schema-vokabulären (RDFS)"@sv, "The RDF Schema vocabulary (RDFS)"@en .
+
+rdfs:Resource
+    rdfs:label "resurs"@sv, "Resource"@en ;
+    skos:prefLabel "resurs"@sv, "resource"@en ;
+    skos:altLabel "Resource"@en ;
+    rdfs:comment "Klassen av alla resurser, dvs. allt."@sv, "The class resource, everything."@en .
+
+rdfs:Proposition
+    rdfs:label "proposition"@sv, "Proposition"@en ;
+    skos:prefLabel "proposition"@sv, "proposition"@en ;
+    skos:altLabel "Proposition"@en ;
+    rdfs:comment "Klassen av propositioner, enkla logiska uttryck som beskriver en relation mellan två entiteter."@sv, "The class of propositions, simple logical expressions describing a relationship between two entities."@en .
+
+rdfs:Class
+    rdfs:label "klass"@sv, "Class"@en ;
+    skos:prefLabel "klass"@sv, "class"@en ;
+    skos:altLabel "Class"@en ;
+    rdfs:comment "Klassen av klasser."@sv, "The class of classes."@en .
+
+rdfs:subClassOf
+    rdfs:label "är underklass till"@sv, "subClassOf"@en ;
+    skos:prefLabel "är underklass till"@sv, "is subclass of"@en ;
+    skos:altLabel "subClassOf"@en ;
+    rdfs:comment "Subjektet är en underklass till en klass."@sv, "The subject is a subclass of a class."@en .
+
+rdfs:subPropertyOf
+    rdfs:label "är underegenskap till"@sv, "subPropertyOf"@en ;
+    skos:prefLabel "är underegenskap till"@sv, "is subproperty of"@en ;
+    skos:altLabel "subPropertyOf"@en ;
+    rdfs:comment "Subjektet är en underegenskap till en egenskap."@sv, "The subject is a subproperty of a property."@en .
+
+rdfs:comment
+    rdfs:label "kommentar"@sv, "comment"@en ;
+    skos:prefLabel "kommentar"@sv, "comment"@en ;
+    rdfs:comment "En beskrivning av subjektresursen."@sv, "A description of the subject resource."@en .
+
+rdfs:label
+    rdfs:label "benämning"@sv, "label"@en ;
+    skos:prefLabel "benämning"@sv, "label"@en ;
+    rdfs:comment "Ett människoläsbart namn på subjektet."@sv, "A human-readable name for the subject."@en .
+
+rdfs:domain
+    rdfs:label "domän"@sv, "domain"@en ;
+    skos:prefLabel "domän"@sv, "domain"@en ;
+    rdfs:comment "En domän för subjektegenskapen."@sv, "A domain of the subject property."@en .
+
+rdfs:range
+    rdfs:label "värdemängd"@sv, "range"@en ;
+    skos:prefLabel "värdemängd"@sv, "range"@en ;
+    rdfs:comment "En värdemängd för subjektegenskapen."@sv, "A range of the subject property."@en .
+
+rdfs:seeAlso
+    rdfs:label "se även"@sv, "seeAlso"@en ;
+    skos:prefLabel "se även"@sv, "see also"@en ;
+    skos:altLabel "seeAlso"@en ;
+    rdfs:comment "Ytterligare information om subjektresursen."@sv, "Further information about the subject resource."@en .
+
+rdfs:isDefinedBy
+    rdfs:label "är definierad av"@sv, "isDefinedBy"@en ;
+    skos:prefLabel "är definierad av"@sv, "is defined by"@en ;
+    skos:altLabel "isDefinedBy"@en ;
+    rdfs:comment "En resurs som definierar subjektresursen."@sv, "A resource that defines the subject resource."@en .
+
+rdfs:Literal
+    rdfs:label "literal"@sv, "Literal"@en ;
+    skos:prefLabel "literal"@sv, "literal"@en ;
+    skos:altLabel "Literal"@en ;
+    rdfs:comment "Klassen av literala värden, t.ex. textsträngar och heltal."@sv, "The class of literal values, eg. textual strings and integers."@en .
+
+rdfs:Container
+    rdfs:label "behållare"@sv, "Container"@en ;
+    skos:prefLabel "behållare"@sv, "container"@en ;
+    skos:altLabel "Container"@en ;
+    rdfs:comment "Klassen av RDF-behållare."@sv, "The class of RDF containers."@en .
+
+rdfs:ContainerMembershipProperty
+    rdfs:label "behållarmedlemskapsegenskap"@sv, "ContainerMembershipProperty"@en ;
+    skos:prefLabel "behållarmedlemskapsegenskap"@sv, "container membership property"@en ;
+    skos:altLabel "ContainerMembershipProperty"@en ;
+    rdfs:comment "Klassen av behållarmedlemskapsegenskaper, rdf:_1, rdf:_2, ..., som alla är underegenskaper till 'member'."@sv, "The class of container membership properties, rdf:_1, rdf:_2, ..., all of which are sub-properties of 'member'."@en .
+
+rdfs:member
+    rdfs:label "medlem"@sv, "member"@en ;
+    skos:prefLabel "medlem"@sv, "member"@en ;
+    rdfs:comment "En medlem i subjektresursen."@sv, "A member of the subject resource."@en .
+
+rdfs:Datatype
+    rdfs:label "datatyp"@sv, "Datatype"@en ;
+    skos:prefLabel "datatyp"@sv, "datatype"@en ;
+    skos:altLabel "Datatype"@en ;
+    rdfs:comment "Klassen av RDF-datatyper."@sv, "The class of RDF datatypes."@en .

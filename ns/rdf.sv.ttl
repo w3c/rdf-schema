@@ -1,0 +1,184 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    dcterms:title "RDF-begreppsvokabulären (RDF)"@sv, "The RDF Concepts Vocabulary (RDF)"@en ;
+    dcterms:description "Detta är RDF-schemat för RDF-vokabulärens termer i RDF-namnrymden, så som de definieras av RDF 1.1 Concepts."@sv, "This is the RDF Schema for the RDF vocabulary terms in the RDF Namespace, defined in RDF 1.1 Concepts."@en .
+
+rdf:HTML
+    rdfs:label "HTML"@sv, "HTML"@en ;
+    skos:prefLabel "HTML"@sv, "HTML"@en ;
+    rdfs:comment "Datatypen för RDF-literaler som lagrar fragment av HTML-innehåll"@sv, "The datatype of RDF literals storing fragments of HTML content"@en .
+
+rdf:langString
+    rdfs:label "språktaggad sträng"@sv, "langString"@en ;
+    skos:prefLabel "språktaggad sträng"@sv, "language-tagged string"@en ;
+    skos:altLabel "langString"@en ;
+    rdfs:comment "Datatypen för språktaggade strängvärden"@sv, "The datatype of language-tagged string values"@en .
+
+rdf:dirLangString
+    rdfs:label "sträng med språktagg och grundriktning"@sv, "dirLangString"@en ;
+    skos:prefLabel "sträng med språktagg och grundriktning"@sv, "directional language-tagged string"@en ;
+    skos:altLabel "dirLangString"@en ;
+    rdfs:comment "Datatypen för strängar med språktagg och grundriktning, som innehåller en språktagg och en grundriktning (antingen 'ltr' eller 'rtl')"@sv, "The datatype of directional language-tagged string values, which includes a language tag and a base direction (either 'ltr' or 'rtl')"@en .
+
+rdf:PlainLiteral
+    rdfs:label "otypad literal"@sv, "PlainLiteral"@en ;
+    skos:prefLabel "otypad literal"@sv, "plain literal"@en ;
+    skos:altLabel "PlainLiteral"@en ;
+    rdfs:comment "Klassen av enkla (dvs. otypade) literala värden, som används i RIF och OWL 2. Tas inte bort förrän den inte längre behövs där."@sv, "The class of plain (i.e., untyped) literal values, as used in RIF and OWL 2.  Will not be removed until no longer needed there."@en .
+
+rdf:type
+    rdfs:label "typ"@sv, "type"@en ;
+    skos:prefLabel "typ"@sv, "type"@en ;
+    rdfs:comment "Subjektet är en instans av en klass."@sv, "The subject is an instance of a class."@en .
+
+rdf:reifies
+    rdfs:label "reifierar"@sv, "reifies"@en ;
+    skos:prefLabel "reifierar"@sv, "reifies"@en ;
+    rdfs:comment "Associerar subjektresursen med en proposition."@sv, "Associates the subject resource with a proposition."@en .
+
+rdf:Property
+    rdfs:label "egenskap"@sv, "Property"@en ;
+    skos:prefLabel "egenskap"@sv, "property"@en ;
+    skos:altLabel "Property"@en ;
+    rdfs:comment "Klassen av RDF-egenskaper."@sv, "The class of RDF properties."@en .
+
+rdf:Statement
+    rdfs:label "påstående"@sv, "Statement"@en ;
+    skos:prefLabel "påstående"@sv, "statement"@en ;
+    skos:altLabel "Statement"@en ;
+    rdfs:comment "Klassen av RDF-påståenden."@sv, "The class of RDF statements."@en .
+
+rdf:subject
+    rdfs:label "subjekt"@sv, "subject"@en ;
+    skos:prefLabel "subjekt"@sv, "subject"@en ;
+    rdfs:comment "Subjektet i det aktuella RDF-påståendet."@sv, "The subject of the subject RDF statement."@en .
+
+rdf:predicate
+    rdfs:label "predikat"@sv, "predicate"@en ;
+    skos:prefLabel "predikat"@sv, "predicate"@en ;
+    rdfs:comment "Predikatet i det aktuella RDF-påståendet."@sv, "The predicate of the subject RDF statement."@en .
+
+rdf:object
+    rdfs:label "objekt"@sv, "object"@en ;
+    skos:prefLabel "objekt"@sv, "object"@en ;
+    rdfs:comment "Objektet i det aktuella RDF-påståendet."@sv, "The object of the subject RDF statement."@en .
+
+rdf:Bag
+    rdfs:label "multimängd"@sv, "Bag"@en ;
+    skos:prefLabel "multimängd"@sv, "bag"@en ;
+    skos:altLabel "Bag"@en ;
+    rdfs:comment "Klassen av oordnade behållare."@sv, "The class of unordered containers."@en .
+
+rdf:Seq
+    rdfs:label "sekvens"@sv, "Seq"@en ;
+    skos:prefLabel "sekvens"@sv, "sequence"@en ;
+    skos:altLabel "Seq"@en ;
+    rdfs:comment "Klassen av ordnade behållare."@sv, "The class of ordered containers."@en .
+
+rdf:Alt
+    rdfs:label "alternativ"@sv, "Alt"@en ;
+    skos:prefLabel "alternativ"@sv, "alternatives"@en ;
+    skos:altLabel "Alt"@en ;
+    rdfs:comment "Klassen av behållare av alternativ."@sv, "The class of containers of alternatives."@en .
+
+rdf:value
+    rdfs:label "värde"@sv, "value"@en ;
+    skos:prefLabel "värde"@sv, "value"@en ;
+    rdfs:comment "Konventionell egenskap som används för strukturerade värden."@sv, "Idiomatic property used for structured values."@en .
+
+rdf:List
+    rdfs:label "lista"@sv, "List"@en ;
+    skos:prefLabel "lista"@sv, "list"@en ;
+    skos:altLabel "List"@en ;
+    rdfs:comment "Klassen av RDF-listor."@sv, "The class of RDF Lists."@en .
+
+rdf:nil
+    rdfs:label "tom lista"@sv, "nil"@en ;
+    skos:prefLabel "tom lista"@sv, "empty list"@en ;
+    skos:altLabel "nil"@en ;
+    rdfs:comment "Den tomma listan utan element. Om resten av en lista är den tomma listan innehåller listan inga fler element."@sv, "The empty list, with no items in it. If the rest of a list is nil then the list has no more items in it."@en .
+
+rdf:first
+    rdfs:label "första element"@sv, "first"@en ;
+    skos:prefLabel "första element"@sv, "first"@en ;
+    rdfs:comment "Det första elementet i den aktuella RDF-listan."@sv, "The first item in the subject RDF list."@en .
+
+rdf:rest
+    rdfs:label "rest"@sv, "rest"@en ;
+    skos:prefLabel "rest"@sv, "rest"@en ;
+    rdfs:comment "Resten av den aktuella RDF-listan efter det första elementet."@sv, "The rest of the subject RDF list after the first item."@en .
+
+rdf:XMLLiteral
+    rdfs:label "XML-literal"@sv, "XMLLiteral"@en ;
+    skos:prefLabel "XML-literal"@sv, "XML literal"@en ;
+    skos:altLabel "XMLLiteral"@en ;
+    rdfs:comment "Datatypen för XML-literala värden."@sv, "The datatype of XML literal values."@en .
+
+rdf:JSON
+    rdfs:label "JSON"@sv, "JSON"@en ;
+    skos:prefLabel "JSON"@sv, "JSON"@en ;
+    rdfs:comment "Datatypen för RDF-literaler som lagrar JSON-innehåll."@sv, "The datatype of RDF literals storing JSON content."@en .
+
+rdf:CompoundLiteral
+    rdfs:label "sammansatt literal"@sv, "CompoundLiteral"@en ;
+    skos:prefLabel "sammansatt literal"@sv, "compound literal"@en ;
+    skos:altLabel "CompoundLiteral"@en ;
+    rdfs:comment "En klass som representerar sammansatta literaler."@sv, "A class representing a compound literal."@en .
+
+rdf:language
+    rdfs:label "språk"@sv, "language"@en ;
+    skos:prefLabel "språk"@sv, "language"@en ;
+    rdfs:comment "Språkkomponenten i en sammansatt literal (rdf:CompoundLiteral)."@sv, "The language component of a CompoundLiteral."@en .
+
+rdf:direction
+    rdfs:label "grundriktning"@sv, "direction"@en ;
+    skos:prefLabel "grundriktning"@sv, "direction"@en ;
+    rdfs:comment "Grundriktningskomponenten i en sammansatt literal (rdf:CompoundLiteral)."@sv, "The base direction component of a CompoundLiteral."@en .
+
+rdf:PropositionForm
+    rdfs:label "propositionsform"@sv, "PropositionForm"@en ;
+    skos:prefLabel "propositionsform"@sv, "proposition form"@en ;
+    skos:altLabel "PropositionForm"@en ;
+    rdfs:comment "Klassen av abstrakta, atomära propositionsformer. Reserverad för kodning av propositioner i RDF 1.2 Basic."@sv, "The class of abstract, atomic proposition forms. Reserved for encoding propositions in RDF 1.2 Basic."@en .
+
+rdf:propositionFormSubject
+    rdfs:label "propositionsformssubjekt"@sv, "propositionFormSubject"@en ;
+    skos:prefLabel "propositionsformssubjekt"@sv, "proposition form subject"@en ;
+    skos:altLabel "propositionFormSubject"@en ;
+    rdfs:comment "Subjektkomponenten i en propositionsform. Reserverad för kodning av propositioner i RDF 1.2 Basic."@sv, "The subject component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
+
+rdf:propositionFormPredicate
+    rdfs:label "propositionsformspredikat"@sv, "propositionFormPredicate"@en ;
+    skos:prefLabel "propositionsformspredikat"@sv, "proposition form predicate"@en ;
+    skos:altLabel "propositionFormPredicate"@en ;
+    rdfs:comment "Predikatkomponenten i en propositionsform. Reserverad för kodning av propositioner i RDF 1.2 Basic."@sv, "The predicate component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
+
+rdf:propositionFormObject
+    rdfs:label "propositionsformsobjekt"@sv, "propositionFormObject"@en ;
+    skos:prefLabel "propositionsformsobjekt"@sv, "proposition form object"@en ;
+    skos:altLabel "propositionFormObject"@en ;
+    rdfs:comment "Objektkomponenten i en propositionsform. Reserverad för kodning av propositioner i RDF 1.2 Basic."@sv, "The object component of a proposition form. Reserved for encoding propositions in RDF 1.2 Basic."@en .
+
+rdf:version-1.2
+    rdfs:label "1.2"@sv, "1.2"@en ;
+    skos:prefLabel "1.2"@sv, "1.2"@en ;
+    rdfs:comment "Version 1.2."@sv, "Version 1.2."@en .
+
+rdf:version-1.2-basic
+    rdfs:label "1.2-basic"@sv, "1.2-basic"@en ;
+    skos:prefLabel "1.2-basic"@sv, "1.2-basic"@en ;
+    rdfs:comment "Version 1.2-basic"@sv, "Version 1.2-basic"@en .
+
+rdf:version-1.1
+    rdfs:label "1.1"@sv, "1.1"@en ;
+    skos:prefLabel "1.1"@sv, "1.1"@en ;
+    rdfs:comment "Version 1.1"@sv, "Version 1.1"@en .
+
+rdf:version-1.0
+    rdfs:label "1.0"@sv, "1.0"@en ;
+    skos:prefLabel "1.0"@sv, "1.0"@en ;
+    rdfs:comment "Version 1.0"@sv, "Version 1.0"@en .

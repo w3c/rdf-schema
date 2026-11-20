@@ -5,12 +5,12 @@
 
 <http://www.w3.org/2001/XMLSchema#>
     dcterms:title "XSD-datatyper i RDF"@sv, "RDF XSD datatypes"@en ;
-    dcterms:description "Denna fil beskriver XML Schema-datatyperna som används i RDF."@sv, "This file is a description of the XML Schema datatypes used in RDF"@en .
+    dcterms:description "Denna fil beskriver de XML Schema-datatyper som används i RDF."@sv, "This file is a description of the XML Schema datatypes used in RDF"@en .
 
 xsd:string
     rdfs:label "sträng"@sv, "string"@en ;
     skos:prefLabel "sträng"@sv, "string"@en ;
-    rdfs:comment "Strängar. Värderymd: ändliga sekvenser av Unicode-tecken. Lexikal form: alla ändliga följder av XML-tecken som matchar XML-produktionen Char (d.v.s. alla Unicode-skalärvärden som tillåts i XML)."@sv, "Character strings. Value space: finite-length sequences of Unicode characters. Lexical form: any finite-length sequence of XML characters matching the XML Char production (i.e., any Unicode scalar value allowed by XML)."@en .
+    rdfs:comment "Strängar. Värderymd: ändliga sekvenser av Unicode-tecken. Lexikal form: alla ändliga följder av XML-tecken som matchar XML-produktionsregeln Char (d.v.s. alla Unicode-skalärvärden som tillåts i XML)."@sv, "Character strings. Value space: finite-length sequences of Unicode characters. Lexical form: any finite-length sequence of XML characters matching the XML Char production (i.e., any Unicode scalar value allowed by XML)."@en .
 
 xsd:boolean
     rdfs:label "booleskt värde"@sv, "boolean"@en ;
@@ -20,12 +20,12 @@ xsd:boolean
 xsd:decimal
     rdfs:label "decimaltal"@sv, "decimal"@en ;
     skos:prefLabel "decimaltal"@sv, "decimal"@en ;
-    rdfs:comment "Decimaltal med godtycklig precision. Värderymd: nummer på formen i/10^n, med i och n som heltal (n ≥ 0). Inga särskilda värden (INF/NaN) och ingen exponentnotation i lexikal form. Lexikal form: ett valfritt förtecken, följt av siffror, med en valfri efterföljande bråkdel med '.' som decimalavskiljare; en exponent är inte tillåten (t.ex. '-1.23', '210', '+100000.00')."@sv, "Arbitrary-precision decimal numbers. Value space: numbers of the form i/10^n, with i and n integers (n ≥ 0). No special values (INF/NaN) and no exponential notation in lexical form. Lexical form: an optional leading sign followed by digits, with an optional fractional part using '.' as the decimal separator; no exponent is permitted (e.g., '-1.23', '210', '+100000.00')."@en .
+    rdfs:comment "Decimaltal med godtycklig precision. Värderymd: tal på formen i/10^n, med i och n som heltal (n ≥ 0). Inga särskilda värden (INF/NaN) och ingen exponentnotation i lexikal form. Lexikal form: ett valfritt förtecken, följt av siffror, med en valfri efterföljande bråkdel med '.' som decimaltecken; en exponent är inte tillåten (t.ex. '-1.23', '210', '+100000.00')."@sv, "Arbitrary-precision decimal numbers. Value space: numbers of the form i/10^n, with i and n integers (n ≥ 0). No special values (INF/NaN) and no exponential notation in lexical form. Lexical form: an optional leading sign followed by digits, with an optional fractional part using '.' as the decimal separator; no exponent is permitted (e.g., '-1.23', '210', '+100000.00')."@en .
 
 xsd:integer
     rdfs:label "heltal"@sv, "integer"@en ;
     skos:prefLabel "heltal"@sv, "integer"@en ;
-    rdfs:comment "Heltal med förtecken av godtycklig storlek. Härledd från xsd:decimal med antal decimaler=0. Lexikal form: valfritt förtecken, följt av en eller flera decimalsiffror; utan decimalpunkt och utan exponent (t.ex. '-1', '0', '+100000')."@sv, "Signed integers of arbitrary size. Derived from xsd:decimal with fractionDigits=0. Lexical form: optional leading sign followed by one or more decimal digits; no decimal point or exponent (e.g., '-1', '0', '+100000')."@en .
+    rdfs:comment "Heltal med förtecken av godtycklig storlek. Härledd från xsd:decimal med fractionDigits=0. Lexikal form: valfritt förtecken, följt av en eller flera decimalsiffror; utan decimalpunkt och utan exponent (t.ex. '-1', '0', '+100000')."@sv, "Signed integers of arbitrary size. Derived from xsd:decimal with fractionDigits=0. Lexical form: optional leading sign followed by one or more decimal digits; no decimal point or exponent (e.g., '-1', '0', '+100000')."@en .
 
 xsd:double
     rdfs:label "64-bitars flyttal"@sv, "double"@en ;
@@ -42,7 +42,7 @@ xsd:float
 xsd:date
     rdfs:label "datum"@sv, "date"@en ;
     skos:prefLabel "datum"@sv, "date"@en ;
-    rdfs:comment "Kalenderdatum som uppåt öppna dygnsintervall. Lexikal form: YYYY-MM-DD med valfri tidszon. Lexikal form för tidszoner: 'Z' eller en tidszonsförskjutning på formen ±hh:mm där 00 ≤ mm ≤ 59 och |förskjutning| ≤ 14:00 (t.ex. '2025-09-27Z', '2025-09-27+02:00')."@sv, "Calendar dates as top-open day intervals. Lexical form: YYYY-MM-DD with optional timezone. Timezone lexical forms: 'Z' or an offset of the form ±hh:mm with 00 ≤ mm ≤ 59 and |offset| ≤ 14:00 (e.g., '2025-09-27Z', '2025-09-27+02:00')."@en .
+    rdfs:comment "Kalenderdatum i form av dygnsintervall som är öppna i övre änden. Lexikal form: YYYY-MM-DD med valfri tidszon. Lexikal form för tidszoner: 'Z' eller en tidszonsförskjutning på formen ±hh:mm där 00 ≤ mm ≤ 59 och |förskjutning| ≤ 14:00 (t.ex. '2025-09-27Z', '2025-09-27+02:00')."@sv, "Calendar dates as top-open day intervals. Lexical form: YYYY-MM-DD with optional timezone. Timezone lexical forms: 'Z' or an offset of the form ±hh:mm with 00 ≤ mm ≤ 59 and |offset| ≤ 14:00 (e.g., '2025-09-27Z', '2025-09-27+02:00')."@en .
 
 xsd:time
     rdfs:label "tid"@sv, "time"@en ;
@@ -53,19 +53,19 @@ xsd:dateTime
     rdfs:label "datum och tid"@sv, "dateTime"@en ;
     skos:prefLabel "datum och tid"@sv, "date and time"@en ;
     skos:altLabel "dateTime"@en ;
-    rdfs:comment "Datum och tider med valfri tidszon. Lexikal form: YYYY-MM-DDThh:mm:ss(.s+)? med valfri tidszon. Värden med olika uttryckliga tidszonsförskjutningar kan vara likvärdiga som ögonblick. Lexikala former för tidszoner: 'Z' eller ±hh:mm där |förskjutning| ≤ 14:00 (t.ex. '2025-09-27T14:03:00+02:00')."@sv, "Instants of time, optionally with timezone. Lexical form: YYYY-MM-DDThh:mm:ss(.s+)? with optional timezone. Values with different explicit offsets can be equal as instants. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '2025-09-27T14:03:00+02:00')."@en .
+    rdfs:comment "Tidpunkter med valfri tidszon. Lexikal form: YYYY-MM-DDThh:mm:ss(.s+)? med valfri tidszon. Värden med olika uttryckliga tidszonsförskjutningar kan vara likvärdiga som ögonblick. Lexikala former för tidszoner: 'Z' eller ±hh:mm där |förskjutning| ≤ 14:00 (t.ex. '2025-09-27T14:03:00+02:00')."@sv, "Instants of time, optionally with timezone. Lexical form: YYYY-MM-DDThh:mm:ss(.s+)? with optional timezone. Values with different explicit offsets can be equal as instants. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '2025-09-27T14:03:00+02:00')."@en .
 
 xsd:dateTimeStamp
     rdfs:label "datum och tid med tidszon"@sv, "dateTimeStamp"@en ;
     skos:prefLabel "datum och tid med tidszon"@sv, "date and time with timezone"@en ;
     skos:altLabel "dateTimeStamp"@en ;
-    rdfs:comment "Datum och tider med en obligatorisk, uttrycklig tidszonsförskjutning. Lexikal form: YYYY-MM-DDThh:mm:ss(.s+)?(Z|±hh:mm); tidszonsförskjutningen är obligatorisk."@sv, "Dates and times with a required explicit timezone offset. Lexical form: YYYY-MM-DDThh:mm:ss(.s+)?(Z|±hh:mm); the timezone offset is mandatory."@en .
+    rdfs:comment "Tidpunkter med en obligatorisk, uttrycklig tidszonsförskjutning. Lexikal form: YYYY-MM-DDThh:mm:ss(.s+)?(Z|±hh:mm); tidszonsförskjutningen är obligatorisk."@sv, "Dates and times with a required explicit timezone offset. Lexical form: YYYY-MM-DDThh:mm:ss(.s+)?(Z|±hh:mm); the timezone offset is mandatory."@en .
 
 xsd:gYear
     rdfs:label "gregorianskt år"@sv, "gYear"@en ;
     skos:prefLabel "gregorianskt år"@sv, "Gregorian year"@en ;
     skos:altLabel "gYear"@en ;
-    rdfs:comment "Gregorianska år. Lexikal form: CCYY (valfritt inlett med '-' för år före vår tideräkning och valfri tidszon). Lexikala former för tidszoner: 'Z' eller ±hh:mm där |förskjutning| ≤ 14:00; År matchar mönstret -?([1-9][0-9]{3,}|0[0-9]{3})."@sv, "Gregorian years. Lexical form: CCYY (optionally with a leading '-' for years BCE and optional timezone). Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00; years are matched by -?([1-9][0-9]{3,}|0[0-9]{3})."@en .
+    rdfs:comment "Gregorianska år. Lexikal form: CCYY (valfritt med inledande '-' för år före vår tideräkning och valfri tidszon). Lexikala former för tidszoner: 'Z' eller ±hh:mm där |förskjutning| ≤ 14:00; år matchar mönstret -?([1-9][0-9]{3,}|0[0-9]{3})."@sv, "Gregorian years. Lexical form: CCYY (optionally with a leading '-' for years BCE and optional timezone). Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00; years are matched by -?([1-9][0-9]{3,}|0[0-9]{3})."@en .
 
 xsd:gMonth
     rdfs:label "gregoriansk månad"@sv, "gMonth"@en ;
@@ -77,7 +77,7 @@ xsd:gDay
     rdfs:label "gregoriansk dag"@sv, "gDay"@en ;
     skos:prefLabel "gregoriansk dag"@sv, "Gregorian day"@en ;
     skos:altLabel "gDay"@en ;
-    rdfs:comment "Dagar i månader som återkommer varje månad. Lexikal form: ---DD med valfri tidszon. Lexikala former för tidszoner: 'Z' eller ±hh:mm där |förskjutning| ≤ 14:00 (t.ex. '---05Z', '---31-03:00')."@sv, "Days in a month recurring each month. Lexical form: ---DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '---05Z', '---31-03:00')."@en .
+    rdfs:comment "Dagar i en månad som återkommer varje månad. Lexikal form: ---DD med valfri tidszon. Lexikala former för tidszoner: 'Z' eller ±hh:mm där |förskjutning| ≤ 14:00 (t.ex. '---05Z', '---31-03:00')."@sv, "Days in a month recurring each month. Lexical form: ---DD with optional timezone. Timezone lexical forms: 'Z' or ±hh:mm with |offset| ≤ 14:00 (e.g., '---05Z', '---31-03:00')."@en .
 
 xsd:gYearMonth
     rdfs:label "gregorianskt år och månad"@sv, "gYearMonth"@en ;
@@ -94,19 +94,19 @@ xsd:gMonthDay
 xsd:duration
     rdfs:label "varaktighet"@sv, "duration"@en ;
     skos:prefLabel "varaktighet"@sv, "duration"@en ;
-    rdfs:comment "Tidsrymder enligt ISO 8601 (PnYnMnDTnHnMnS), valfritt ledande '-'. Värderymden parar ihop en månadskomponent och en sekundkomponent; enbart partiell ordning är definierad. Lexikal form: 'P', följt av år/månad/dag och valfritt 'T' följt av timme/minut/sekund; minst en komponent måste vara angiven; en bråkdel är endast tillåten på sekunder (t.ex. 'P3Y6M4DT12H30M5.5S', '-P15D')."@sv, "Time durations per ISO 8601 (PnYnMnDTnHnMnS), optionally with a leading '-'. Value space pairs a months component and a seconds component; only a partial order is defined. Lexical form: 'P' followed by year/month/day and optionally 'T' followed by hour/minute/second fragments; at least one component must be present; a fractional part is allowed on seconds only (e.g., 'P3Y6M4DT12H30M5.5S', '-P15D')."@en .
+    rdfs:comment "Tidsrymder enligt ISO 8601 (PnYnMnDTnHnMnS), valfritt inledande '-'. Värderymden parar ihop en månadskomponent och en sekundkomponent; enbart partiell ordning är definierad. Lexikal form: 'P', följt av år/månad/dag och valfritt 'T' följt av timme/minut/sekund; minst en komponent måste vara angiven; en bråkdel är endast tillåten på sekundkomponenten (t.ex. 'P3Y6M4DT12H30M5.5S', '-P15D')."@sv, "Time durations per ISO 8601 (PnYnMnDTnHnMnS), optionally with a leading '-'. Value space pairs a months component and a seconds component; only a partial order is defined. Lexical form: 'P' followed by year/month/day and optionally 'T' followed by hour/minute/second fragments; at least one component must be present; a fractional part is allowed on seconds only (e.g., 'P3Y6M4DT12H30M5.5S', '-P15D')."@en .
 
 xsd:yearMonthDuration
     rdfs:label "varaktighet i år och månad"@sv, "yearMonthDuration"@en ;
     skos:prefLabel "varaktighet i år och månad"@sv, "year and month duration"@en ;
     skos:altLabel "yearMonthDuration"@en ;
-    rdfs:comment "Tidsrymder begränsade till år och månad (där sekundkomponenten är 0). Totalt ordnade; den lexikala formen använder PnYnM med valfritt ledande '-' (t.ex. 'P2Y', 'P3M', '-P1Y2M')."@sv, "Durations restricted to year and month fields (seconds component is 0). Totally ordered; lexical form uses PnYnM with optional leading '-' (e.g., 'P2Y', 'P3M', '-P1Y2M')."@en .
+    rdfs:comment "Tidsrymder begränsade till år och månad (där sekundkomponenten är 0). Totalt ordnade; den lexikala formen använder PnYnM med valfritt inledande '-' (t.ex. 'P2Y', 'P3M', '-P1Y2M')."@sv, "Durations restricted to year and month fields (seconds component is 0). Totally ordered; lexical form uses PnYnM with optional leading '-' (e.g., 'P2Y', 'P3M', '-P1Y2M')."@en .
 
 xsd:dayTimeDuration
     rdfs:label "varaktighet i dagar, timmar, minuter och sekunder"@sv, "dayTimeDuration"@en ;
-    skos:prefLabel"varaktighet i dagar, timmar, minuter och sekunder"@sv, "duration in days, hours, minutes and seconds"@en ;
+    skos:prefLabel "varaktighet i dagar, timmar, minuter och sekunder"@sv, "duration in days, hours, minutes and seconds"@en ;
     skos:altLabel "dayTimeDuration"@en ;
-    rdfs:comment "Tidsrymder begränsade till dag, timme, minut och sekund (där månadskomponenten är 0). Totalt ordnade; den lexikala formen 'PnDTnHnMnS' med valfritt ledande '-' och valfria sekundbråkdelar (t.ex. 'P30D', 'PT12H30M', 'PT5.25S', '-P1DT2H')."@sv, "Durations restricted to day, hour, minute, second fields (months component is 0). Totally ordered; lexical form 'PnDTnHnMnS' with optional leading '-' and optional fractional seconds (e.g., 'P30D', 'PT12H30M', 'PT5.25S', '-P1DT2H')."@en .
+    rdfs:comment "Tidsrymder begränsade till dag, timme, minut och sekund (där månadskomponenten är 0). Totalt ordnade; den lexikala formen använder 'PnDTnHnMnS' med valfritt inledande '-' och valfria sekundbråkdelar (t.ex. 'P30D', 'PT12H30M', 'PT5.25S', '-P1DT2H')."@sv, "Durations restricted to day, hour, minute, second fields (months component is 0). Totally ordered; lexical form 'PnDTnHnMnS' with optional leading '-' and optional fractional seconds (e.g., 'P30D', 'PT12H30M', 'PT5.25S', '-P1DT2H')."@en .
 
 xsd:byte
     rdfs:label "8-bitars heltal med förtecken"@sv, "byte"@en ;
@@ -136,35 +136,35 @@ xsd:unsignedByte
     rdfs:label "8-bitars heltal utan förtecken"@sv, "unsignedByte"@en ;
     skos:prefLabel "8-bitars heltal utan förtecken"@sv, "8-bit unsigned integer"@en ;
     skos:altLabel "unsignedByte"@en ;
-    rdfs:comment "8-bitars heltal utan förtecken. Värderymd: [0 .. 255]. Lexikal form: valfritt förtecken, följt av siffror; om ett förtecken används måste det vara '+', förutom för noll som enligt XSD 1.1:s lexikala rymd får skrivas med valfritt '+' eller '-'."@sv, "8-bit unsigned integers. Value space: [0 .. 255]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
+    rdfs:comment "8-bitars heltal utan förtecken. Värderymd: [0 .. 255]. Lexikal form: valfritt förtecken, följt av siffror; om ett förtecken används måste det vara '+', förutom för noll som enligt den lexikala rymden i XSD 1.1 får skrivas med valfritt '+' eller '-'."@sv, "8-bit unsigned integers. Value space: [0 .. 255]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
 
 xsd:unsignedShort
     rdfs:label "16-bitars heltal utan förtecken"@sv, "unsignedShort"@en ;
     skos:prefLabel "16-bitars heltal utan förtecken"@sv, "16-bit unsigned integer"@en ;
     skos:altLabel "unsignedShort"@en ;
-    rdfs:comment "16-bitars heltal utan förtecken. Värderymd: [0 .. 65535]. Lexikal form: valfritt förtecken följt av siffror; om ett förtecken används måste det vara '+', förutom för noll som enligt XSD 1.1:s lexikala rymd får skrivas med valfritt '+' eller '-'."@sv, "16-bit unsigned integers. Value space: [0 .. 65535]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
+    rdfs:comment "16-bitars heltal utan förtecken. Värderymd: [0 .. 65535]. Lexikal form: valfritt förtecken följt av siffror; om ett förtecken används måste det vara '+', förutom för noll som enligt den lexikala rymden i XSD 1.1 får skrivas med valfritt '+' eller '-'."@sv, "16-bit unsigned integers. Value space: [0 .. 65535]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
 
 xsd:unsignedInt
     rdfs:label "32-bitars heltal utan förtecken"@sv, "unsignedInt"@en ;
     skos:prefLabel "32-bitars heltal utan förtecken"@sv, "32-bit unsigned integer"@en ;
     skos:altLabel "unsignedInt"@en ;
-    rdfs:comment "32-bitars heltal utan förtecken. Värderymd: [0 .. 4294967295]. Lexikal form: följt av siffror; om ett förtecken används måste det vara '+', förutom för noll som enligt XSD 1.1:s lexikala rymd får skrivas med valfritt '+' eller '-'."@sv, "32-bit unsigned integers. Value space: [0 .. 4294967295]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
+    rdfs:comment "32-bitars heltal utan förtecken. Värderymd: [0 .. 4294967295]. Lexikal form: valfritt förtecken följt av siffror; om ett förtecken används måste det vara '+', förutom för noll som enligt den lexikala rymden i XSD 1.1 får skrivas med valfritt '+' eller '-'."@sv, "32-bit unsigned integers. Value space: [0 .. 4294967295]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
 
 xsd:unsignedLong
     rdfs:label "64-bitars heltal utan förtecken"@sv, "unsignedLong"@en ;
     skos:prefLabel "64-bitars heltal utan förtecken"@sv, "64-bit unsigned integer"@en ;
     skos:altLabel "unsignedLong"@en ;
-    rdfs:comment "64-bitars heltal utan förtecken. Värderymd: [0 .. 18446744073709551615]. Lexikal form: följt av siffror; om ett förtecken används måste det vara '+', förutom för noll som enligt XSD 1.1:s lexikala rymd får skrivas med valfritt '+' eller '-'."@sv, "64-bit unsigned integers. Value space: [0 .. 18446744073709551615]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
+    rdfs:comment "64-bitars heltal utan förtecken. Värderymd: [0 .. 18446744073709551615]. Lexikal form: valfritt förtecken följt av siffror; om ett förtecken används måste det vara '+', förutom för noll som enligt den lexikala rymden i XSD 1.1 får skrivas med valfritt '+' eller '-'."@sv, "64-bit unsigned integers. Value space: [0 .. 18446744073709551615]. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign in XSD 1.1 lexical space."@en .
 
 xsd:positiveInteger
     rdfs:label "positivt heltal"@sv, "positiveInteger"@en ;
     skos:prefLabel "positivt heltal"@sv, "positive integer"@en ;
     skos:altLabel "positiveInteger"@en ;
-    rdfs:comment "Heltal större än noll. Värderymd: {1, 2, ...}. Härledd från xsd:nonNegativeInteger med minInclusive=1. Lexikal form: valfritt '+' följt av en eller flera siffror; ingen nolla eller negativa former."@sv, "Integers greater than zero. Value space: {1, 2, ...}. Derived from xsd:nonNegativeInteger with minInclusive=1. Lexical form: optional '+' sign followed by one or more digits; no zero or negative forms."@en .
+    rdfs:comment "Heltal större än noll. Värderymd: {1, 2, ...}. Härledd från xsd:nonNegativeInteger med minInclusive=1. Lexikal form: valfritt '+' följt av en eller flera siffror; ingen nolla och inga negativa former."@sv, "Integers greater than zero. Value space: {1, 2, ...}. Derived from xsd:nonNegativeInteger with minInclusive=1. Lexical form: optional '+' sign followed by one or more digits; no zero or negative forms."@en .
 
 xsd:nonNegativeInteger
-    rdfs:label "ickenegativt heltal"@sv, "nonNegativeInteger"@en ;
-    skos:prefLabel "ickenegativt heltal"@sv, "non-negative integer"@en ;
+    rdfs:label "icke-negativt heltal"@sv, "nonNegativeInteger"@en ;
+    skos:prefLabel "icke-negativt heltal"@sv, "non-negative integer"@en ;
     skos:altLabel "nonNegativeInteger"@en ;
     rdfs:comment "Heltal större än eller lika med noll. Värderymd: {0, 1, 2, ...}. Lexikal form: valfritt förtecken följt av siffror; om ett förtecken är angivet måste det vara '+', förutom för noll som får skrivas med valfritt '+' eller '-'."@sv, "Integers greater than or equal to zero. Value space: {0, 1, 2, ...}. Lexical form: optional sign followed by digits; if a sign is present it must be '+', except that zero may be written with an optional '+' or '-' sign."@en .
 
@@ -175,8 +175,8 @@ xsd:negativeInteger
     rdfs:comment "Heltal mindre än noll. Värderymd: {..., -2, -1}. Härledd från xsd:nonPositiveInteger med maxInclusive=-1. Lexikal form: obligatoriskt '-', följt av en eller flera siffror."@sv, "Integers less than zero. Value space: {..., -2, -1}. Derived from xsd:nonPositiveInteger with maxInclusive=-1. Lexical form: mandatory '-' sign followed by one or more digits."@en .
 
 xsd:nonPositiveInteger
-    rdfs:label "ickepositivt heltal"@sv, "nonPositiveInteger"@en ;
-    skos:prefLabel "ickepositivt heltal"@sv, "non-positive integer"@en ;
+    rdfs:label "icke-positivt heltal"@sv, "nonPositiveInteger"@en ;
+    skos:prefLabel "icke-positivt heltal"@sv, "non-positive integer"@en ;
     skos:altLabel "nonPositiveInteger"@en ;
     rdfs:comment "Heltal mindre än eller lika med noll. Värderymd: {..., -2, -1, 0}. Lexikal form: valfritt förtecken för noll, annars obligatoriskt '-' följt av siffror."@sv, "Integers less than or equal to zero. Value space: {..., -2, -1, 0}. Lexical form: optional sign for zero, otherwise a mandatory '-' sign followed by digits."@en .
 
@@ -190,13 +190,13 @@ xsd:base64Binary
     rdfs:label "base64-kodad binärdata"@sv, "base64Binary"@en ;
     skos:prefLabel "base64-kodad binärdata"@sv, "Base64 binary data"@en ;
     skos:altLabel "base64Binary"@en ;
-    rdfs:comment "Godtycklig binärdata, kodad enligt base64. Base64-alfabetet enligt RFC 4648; lexikala former och blankteckenhantering följer XML Schema-reglerna. Lexikal form: tecken från base64-alfabetet 'A–Z', 'a–z', '0–9', '+', '/' med valfritt '=' som utfyllnad; blanktecken kollapsas under validering."@sv, "Arbitrary binary data encoded using Base64. Base64 alphabet per RFC 4648; lexical forms and whitespace handling follow XML Schema rules. Lexical form: Base64 alphabet 'A–Z', 'a–z', '0–9', '+', '/' with optional '=' padding; whitespace is collapsed during validation."@en .
+    rdfs:comment "Godtycklig binärdata, kodad enligt base64. Base64-alfabetet enligt RFC 4648; lexikala former och blankteckenhantering följer XML Schema-reglerna. Lexikal form: tecken från base64-alfabetet 'A–Z', 'a–z', '0–9', '+', '/' med valfritt '=' som utfyllnad; blanktecken slås samman under validering."@sv, "Arbitrary binary data encoded using Base64. Base64 alphabet per RFC 4648; lexical forms and whitespace handling follow XML Schema rules. Lexical form: Base64 alphabet 'A–Z', 'a–z', '0–9', '+', '/' with optional '=' padding; whitespace is collapsed during validation."@en .
 
 xsd:anyURI
     rdfs:label "IRI-referens"@sv, "anyURI"@en ;
     skos:prefLabel "IRI-referens"@sv, "IRI reference"@en ;
     skos:altLabel "anyURI"@en ;
-    rdfs:comment "Internationaliserade resursidentifierare (IRI:er) eller IRI-referenser per RFC 3987. Lexikalrymden är helt enkelt xsd:string (XSD kräver ingen fast grammatik). Typiska lexikala former inkluderar absoluta eller relativa IRI:er och valfria fragmentidentifierare; processorer får tillämpa kodning och mappningar från IRI till URI."@sv, "Internationalized Resource Identifiers (IRIs) or IRI references per RFC 3987. Lexical space is simply xsd:string (no fixed grammar is enforced by XSD); typical lexical forms include absolute or relative IRIs and optional fragment identifiers; processors may apply escaping/IRI-to-URI mapping."@en .
+    rdfs:comment "Internationaliserade resursidentifierare (IRI:er) eller IRI-referenser enligt RFC 3987. Den lexikala rymden är helt enkelt xsd:string (XSD kräver ingen fast grammatik). Typiska lexikala former inkluderar absoluta eller relativa IRI:er och valfria fragmentidentifierare; processorer får tillämpa procentkodning och mappningar från IRI till URI."@sv, "Internationalized Resource Identifiers (IRIs) or IRI references per RFC 3987. Lexical space is simply xsd:string (no fixed grammar is enforced by XSD); typical lexical forms include absolute or relative IRIs and optional fragment identifiers; processors may apply escaping/IRI-to-URI mapping."@en .
 
 xsd:language
     rdfs:label "språkkod"@sv, "language"@en ;
@@ -208,28 +208,28 @@ xsd:normalizedString
     rdfs:label "normaliserad sträng"@sv, "normalizedString"@en ;
     skos:prefLabel "normaliserad sträng"@sv, "normalized string"@en ;
     skos:altLabel "normalizedString"@en ;
-    rdfs:comment "Strängar utan vagnretur-, radmatnings- och tabulatortecken. Härledd från xsd:string; blankteckennormaliserad för att byta ut dessa tecken mot blanksteg. Lexikal form: vilken sträng som helst som inte innehåller #xD, #xA eller #x9 (per XML); d.v.s. med dessa tecken ersatta vid normalisering."@sv, "Strings with carriage return, line feed, and tab characters disallowed. Derived from xsd:string; whitespace normalized to replace those characters with spaces. Lexical form: any string not containing #xD, #xA or #x9 (per XML), i.e., with those characters replaced during normalization."@en .
+    rdfs:comment "Strängar utan vagnretur-, radmatnings- och tabulatortecken. Härledd från xsd:string; blankteckennormaliserad för att byta ut dessa tecken mot blanksteg. Lexikal form: vilken sträng som helst som inte innehåller #xD, #xA eller #x9 (enligt XML); d.v.s. med dessa tecken ersatta vid normalisering."@sv, "Strings with carriage return, line feed, and tab characters disallowed. Derived from xsd:string; whitespace normalized to replace those characters with spaces. Lexical form: any string not containing #xD, #xA or #x9 (per XML), i.e., with those characters replaced during normalization."@en .
 
 xsd:token
     rdfs:label "tokeniserad sträng"@sv, "token"@en ;
     skos:prefLabel "tokeniserad sträng"@sv, "tokenized string"@en ;
     skos:altLabel "token"@en ;
-    rdfs:comment "Tokeniserade strängar, härledda från xsd:normalizedString: utan inledande och avslutande blanktecken och utan interna sekvenser av flera på varandra följande blanktecken. Lexikal form: strängar med kollapsade blanktecken (följder av blanktecken kollapsade ner till ett enda blanksteg; inledande och avslutande blanksteg borttagna)."@sv, "Tokenized strings derived from xsd:normalizedString: no leading or trailing spaces and no internal sequences of multiple spaces. Lexical form: strings with whitespace collapsed (runs of spaces collapsed to a single space; leading/trailing spaces removed)."@en .
+    rdfs:comment "Tokeniserade strängar, härledda från xsd:normalizedString: utan inledande och avslutande blanksteg och utan interna sekvenser av flera på varandra följande blanksteg. Lexikal form: strängar med sammanslagna blanktecken (följder av blanksteg ersatta av ett enda blanksteg; inledande och avslutande blanksteg borttagna)."@sv, "Tokenized strings derived from xsd:normalizedString: no leading or trailing spaces and no internal sequences of multiple spaces. Lexical form: strings with whitespace collapsed (runs of spaces collapsed to a single space; leading/trailing spaces removed)."@en .
 
 xsd:NMTOKEN
-    rdfs:label "XML-namnstoken"@sv, "NMTOKEN"@en ;
-    skos:prefLabel "XML-namnstoken"@sv, "XML name token"@en ;
+    rdfs:label "XML-namntoken"@sv, "NMTOKEN"@en ;
+    skos:prefLabel "XML-namntoken"@sv, "XML name token"@en ;
     skos:altLabel "NMTOKEN"@en ;
-    rdfs:comment "Värden som matchar XML-produktionen Nmtoken. Härledd från xsd:token. Lexikal form: ett eller flera NameChar-tecken per XML (vilket matchar XML-produktionen Nmtoken)."@sv, "Values matching the XML Nmtoken production. Derived from xsd:token. Lexical form: one or more NameChar per XML (i.e., matches the XML Nmtoken production)."@en .
+    rdfs:comment "Värden som matchar XML-produktionsregeln Nmtoken. Härledd från xsd:token. Lexikal form: ett eller flera NameChar-tecken enligt XML (vilket matchar XML-produktionsregeln Nmtoken)."@sv, "Values matching the XML Nmtoken production. Derived from xsd:token. Lexical form: one or more NameChar per XML (i.e., matches the XML Nmtoken production)."@en .
 
 xsd:Name
     rdfs:label "XML-namn"@sv, "Name"@en ;
     skos:prefLabel "XML-namn"@sv, "XML name"@en ;
     skos:altLabel "Name"@en ;
-    rdfs:comment "Värden som matchar XML-produktionen Name. Härledd från xsd:token. Lexikal form: ett NameStartChar-tecken, följt av noll eller flera NameChar-tecken per XML."@sv, "Values matching the XML Name production. Derived from xsd:token. Lexical form: NameStartChar followed by zero or more NameChar per XML."@en .
+    rdfs:comment "Värden som matchar XML-produktionsregeln Name. Härledd från xsd:token. Lexikal form: ett NameStartChar-tecken, följt av noll eller flera NameChar-tecken enligt XML."@sv, "Values matching the XML Name production. Derived from xsd:token. Lexical form: NameStartChar followed by zero or more NameChar per XML."@en .
 
 xsd:NCName
     rdfs:label "XML-namn utan kolon"@sv, "NCName"@en ;
     skos:prefLabel "XML-namn utan kolon"@sv, "XML name without a colon"@en ;
     skos:altLabel "NCName"@en ;
-    rdfs:comment "XML-namn utan kolon som matchar produktionen NCName (d.v.s. namn utan kolon). Härledd från xsd:Name. Lexikal form: ett XML NCName (samma som Name men där ':' inte är tillåtet)."@sv, "XML 'non-colonized' names matching the NCName production (i.e., Name without the colon). Derived from xsd:Name. Lexical form: XML NCName (same as Name but disallowing ':')."@en .
+    rdfs:comment "XML-namn utan kolon som matchar produktionsregeln NCName (d.v.s. namn utan kolon). Härledd från xsd:Name. Lexikal form: ett XML NCName (samma som Name men där ':' inte är tillåtet)."@sv, "XML 'non-colonized' names matching the NCName production (i.e., Name without the colon). Derived from xsd:Name. Lexical form: XML NCName (same as Name but disallowing ':')."@en .

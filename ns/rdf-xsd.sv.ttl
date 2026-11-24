@@ -10,7 +10,7 @@
 xsd:string
     rdfs:label "sträng"@sv, "string"@en ;
     skos:prefLabel "sträng"@sv, "string"@en ;
-    rdfs:comment "Strängar. Värderymd: ändliga sekvenser av Unicode-tecken. Lexikal form: alla ändliga följder av XML-tecken som matchar XML-produktionsregeln Char (d.v.s. alla Unicode-skalärvärden som tillåts i XML)."@sv, "Character strings. Value space: finite-length sequences of Unicode characters. Lexical form: any finite-length sequence of XML characters matching the XML Char production (i.e., any Unicode scalar value allowed by XML)."@en .
+    rdfs:comment "Teckensträngar. Värderymd: ändliga sekvenser av Unicode-tecken. Lexikal form: alla ändliga sekvenser av XML-tecken som matchar XML-produktionsregeln Char (dvs. alla Unicode-skalärvärden som tillåts i XML)."@sv, "Character strings. Value space: finite-length sequences of Unicode characters. Lexical form: any finite-length sequence of XML characters matching the XML Char production (i.e., any Unicode scalar value allowed by XML)."@en .
 
 xsd:boolean
     rdfs:label "booleskt värde"@sv, "boolean"@en ;
@@ -208,7 +208,7 @@ xsd:normalizedString
     rdfs:label "normaliserad sträng"@sv, "normalizedString"@en ;
     skos:prefLabel "normaliserad sträng"@sv, "normalized string"@en ;
     skos:altLabel "normalizedString"@en ;
-    rdfs:comment "Strängar utan vagnretur-, radmatnings- och tabulatortecken. Härledd från xsd:string; blankteckennormaliserad för att byta ut dessa tecken mot blanksteg. Lexikal form: vilken sträng som helst som inte innehåller #xD, #xA eller #x9 (enligt XML); d.v.s. med dessa tecken ersatta vid normalisering."@sv, "Strings with carriage return, line feed, and tab characters disallowed. Derived from xsd:string; whitespace normalized to replace those characters with spaces. Lexical form: any string not containing #xD, #xA or #x9 (per XML), i.e., with those characters replaced during normalization."@en .
+    rdfs:comment "Strängar utan vagnretur-, radmatnings- och tabulatortecken. Härledd från xsd:string; blankteckennormaliserad för att byta ut dessa tecken mot blanksteg. Lexikal form: vilken sträng som helst som inte innehåller #xD, #xA eller #x9 (enligt XML); dvs. med dessa tecken ersatta vid normalisering."@sv, "Strings with carriage return, line feed, and tab characters disallowed. Derived from xsd:string; whitespace normalized to replace those characters with spaces. Lexical form: any string not containing #xD, #xA or #x9 (per XML), i.e., with those characters replaced during normalization."@en .
 
 xsd:token
     rdfs:label "tokeniserad sträng"@sv, "token"@en ;
@@ -232,4 +232,4 @@ xsd:NCName
     rdfs:label "XML-namn utan kolon"@sv, "NCName"@en ;
     skos:prefLabel "XML-namn utan kolon"@sv, "XML name without a colon"@en ;
     skos:altLabel "NCName"@en ;
-    rdfs:comment "XML-namn utan kolon som matchar produktionsregeln NCName (d.v.s. namn utan kolon). Härledd från xsd:Name. Lexikal form: ett XML NCName (samma som Name men där ':' inte är tillåtet)."@sv, "XML 'non-colonized' names matching the NCName production (i.e., Name without the colon). Derived from xsd:Name. Lexical form: XML NCName (same as Name but disallowing ':')."@en .
+    rdfs:comment "XML-namn utan kolon som matchar produktionsregeln NCName (dvs. namn utan kolon). Härledd från xsd:Name. Lexikal form: ett XML NCName (samma som Name men där ':' inte är tillåtet)."@sv, "XML 'non-colonized' names matching the NCName production (i.e., Name without the colon). Derived from xsd:Name. Lexical form: XML NCName (same as Name but disallowing ':')."@en .

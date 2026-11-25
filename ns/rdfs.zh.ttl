@@ -1,0 +1,97 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://www.w3.org/2000/01/rdf-schema#>
+    dcterms:title "RDF Schema 词汇表（RDFS）"@zh, "The RDF Schema vocabulary (RDFS)"@en .
+
+rdfs:Resource
+    rdfs:label "资源"@zh, "Resource"@en ;
+    skos:prefLabel "资源"@zh, "resource"@en ;
+    skos:altLabel "Resource"@en ;
+    rdfs:comment "资源的类，包含所有事物。"@zh, "The class resource, everything."@en .
+
+rdfs:Proposition
+    rdfs:label "命题"@zh, "Proposition"@en ;
+    skos:prefLabel "命题"@zh, "proposition"@en ;
+    skos:altLabel "Proposition"@en ;
+    rdfs:comment "命题的类，即描述两个实体之间关系的简单逻辑表达式。"@zh, "The class of propositions, simple logical expressions describing a relationship between two entities."@en .
+
+rdfs:Class
+    rdfs:label "类"@zh, "Class"@en ;
+    skos:prefLabel "类"@zh, "class"@en ;
+    skos:altLabel "Class"@en ;
+    rdfs:comment "类的类。"@zh, "The class of classes."@en .
+
+rdfs:subClassOf
+    rdfs:label "是……的子类"@zh, "subClassOf"@en ;
+    skos:prefLabel "是……的子类"@zh, "is subclass of"@en ;
+    skos:altLabel "subClassOf"@en ;
+    rdfs:comment "主体是某个类的子类。"@zh, "The subject is a subclass of a class."@en .
+
+rdfs:subPropertyOf
+    rdfs:label "是……的子属性"@zh, "subPropertyOf"@en ;
+    skos:prefLabel "是……的子属性"@zh, "is subproperty of"@en ;
+    skos:altLabel "subPropertyOf"@en ;
+    rdfs:comment "主体是某个属性的子属性。"@zh, "The subject is a subproperty of a property."@en .
+
+rdfs:comment
+    rdfs:label "注释"@zh, "comment"@en ;
+    skos:prefLabel "注释"@zh, "comment"@en ;
+    rdfs:comment "主体资源的描述。"@zh, "A description of the subject resource."@en .
+
+rdfs:label
+    rdfs:label "标签"@zh, "label"@en ;
+    skos:prefLabel "标签"@zh, "label"@en ;
+    rdfs:comment "主体的人类可读名称。"@zh, "A human-readable name for the subject."@en .
+
+rdfs:domain
+    rdfs:label "定义域"@zh, "domain"@en ;
+    skos:prefLabel "定义域"@zh, "domain"@en ;
+    rdfs:comment "主体属性的一个定义域。"@zh, "A domain of the subject property."@en .
+
+rdfs:range
+    rdfs:label "值域"@zh, "range"@en ;
+    skos:prefLabel "值域"@zh, "range"@en ;
+    rdfs:comment "主体属性的一个值域。"@zh, "A range of the subject property."@en .
+
+rdfs:seeAlso
+    rdfs:label "另见"@zh, "seeAlso"@en ;
+    skos:prefLabel "另见"@zh, "see also"@en ;
+    skos:altLabel "seeAlso"@en ;
+    rdfs:comment "关于主体资源的更多信息。"@zh, "Further information about the subject resource."@en .
+
+rdfs:isDefinedBy
+    rdfs:label "由……定义"@zh, "isDefinedBy"@en ;
+    skos:prefLabel "由……定义"@zh, "is defined by"@en ;
+    skos:altLabel "isDefinedBy"@en ;
+    rdfs:comment "用于定义主体资源的资源。"@zh, "A resource that defines the subject resource."@en .
+
+rdfs:Literal
+    rdfs:label "字面量"@zh, "Literal"@en ;
+    skos:prefLabel "字面量"@zh, "literal"@en ;
+    skos:altLabel "Literal"@en ;
+    rdfs:comment "字面量值的类，例如文本字符串和整数。"@zh, "The class of literal values, eg. textual strings and integers."@en .
+
+rdfs:Container
+    rdfs:label "容器"@zh, "Container"@en ;
+    skos:prefLabel "容器"@zh, "container"@en ;
+    skos:altLabel "Container"@en ;
+    rdfs:comment "RDF 容器的类。"@zh, "The class of RDF containers."@en .
+
+rdfs:ContainerMembershipProperty
+    rdfs:label "容器成员属性"@zh, "ContainerMembershipProperty"@en ;
+    skos:prefLabel "容器成员属性"@zh, "container membership property"@en ;
+    skos:altLabel "ContainerMembershipProperty"@en ;
+    rdfs:comment "容器成员属性 rdf:_1、rdf:_2、……的类，这些属性都是 'member' 的子属性。"@zh, "The class of container membership properties, rdf:_1, rdf:_2, ..., all of which are sub-properties of 'member'."@en .
+
+rdfs:member
+    rdfs:label "成员"@zh, "member"@en ;
+    skos:prefLabel "成员"@zh, "member"@en ;
+    rdfs:comment "主体资源的一个成员。"@zh, "A member of the subject resource."@en .
+
+rdfs:Datatype
+    rdfs:label "数据类型"@zh, "Datatype"@en ;
+    skos:prefLabel "数据类型"@zh, "datatype"@en ;
+    skos:altLabel "Datatype"@en ;
+    rdfs:comment "RDF 数据类型的类。"@zh, "The class of RDF datatypes."@en .

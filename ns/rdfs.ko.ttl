@@ -48,12 +48,12 @@ rdfs:label
 rdfs:domain
     rdfs:label "도메인"@ko, "domain"@en ;
     skos:prefLabel "도메인"@ko, "domain"@en ;
-    rdfs:comment "주어 속성의 도메인입니다."@ko, "A domain of the subject property."@en .
+    rdfs:comment "이 속성을 술어로 사용하는 트리플의 주어가 속하는 클래스입니다."@ko, "A domain of the subject property."@en .
 
 rdfs:range
-    rdfs:label "범위"@ko, "range"@en ;
-    skos:prefLabel "범위"@ko, "range"@en ;
-    rdfs:comment "주어 속성의 범위입니다."@ko, "A range of the subject property."@en .
+    rdfs:label "레인지"@ko, "range"@en ;
+    skos:prefLabel "레인지"@ko, "range"@en ;
+    rdfs:comment "이 속성을 술어로 사용하는 트리플의 목적어가 속하는 클래스입니다."@ko, "A range of the subject property."@en .
 
 rdfs:seeAlso
     rdfs:label "참조"@ko, "seeAlso"@en ;
